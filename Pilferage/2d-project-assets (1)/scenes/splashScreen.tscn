@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dtwdx14dspny5"]
+
+[ext_resource type="Script" uid="uid://xlymqtsr7j1j" path="res://scripts/splash_screen.gd" id="1_ec0dw"]
+[ext_resource type="Texture2D" uid="uid://c3r8eyeh2833v" path="res://characters/happy_boo/square_body.png" id="2_1b3xc"]
+[ext_resource type="Texture2D" uid="uid://br1jr55mxdn6w" path="res://assets/images/pixel_art_small.png" id="3_ec0dw"]
+
+[node name="splashScreen" type="Control" unique_id=1993756028]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1928.0
+offset_bottom = 1087.0
+script = ExtResource("1_ec0dw")
+
+[node name="background" type="TextureRect" parent="." unique_id=1362645422]
+layout_mode = 0
+offset_left = -748.0
+offset_top = -340.0
+offset_right = 2446.0
+offset_bottom = 1340.0
+texture = ExtResource("2_1b3xc")
+
+[node name="logo" type="TextureRect" parent="background" unique_id=1289405449]
+layout_mode = 0
+offset_left = 1436.0
+offset_top = 525.0
+offset_right = 2071.0
+offset_bottom = 1163.0
+texture = ExtResource("3_ec0dw")

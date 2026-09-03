@@ -1,0 +1,13 @@
+res://splashScreen.tscn
+res://main_menu.tscn
+res://scenes/splashScreen.tscn
+res://scenes/main_menu.tscn
+res://assets/fonts/buttonTheme.tres
+res://scripts/main_menu.gd
+res://scripts/splashScreen.gd
+res://scripts/splash_screen.gd
+res://scripts/gun.gd
+res://scripts/brotatoclone.gd
+res://scripts/credits.gd
+res://scenes/credits.tscn
+res://assets/fonts/textLable.tres
