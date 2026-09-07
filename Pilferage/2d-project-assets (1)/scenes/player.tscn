@@ -40,7 +40,7 @@ unique_name_in_owner = true
 position = Vector2(-4, -47)
 
 [node name="shootTime" type="Timer" parent="GUN" unique_id=90855666]
-wait_time = 0.009999999999999998
+wait_time = 0.00999999999999999
 autostart = true
 
 [node name="hurtBox" type="Area2D" parent="." unique_id=84366875]
