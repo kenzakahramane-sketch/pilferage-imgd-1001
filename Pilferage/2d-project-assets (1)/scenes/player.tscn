@@ -39,10 +39,6 @@ unique_name_in_owner = true
 [node name="GUN" parent="." unique_id=269018533 instance=ExtResource("3_i3pqv")]
 position = Vector2(-4, -47)
 
-[node name="shootTime" type="Timer" parent="GUN" unique_id=90855666]
-wait_time = 0.00999999999999999
-autostart = true
-
 [node name="hurtBox" type="Area2D" parent="." unique_id=84366875]
 unique_name_in_owner = true
 collision_layer = 0
@@ -62,5 +58,3 @@ theme_override_styles/background = SubResource("StyleBoxFlat_4cxtk")
 theme_override_styles/fill = SubResource("StyleBoxFlat_rekuv")
 value = 100.0
 show_percentage = false
-
-[connection signal="timeout" from="GUN/shootTime" to="GUN" method="_on_shoot_time_timeout"]
