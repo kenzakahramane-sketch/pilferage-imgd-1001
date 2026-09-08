@@ -26,8 +26,9 @@ texture = ExtResource("1_vk1bi")
 unique_name_in_owner = true
 position = Vector2(25.887527, -10.287661)
 
-[node name="Timer" type="Timer" parent="." unique_id=12502201]
+[node name="shootTime" type="Timer" parent="." unique_id=12502201]
+unique_name_in_owner = true
 wait_time = 0.4
 autostart = true
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="shootTime" to="." method="_on_shoot_time_timeout"]
