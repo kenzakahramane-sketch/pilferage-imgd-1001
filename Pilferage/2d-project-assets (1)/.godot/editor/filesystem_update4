@@ -1,8 +1,3 @@
-res://scenes/main_menu.tscn
+res://scenes/splashScreen.tscn
 res://assets/fonts/buttonTheme.tres
 res://scenes/brotatoclone.tscn
-res://scenes/pubDoor.gd
-res://scenes/interiors.tscn
-res://scripts/brotatoclone.gd
-res://scenes/player.tscn
-res://scenes/exit_door.gd
