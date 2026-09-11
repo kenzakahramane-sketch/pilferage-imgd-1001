@@ -89,7 +89,18 @@ theme = ExtResource("3_wu84c")
 text = "Quit
 "
 
+[node name="dev" type="Button" parent="." unique_id=1377954320]
+layout_mode = 0
+offset_left = 1515.0
+offset_top = 912.0
+offset_right = 1779.0
+offset_bottom = 952.0
+theme = ExtResource("3_wu84c")
+text = "Level 1 Shortcut
+ (DEV BUTTON)"
+
 [connection signal="pressed" from="Options/StartGame" to="." method="_on_startgame_pressed"]
 [connection signal="pressed" from="Options/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="Options/Versions" to="." method="_on_versions_pressed"]
 [connection signal="pressed" from="Options/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="dev" to="." method="_on_dev_pressed"]
