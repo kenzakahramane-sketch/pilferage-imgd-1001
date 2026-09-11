@@ -1,8 +1,13 @@
+TileMap
+CollisionShape2D
+StaticBody2D
+Button
 Camera2D
+AnimatedSprite2D
+CharacterBody2D
 Marker2D
 ColorRect
 Sprite2D
-CollisionShape2D
 Area2D
 TextureRect
 Label

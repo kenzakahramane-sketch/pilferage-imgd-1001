@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://cghebo1ukli5x" path="res://scripts/brotatoclone.gd" id="1_svci8"]
 [ext_resource type="PackedScene" uid="uid://c0gpy0pye4jr6" path="res://scenes/tree.tscn" id="2_1kod4"]
 [ext_resource type="Script" uid="uid://ca32227r5387d" path="res://scenes/pubDoor.gd" id="4_7xkgf"]
-[ext_resource type="Texture2D" uid="uid://42bnlf0jk3uq" path="res://scenes/door.png" id="5_m1wyy"]
+[ext_resource type="Texture2D" uid="uid://42bnlf0jk3uq" path="res://assets/images/door.png" id="5_m1wyy"]
 
 [sub_resource type="Curve2D" id="Curve2D_1kod4"]
 _data = {
@@ -29,10 +29,10 @@ offset_right = 1927.0
 offset_bottom = 1077.0
 metadata/_edit_use_anchors_ = true
 
-[node name="HUD" type="CanvasLayer" parent="."]
+[node name="HUD" type="CanvasLayer" parent="." unique_id=936535794]
 layer = 5
 
-[node name="ScoreLabel" type="Label" parent="HUD"]
+[node name="ScoreLabel" type="Label" parent="HUD" unique_id=1593221505]
 unique_name_in_owner = true
 offset_left = 24.0
 offset_top = 16.0
@@ -41,29 +41,29 @@ offset_bottom = 56.0
 theme_override_font_sizes/font_size = 28
 text = "Score: 0"
 
-[node name="gameOver" type="CanvasLayer" parent="."]
+[node name="gameOver" type="CanvasLayer" parent="." unique_id=1848210753]
 unique_name_in_owner = true
-visible = false
 layer = 10
+visible = false
 
-[node name="Dim" type="ColorRect" parent="gameOver"]
+[node name="Dim" type="ColorRect" parent="gameOver" unique_id=1442359948]
 offset_left = -1.0
 offset_top = -1.0
 offset_right = 1927.0
 offset_bottom = 1077.0
 color = Color(0, 0, 0, 0.6)
 
-[node name="GameOverLabel" type="Label" parent="gameOver"]
+[node name="GameOverLabel" type="Label" parent="gameOver" unique_id=1045460052]
 offset_left = 663.0
 offset_top = 468.0
 offset_right = 1263.0
 offset_bottom = 548.0
 theme_override_font_sizes/font_size = 64
+text = "GAME OVER"
 horizontal_alignment = 1
 vertical_alignment = 1
-text = "GAME OVER"
 
-[node name="MobSpawnTimer" type="Timer" parent="."]
+[node name="MobSpawnTimer" type="Timer" parent="." unique_id=1233301886]
 wait_time = 2.0
 autostart = true
 
@@ -542,6 +542,6 @@ position = Vector2(0.99998474, -47.000015)
 scale = Vector2(0.08730158, 0.05841823)
 texture = ExtResource("5_m1wyy")
 
+[connection signal="timeout" from="MobSpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="body_entered" from="Door" to="Door" method="_on_body_entered"]
-[connection signal="timeout" from="MobSpawnTimer" to="." method="_on_timer_timeout"]
