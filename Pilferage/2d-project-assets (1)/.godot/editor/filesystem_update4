@@ -1,5 +1,6 @@
-res://scenes/brotatoclone.tscn
+res://scenes/splashScreen.tscn
 res://assets/fonts/buttonTheme.tres
+res://scenes/brotatoclone.tscn
 res://scenes/interiors.tscn
 res://scenes/cat.tscn
 res://scenes/level_1.tscn

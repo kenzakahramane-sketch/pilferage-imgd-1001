@@ -1,4 +1,3 @@
-78098b89c88a74ebe8c20117b8754620
 ::res://::1789059733
 default_bus_layout.tres::AudioBusLayout::6564268947468103023::1789057542::0::1::::<><><>0<>0<><>::
 export_presets.cfg::TextFile::-1::1789057542::0::1::::<><><>0<>0<><>::
@@ -83,3 +82,4 @@ smoke_explosion.gdshader::Shader::5424624029383165850::1789057542::0::1::::<><><
 smoke_explosion.tscn::PackedScene::7675803860678853612::1789057542::0::1::::<><><>0<>0<><>::uid://cjjy1aucj6gji::::res://smoke_explosion/smoke_explosion.gdshader<>uid://bmcptrd1f7ok::::res://smoke_explosion/smoke_explosion.gd
 ::res://trees/::1789057665
 pine_tree.png::CompressedTexture2D::3533732700255610135::1789057542::1789057665::1::::<><><>0<>0<>e3cd3eba4f77380aa3a76dc2ef700f0d<>res://.godot/imported/pine_tree.png-d61929395d8fbd7dd9882891dc69101d.ctex::
+
