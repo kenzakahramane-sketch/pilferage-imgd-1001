@@ -18,6 +18,9 @@ size = Vector2(87, 135)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4cxtk"]
 size = Vector2(288.5, 338.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bxidx"]
+size = Vector2(763, 689)
+
 [node name="Game" type="Node2D" unique_id=21739277]
 y_sort_enabled = true
 script = ExtResource("1_svci8")
@@ -428,6 +431,27 @@ texture = ExtResource("5_m1wyy")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Home9" unique_id=1443632880]
 position = Vector2(262.75, 96.75)
 shape = SubResource("RectangleShape2D_4cxtk")
+
+[node name="_cave_" type="StaticBody2D" parent="." unique_id=1543800596]
+position = Vector2(1055, 8919)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="_cave_" unique_id=440655470]
+position = Vector2(17, 8)
+shape = SubResource("RectangleShape2D_bxidx")
+
+[node name="rock" type="ColorRect" parent="_cave_" unique_id=1342952401]
+offset_left = -372.0
+offset_top = -362.0
+offset_right = 402.0
+offset_bottom = 358.0
+color = Color(0.5037685, 0.5037685, 0.50376844, 1)
+
+[node name="Opening" type="ColorRect" parent="_cave_" unique_id=1541685702]
+offset_left = -147.0
+offset_top = 68.0
+offset_right = 192.0
+offset_bottom = 357.0
+color = Color(0, 0, 0, 1)
 
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="body_entered" from="Home/tempWall/Door" to="Home/tempWall/Door" method="_on_body_entered"]
