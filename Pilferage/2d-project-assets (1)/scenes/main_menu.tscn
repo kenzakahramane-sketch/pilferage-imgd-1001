@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://k3cljth1nm2m" path="res://scripts/main_menu.gd" id="1_ekxnf"]
 [ext_resource type="Texture2D" uid="uid://bbep2dogndtrt" path="res://assets/images/GameLogoVer1.png" id="2_bqqt6"]
+[ext_resource type="Texture2D" uid="uid://d23uheorku8l0" path="res://assets/images/pixel_art_large (1).png" id="2_wu84c"]
 [ext_resource type="Theme" uid="uid://didlpevuq4lh3" path="res://assets/fonts/buttonTheme.tres" id="3_wu84c"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_cbqb0"]
@@ -41,6 +42,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.5176471, 0.6784314, 0.654902, 1)
+
+[node name="PixelArtLarge(1)" type="Sprite2D" parent="background" unique_id=1316126899]
+position = Vector2(965, 549)
+scale = Vector2(0.34033835, 0.3108798)
+texture = ExtResource("2_wu84c")
 
 [node name="logo" type="TextureRect" parent="." unique_id=242677976]
 layout_mode = 1
