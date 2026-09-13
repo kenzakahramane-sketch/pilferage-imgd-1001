@@ -29,3 +29,7 @@ func _on_versions_pressed():
 # Quit button action
 func _on_quit_pressed():
 	get_tree().quit()
+
+# TEMPORARY BUTTON FOR TESTING
+func _on_dev_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/level_1.tscn")
