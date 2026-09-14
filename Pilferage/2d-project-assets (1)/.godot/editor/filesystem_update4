@@ -1,0 +1,4 @@
+res://assets/fonts/buttonTheme.tres
+res://scripts/main_menu.gd
+res://scenes/version_notes.tscn
+res://scripts/version_notes.gd

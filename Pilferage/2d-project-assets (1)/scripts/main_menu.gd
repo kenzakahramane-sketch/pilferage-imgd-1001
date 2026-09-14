@@ -23,7 +23,7 @@ func _on_credits_pressed():
 # Version History button action
 func _on_versions_pressed():
 	# Change to an options scene or open a popup
-	get_tree().change_scene_to_file("res://scenes/Options.tscn")
+	get_tree().change_scene_to_file("res://scenes/version_notes.tscn")
 
 
 # Quit button action
