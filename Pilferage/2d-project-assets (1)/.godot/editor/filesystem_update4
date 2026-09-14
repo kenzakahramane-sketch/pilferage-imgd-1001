@@ -1,3 +1,4 @@
 res://scenes/level_1.tscn
 res://assets/fonts/buttonTheme.tres
 res://scripts/cat.gd
+res://scenes/cat.tscn
