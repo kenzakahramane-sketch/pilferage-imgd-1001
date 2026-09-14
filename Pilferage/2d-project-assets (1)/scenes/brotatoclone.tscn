@@ -164,6 +164,10 @@ text = "GAME OVER"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="MobSpawnTimer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
 [node name="Player" parent="." unique_id=775659923 instance=ExtResource("1_qyqyw")]
 position = Vector2(-409, 1493)
 
@@ -454,6 +458,7 @@ offset_bottom = 357.0
 color = Color(0, 0, 0, 1)
 
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
+[connection signal="timeout" from="MobSpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="Home/tempWall/Door" to="Home/tempWall/Door" method="_on_body_entered"]
 [connection signal="body_entered" from="Home2/tempWall/Door" to="Home2/tempWall/Door" method="_on_body_entered"]
 [connection signal="body_entered" from="Home3/tempWall/Door" to="Home3/tempWall/Door" method="_on_body_entered"]
