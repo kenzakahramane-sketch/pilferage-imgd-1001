@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const ACCELERATION = 8
+const ACCELERATION = 4
 const JUMP_VELOCITY = -250.0
 const MAX_SPEED = 150
 @onready var animated_sprite = $AnimatedSprite2D
@@ -11,7 +11,7 @@ const MAX_SPEED = 150
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
-		if detect_right.is_colliding() and velocity.y > 0 or detect_left.is_colliding() and velocity.y > 0:
+		if detect_right.is_colliding() and velocity.y > 0 and animated_sprite.flip_h == false or detect_left.is_colliding() and velocity.y > 0 and animated_sprite.flip_h == true:
 			velocity += get_gravity() * delta / 4
 		else:
 			velocity += get_gravity() * delta
@@ -33,7 +33,10 @@ func _physics_process(delta: float) -> void:
 		animated_sprite.flip_h = true
 		hitbox.position.x = 6.75
 	if direction:
-		velocity.x += direction * ACCELERATION
+		if direction * velocity.x >= 0:
+			velocity.x += direction * ACCELERATION
+		else:
+			velocity.x += direction * ACCELERATION
 	else:
 		velocity.x = move_toward(velocity.x, 0, ACCELERATION * 0.5)
 	if abs(velocity.x) > MAX_SPEED:
@@ -58,7 +61,7 @@ func _physics_process(delta: float) -> void:
 			animated_sprite.play("fallCool")
 	# The push mechanic
 	if Input.is_action_just_pressed("Push"):
-		if detect_right.is_colliding():
+		if detect_right.is_colliding() and animated_sprite.flip_h == false:
 			if Input.is_action_pressed("move_up"):
 				animated_sprite.play("jumpCool")
 				velocity.y = JUMP_VELOCITY
@@ -66,7 +69,7 @@ func _physics_process(delta: float) -> void:
 			else:
 				velocity.x = MAX_SPEED * -1.75
 		else:
-			if detect_left.is_colliding():
+			if detect_left.is_colliding() and animated_sprite.flip_h == true:
 				if Input.is_action_pressed("move_up"):
 					animated_sprite.play("jumpCool")
 					velocity.y = JUMP_VELOCITY
