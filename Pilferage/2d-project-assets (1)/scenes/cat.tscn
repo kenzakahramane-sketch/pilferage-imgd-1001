@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://c7uyokengmfxn"]
 
 [ext_resource type="Texture2D" uid="uid://bf4oexnk1n8ky" path="res://assets/images/Sidescroller images/cat.png" id="1_myi5k"]
-[ext_resource type="Texture2D" uid="uid://ca0823iqg8dep" path="res://pistol/impact/circle.png" id="2_se5fe"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_se5fe"]
 atlas = ExtResource("1_myi5k")
@@ -298,7 +297,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"runCool",
-"speed": 6.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -324,7 +323,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"sprintCool",
-"speed": 18.0
+"speed": 15.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_myi5k"]
@@ -334,7 +333,6 @@ size = Vector2(6.5, 11)
 z_index = 1
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1813273544]
-z_index = 1
 position = Vector2(9, -8)
 scale = Vector2(1.147, 1)
 sprite_frames = SubResource("SpriteFrames_ciobh")
@@ -345,16 +343,10 @@ autoplay = "idleCool"
 position = Vector2(11.25, -5.5)
 shape = SubResource("RectangleShape2D_myi5k")
 
-[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=21534562]
-position = Vector2(11, 0)
-scale = Vector2(0.063, 0.063)
-emitting = false
-amount = 24
-texture = ExtResource("2_se5fe")
-explosiveness = 0.1
-spread = 180.0
-gravity = Vector2(0, -30)
-initial_velocity_min = 30.0
-initial_velocity_max = 60.0
-scale_amount_min = 0.02
-scale_amount_max = 0.06
+[node name="RayCastRight" type="RayCast2D" parent="." unique_id=586380289]
+position = Vector2(11, -6)
+target_position = Vector2(6, 0)
+
+[node name="RayCastLeft" type="RayCast2D" parent="." unique_id=1294679913]
+position = Vector2(7, -6)
+target_position = Vector2(-6, 0)

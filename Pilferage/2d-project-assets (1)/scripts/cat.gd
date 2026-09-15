@@ -1,28 +1,30 @@
 extends CharacterBody2D
 
 
-const ACCELERATION = 6
+const ACCELERATION = 8
 const JUMP_VELOCITY = -250.0
 const MAX_SPEED = 150
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var hitbox = $CollisionShape2D
-@onready var particles = $CPUParticles2D
-
+@onready var detect_left = $RayCastLeft
+@onready var detect_right = $RayCastRight
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
-		velocity += get_gravity() * delta
+		if detect_right.is_colliding() and velocity.y > 0 or detect_left.is_colliding() and velocity.y > 0:
+			velocity += get_gravity() * delta / 4
+		else:
+			velocity += get_gravity() * delta
 
-	# Handle jump.
+	# Handle jump, jumps higher if you build up speed.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		animated_sprite.play("jumpCool")
 		if abs (velocity.x) < 100:
 			velocity.y = JUMP_VELOCITY
 		else:
-			velocity.y = JUMP_VELOCITY + JUMP_VELOCITY * 0.15 * ((abs(velocity.x) / 100))
+			velocity.y = JUMP_VELOCITY + JUMP_VELOCITY * 0.15 * (abs(velocity.x) / 100)
 
 	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("move_left", "move_right")
 	if direction > 0:
 		animated_sprite.flip_h = false
@@ -33,27 +35,44 @@ func _physics_process(delta: float) -> void:
 	if direction:
 		velocity.x += direction * ACCELERATION
 	else:
-		velocity.x = move_toward(velocity.x, 0, ACCELERATION)
+		velocity.x = move_toward(velocity.x, 0, ACCELERATION * 0.5)
 	if abs(velocity.x) > MAX_SPEED:
 		if velocity.x > 0:
-			velocity.x = move_toward(velocity.x, MAX_SPEED, ACCELERATION)
+			velocity.x = move_toward(velocity.x, MAX_SPEED, ACCELERATION * 1.15)
 		if velocity.x < 0:
-			velocity.x = move_toward(velocity.x, -1 * MAX_SPEED, ACCELERATION)
+			velocity.x = move_toward(velocity.x, -1 * MAX_SPEED, ACCELERATION * 1.15)
 	move_and_slide()
+	# Detects collision for dangerous things.
+	
+	# Different animations are played based on the current state of your movement.
 	if is_on_floor():
 		if velocity.x == 0:
 			animated_sprite.play("idleCool")
-			particles.emitting = false
 		else:
-			if abs(velocity.x) >= 150:
+			if abs(velocity.x) >= MAX_SPEED:
 				animated_sprite.play("sprintCool")
-				particles.emitting = true
 			else:
 				animated_sprite.play("runCool")
-				particles.emitting = false
 	else:
 		if velocity.y > 0:
 			animated_sprite.play("fallCool")
-			particles.emitting = false
+	# The push mechanic
+	if Input.is_action_just_pressed("Push"):
+		if detect_right.is_colliding():
+			if Input.is_action_pressed("move_up"):
+				animated_sprite.play("jumpCool")
+				velocity.y = JUMP_VELOCITY
+				velocity.x = MAX_SPEED * -1.25
+			else:
+				velocity.x = MAX_SPEED * -1.75
+		else:
+			if detect_left.is_colliding():
+				if Input.is_action_pressed("move_up"):
+					animated_sprite.play("jumpCool")
+					velocity.y = JUMP_VELOCITY
+					velocity.x = MAX_SPEED * 1.25
+				else:
+					velocity.x = MAX_SPEED * 1.75
+	
 		
 		

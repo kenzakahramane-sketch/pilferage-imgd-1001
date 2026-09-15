@@ -115,7 +115,8 @@ horizontal_alignment = 1
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_4leat")
 theme_override_font_sizes/font_size = 32
-text = "- Made tutorial gameplay scene the base of the hub world
+text = "- Made tutorial gameplay scene the base of the
+hub world
 - Added sprites for both hub world
 and sidescroller levels
 - Added a developer button to
@@ -148,13 +149,20 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("2_4leat")
 theme_override_font_sizes/font_size = 32
 text = "- Updated the first sidescroller level to
-make it feel morelike a forest
+make it feel more like a forest
 - Updated the movement and animations of the cat
 - When moving left or right
 in the sidescroller, you now accelerate
 - Jump height increases if you reach a high enough speed
 - Implemented the changelog into the game
-- Edited the credits to match the progress made"
+- Edited the credits to match the progress made
+- You can now use the push action by pressing the
+space bar (no push animation)
+- By using push against a wall,
+you can perform a wall push,
+which gives you a burst of speed
+- Using a wall push while pressing jump will allow you
+to wall jump"
 horizontal_alignment = 1
 
 [node name="BackButton" type="Button" parent="." unique_id=2074635226]
