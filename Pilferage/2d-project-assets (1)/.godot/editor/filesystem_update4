@@ -3,3 +3,4 @@ res://assets/fonts/buttonTheme.tres
 res://scripts/cat.gd
 res://scenes/level_1.tscn
 res://scenes/version_history.tscn
+res://scenes/credits.tscn

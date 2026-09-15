@@ -162,7 +162,10 @@ space bar (no push animation)
 you can perform a wall push,
 which gives you a burst of speed
 - Using a wall push while pressing jump will allow you
-to wall jump"
+to wall jump
+
+
+"
 horizontal_alignment = 1
 
 [node name="BackButton" type="Button" parent="." unique_id=2074635226]
