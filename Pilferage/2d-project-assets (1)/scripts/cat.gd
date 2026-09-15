@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const ACCELERATION = 4
+const ACCELERATION = 3
 const JUMP_VELOCITY = -250.0
 const MAX_SPEED = 150
 @onready var animated_sprite = $AnimatedSprite2D
@@ -12,7 +12,9 @@ func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		if detect_right.is_colliding() and velocity.y > 0 and animated_sprite.flip_h == false or detect_left.is_colliding() and velocity.y > 0 and animated_sprite.flip_h == true:
-			velocity += get_gravity() * delta / 4
+			velocity += get_gravity() * delta / 20
+			if velocity.y > 75:
+				velocity.y = 75
 		else:
 			velocity += get_gravity() * delta
 
