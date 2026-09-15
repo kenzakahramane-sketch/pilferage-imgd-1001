@@ -29,3 +29,8 @@ func _on_timer_timeout():
 func _on_player_health_depleted():
 	%gameOver.visible = true
 	get_tree().paused = true
+	
+func _ready():
+	if Global.spawn_point == "forest":
+		$Player.global_position = $Spawns/forest.global_position
+		Global.spawn_point = ""

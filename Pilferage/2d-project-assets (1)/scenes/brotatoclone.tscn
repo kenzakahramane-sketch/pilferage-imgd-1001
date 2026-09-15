@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c0gpy0pye4jr6" path="res://scenes/tree.tscn" id="2_1kod4"]
 [ext_resource type="Script" uid="uid://ca32227r5387d" path="res://scenes/pubDoor.gd" id="4_7xkgf"]
 [ext_resource type="Texture2D" uid="uid://42bnlf0jk3uq" path="res://assets/images/Topdown images/door.png" id="5_m1wyy"]
+[ext_resource type="Script" uid="uid://i25vqnbrl3us" path="res://scenes/entrance.gd" id="6_m1wyy"]
 
 [sub_resource type="Curve2D" id="Curve2D_1kod4"]
 _data = {
@@ -19,7 +20,10 @@ size = Vector2(87, 135)
 size = Vector2(288.5, 338.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bxidx"]
-size = Vector2(763, 689)
+size = Vector2(859.5, 597.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m5gep"]
+size = Vector2(342, 196)
 
 [node name="Game" type="Node2D" unique_id=21739277]
 y_sort_enabled = true
@@ -436,26 +440,52 @@ texture = ExtResource("5_m1wyy")
 position = Vector2(262.75, 96.75)
 shape = SubResource("RectangleShape2D_4cxtk")
 
-[node name="_cave_" type="StaticBody2D" parent="." unique_id=1543800596]
-position = Vector2(1055, 8919)
+[node name="wall" type="Area2D" parent="." unique_id=1556612911]
+position = Vector2(1072, 8927)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="_cave_" unique_id=440655470]
-position = Vector2(17, 8)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="wall" unique_id=1957559924]
+position = Vector2(572, 593)
 shape = SubResource("RectangleShape2D_bxidx")
 
-[node name="rock" type="ColorRect" parent="_cave_" unique_id=1342952401]
-offset_left = -372.0
-offset_top = -362.0
-offset_right = 402.0
-offset_bottom = 358.0
-color = Color(0.5037685, 0.5037685, 0.50376844, 1)
+[node name="ColorRect2" type="ColorRect" parent="wall/CollisionShape2D2" unique_id=128557435]
+offset_left = -425.0
+offset_top = -297.0
+offset_right = 446.0
+offset_bottom = 295.0
+color = Color(0.26656184, 0.48613477, 0.11715884, 1)
+metadata/_edit_use_anchors_ = true
 
-[node name="Opening" type="ColorRect" parent="_cave_" unique_id=1541685702]
-offset_left = -147.0
-offset_top = 68.0
-offset_right = 192.0
-offset_bottom = 357.0
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall" unique_id=440655470]
+position = Vector2(-635.75, 596.75)
+shape = SubResource("RectangleShape2D_bxidx")
+
+[node name="ColorRect" type="ColorRect" parent="wall/CollisionShape2D" unique_id=2043669484]
+offset_left = -436.25
+offset_top = -294.75
+offset_right = 434.75
+offset_bottom = 297.25
+color = Color(0.26656184, 0.48613477, 0.11715884, 1)
+
+[node name="entrance" type="Area2D" parent="." unique_id=1402561767]
+position = Vector2(1146, 9410)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="entrance" unique_id=881088273]
+position = Vector2(-102, 71)
+shape = SubResource("RectangleShape2D_m5gep")
+script = ExtResource("6_m1wyy")
+
+[node name="Opening" type="ColorRect" parent="entrance" unique_id=1541685702]
+offset_left = -271.5
+offset_top = -120.0
+offset_right = 67.5
+offset_bottom = 169.0
 color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Spawns" type="Node2D" parent="." unique_id=162815131]
+
+[node name="forest" type="Marker2D" parent="Spawns" unique_id=346659865]
+position = Vector2(1036, 9147)
 
 [connection signal="timeout" from="MobSpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
@@ -468,3 +498,4 @@ color = Color(0, 0, 0, 1)
 [connection signal="body_entered" from="Home7/tempWall/Door" to="Home7/tempWall/Door" method="_on_body_entered"]
 [connection signal="body_entered" from="Home8/tempWall/Door" to="Home8/tempWall/Door" method="_on_body_entered"]
 [connection signal="body_entered" from="Home9/tempWall/Door" to="Home9/tempWall/Door" method="_on_body_entered"]
+[connection signal="body_entered" from="entrance" to="entrance/CollisionShape2D" method="_on_entrance_body_entered"]

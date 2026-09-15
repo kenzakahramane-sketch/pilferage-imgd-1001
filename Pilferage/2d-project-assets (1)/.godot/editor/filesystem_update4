@@ -1,5 +1,8 @@
-res://scenes/cat.tscn
+res://scenes/brotatoclone.tscn
 res://assets/fonts/buttonTheme.tres
-res://scripts/cat.gd
+res://scenes/entrance.gd
 res://scenes/level_1.tscn
+res://scenes/exit.gd
 res://scenes/version_history.tscn
+res://scripts/Global.gd
+res://scripts/brotatoclone.gd

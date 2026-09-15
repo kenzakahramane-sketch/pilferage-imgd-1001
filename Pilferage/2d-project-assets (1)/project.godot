@@ -79,6 +79,10 @@ run/main_scene="uid://dtwdx14dspny5"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://assets/images/Miscellanious images/icon.png"
 
+[autoload]
+
+Global="*uid://7v505kegvnki"
+
 [display]
 
 window/size/viewport_width=1920
