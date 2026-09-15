@@ -8,3 +8,6 @@ res://version_history.tscn
 res://version_history.gd
 res://scenes/credits.tscn
 res://scenes/version_history.tscn
+res://scenes/interiors.tscn
+res://scenes/brotatoclone.tscn
+res://scenes/splashScreen.tscn

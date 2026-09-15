@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kpw6j0jvyrr4"
-path="res://.godot/imported/pilferageact1-tilemapv1.0-pixilart.png-583a9389a694933b0efb49372c7942d1.ctex"
+uid="uid://hj3e18hsj07"
+path="res://.godot/imported/icon.png-14614cd71dfb59f865009aac72303e3c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/pilferageact1-tilemapv1.0-pixilart.png"
-dest_files=["res://.godot/imported/pilferageact1-tilemapv1.0-pixilart.png-583a9389a694933b0efb49372c7942d1.ctex"]
+source_file="res://assets/images/Miscellanious images/icon.png"
+dest_files=["res://.godot/imported/icon.png-14614cd71dfb59f865009aac72303e3c.ctex"]
 
 [params]
 

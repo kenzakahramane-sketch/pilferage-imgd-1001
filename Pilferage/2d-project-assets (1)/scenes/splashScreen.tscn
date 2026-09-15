@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://xlymqtsr7j1j" path="res://scripts/splash_screen.gd" id="1_ec0dw"]
 [ext_resource type="Texture2D" uid="uid://c3r8eyeh2833v" path="res://characters/happy_boo/square_body.png" id="2_1b3xc"]
-[ext_resource type="Texture2D" uid="uid://br1jr55mxdn6w" path="res://assets/images/pixel_art_small.png" id="3_ec0dw"]
+[ext_resource type="Texture2D" uid="uid://br1jr55mxdn6w" path="res://assets/images/Miscellanious images/pixel_art_small.png" id="3_ec0dw"]
 
 [node name="splashScreen" type="Control" unique_id=1993756028]
 layout_mode = 3

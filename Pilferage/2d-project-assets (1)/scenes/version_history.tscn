@@ -153,7 +153,8 @@ make it feel morelike a forest
 - When moving left or right
 in the sidescroller, you now accelerate
 - Jump height increases if you reach a high enough speed
-- Implemented the changelog into the game"
+- Implemented the changelog into the game
+- Edited the credits to match the progress made"
 horizontal_alignment = 1
 
 [node name="BackButton" type="Button" parent="." unique_id=2074635226]

@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://c8acanknmjgjl"]
 
 [ext_resource type="Script" uid="uid://k3cljth1nm2m" path="res://scripts/main_menu.gd" id="1_ekxnf"]
-[ext_resource type="Texture2D" uid="uid://bbep2dogndtrt" path="res://assets/images/GameLogoVer1.png" id="2_bqqt6"]
-[ext_resource type="Texture2D" uid="uid://d23uheorku8l0" path="res://assets/images/pixel_art_large (1).png" id="2_wu84c"]
+[ext_resource type="Texture2D" uid="uid://bbep2dogndtrt" path="res://assets/images/Miscellanious images/GameLogoVer1.png" id="2_bqqt6"]
+[ext_resource type="Texture2D" uid="uid://d23uheorku8l0" path="res://assets/images/Miscellanious images/pixel_art_large (1).png" id="2_wu84c"]
 [ext_resource type="Theme" uid="uid://didlpevuq4lh3" path="res://assets/fonts/buttonTheme.tres" id="3_wu84c"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_cbqb0"]
