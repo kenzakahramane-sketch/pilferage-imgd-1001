@@ -1,0 +1,167 @@
+[gd_scene format=3 uid="uid://b6xrqlakup4i"]
+
+[ext_resource type="Script" uid="uid://cj7u3ci8hvyav" path="res://scripts/version_history.gd" id="1_cikha"]
+[ext_resource type="FontFile" uid="uid://c8x3e628x2e51" path="res://assets/fonts/PressStart2P-Regular.ttf" id="2_4leat"]
+
+[node name="Version History" type="Control" unique_id=1882803910]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cikha")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=593796011]
+layout_mode = 0
+offset_right = 1922.0
+offset_bottom = 965.0
+
+[node name="ColorRect" type="ColorRect" parent="TextureRect" unique_id=119448301]
+layout_mode = 0
+offset_right = 1925.0
+offset_bottom = 1039.0
+color = Color(0.5176471, 0.6784314, 0.654902, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=839151747]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 55.0
+offset_right = 1878.0
+offset_bottom = 983.0
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer" unique_id=2000397029]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="ScrollContainer/TextureRect" unique_id=1495158182]
+layout_mode = 0
+offset_left = 3.0
+offset_top = -3.0
+offset_right = 1819.0
+offset_bottom = 2268.0
+color = Color(0.14117648, 0.13333334, 0.18039216, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=893407225]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Label0" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=319448735]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4leat")
+theme_override_font_sizes/font_size = 32
+text = "                                                         "
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1530454234]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4leat")
+theme_override_font_sizes/font_size = 32
+text = "Changelog"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=414845066]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4leat")
+theme_override_font_sizes/font_size = 32
+text = "* * * * * * * *"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=873077615]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4leat")
+theme_override_font_sizes/font_size = 32
+text = "Version 0.1 (Sprint 1) 8/27 - 9/1"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=349906308]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4leat")
+theme_override_font_sizes/font_size = 32
+text = "* * * * * * * *"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=251562015]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4leat")
+theme_override_font_sizes/font_size = 32
+text = "- Added the main menu
+- Added a splash screen
+- Added credits page
+- Added a button for version history
+- Added verious assets for the future"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1498532219]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4leat")
+theme_override_font_sizes/font_size = 32
+text = "* * * * * * * *"
+horizontal_alignment = 1
+
+[node name="Label7" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1023912336]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4leat")
+theme_override_font_sizes/font_size = 32
+text = "Version 0.2 (Sprint 2) 9/2 - 9/8"
+horizontal_alignment = 1
+
+[node name="Label8" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1852598711]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4leat")
+theme_override_font_sizes/font_size = 32
+text = "* * * * * * * *"
+horizontal_alignment = 1
+
+[node name="Label9" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=201095253]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4leat")
+theme_override_font_sizes/font_size = 32
+text = "- Made tutorial gameplay scene the base of the hub world
+- Added sprites for both hub world
+and sidescroller levels
+- Added a developer button to
+access the sidescolling level"
+horizontal_alignment = 1
+
+[node name="Label10" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1851701515]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4leat")
+theme_override_font_sizes/font_size = 32
+text = "* * * * * * * *"
+horizontal_alignment = 1
+
+[node name="Label11" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=539636430]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4leat")
+theme_override_font_sizes/font_size = 32
+text = "Version 0.3 (Sprint 3) 9/9 - 9/15"
+horizontal_alignment = 1
+
+[node name="Label12" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=264517873]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4leat")
+theme_override_font_sizes/font_size = 32
+text = "* * * * * * * *"
+horizontal_alignment = 1
+
+[node name="Label13" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=885239974]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4leat")
+theme_override_font_sizes/font_size = 32
+text = "- Updated the first sidescroller level to
+make it feel morelike a forest
+- Updated the movement and animations of the cat
+- When moving left or right
+in the sidescroller, you now accelerate
+- Jump height increases if you reach a high enough speed
+- Implemented the changelog into the game"
+horizontal_alignment = 1
+
+[node name="BackButton" type="Button" parent="." unique_id=2074635226]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 34.0
+offset_right = 606.0
+offset_bottom = 139.0
+theme_override_fonts/font = ExtResource("2_4leat")
+theme_override_font_sizes/font_size = 32
+text = "Return to Menu"

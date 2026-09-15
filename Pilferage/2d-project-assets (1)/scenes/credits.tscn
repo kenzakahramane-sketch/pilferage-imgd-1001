@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://caj0ns2qma38g" path="res://scripts/credits.gd" id="1_nm7lk"]
 [ext_resource type="Theme" uid="uid://b4iqbjq3otfnm" path="res://assets/fonts/textLable.tres" id="2_0ctdu"]
 [ext_resource type="Theme" uid="uid://didlpevuq4lh3" path="res://assets/fonts/buttonTheme.tres" id="2_2ckv8"]
+[ext_resource type="FontFile" uid="uid://c8x3e628x2e51" path="res://assets/fonts/PressStart2P-Regular.ttf" id="3_2fbfq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cbqb0"]
 bg_color = Color(0.15294118, 0.18039216, 0.27058825, 1)
@@ -58,11 +59,11 @@ grow_vertical = 2
 scale = Vector2(0.9200004, 0.9350413)
 theme = SubResource("Theme_1ie8s")
 
-[node name="TextureRect" type="TextureRect" parent="ScrollContainer" unique_id=1726313119]
+[node name="TextureRect2" type="TextureRect" parent="ScrollContainer" unique_id=1726313119]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="ColorRect" type="ColorRect" parent="ScrollContainer/TextureRect" unique_id=789205355]
+[node name="ColorRect" type="ColorRect" parent="ScrollContainer/TextureRect2" unique_id=789205355]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 106.64378
@@ -106,6 +107,7 @@ horizontal_alignment = 1
 layout_mode = 2
 theme = ExtResource("2_0ctdu")
 theme_override_font_sizes/font_size = 32
+text = "Diana"
 horizontal_alignment = 1
 
 [node name="Label6" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=196547264]
@@ -126,6 +128,7 @@ horizontal_alignment = 1
 layout_mode = 2
 theme = ExtResource("2_0ctdu")
 theme_override_font_sizes/font_size = 32
+text = "Kenza"
 horizontal_alignment = 1
 
 [node name="Label9" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=286036756]
@@ -166,6 +169,7 @@ horizontal_alignment = 1
 layout_mode = 2
 theme = ExtResource("2_0ctdu")
 theme_override_font_sizes/font_size = 32
+text = "Ryan"
 horizontal_alignment = 1
 
 [node name="Label15" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1188270352]
@@ -186,6 +190,21 @@ horizontal_alignment = 1
 layout_mode = 2
 theme = ExtResource("2_0ctdu")
 theme_override_font_sizes/font_size = 32
+text = "Derek"
+horizontal_alignment = 1
+
+[node name="Label18" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=2027397472]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_2fbfq")
+theme_override_font_sizes/font_size = 32
+text = "A game made by Ryan, Diana, Kenza, and Derek"
+horizontal_alignment = 1
+
+[node name="Label19" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1597000561]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_2fbfq")
+theme_override_font_sizes/font_size = 32
+text = "Thanks for playing!"
 horizontal_alignment = 1
 
 [node name="BackButton" type="Button" parent="." unique_id=1314677983]
@@ -194,9 +213,9 @@ anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 117.0
-offset_top = -180.0
+offset_top = -980.0
 offset_right = 445.0
-offset_bottom = -122.0
+offset_bottom = -922.0
 grow_vertical = 0
 theme = ExtResource("2_2ckv8")
 theme_override_font_sizes/font_size = 21
