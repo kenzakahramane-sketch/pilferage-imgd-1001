@@ -1,6 +1,11 @@
 [gd_scene format=3 uid="uid://c7uyokengmfxn"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://bf4oexnk1n8ky" path="res://assets/images/cat.png" id="1_myi5k"]
+=======
+[ext_resource type="Texture2D" uid="uid://bf4oexnk1n8ky" path="res://assets/images/Sidescroller images/cat.png" id="1_myi5k"]
+[ext_resource type="Texture2D" uid="uid://gbipnr7e31lp" path="res://assets/images/Sidescroller images/pilferage-cat-sheet-v1.1-pixilart.png" id="2_se5fe"]
+>>>>>>> Stashed changes
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_se5fe"]
 atlas = ExtResource("1_myi5k")
@@ -61,6 +66,14 @@ region = Rect2(32, 48, 16, 16)
 [sub_resource type="AtlasTexture" id="AtlasTexture_ltttp"]
 atlas = ExtResource("1_myi5k")
 region = Rect2(48, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xpa1t"]
+atlas = ExtResource("2_se5fe")
+region = Rect2(16, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cdiht"]
+atlas = ExtResource("2_se5fe")
+region = Rect2(0, 96, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8jovi"]
 atlas = ExtResource("1_myi5k")
@@ -215,6 +228,22 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_xpa1t")
+}],
+"loop": 1,
+"name": &"pushCape",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cdiht")
+}],
+"loop": 1,
+"name": &"pushCool",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_8jovi")
 }, {
 "duration": 1.0,
@@ -281,7 +310,11 @@ size = Vector2(6.5, 11)
 position = Vector2(9, -8)
 scale = Vector2(1.147, 1)
 sprite_frames = SubResource("SpriteFrames_ciobh")
+<<<<<<< Updated upstream
 animation = &"jumpCool"
+=======
+animation = &"pushCape"
+>>>>>>> Stashed changes
 autoplay = "idleCool"
 frame_progress = 0.96776724
 

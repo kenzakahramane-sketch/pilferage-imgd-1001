@@ -1,4 +1,12 @@
+<<<<<<< Updated upstream
 res://assets/fonts/buttonTheme.tres
 res://scripts/main_menu.gd
 res://scenes/version_notes.tscn
 res://scripts/version_notes.gd
+=======
+res://scenes/version_history.tscn
+res://assets/fonts/buttonTheme.tres
+res://scenes/cat.tscn
+res://scripts/cat.gd
+res://scenes/level_1.tscn
+>>>>>>> Stashed changes
