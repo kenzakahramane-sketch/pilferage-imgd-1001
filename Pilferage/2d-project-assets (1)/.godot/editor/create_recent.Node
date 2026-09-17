@@ -1,11 +1,13 @@
 CollisionShape2D
 Area2D
+Marker2D
+Node2D
+FoldableContainer
+ColorRect
 Label
 RayCast2D
-Node2D
 TileMapLayer
 CPUParticles2D
-ColorRect
 TextureRect
 ScrollContainer
 VBoxContainer
