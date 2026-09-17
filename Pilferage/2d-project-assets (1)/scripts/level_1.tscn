@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://m3lqofivqr72"]
+[gd_scene format=4 uid="uid://6ckx2wph2j3y"]
 
 [ext_resource type="Texture2D" uid="uid://kpw6j0jvyrr4" path="res://assets/images/Sidescroller images/pilferageact1-tilemapv1.0-pixilart.png" id="1_bswci"]
 [ext_resource type="PackedScene" uid="uid://c7uyokengmfxn" path="res://scenes/cat.tscn" id="2_rus8k"]

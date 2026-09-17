@@ -1,5 +1,5 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1789655271
+::res://::1789655476
 default_bus_layout.tres::AudioBusLayout::6564268947468103023::1789401413::0::1::::<><><>0<>0<><>::
 export_presets.cfg::TextFile::-1::1789401413::0::1::::<><><>0<>0<><>::
 ::res://addons/::1789401463
@@ -58,7 +58,7 @@ impact.tscn::PackedScene::706737085132625066::1789401413::0::1::::<><><>0<>0<><>
 muzzle_flash.gd::GDScript::2184711477186327130::1789401413::0::1::::<>Node2D<><>0<>0<><>::
 muzzle_flash.png::CompressedTexture2D::8165061320742786479::1789401413::1789401413::1::::<><><>0<>0<>d63a7f225b1e1679c8cc4123d78e692f<>res://.godot/imported/muzzle_flash.png-752b19c1a1a60c24eac6f205d487f2ea.ctex::
 muzzle_flash.tscn::PackedScene::6601472980654318439::1789401413::0::1::::<><><>0<>0<><>::uid://6ej4465c3oxu::::res://pistol/muzzle_flash/muzzle_flash.gd<>uid://brgpjilf7s2ul::::res://pistol/muzzle_flash/muzzle_flash.png
-::res://scenes/::1789519072
+::res://scenes/::1789655330
 brotatoclone.tscn::PackedScene::8767155546760665442::1789519072::0::1::::<><><>0<>0<><>::uid://c1sx7bic4uhdj::::res://scenes/player.tscn<>uid://cghebo1ukli5x::::res://scripts/brotatoclone.gd<>uid://c0gpy0pye4jr6::::res://scenes/tree.tscn<>uid://ca32227r5387d::::res://scenes/pubDoor.gd<>uid://42bnlf0jk3uq::::res://assets/images/Topdown images/door.png
 bullet.tscn::PackedScene::4510038469915135496::1789401413::0::1::::<><><>0<>0<><>::uid://cfjvwhypwf5h5::::res://scripts/bullet.gd<>uid://bd4rrqj72amnx::::res://pistol/projectile.png
 cat.tscn::PackedScene::7061654659837373455::1789518675::0::1::::<><><>0<>0<><>::uid://bf4oexnk1n8ky::::res://assets/images/Sidescroller images/cat.png
@@ -78,8 +78,8 @@ pubDoor.gd::GDScript::4832332988117829799::1789514597::0::1::::<>Area2D<><>0<>0<
 splashScreen.tscn::PackedScene::8538491025596743098::1789518675::0::1::::<><><>0<>0<><>::uid://xlymqtsr7j1j::::res://scripts/splash_screen.gd<>uid://c3r8eyeh2833v::::res://characters/happy_boo/square_body.png<>uid://br1jr55mxdn6w::::res://assets/images/Miscellanious images/pixel_art_small.png
 sturdy_mob.tscn::PackedScene::175450130508522366::1789401413::0::1::::<><><>0<>0<><>::uid://ogik4s70pgwl::::res://characters/slime/slime.tscn<>uid://d07l5xwryn2cx::::res://scripts/mob.gd
 tree.tscn::PackedScene::6540903676159351021::1789401413::0::1::::<><><>0<>0<><>::uid://dk5b8a84a6n2h::::res://characters/ground_shadow.png<>uid://bql1cc345qv7d::::res://trees/pine_tree.png
-version_history.tscn::PackedScene::135612260724515998::1789519072::0::1::::<><><>0<>0<><>::uid://caj0ns2qma38g::::res://scripts/credits.gd<>uid://c8x3e628x2e51::::res://assets/fonts/PressStart2P-Regular.ttf<>uid://b4iqbjq3otfnm::::res://assets/fonts/textLable.tres<>uid://didlpevuq4lh3::::res://assets/fonts/buttonTheme.tres
-::res://scripts/::1789519072
+version_history.tscn::PackedScene::135612260724515998::1789655285::0::1::::<><><>0<>0<><>::uid://cj7u3ci8hvyav::::res://scripts/version_history.gd<>uid://c8x3e628x2e51::::res://assets/fonts/PressStart2P-Regular.ttf
+::res://scripts/::1789655429
 brotatoclone.gd::GDScript::5208670503672116907::1789519072::0::1::::<>Node2D<><>0<>0<><>::
 bullet.gd::GDScript::5143679735126824684::1789514597::0::1::::<>Area2D<><>0<>0<><>::
 cat.gd::GDScript::2277258679841232933::1789519072::0::1::::<>CharacterBody2D<><>0<>0<><>::
@@ -87,6 +87,7 @@ credits.gd::GDScript::4792962895185723480::1789514597::0::1::::<>Control<><>0<>0
 dialogue_box.gd::GDScript::237989540336183653::1789514597::0::1::::<>CanvasLayer<><>0<>0<><>::
 dialogue_manager.gd::GDScript::5695379310282828772::1789514597::0::1::::<>Node<><>0<>0<><>::
 gun.gd::GDScript::3489142608771703023::1789514597::0::1::::<>Area2D<><>0<>0<><>::
+level_1.tscn::PackedScene::2180632604282710044::1789655401::0::1::::<><><>0<>0<><>::uid://kpw6j0jvyrr4::::res://assets/images/Sidescroller images/pilferageact1-tilemapv1.0-pixilart.png<>uid://c7uyokengmfxn::::res://scenes/cat.tscn<>uid://7peead4k52jx::::res://scripts/cat.gd<>uid://dtindn668i0np::::res://assets/images/Sidescroller images/pixil-frame-0-9.png<>uid://clpel4kn5cse2::::res://assets/images/Sidescroller images/pixilart-drawing.png<>uid://c8x3e628x2e51::::res://assets/fonts/PressStart2P-Regular.ttf
 lore_journal.gd::GDScript::5278452148165774431::1789401413::0::1::::<>CanvasLayer<><>0<>0<><>::
 main_menu.gd::GDScript::759832593627238010::1789518675::0::1::::<>Control<><>0<>0<><>::
 mob.gd::GDScript::8980765933725370575::1789514597::0::1::::<>CharacterBody2D<><>0<>0<><>::
