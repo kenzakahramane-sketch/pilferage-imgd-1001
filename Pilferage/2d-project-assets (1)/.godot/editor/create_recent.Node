@@ -1,3 +1,5 @@
+CollisionShape2D
+Area2D
 Label
 RayCast2D
 Node2D
@@ -9,6 +11,4 @@ ScrollContainer
 VBoxContainer
 Button
 TileMap
-CollisionShape2D
 StaticBody2D
-Camera2D
