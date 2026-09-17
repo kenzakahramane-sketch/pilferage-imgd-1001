@@ -2,6 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://bf4oexnk1n8ky" path="res://assets/images/Sidescroller images/cat.png" id="1_myi5k"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_myi5k"]
+size = Vector2(6.5, 11)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_se5fe"]
 atlas = ExtResource("1_myi5k")
 region = Rect2(16, 80, 16, 16)
@@ -326,18 +329,8 @@ animations = [{
 "speed": 15.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_myi5k"]
-size = Vector2(6.5, 11)
-
 [node name="cat" type="CharacterBody2D" unique_id=814917533]
 z_index = 1
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1813273544]
-position = Vector2(9, -8)
-scale = Vector2(1.147, 1)
-sprite_frames = SubResource("SpriteFrames_ciobh")
-animation = &"sprintCool"
-autoplay = "idleCool"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=454549907]
 position = Vector2(11.25, -5.5)
@@ -350,3 +343,10 @@ target_position = Vector2(6, 0)
 [node name="RayCastLeft" type="RayCast2D" parent="." unique_id=1294679913]
 position = Vector2(7, -6)
 target_position = Vector2(-6, 0)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1500078002]
+position = Vector2(9, -8)
+scale = Vector2(1.147, 1)
+sprite_frames = SubResource("SpriteFrames_ciobh")
+animation = &"idleCool"
+autoplay = "idleCool"
