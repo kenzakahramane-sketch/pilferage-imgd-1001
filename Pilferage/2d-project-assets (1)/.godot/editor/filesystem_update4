@@ -1,16 +1,2 @@
-res://scenes/version_history.tscn
+res://scenes/splashScreen.tscn
 res://assets/fonts/buttonTheme.tres
-res://scripts/cat.gd
-res://return_to_hubworld.tscn
-res://scenes/return_to_hubworld.tscn
-res://scenes/return_to_hubworld.gd
-res://scenes/level_1.tscn
-res://scenes/brotatoclone.tscn
-res://scripts/brotatoclone.gd
-res://scenes/hubCat.gd
-res://scenes/cat.tscn
-res://scenes/entrance.gd
-res://scenes/exit_door.gd
-res://scenes/interiors.tscn
-res://scenes/pubDoor.gd
-res://scenes/hubCat.tscn
