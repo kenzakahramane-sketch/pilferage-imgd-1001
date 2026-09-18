@@ -25,10 +25,10 @@ func _physics_process(delta: float) -> void:
 
 	# Get the input direction and handle the movement/deceleration.
 	var direction := Input.get_axis("move_left", "move_right")
-	if direction > 0:
+	if velocity.x > 0:
 		animated_sprite.flip_h = false
 		hitbox.position.x = 11.25
-	if direction < 0:
+	if velocity.x < 0:
 		animated_sprite.flip_h = true
 		hitbox.position.x = 6.75
 	if direction:
@@ -76,6 +76,11 @@ func _physics_process(delta: float) -> void:
 					velocity.x = MAX_SPEED * 1.25
 				else:
 					velocity.x = MAX_SPEED * 1.75
-	
+	if velocity.x > 0:
+		animated_sprite.flip_h = false
+		hitbox.position.x = 11.25
+	if velocity.x < 0:
+		animated_sprite.flip_h = true
+		hitbox.position.x = 6.75
 		
 		
