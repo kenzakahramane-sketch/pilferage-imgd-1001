@@ -1,2 +1,11 @@
 res://scenes/cat.tscn
 res://scripts/cat.gd
+<<<<<<< Updated upstream
+=======
+res://scenes/level_1.tscn
+res://scenes/return_to_hubworld.tscn
+res://scenes/exit_door.gd
+res://scenes/pubDoor.gd
+res://scenes/return_to_hubworld.gd
+res://scripts/brotatoclone.gd
+>>>>>>> Stashed changes
