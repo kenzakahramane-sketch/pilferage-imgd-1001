@@ -196,7 +196,11 @@ see the updates
 - Updated the sidescroller level with more obstacles
 to try out
 - You can now return to the hubworld by moving off the
-edge of the screen to the left"
+edge of the screen to the left
+- The hub world also has a way to enter the sidescroller
+level
+- The cat is now in the hub world, press the shift key
+to sprint"
 horizontal_alignment = 1
 
 [node name="BackButton" type="Button" parent="." unique_id=1204261190]

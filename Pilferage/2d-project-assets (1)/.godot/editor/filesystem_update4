@@ -1,3 +1,4 @@
 res://scenes/pubDoor.gd
 res://scenes/return_to_hubworld.gd
 res://scripts/cat.gd
+res://scenes/version_history.tscn
