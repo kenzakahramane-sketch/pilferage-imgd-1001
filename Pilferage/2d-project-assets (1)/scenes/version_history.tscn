@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cj7u3ci8hvyav" path="res://scripts/version_history.gd" id="1_cikha"]
 [ext_resource type="FontFile" uid="uid://c8x3e628x2e51" path="res://assets/fonts/PressStart2P-Regular.ttf" id="2_4leat"]
 
-[node name="Version History" type="Control" unique_id=1882803910]
+[node name="Version History" type="Control" unique_id=2078436943]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,74 +12,74 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_cikha")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=593796011]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1996809501]
 layout_mode = 0
 offset_right = 1922.0
 offset_bottom = 965.0
 
-[node name="ColorRect" type="ColorRect" parent="TextureRect" unique_id=119448301]
+[node name="ColorRect" type="ColorRect" parent="TextureRect" unique_id=147438642]
 layout_mode = 0
 offset_right = 1925.0
 offset_bottom = 1039.0
-color = Color(0.5176471, 0.6784314, 0.654902, 1)
+color = Color(0.517647, 0.678431, 0.654902, 1)
 
-[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=839151747]
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=531231822]
 layout_mode = 0
 offset_left = 51.0
 offset_top = 55.0
 offset_right = 1878.0
 offset_bottom = 983.0
 
-[node name="TextureRect" type="TextureRect" parent="ScrollContainer" unique_id=2000397029]
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer" unique_id=1390583845]
 layout_mode = 2
 
-[node name="ColorRect" type="ColorRect" parent="ScrollContainer/TextureRect" unique_id=1495158182]
+[node name="ColorRect" type="ColorRect" parent="ScrollContainer/TextureRect" unique_id=168872808]
 layout_mode = 0
 offset_left = 3.0
 offset_top = -3.0
 offset_right = 1819.0
-offset_bottom = 2268.0
-color = Color(0.14117648, 0.13333334, 0.18039216, 1)
+offset_bottom = 3980.0
+color = Color(0.141176, 0.133333, 0.180392, 1)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=893407225]
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=1451312130]
 layout_mode = 2
 theme_override_constants/separation = 50
 
-[node name="Label0" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=319448735]
+[node name="Label0" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=837229568]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_4leat")
 theme_override_font_sizes/font_size = 32
 text = "                                                         "
 
-[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1530454234]
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1771737039]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_4leat")
 theme_override_font_sizes/font_size = 32
 text = "Changelog"
 horizontal_alignment = 1
 
-[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=414845066]
+[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=811866473]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_4leat")
 theme_override_font_sizes/font_size = 32
 text = "* * * * * * * *"
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=873077615]
+[node name="Label3" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=47669213]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_4leat")
 theme_override_font_sizes/font_size = 32
 text = "Version 0.1 (Sprint 1) 8/27 - 9/1"
 horizontal_alignment = 1
 
-[node name="Label4" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=349906308]
+[node name="Label4" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1366385388]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_4leat")
 theme_override_font_sizes/font_size = 32
 text = "* * * * * * * *"
 horizontal_alignment = 1
 
-[node name="Label5" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=251562015]
+[node name="Label5" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1302329251]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_4leat")
 theme_override_font_sizes/font_size = 32
@@ -90,28 +90,28 @@ text = "- Added the main menu
 - Added verious assets for the future"
 horizontal_alignment = 1
 
-[node name="Label6" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1498532219]
+[node name="Label6" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=440816875]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_4leat")
 theme_override_font_sizes/font_size = 32
 text = "* * * * * * * *"
 horizontal_alignment = 1
 
-[node name="Label7" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1023912336]
+[node name="Label7" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1150596738]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_4leat")
 theme_override_font_sizes/font_size = 32
 text = "Version 0.2 (Sprint 2) 9/2 - 9/8"
 horizontal_alignment = 1
 
-[node name="Label8" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1852598711]
+[node name="Label8" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1198437796]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_4leat")
 theme_override_font_sizes/font_size = 32
 text = "* * * * * * * *"
 horizontal_alignment = 1
 
-[node name="Label9" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=201095253]
+[node name="Label9" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1384869058]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_4leat")
 theme_override_font_sizes/font_size = 32
@@ -123,28 +123,28 @@ and sidescroller levels
 access the sidescolling level"
 horizontal_alignment = 1
 
-[node name="Label10" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1851701515]
+[node name="Label10" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1482945621]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_4leat")
 theme_override_font_sizes/font_size = 32
 text = "* * * * * * * *"
 horizontal_alignment = 1
 
-[node name="Label11" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=539636430]
+[node name="Label11" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1557798087]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_4leat")
 theme_override_font_sizes/font_size = 32
 text = "Version 0.3 (Sprint 3) 9/9 - 9/15"
 horizontal_alignment = 1
 
-[node name="Label12" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=264517873]
+[node name="Label12" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1135499843]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_4leat")
 theme_override_font_sizes/font_size = 32
 text = "* * * * * * * *"
 horizontal_alignment = 1
 
-[node name="Label13" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=885239974]
+[node name="Label13" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=541215100]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_4leat")
 theme_override_font_sizes/font_size = 32
@@ -162,10 +162,44 @@ space bar (no push animation)
 you can perform a wall push,
 which gives you a burst of speed
 - Using a wall push while pressing jump will allow you
-to wall jump"
+to wall jump
+"
 horizontal_alignment = 1
 
-[node name="BackButton" type="Button" parent="." unique_id=2074635226]
+[node name="Label14" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1892050095]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4leat")
+theme_override_font_sizes/font_size = 32
+text = "* * * * * * * *"
+horizontal_alignment = 1
+
+[node name="Label15" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=897449769]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4leat")
+theme_override_font_sizes/font_size = 32
+text = "Version 0.4 (Sprint 4) 9/16 - 9/22"
+horizontal_alignment = 1
+
+[node name="Label16" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=326206712]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4leat")
+theme_override_font_sizes/font_size = 32
+text = "* * * * * * * *"
+horizontal_alignment = 1
+
+[node name="Label17" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=107873099]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4leat")
+theme_override_font_sizes/font_size = 32
+text = "- Fixed the version history, now you can actually
+see the updates
+- Updated the sidescroller level with more obstacles
+to try out
+- You can now return to the hubworld by moving off the
+edge of the screen to the left"
+horizontal_alignment = 1
+
+[node name="BackButton" type="Button" parent="." unique_id=1204261190]
 layout_mode = 0
 offset_left = 53.0
 offset_top = 57.0

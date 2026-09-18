@@ -12,3 +12,5 @@ TextureRect
 ScrollContainer
 VBoxContainer
 Button
+TileMap
+StaticBody2D

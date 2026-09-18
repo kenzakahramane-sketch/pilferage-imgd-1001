@@ -9,7 +9,7 @@ const MAX_SPEED = 150
 @onready var detect_left = $RayCastLeft
 @onready var detect_right = $RayCastRight
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
+	# Add the gravity. When moving against a wall, you will fall down slower
 	if not is_on_floor():
 		if detect_right.is_colliding() and velocity.y > 0 and animated_sprite.flip_h == false or detect_left.is_colliding() and velocity.y > 0 and animated_sprite.flip_h == true:
 			velocity += get_gravity() * delta / 20
@@ -59,7 +59,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		if velocity.y > 0:
 			animated_sprite.play("fallCool")
-	# The push mechanic
+	# The push mechanic. Push against a wall to perform a wall push, wall pushes done while pressing jump will become a wall jump.
 	if Input.is_action_just_pressed("Push"):
 		if detect_right.is_colliding() and animated_sprite.flip_h == false:
 			if Input.is_action_pressed("move_up"):
