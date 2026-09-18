@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-
 const ACCELERATION = 2
 const JUMP_VELOCITY = -250.0
 const MAX_SPEED = 150
@@ -8,6 +7,8 @@ const MAX_SPEED = 150
 @onready var hitbox = $CollisionShape2D
 @onready var detect_left = $RayCastLeft
 @onready var detect_right = $RayCastRight
+@onready var detect_down = $RayCastDown
+@onready var audio_grass = $"Grass sound effect"
 func _physics_process(delta: float) -> void:
 	# Add the gravity. When moving against a wall, you will fall down slower
 	if not is_on_floor():
@@ -22,6 +23,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		animated_sprite.play("jumpCool")
 		velocity.y = JUMP_VELOCITY + JUMP_VELOCITY * 0.15 * (abs(velocity.x) / 100)
+		
 
 	# Get the input direction and handle the movement/deceleration.
 	var direction := Input.get_axis("move_left", "move_right")
@@ -45,13 +47,12 @@ func _physics_process(delta: float) -> void:
 		if velocity.x < 0:
 			velocity.x = move_toward(velocity.x, -1 * MAX_SPEED, ACCELERATION * 1.5)
 	move_and_slide()
-	# Detects collision for dangerous things.
-	
+	# Detects collision for things.
 	# Different animations are played based on the current state of your movement.
 	if is_on_floor():
 		if velocity.x == 0:
 			animated_sprite.play("idleCool")
-		else:
+		else:	
 			if abs(velocity.x) >= MAX_SPEED:
 				animated_sprite.play("sprintCool")
 			else:
@@ -79,8 +80,8 @@ func _physics_process(delta: float) -> void:
 	if velocity.x > 0:
 		animated_sprite.flip_h = false
 		hitbox.position.x = 11.25
+		detect_down.position.x = 11.25
 	if velocity.x < 0:
 		animated_sprite.flip_h = true
 		hitbox.position.x = 6.75
-		
-		
+		detect_down.position.x = 6.75

@@ -200,7 +200,10 @@ edge of the screen to the left
 - The hub world also has a way to enter the sidescroller
 level
 - The cat is now in the hub world, press the shift key
-to sprint"
+to sprint
+- The cat in the sidescroller now faces in a direction
+based on its current velocity instead of the direction
+of the most recent input"
 horizontal_alignment = 1
 
 [node name="BackButton" type="Button" parent="." unique_id=1204261190]
