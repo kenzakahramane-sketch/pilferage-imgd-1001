@@ -1,10 +1,2 @@
-res://scenes/brotatoclone.tscn
-res://assets/fonts/buttonTheme.tres
-res://scripts/brotatoclone.gd
-res://scenes/hubCat.gd
 res://scenes/cat.tscn
-res://scenes/entrance.gd
-res://scenes/exit_door.gd
-res://scenes/interiors.tscn
-res://scenes/pubDoor.gd
-res://scenes/hubCat.tscn
+res://scripts/cat.gd
