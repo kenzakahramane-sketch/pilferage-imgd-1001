@@ -203,7 +203,12 @@ level
 to sprint
 - The cat in the sidescroller now faces in a direction
 based on its current velocity instead of the direction
-of the most recent input"
+of the most recent input
+- If you're very close to a wall, the cat will
+automatically face it to aid you in wall pushing or wall
+jumping
+- Added coyote time and jump buffering to make timing
+inputs less demanding"
 horizontal_alignment = 1
 
 [node name="BackButton" type="Button" parent="." unique_id=1204261190]

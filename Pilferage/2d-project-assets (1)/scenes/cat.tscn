@@ -339,11 +339,13 @@ shape = SubResource("RectangleShape2D_myi5k")
 
 [node name="RayCastRight" type="RayCast2D" parent="." unique_id=586380289]
 position = Vector2(11, -6)
-target_position = Vector2(6, 0)
+target_position = Vector2(8, 0)
+hit_from_inside = true
 
 [node name="RayCastLeft" type="RayCast2D" parent="." unique_id=1294679913]
 position = Vector2(7, -6)
-target_position = Vector2(-6, 0)
+target_position = Vector2(-8, 0)
+hit_from_inside = true
 
 [node name="RayCastDown" type="RayCast2D" parent="." unique_id=1558546788]
 position = Vector2(11.25, -3)
@@ -359,3 +361,11 @@ autoplay = "idleCool"
 [node name="Grass sound effect" type="AudioStreamPlayer2D" parent="." unique_id=802878189]
 stream = ExtResource("2_se5fe")
 volume_db = 20.0
+
+[node name="Coyote timer" type="Timer" parent="." unique_id=236537499]
+wait_time = 0.1
+one_shot = true
+
+[node name="Jump buffer timer" type="Timer" parent="." unique_id=396974780]
+wait_time = 0.1
+one_shot = true
