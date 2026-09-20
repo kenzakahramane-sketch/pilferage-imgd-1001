@@ -1,5 +1,7 @@
-res://scenes/hub.tscn
-res://scenes/exit.gd
-res://scenes/exit_door.gd
+res://scenes/pubDoor.gd
 res://scenes/return_to_hubworld.gd
-res://scripts/main_menu.gd
+res://scripts/cat.gd
+res://scenes/version_history.tscn
+res://scenes/level_1.tscn
+res://scenes/cat.tscn
+res://scenes/hubCat.tscn
