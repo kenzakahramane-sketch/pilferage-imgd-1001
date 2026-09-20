@@ -2,4 +2,4 @@ extends Area2D
 
 func _on_body_entered(body):
 	if body.name == "hubCat":
-		get_tree().change_scene_to_file("res://scenes/brotatoclone.tscn")
+		get_tree().change_scene_to_file("res://scenes/hub.tscn")

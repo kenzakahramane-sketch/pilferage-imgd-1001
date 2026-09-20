@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://dw541hhyrvxao"]
 
-[ext_resource type="Script" uid="uid://cghebo1ukli5x" path="res://scripts/brotatoclone.gd" id="1_svci8"]
-[ext_resource type="PackedScene" uid="uid://c0gpy0pye4jr6" path="res://scenes/tree.tscn" id="2_1kod4"]
-[ext_resource type="Script" uid="uid://ca32227r5387d" path="res://scenes/pubDoor.gd" id="4_7xkgf"]
-[ext_resource type="Texture2D" uid="uid://42bnlf0jk3uq" path="res://assets/images/Topdown images/door.png" id="5_m1wyy"]
-[ext_resource type="PackedScene" uid="uid://c7uyokengmfxn" path="res://scenes/cat.tscn" id="6_l1rjk"]
-[ext_resource type="Script" uid="uid://i25vqnbrl3us" path="res://scenes/entrance.gd" id="6_m1wyy"]
-[ext_resource type="Script" uid="uid://bvxmdlka7brrd" path="res://scenes/hubCat.gd" id="7_2lv1l"]
-[ext_resource type="Texture2D" uid="uid://bf4oexnk1n8ky" path="res://assets/images/Sidescroller images/cat.png" id="7_l1rjk"]
-[ext_resource type="Texture2D" uid="uid://clkpjavs3gywl" path="res://assets/images/Hub Images/catBack.png" id="8_6me8n"]
-[ext_resource type="Texture2D" uid="uid://4vt5jjjrbjky" path="res://assets/images/Hub Images/catFront.png" id="9_6me8n"]
+[ext_resource type="Script" uid="uid://cghebo1ukli5x" path="res://scripts/hub.gd" id="1_4oyfp"]
+[ext_resource type="PackedScene" uid="uid://c0gpy0pye4jr6" path="res://scenes/tree.tscn" id="2_lcd1r"]
+[ext_resource type="Script" uid="uid://ca32227r5387d" path="res://scenes/pubDoor.gd" id="3_s6eg2"]
+[ext_resource type="Texture2D" uid="uid://42bnlf0jk3uq" path="res://assets/images/Topdown images/door.png" id="4_glsmu"]
+[ext_resource type="Script" uid="uid://i25vqnbrl3us" path="res://scenes/entrance.gd" id="5_phvbg"]
+[ext_resource type="PackedScene" uid="uid://c7uyokengmfxn" path="res://scenes/cat.tscn" id="6_3q32m"]
+[ext_resource type="Script" uid="uid://bvxmdlka7brrd" path="res://scenes/hubCat.gd" id="7_8hrlh"]
+[ext_resource type="Texture2D" uid="uid://clkpjavs3gywl" path="res://assets/images/Hub Images/catBack.png" id="8_5ox4q"]
+[ext_resource type="Texture2D" uid="uid://bf4oexnk1n8ky" path="res://assets/images/Sidescroller images/cat.png" id="9_mw5nc"]
+[ext_resource type="Texture2D" uid="uid://4vt5jjjrbjky" path="res://assets/images/Hub Images/catFront.png" id="10_7t3s2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rekuv"]
 size = Vector2(87, 135)
@@ -27,162 +27,162 @@ size = Vector2(342, 196)
 size = Vector2(6.5, 11)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_se5fe"]
-atlas = ExtResource("7_l1rjk")
+atlas = ExtResource("9_mw5nc")
 region = Rect2(16, 80, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t8pth"]
-atlas = ExtResource("7_l1rjk")
+atlas = ExtResource("9_mw5nc")
 region = Rect2(0, 80, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7vi38"]
-atlas = ExtResource("7_l1rjk")
+atlas = ExtResource("9_mw5nc")
 region = Rect2(96, 64, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cxap7"]
-atlas = ExtResource("7_l1rjk")
+atlas = ExtResource("9_mw5nc")
 region = Rect2(96, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tol8a"]
-atlas = ExtResource("7_l1rjk")
+atlas = ExtResource("9_mw5nc")
 region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o55mh"]
-atlas = ExtResource("7_l1rjk")
+atlas = ExtResource("9_mw5nc")
 region = Rect2(64, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ic5u8"]
-atlas = ExtResource("7_l1rjk")
+atlas = ExtResource("9_mw5nc")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8px16"]
-atlas = ExtResource("7_l1rjk")
+atlas = ExtResource("9_mw5nc")
 region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kedyd"]
-atlas = ExtResource("7_l1rjk")
+atlas = ExtResource("9_mw5nc")
 region = Rect2(0, 64, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v4p53"]
-atlas = ExtResource("7_l1rjk")
+atlas = ExtResource("9_mw5nc")
 region = Rect2(16, 64, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_32af4"]
-atlas = ExtResource("7_l1rjk")
+atlas = ExtResource("9_mw5nc")
 region = Rect2(32, 64, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sjxxq"]
-atlas = ExtResource("7_l1rjk")
+atlas = ExtResource("9_mw5nc")
 region = Rect2(0, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l5p5i"]
-atlas = ExtResource("7_l1rjk")
+atlas = ExtResource("9_mw5nc")
 region = Rect2(16, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t0nfq"]
-atlas = ExtResource("7_l1rjk")
+atlas = ExtResource("9_mw5nc")
 region = Rect2(32, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ltttp"]
-atlas = ExtResource("7_l1rjk")
+atlas = ExtResource("9_mw5nc")
 region = Rect2(48, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8jovi"]
-atlas = ExtResource("7_l1rjk")
+atlas = ExtResource("9_mw5nc")
 region = Rect2(0, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1551j"]
-atlas = ExtResource("7_l1rjk")
+atlas = ExtResource("9_mw5nc")
 region = Rect2(16, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ox7vo"]
-atlas = ExtResource("7_l1rjk")
+atlas = ExtResource("9_mw5nc")
 region = Rect2(32, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e3hvw"]
-atlas = ExtResource("7_l1rjk")
+atlas = ExtResource("9_mw5nc")
 region = Rect2(48, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t4omw"]
-atlas = ExtResource("7_l1rjk")
+atlas = ExtResource("9_mw5nc")
 region = Rect2(48, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2wmww"]
-atlas = ExtResource("7_l1rjk")
+atlas = ExtResource("9_mw5nc")
 region = Rect2(64, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yf1kj"]
-atlas = ExtResource("7_l1rjk")
+atlas = ExtResource("9_mw5nc")
 region = Rect2(80, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dr6s3"]
-atlas = ExtResource("7_l1rjk")
+atlas = ExtResource("9_mw5nc")
 region = Rect2(96, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3fcyy"]
-atlas = ExtResource("7_l1rjk")
+atlas = ExtResource("9_mw5nc")
 region = Rect2(0, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rgipc"]
-atlas = ExtResource("7_l1rjk")
+atlas = ExtResource("9_mw5nc")
 region = Rect2(16, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4m8cu"]
-atlas = ExtResource("7_l1rjk")
+atlas = ExtResource("9_mw5nc")
 region = Rect2(32, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o8rmy"]
-atlas = ExtResource("7_l1rjk")
+atlas = ExtResource("9_mw5nc")
 region = Rect2(48, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_njgcu"]
-atlas = ExtResource("7_l1rjk")
+atlas = ExtResource("9_mw5nc")
 region = Rect2(48, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xcfqr"]
-atlas = ExtResource("7_l1rjk")
+atlas = ExtResource("9_mw5nc")
 region = Rect2(64, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qonxf"]
-atlas = ExtResource("7_l1rjk")
+atlas = ExtResource("9_mw5nc")
 region = Rect2(80, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_118il"]
-atlas = ExtResource("7_l1rjk")
+atlas = ExtResource("9_mw5nc")
 region = Rect2(96, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_myi5k"]
-atlas = ExtResource("7_l1rjk")
+atlas = ExtResource("9_mw5nc")
 region = Rect2(0, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yq6bb"]
-atlas = ExtResource("7_l1rjk")
+atlas = ExtResource("9_mw5nc")
 region = Rect2(16, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ainfc"]
-atlas = ExtResource("7_l1rjk")
+atlas = ExtResource("9_mw5nc")
 region = Rect2(32, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4st07"]
-atlas = ExtResource("7_l1rjk")
+atlas = ExtResource("9_mw5nc")
 region = Rect2(48, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cjkto"]
-atlas = ExtResource("7_l1rjk")
+atlas = ExtResource("9_mw5nc")
 region = Rect2(64, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7ia2j"]
-atlas = ExtResource("7_l1rjk")
+atlas = ExtResource("9_mw5nc")
 region = Rect2(80, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yl6i5"]
-atlas = ExtResource("7_l1rjk")
+atlas = ExtResource("9_mw5nc")
 region = Rect2(96, 32, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2lv1l"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("8_6me8n")
+"texture": ExtResource("8_5ox4q")
 }],
 "loop": 1,
 "name": &"backCool",
@@ -222,7 +222,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("9_6me8n")
+"texture": ExtResource("10_7t3s2")
 }],
 "loop": 1,
 "name": &"frontCool",
@@ -368,7 +368,7 @@ animations = [{
 
 [node name="Game" type="Node2D" unique_id=21739277]
 y_sort_enabled = true
-script = ExtResource("1_svci8")
+script = ExtResource("1_4oyfp")
 
 [node name="Ground" type="CanvasLayer" parent="." unique_id=2010963963]
 layer = -30
@@ -513,7 +513,7 @@ vertical_alignment = 1
 wait_time = 2.0
 autostart = true
 
-[node name="tempTree" parent="." unique_id=1024133271 instance=ExtResource("2_1kod4")]
+[node name="tempTree" parent="." unique_id=1024133271 instance=ExtResource("2_lcd1r")]
 position = Vector2(-1296, -314)
 
 [node name="Home" type="Area2D" parent="." unique_id=1381094304]
@@ -529,7 +529,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Door" type="Area2D" parent="Home/tempWall" unique_id=2119961848]
 position = Vector2(145, 304)
-script = ExtResource("4_7xkgf")
+script = ExtResource("3_s6eg2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Home/tempWall/Door" unique_id=581836426]
 position = Vector2(4.5, -42)
@@ -538,7 +538,7 @@ shape = SubResource("RectangleShape2D_rekuv")
 [node name="Sprite2D" type="Sprite2D" parent="Home/tempWall/Door" unique_id=43186765]
 position = Vector2(0.99998474, -47.000015)
 scale = Vector2(0.08730158, 0.05841823)
-texture = ExtResource("5_m1wyy")
+texture = ExtResource("4_glsmu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Home" unique_id=895885812]
 position = Vector2(262.75, 96.75)
@@ -557,7 +557,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Door" type="Area2D" parent="Home2/tempWall" unique_id=1072614853]
 position = Vector2(145, 304)
-script = ExtResource("4_7xkgf")
+script = ExtResource("3_s6eg2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Home2/tempWall/Door" unique_id=1987808523]
 position = Vector2(4.5, -42)
@@ -566,7 +566,7 @@ shape = SubResource("RectangleShape2D_rekuv")
 [node name="Sprite2D" type="Sprite2D" parent="Home2/tempWall/Door" unique_id=931007278]
 position = Vector2(0.99998474, -47.000015)
 scale = Vector2(0.08730158, 0.05841823)
-texture = ExtResource("5_m1wyy")
+texture = ExtResource("4_glsmu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Home2" unique_id=370376779]
 position = Vector2(262.75, 96.75)
@@ -585,7 +585,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Door" type="Area2D" parent="Home3/tempWall" unique_id=1990977563]
 position = Vector2(145, 304)
-script = ExtResource("4_7xkgf")
+script = ExtResource("3_s6eg2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Home3/tempWall/Door" unique_id=1754440996]
 position = Vector2(4.5, -42)
@@ -594,7 +594,7 @@ shape = SubResource("RectangleShape2D_rekuv")
 [node name="Sprite2D" type="Sprite2D" parent="Home3/tempWall/Door" unique_id=112195648]
 position = Vector2(0.99998474, -47.000015)
 scale = Vector2(0.08730158, 0.05841823)
-texture = ExtResource("5_m1wyy")
+texture = ExtResource("4_glsmu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Home3" unique_id=267239654]
 position = Vector2(262.75, 96.75)
@@ -613,7 +613,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Door" type="Area2D" parent="Home4/tempWall" unique_id=876472442]
 position = Vector2(145, 304)
-script = ExtResource("4_7xkgf")
+script = ExtResource("3_s6eg2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Home4/tempWall/Door" unique_id=1170584917]
 position = Vector2(4.5, -42)
@@ -622,7 +622,7 @@ shape = SubResource("RectangleShape2D_rekuv")
 [node name="Sprite2D" type="Sprite2D" parent="Home4/tempWall/Door" unique_id=1444852400]
 position = Vector2(0.99998474, -47.000015)
 scale = Vector2(0.08730158, 0.05841823)
-texture = ExtResource("5_m1wyy")
+texture = ExtResource("4_glsmu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Home4" unique_id=2039985275]
 position = Vector2(262.75, 96.75)
@@ -641,7 +641,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Door" type="Area2D" parent="Home5/tempWall" unique_id=811820006]
 position = Vector2(145, 304)
-script = ExtResource("4_7xkgf")
+script = ExtResource("3_s6eg2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Home5/tempWall/Door" unique_id=767085703]
 position = Vector2(4.5, -42)
@@ -650,7 +650,7 @@ shape = SubResource("RectangleShape2D_rekuv")
 [node name="Sprite2D" type="Sprite2D" parent="Home5/tempWall/Door" unique_id=1245076876]
 position = Vector2(0.99998474, -47.000015)
 scale = Vector2(0.08730158, 0.05841823)
-texture = ExtResource("5_m1wyy")
+texture = ExtResource("4_glsmu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Home5" unique_id=200647536]
 position = Vector2(262.75, 96.75)
@@ -669,7 +669,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Door" type="Area2D" parent="Home6/tempWall" unique_id=1355753973]
 position = Vector2(145, 304)
-script = ExtResource("4_7xkgf")
+script = ExtResource("3_s6eg2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Home6/tempWall/Door" unique_id=630464725]
 position = Vector2(4.5, -42)
@@ -678,7 +678,7 @@ shape = SubResource("RectangleShape2D_rekuv")
 [node name="Sprite2D" type="Sprite2D" parent="Home6/tempWall/Door" unique_id=1902968808]
 position = Vector2(0.99998474, -47.000015)
 scale = Vector2(0.08730158, 0.05841823)
-texture = ExtResource("5_m1wyy")
+texture = ExtResource("4_glsmu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Home6" unique_id=1430124334]
 position = Vector2(262.75, 96.75)
@@ -697,7 +697,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Door" type="Area2D" parent="Home7/tempWall" unique_id=1375738437]
 position = Vector2(145, 304)
-script = ExtResource("4_7xkgf")
+script = ExtResource("3_s6eg2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Home7/tempWall/Door" unique_id=1340810708]
 position = Vector2(4.5, -42)
@@ -706,7 +706,7 @@ shape = SubResource("RectangleShape2D_rekuv")
 [node name="Sprite2D" type="Sprite2D" parent="Home7/tempWall/Door" unique_id=69634773]
 position = Vector2(0.99998474, -47.000015)
 scale = Vector2(0.08730158, 0.05841823)
-texture = ExtResource("5_m1wyy")
+texture = ExtResource("4_glsmu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Home7" unique_id=1479981154]
 position = Vector2(262.75, 96.75)
@@ -725,7 +725,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Door" type="Area2D" parent="Home8/tempWall" unique_id=585744163]
 position = Vector2(145, 304)
-script = ExtResource("4_7xkgf")
+script = ExtResource("3_s6eg2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Home8/tempWall/Door" unique_id=2097773514]
 position = Vector2(4.5, -42)
@@ -734,7 +734,7 @@ shape = SubResource("RectangleShape2D_rekuv")
 [node name="Sprite2D" type="Sprite2D" parent="Home8/tempWall/Door" unique_id=2068817577]
 position = Vector2(0.99998474, -47.000015)
 scale = Vector2(0.08730158, 0.05841823)
-texture = ExtResource("5_m1wyy")
+texture = ExtResource("4_glsmu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Home8" unique_id=1683155699]
 position = Vector2(262.75, 96.75)
@@ -753,7 +753,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Door" type="Area2D" parent="Home9/tempWall" unique_id=1156218448]
 position = Vector2(145, 304)
-script = ExtResource("4_7xkgf")
+script = ExtResource("3_s6eg2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Home9/tempWall/Door" unique_id=1202083042]
 position = Vector2(4.5, -42)
@@ -762,7 +762,7 @@ shape = SubResource("RectangleShape2D_rekuv")
 [node name="Sprite2D" type="Sprite2D" parent="Home9/tempWall/Door" unique_id=721517151]
 position = Vector2(0.99998474, -47.000015)
 scale = Vector2(0.08730158, 0.05841823)
-texture = ExtResource("5_m1wyy")
+texture = ExtResource("4_glsmu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Home9" unique_id=1443632880]
 position = Vector2(262.75, 96.75)
@@ -800,7 +800,7 @@ position = Vector2(1146, 9410)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="entrance" unique_id=881088273]
 position = Vector2(-102, 71)
 shape = SubResource("RectangleShape2D_m5gep")
-script = ExtResource("6_m1wyy")
+script = ExtResource("5_phvbg")
 
 [node name="Opening" type="ColorRect" parent="entrance" unique_id=1541685702]
 offset_left = -271.5
@@ -816,11 +816,11 @@ position = Vector2(-5311, -826)
 [node name="forest" type="Marker2D" parent="Spawns" unique_id=1416923314]
 position = Vector2(6359, 9948)
 
-[node name="hubCat" parent="." unique_id=814917533 instance=ExtResource("6_l1rjk")]
+[node name="hubCat" parent="." unique_id=814917533 instance=ExtResource("6_3q32m")]
 position = Vector2(-729, 7)
 rotation = -0.009041538
 scale = Vector2(9.623733, 9.623733)
-script = ExtResource("7_2lv1l")
+script = ExtResource("7_8hrlh")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="hubCat" unique_id=683514641]
 position = Vector2(11.25, -5.5)
