@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cuqta3bwplpu"]
 
-[ext_resource type="Script" uid="uid://baeokwut4pdyr" path="res://scenes/return_to_hubworld.gd" id="1_2seat"]
+[ext_resource type="Script" uid="uid://bmw6j3lcjfq6t" path="res://scripts/return_to_hubworld.gd" id="1_2seat"]
 
 [node name="return to hubworld" type="Area2D" unique_id=1214173505]
 collision_mask = 2

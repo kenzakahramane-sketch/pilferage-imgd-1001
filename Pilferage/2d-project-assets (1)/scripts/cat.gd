@@ -1,6 +1,6 @@
 extends CharacterBody2D
 var wall_cling = 0
-const ACCELERATION = 2
+const ACCELERATION = 2.5
 const JUMP_VELOCITY = -250.0
 const MAX_SPEED = 150
 @onready var animated_sprite = $AnimatedSprite2D
