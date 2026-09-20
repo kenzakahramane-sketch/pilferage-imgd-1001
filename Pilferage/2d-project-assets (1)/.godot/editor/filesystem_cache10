@@ -11,7 +11,7 @@ README.md::TextFile::-1::1789738851::0::1::::<><><>0<>0<><>::
 ::res://assets/fonts/::1789939133
 buttonTheme.tres::Theme::7727660850740282078::1789938723::0::1::::<><><>0<>0<><>::uid://c8x3e628x2e51::::res://assets/fonts/PressStart2P-Regular.ttf
 OFL.txt::TextFile::-1::1789738851::0::1::::<><><>0<>0<><>::
-PressStart2P-Regular.ttf::FontFile::7138262786222471902::1789738851::1789939133::1::::<><><>0<>0<>6f0700480605ec53642be16f58438026<>res://.godot/imported/PressStart2P-Regular.ttf-e20d5ff307f5ecfa1e9984f5c6184197.fontdata::
+PressStart2P-Regular.ttf::FontFile::7138262786222471502::1789738851::1789939133::1::::<><><>0<>0<>6f0700480605ec53642be16f58438026<>res://.godot/imported/PressStart2P-Regular.ttf-e20d5ff307f5ecfa1e9984f5c6184197.fontdata::
 textLable.tres::Theme::4439385927625362258::1789738851::0::1::::<><><>0<>0<><>::uid://c8x3e628x2e51::::res://assets/fonts/PressStart2P-Regular.ttf
 ::res://assets/images/::1789739046
 ::res://assets/images/Hub Images/::1789939133
@@ -19,7 +19,7 @@ catBack.png::CompressedTexture2D::5566489285278209223::1789738851::1789939133::1
 catFront.png::CompressedTexture2D::2080036082062981768::1789738851::1789939133::1::::<><><>0<>0<>02e1da15cf53b8f7b3af92ab49cf2d8c<>res://.godot/imported/catFront.png-24fee99c37918fa87b1405a0a3632023.ctex::
 ::res://assets/images/Miscellanious images/::1789939137
 cow.jpg::CompressedTexture2D::2358534325479046056::1789738851::1789939133::1::::<><><>0<>0<>b8cc7f42c143c67df9c93205053a2651<>res://.godot/imported/cow.jpg-20d8772e8e2d3c5f95e3b2425bc0c605.ctex::
-GameLogoVer1.png::CompressedTexture2D::2465826169161739337::1789738851::1789939133::1::::<><><>0<>0<>524d2e42f8fe3906484440c54312b083<>res://.godot/imported/GameLogoVer1.png-449bd356d6011dfaa35c4f5bbecc97ea.ctex::
+GameLogoVer1.png::CompressedTexture2D::2465826189161739337::1789738851::1789939133::1::::<><><>0<>0<>524d2e42f8fe3906484440c54312b083<>res://.godot/imported/GameLogoVer1.png-449bd356d6011dfaa35c4f5bbecc97ea.ctex::
 icon.png::CompressedTexture2D::15047351210411190::1789738851::1789939133::1::::<><><>0<>0<>33a11401645a689247e326166122389f<>res://.godot/imported/icon.png-14614cd71dfb59f865009aac72303e3c.ctex::
 pixel_art_large (1).png::CompressedTexture2D::9113390479339767411::1789738851::1789939137::1::::<><><>0<>0<>63c416d7a6a4f4e87a3d718991e47cf0<>res://.godot/imported/pixel_art_large (1).png-bc7355a1c1dba75be8b739505ffd5854.ctex::
 pixel_art_large.png::CompressedTexture2D::917716478801483009::1789738851::1789939133::1::::<><><>0<>0<>b130e51c4df536c10894a671aa78acba<>res://.godot/imported/pixel_art_large.png-22ce428237a634f854f328a8ed12275f.ctex::
@@ -38,12 +38,12 @@ ground_shadow.png::CompressedTexture2D::7923201520570455721::1789738851::1789939
 ::res://characters/happy_boo/::1789939133
 happy_boo.gd::GDScript::3084278065983280126::1789738851::0::1::::<>Node2D<><>0<>0<><>::
 happy_boo.tscn::PackedScene::31049085407951015::1789738851::0::1::::<><><>0<>0<><>::uid://bj7buyff1tobm::::res://characters/happy_boo/happy_boo.gd<>uid://b7rhtttevhxtj::::res://characters/ground_shadow.png<>uid://ng8e5ot0dtpd::::res://characters/happy_boo/square_foot.png<>uid://dhapxq8y8ow57::::res://characters/happy_boo/square_lower_leg.png<>uid://qmqpm6asge1i::::res://characters/happy_boo/square_upper_leg.png<>uid://cksiu5gst6fmp::::res://characters/happy_boo/square_body.png<>uid://cvs0lh814pk7h::::res://characters/happy_boo/square_face.png
-square_body.png::CompressedTexture2D::6775235482102118458::1789738851::1789939133::1::::<><><>0<>0<>aaa4a3162c1a17797479517b0db031f4<>res://.godot/imported/square_body.png-ef1c56c8912cd968d7fd09a95e6ea8f4.ctex::
+square_body.png::CompressedTexture2D::6775235482102118485::1789738851::1789939133::1::::<><><>0<>0<>aaa4a3162c1a17797479517b0db031f4<>res://.godot/imported/square_body.png-ef1c56c8912cd968d7fd09a95e6ea8f4.ctex::
 square_face.png::CompressedTexture2D::7116739963656526400::1789738851::1789939133::1::::<><><>0<>0<>3bbbf167f9980ec2c634db0d4455f996<>res://.godot/imported/square_face.png-e27720ce35d82859f41580927c22ef18.ctex::
 square_foot.png::CompressedTexture2D::4361745019028059222::1789738851::1789939133::1::::<><><>0<>0<>7568398d4bb83c27775e12322d3e1f00<>res://.godot/imported/square_foot.png-62023e9ce7985c4b370739df29445354.ctex::
 square_lower_leg.png::CompressedTexture2D::4994664656295402296::1789738851::1789939133::1::::<><><>0<>0<>6ad4a2cd0f76dcff7cf1cc8b332d86d4<>res://.godot/imported/square_lower_leg.png-313909793abe38b44566c8e252c075e0.ctex::
 square_modification_stack.tres::SkeletonModificationStack2D::8504717324922621560::1789738851::0::1::::<><><>0<>0<><>::
-square_ref.png::CompressedTexture2D::3737376858515969496::1789738851::1789939133::1::::<><><>0<>0<>38e676b8e282c930701b95d46d7e1039<>res://.godot/imported/square_ref.png-ad4b2771e34de0b9a0fbda7055a9fe1c.ctex::
+square_ref.png::CompressedTexture2D::3732376858515969496::1789738851::1789939133::1::::<><><>0<>0<>38e676b8e282c930701b95d46d7e1039<>res://.godot/imported/square_ref.png-ad4b2771e34de0b9a0fbda7055a9fe1c.ctex::
 square_upper_leg.png::CompressedTexture2D::7588519058029126745::1789738851::1789939133::1::::<><><>0<>0<>49310ca8922bfed7a90688c81d53e27d<>res://.godot/imported/square_upper_leg.png-e1f848aab7dd8805f40f881c2160a53d.ctex::
 ::res://characters/slime/::1789939133
 slime.gd::GDScript::8074356101711422006::1789738851::0::1::::<>Node2D<><>0<>0<><>::
@@ -58,7 +58,7 @@ projectile.png::CompressedTexture2D::2657917572615215857::1789738851::1789939133
 ::res://pistol/impact/::1789939133
 circle.png::CompressedTexture2D::4826504172182946827::1789738851::1789939133::1::::<><><>0<>0<>beb7d7bef7c4acade64d18c85ad53c74<>res://.godot/imported/circle.png-a2fa3270dee1c1c7e1cb0869903e82df.ctex::
 impact.gd::GDScript::7505530315511680361::1789738851::0::1::::<>Node2D<><>0<>0<><>::
-impact.tscn::PackedScene::706737085132605066::1789738851::0::1::::<><><>0<>0<><>::uid://de6y8t2sf6ynh::::res://pistol/impact/impact.gd<>uid://dn80eu1qs371v::::res://pistol/impact/circle.png
+impact.tscn::PackedScene::706737085132625066::1789738851::0::1::::<><><>0<>0<><>::uid://de6y8t2sf6ynh::::res://pistol/impact/impact.gd<>uid://dn80eu1qs371v::::res://pistol/impact/circle.png
 ::res://pistol/muzzle_flash/::1789939133
 muzzle_flash.gd::GDScript::2184711477186327130::1789738851::0::1::::<>Node2D<><>0<>0<><>::
 muzzle_flash.png::CompressedTexture2D::8165061320742786479::1789738851::1789939133::1::::<><><>0<>0<>d63a7f225b1e1679c8cc4123d78e692f<>res://.godot/imported/muzzle_flash.png-752b19c1a1a60c24eac6f205d487f2ea.ctex::

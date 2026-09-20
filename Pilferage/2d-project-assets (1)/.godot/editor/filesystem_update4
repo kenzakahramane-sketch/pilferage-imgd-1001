@@ -1,9 +1,5 @@
 res://scenes/hub.tscn
-res://scenes/tree.tscn
-res://scenes/oak_tree.tscn
 res://scenes/exit.gd
 res://scenes/exit_door.gd
 res://scenes/return_to_hubworld.gd
 res://scripts/main_menu.gd
-res://scripts/hub.gd
-res://scenes/hubCat.gd
