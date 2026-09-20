@@ -1,3 +1,5 @@
+Node
+TileMap
 Timer
 AudioStreamPlayer2D
 RayCast2D
@@ -10,5 +12,3 @@ ColorRect
 Label
 TileMapLayer
 CPUParticles2D
-TextureRect
-ScrollContainer
