@@ -7,6 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://dtindn668i0np" path="res://assets/images/Sidescroller images/pixil-frame-0-9.png" id="4_5xbjy"]
 [ext_resource type="Texture2D" uid="uid://clpel4kn5cse2" path="res://assets/images/Sidescroller images/pixilart-drawing.png" id="5_4nkto"]
 [ext_resource type="FontFile" uid="uid://c8x3e628x2e51" path="res://assets/fonts/PressStart2P-Regular.ttf" id="6_fcfvj"]
+[ext_resource type="PackedScene" uid="uid://itemmushroom8k1" path="res://scenes/mushroom_item.tscn" id="7_mush1"]
+[ext_resource type="PackedScene" uid="uid://itemcarrot8k2" path="res://scenes/carrot_item.tscn" id="8_carr1"]
+[ext_resource type="PackedScene" uid="uid://itemflower8k3" path="res://scenes/flower_item.tscn" id="9_flwr1"]
+[ext_resource type="PackedScene" uid="uid://npcbasfax4k2" path="res://scenes/npc.tscn" id="10_npc01"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rus8k"]
 texture = ExtResource("1_bswci")
@@ -102,7 +106,21 @@ sources/8 = SubResource("TileSetAtlasSource_fcfvj")
 
 [node name="Level1" type="Node2D" unique_id=1016265920]
 
-[node name="cat" parent="." unique_id=2095441473 instance=ExtResource("2_rus8k")]
+[node name="LevelNPC" parent="." instance=ExtResource("10_npc01")]
+position = Vector2(16, 0)
+npc_name = "Old Man Scoobaloo"
+dialogue_lines = Array[String](["Careful in there, traveler.", "I've seen some strange lights in the trees lately...", "Grab anything useful you find along the way!"])
+
+[node name="MushroomItem" parent="." instance=ExtResource("7_mush1")]
+position = Vector2(40, 0)
+
+[node name="CarrotItem" parent="." instance=ExtResource("8_carr1")]
+position = Vector2(64, 0)
+
+[node name="FlowerItem" parent="." instance=ExtResource("9_flwr1")]
+position = Vector2(88, 0)
+
+[node name="cat" parent="." unique_id=2095441473 instance=ExtResource("2_rus8k") groups=["player"]]
 collision_layer = 2
 script = ExtResource("3_rus8k")
 

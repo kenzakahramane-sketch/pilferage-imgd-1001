@@ -7,7 +7,7 @@ size = Vector2(32, 48)
 
 [node name="NPC" type="Area2D"]
 collision_layer = 4
-collision_mask = 1
+collision_mask = 3
 script = ExtResource("1_npcgd")
 npc_name = "Townsfolk"
 dialogue_lines = Array[String](["Hey there!", "Nice day, isn't it?"])

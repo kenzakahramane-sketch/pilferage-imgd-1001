@@ -869,8 +869,7 @@ scale = Vector2(0.6399988, 0.6399988)
 [node name="SquirrelNPC" parent="." instance=ExtResource("10_sqrl")]
 position = Vector2(2860, 2980)
 
-[node name="hubCat" parent="." unique_id=814917533 instance=ExtResource("6_l1rjk")]
-groups=["player"]
+[node name="hubCat" parent="." unique_id=814917533 instance=ExtResource("6_l1rjk") groups=["player"]]
 position = Vector2(0.00012207031, 3.8146973e-06)
 rotation = -0.009041538
 script = ExtResource("7_2lv1l")
