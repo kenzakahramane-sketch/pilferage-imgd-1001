@@ -7,6 +7,7 @@ func _ready():
 	$Options/Credits.pressed.connect(_on_credits_pressed)
 	$Options/Versions.pressed.connect(_on_versions_pressed)
 	$Options/Quit.pressed.connect(_on_quit_pressed)
+	$Options/Options.pressed.connect(_on_options_pressed)
 
 # Start button action
 func _on_startgame_pressed():
@@ -33,3 +34,7 @@ func _on_quit_pressed():
 # TEMPORARY BUTTON FOR TESTING
 func _on_dev_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/level_1.tscn")
+
+
+func _on_options_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/options.tscn")

@@ -3,8 +3,10 @@ var wall_cling = 0
 const ACCELERATION = 2.5
 const JUMP_VELOCITY = -250.0
 const MAX_SPEED = 150
+var wall_charge = 0
+const wall_charge_time = 45
 @onready var animated_sprite = $AnimatedSprite2D
-@onready var hitbox = $CollisionShape2D
+@onready var hitbox = $movement_box
 @onready var detect_left = $RayCastLeft
 @onready var detect_right = $RayCastRight
 @onready var detect_down = $RayCastDown
@@ -52,13 +54,16 @@ func _physics_process(delta: float) -> void:
 	# Detects collision for things.
 	# Different animations are played based on the current state of your movement.
 	if is_on_floor() || !coyote_timer.is_stopped():
-		if velocity.x == 0:
-			animated_sprite.play("idleCool")
-		else:	
-			if abs(velocity.x) >= MAX_SPEED:
-				animated_sprite.play("sprintCool")
-			else:
-				animated_sprite.play("runCool")
+		if wall_charge > wall_charge_time and Global.simplified_controls == true:
+			animated_sprite.play("dmgCool")
+		else:
+			if velocity.x == 0:
+				animated_sprite.play("idleCool")
+			else:	
+				if abs(velocity.x) >= MAX_SPEED:
+					animated_sprite.play("sprintCool")
+				else:
+					animated_sprite.play("runCool")
 	else:
 		if velocity.y > 0:
 			animated_sprite.play("fallCool")
@@ -81,16 +86,25 @@ func _physics_process(delta: float) -> void:
 					velocity.x = MAX_SPEED * 1.75
 	if detect_left.is_colliding():
 		wall_cling = 50
+		wall_charge += 1
 	else:
 		if detect_right.is_colliding():
 			wall_cling = -50
+			wall_charge += 1
 		else:
 			wall_cling = 0
-	if velocity.x > 0 + wall_cling:
+			wall_charge = 0
+	if velocity.x > 10 + wall_cling:
 		animated_sprite.flip_h = false
 		hitbox.position.x = 11.25
 		detect_down.position.x = 11.25
-	if velocity.x < 0 + wall_cling:
+	if velocity.x < -10 + wall_cling:
 		animated_sprite.flip_h = true
 		hitbox.position.x = 6.75
 		detect_down.position.x = 6.75
+	if Global.simplified_controls == true and abs(velocity.x) < 50 and Input.is_action_pressed("move_up") and !is_on_floor() and ((detect_right.is_colliding() and animated_sprite.flip_h == false and direction < 0) or (detect_left.is_colliding() and animated_sprite.flip_h == true and direction > 0)):
+			velocity.y = JUMP_VELOCITY
+			velocity.x = MAX_SPEED * 1.25 * direction
+	if Global.simplified_controls == true and direction and wall_charge > wall_charge_time and abs(velocity.x) < 50:
+		if (animated_sprite.flip_h == false and direction < 0) or (animated_sprite.flip_h == true and direction > 0):
+			velocity.x = MAX_SPEED * 1.75 * direction

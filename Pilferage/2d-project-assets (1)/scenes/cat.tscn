@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c7uyokengmfxn"]
 
 [ext_resource type="Texture2D" uid="uid://bf4oexnk1n8ky" path="res://assets/images/Sidescroller images/cat.png" id="1_myi5k"]
+[ext_resource type="Script" uid="uid://7peead4k52jx" path="res://scripts/cat.gd" id="1_t8pth"]
 [ext_resource type="AudioStream" uid="uid://cqntv7ry0y4fr" path="res://assets/Sound Effects/joentnt-walk-on-grass-2-291985.mp3" id="2_se5fe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_myi5k"]
@@ -332,19 +333,23 @@ animations = [{
 
 [node name="cat" type="CharacterBody2D" unique_id=814917533]
 z_index = 1
+collision_mask = 3
+script = ExtResource("1_t8pth")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=454549907]
+[node name="movement_box" type="CollisionShape2D" parent="." unique_id=454549907]
 position = Vector2(11.25, -5.5)
 shape = SubResource("RectangleShape2D_myi5k")
 
 [node name="RayCastRight" type="RayCast2D" parent="." unique_id=586380289]
 position = Vector2(11, -6)
 target_position = Vector2(8, 0)
+collision_mask = 4
 hit_from_inside = true
 
 [node name="RayCastLeft" type="RayCast2D" parent="." unique_id=1294679913]
 position = Vector2(7, -6)
 target_position = Vector2(-8, 0)
+collision_mask = 4
 hit_from_inside = true
 
 [node name="RayCastDown" type="RayCast2D" parent="." unique_id=1558546788]
