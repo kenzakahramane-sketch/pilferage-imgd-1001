@@ -1,11 +1,2 @@
-res://scripts/options.gd
-res://scenes/options.tscn
-res://assets/fonts/buttonTheme.tres
-res://scripts/Global.gd
-res://scripts/main_menu.gd
-res://scripts/cat.gd
-res://scripts/level_1.gd
-res://scenes/level_1.tscn
-res://scenes/cat.tscn
 res://scenes/level_2.tscn
-res://scenes/go_to_level_2.tscn
+res://assets/fonts/buttonTheme.tres
