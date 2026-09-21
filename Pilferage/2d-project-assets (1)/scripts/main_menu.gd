@@ -10,8 +10,8 @@ func _ready():
 
 # Start button action
 func _on_startgame_pressed():
-	# Change to your game scene
-	get_tree().change_scene_to_file("res://scenes/brotatoclone.tscn")
+	# Play the opening animation first, which transitions into the hub itself
+	get_tree().change_scene_to_file("res://scenes/opening_animation.tscn")
 	
 	
 # Credits button action

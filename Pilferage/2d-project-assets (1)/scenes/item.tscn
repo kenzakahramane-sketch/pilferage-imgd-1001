@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://itembasegen8k"]
+
+[ext_resource type="Script" path="res://scripts/item.gd" id="1_item"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_item"]
+radius = 20.0
+
+[node name="Item" type="Area2D"]
+collision_layer = 8
+collision_mask = 1
+script = ExtResource("1_item")
+item_id = ""
+item_name = "Item"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_item")
+
+[node name="ItemSprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true

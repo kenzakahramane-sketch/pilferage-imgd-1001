@@ -25,13 +25,13 @@ func _ready() -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	if body.name == "Player":
+	if body.is_in_group("player"):
 		_player_in_range = true
 		interact_hint.visible = true
 
 
 func _on_body_exited(body: Node2D) -> void:
-	if body.name == "Player":
+	if body.is_in_group("player"):
 		_player_in_range = false
 		interact_hint.visible = false
 
