@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://npcsquirrel9k4"]
+
+[ext_resource type="Script" path="res://scripts/npc.gd" id="1_npcgd"]
+[ext_resource type="Texture2D" path="res://assets/images/NPCs/squirrel.png" id="2_sqrl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sqrl"]
+size = Vector2(16, 16)
+
+[node name="SquirrelNPC" type="Area2D"]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_npcgd")
+npc_name = "Squirrel"
+dialogue_lines = Array[String](["Howdy mister cat!"])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_sqrl")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_sqrl")
+
+[node name="InteractHint" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = -20.0
+offset_top = -26.0
+offset_right = 20.0
+offset_bottom = -2.0
+theme_override_font_sizes/font_size = 8
+horizontal_alignment = 1
+text = "[E]"
