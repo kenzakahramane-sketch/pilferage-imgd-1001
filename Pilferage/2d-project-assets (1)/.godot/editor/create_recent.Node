@@ -1,6 +1,10 @@
+<<<<<<< Updated upstream
 TileMapLayer
 TileMap
 Area2D
+=======
+Button
+>>>>>>> Stashed changes
 CollisionShape2D
 Button
 VBoxContainer

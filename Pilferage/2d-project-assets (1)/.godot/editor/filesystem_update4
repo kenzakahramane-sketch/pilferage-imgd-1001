@@ -1,2 +1,8 @@
 res://scenes/level_2.tscn
 res://assets/fonts/buttonTheme.tres
+res://scripts/cat.gd
+res://scripts/Global.gd
+res://scripts/main_menu.gd
+res://scripts/return_to_hubworld.gd
+res://scenes/cat.tscn
+res://scenes/go_to_level_1.tscn

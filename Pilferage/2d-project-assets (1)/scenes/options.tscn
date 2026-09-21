@@ -1,6 +1,12 @@
+<<<<<<< Updated upstream
 [gd_scene format=3 uid="uid://xtuo6eaih2wp"]
 
 [ext_resource type="Script" uid="uid://d0e6d8kyb1pq2" path="res://scripts/options.gd" id="1_yjkok"]
+=======
+[gd_scene format=3 uid="uid://badgnyc64q08t"]
+
+[ext_resource type="Script" path="res://scripts/options.gd" id="1_yjkok"]
+>>>>>>> Stashed changes
 [ext_resource type="FontFile" uid="uid://c8x3e628x2e51" path="res://assets/fonts/PressStart2P-Regular.ttf" id="2_2iy26"]
 [ext_resource type="Theme" uid="uid://didlpevuq4lh3" path="res://assets/fonts/buttonTheme.tres" id="2_kv8mn"]
 

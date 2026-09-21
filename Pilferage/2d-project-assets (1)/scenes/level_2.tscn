@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 [gd_scene format=4 uid="uid://vgrpaprapaud"]
 
 [ext_resource type="Texture2D" uid="uid://kpw6j0jvyrr4" path="res://assets/images/Sidescroller images/pilferageact1-tilemapv1.0-pixilart.png" id="1_pbc48"]
@@ -5,6 +6,15 @@
 [ext_resource type="PackedScene" uid="uid://c7uyokengmfxn" path="res://scenes/cat.tscn" id="2_eqxsl"]
 [ext_resource type="PackedScene" uid="uid://j13nplw74h7n" path="res://scenes/go_to_level_1.tscn" id="3_b4j7a"]
 [ext_resource type="Texture2D" uid="uid://dtindn668i0np" path="res://assets/images/Sidescroller images/pilferageact1- tilemap with darker tree.png" id="4_b4j7a"]
+=======
+[gd_scene format=4 uid="uid://b0iq1mbufj43k"]
+
+[ext_resource type="Texture2D" uid="uid://kpw6j0jvyrr4" path="res://assets/images/Sidescroller images/pilferageact1-tilemapv1.0-pixilart.png" id="1_pbc48"]
+[ext_resource type="Texture2D" path="res://assets/images/Sidescroller images/pilferageact2 - tilemapV1.png" id="2_b4j7a"]
+[ext_resource type="PackedScene" uid="uid://c7uyokengmfxn" path="res://scenes/cat.tscn" id="2_eqxsl"]
+[ext_resource type="PackedScene" uid="uid://1vkl6vay0yj4" path="res://scenes/go_to_level_1.tscn" id="3_b4j7a"]
+[ext_resource type="Texture2D" path="res://assets/images/Sidescroller images/pilferageact1- tilemap with darker tree.png" id="4_b4j7a"]
+>>>>>>> Stashed changes
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wo48x"]
 texture = ExtResource("1_pbc48")
@@ -203,7 +213,10 @@ sources/0 = SubResource("TileSetAtlasSource_b4j7a")
 [node name="cat" parent="." unique_id=814917533 instance=ExtResource("2_eqxsl")]
 position = Vector2(-11, -17)
 collision_layer = 7
+<<<<<<< Updated upstream
 collision_mask = 1
+=======
+>>>>>>> Stashed changes
 
 [node name="Camera2D" type="Camera2D" parent="cat" unique_id=1589659099]
 zoom = Vector2(6, 6)
