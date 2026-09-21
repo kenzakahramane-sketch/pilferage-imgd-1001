@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream
 uid="uid://c44ri8g8pq1xx"
+=======
+uid="uid://dmg2030kt5x46"
+>>>>>>> Stashed changes
 path="res://.godot/imported/pilferageact2 - tilemapV1.png-11af413397fecc21c2c22be6e7127706.ctex"
 metadata={
 "vram_texture": false

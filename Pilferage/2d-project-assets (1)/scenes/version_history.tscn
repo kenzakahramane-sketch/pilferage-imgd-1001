@@ -208,7 +208,19 @@ of the most recent input
 automatically face it to aid you in wall pushing or wall
 jumping
 - Added coyote time and jump buffering to make timing
-inputs less demanding"
+inputs less demanding
+- Simple controls have been added.
+When against the wall for a long enough
+period of time, you can now press
+in the opposite direction of the
+wall to do a wall push and
+you can also press jump while pressing the
+opposite direction of the wall to perform a wall jump
+- The hub world has been updated
+with a different aesthetic
+- An options menu has been added with two settings to
+change currently
+background music has been added to the first level"
 horizontal_alignment = 1
 
 [node name="BackButton" type="Button" parent="." unique_id=1204261190]

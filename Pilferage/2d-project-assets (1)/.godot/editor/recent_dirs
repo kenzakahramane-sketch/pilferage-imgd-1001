@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 res://scripts/
 res://assets/fonts/
 =======
@@ -9,4 +10,13 @@ res://scenes/
 res://assets/Sound Effects/
 res://
 res://assets/images/Sidescroller images/
+=======
+res://assets/Music/
+res://assets/images/Sidescroller images/
+res://scenes/
+res://assets/Sound Effects/
+res://
+res://assets/fonts/
+res://scripts/
+>>>>>>> Stashed changes
 res://assets/images/

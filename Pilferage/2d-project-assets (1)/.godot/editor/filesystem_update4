@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 res://scenes/level_2.tscn
 res://assets/fonts/buttonTheme.tres
 res://scripts/cat.gd
@@ -6,3 +7,17 @@ res://scripts/main_menu.gd
 res://scripts/return_to_hubworld.gd
 res://scenes/cat.tscn
 res://scenes/go_to_level_1.tscn
+=======
+res://scripts/Global.gd
+res://scripts/main_menu.gd
+res://scripts/go_to_level_2.gd
+res://scenes/level_1.tscn
+res://assets/fonts/buttonTheme.tres
+res://scenes/level_2.tscn
+res://scripts/cat.gd
+res://scenes/go_to_level_2.tscn
+res://scenes/return_to_hubworld.tscn
+res://scripts/return_to_hubworld.gd
+res://scenes/cat.tscn
+res://scenes/version_history.tscn
+>>>>>>> Stashed changes
