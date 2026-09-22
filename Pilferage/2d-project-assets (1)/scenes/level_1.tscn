@@ -321,14 +321,14 @@ rotation = -1.5707964
 shape = SubResource("WorldBoundaryShape2D_6dial")
 
 [node name="FlowerItem" parent="." unique_id=368076406 instance=ExtResource("9_flwr1")]
-position = Vector2(65.43701, 10.045319)
+position = Vector2(3062, -434)
 priority = 1
 
 [node name="MushroomItem" parent="." unique_id=575156252 instance=ExtResource("7_mush1")]
-position = Vector2(150.06862, -4.6049957)
+position = Vector2(2731, -58)
 
 [node name="CarrotItem" parent="." unique_id=948645840 instance=ExtResource("8_carr1")]
-position = Vector2(115.535736, -6.697899)
+position = Vector2(2314, -250)
 
 [node name="ItemBar" parent="." unique_id=2108399289 instance=ExtResource("6_7nomh")]
 
