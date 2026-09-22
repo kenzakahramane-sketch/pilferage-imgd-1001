@@ -32,3 +32,5 @@ res://scenes/version_history.tscn
 res://scenes/flower_item.tscn
 res://scenes/mushroom_item.tscn
 res://scenes/carrot_item.tscn
+res://scripts/pubDoor.gd
+res://scenes/item_bar.tscn
