@@ -952,7 +952,7 @@ position = Vector2(0, 21)
 position = Vector2(3008.0007, 3066.0005)
 scale = Vector2(0.6399988, 0.6399988)
 
-[node name="hubCat" parent="." unique_id=814917533 instance=ExtResource("6_l1rjk")]
+[node name="hubCat" parent="." unique_id=814917533 groups=["player"] instance=ExtResource("6_l1rjk")]
 position = Vector2(-10.000001, 22.000002)
 rotation = -0.009041538
 script = SubResource("GDScript_a0oke")
