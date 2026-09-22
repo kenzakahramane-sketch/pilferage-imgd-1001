@@ -1,31 +1,17 @@
 [gd_scene format=4 uid="uid://6ckx2wph2j3y"]
 
-<<<<<<< Updated upstream
-[ext_resource type="Script" uid="uid://ihmf8np445fb" path="res://scripts/level_1.gd" id="1_2y5yt"]
+[ext_resource type="Script" path="res://scripts/level_1.gd" id="1_2y5yt"]
 [ext_resource type="Texture2D" uid="uid://kpw6j0jvyrr4" path="res://assets/images/Sidescroller images/pilferageact1-tilemapv1.0-pixilart.png" id="1_bswci"]
 [ext_resource type="PackedScene" uid="uid://cuqta3bwplpu" path="res://scenes/return_to_hubworld.tscn" id="1_pa8r4"]
 [ext_resource type="PackedScene" uid="uid://c7uyokengmfxn" path="res://scenes/cat.tscn" id="2_rus8k"]
 [ext_resource type="Texture2D" uid="uid://dtindn668i0np" path="res://assets/images/Sidescroller images/pilferageact1- tilemap with darker tree.png" id="4_5xbjy"]
 [ext_resource type="Texture2D" uid="uid://clpel4kn5cse2" path="res://assets/images/Sidescroller images/pilferageact1background.png" id="5_4nkto"]
-[ext_resource type="Texture2D" uid="uid://n87wtgyf63w4" path="res://assets/images/Sidescroller images/pilferageact1 - tilemap with semisolid platforms.png" id="5_7gny6"]
-=======
-[ext_resource type="Script" uid="uid://b0t1p82lw6l4u" path="res://scripts/level_1.gd" id="1_2y5yt"]
-[ext_resource type="Texture2D" uid="uid://kpw6j0jvyrr4" path="res://assets/images/Sidescroller images/pilferageact1-tilemapv1.0-pixilart.png" id="1_bswci"]
-[ext_resource type="PackedScene" uid="uid://cuqta3bwplpu" path="res://scenes/return_to_hubworld.tscn" id="1_pa8r4"]
-[ext_resource type="PackedScene" uid="uid://c7uyokengmfxn" path="res://scenes/cat.tscn" id="2_rus8k"]
-[ext_resource type="Script" uid="uid://7peead4k52jx" path="res://scripts/cat.gd" id="3_rus8k"]
-[ext_resource type="Texture2D" uid="uid://dtindn668i0np" path="res://assets/images/Sidescroller images/pixil-frame-0-9.png" id="4_5xbjy"]
-[ext_resource type="Texture2D" uid="uid://clpel4kn5cse2" path="res://assets/images/Sidescroller images/pixilart-drawing.png" id="5_4nkto"]
-[ext_resource type="Texture2D" uid="uid://bhq77luo0rlnb" path="res://assets/images/Sidescroller images/pilferageact1 - tilemap with semisolid platforms.png" id="5_7gny6"]
->>>>>>> Stashed changes
+[ext_resource type="Texture2D" uid="uid://b8klt65df8ao8" path="res://assets/images/Sidescroller images/pilferageact1 - tilemap with semisolid platforms.png" id="5_7gny6"]
 [ext_resource type="FontFile" uid="uid://c8x3e628x2e51" path="res://assets/fonts/PressStart2P-Regular.ttf" id="6_fcfvj"]
 [ext_resource type="PackedScene" uid="uid://04gte8cy0kd0" path="res://scenes/go_to_level_2.tscn" id="7_15mv3"]
-[ext_resource type="AudioStream" uid="uid://cvrdtxfgqowgo" path="res://assets/Music/LOOP(upbeat) 190bpm_Too Many Coffees_MIDI.ogg" id="9_e3sih"]
-[ext_resource type="AudioStream" uid="uid://hdouwhjhclcr" path="res://assets/Music/LOOP(upbeat) 190bpm_Too Many Coffees.ogg" id="11_2os1m"]
-<<<<<<< Updated upstream
-[ext_resource type="Script" uid="uid://comxd0tngr4f2" path="res://scripts/go_to_level_1.gd" id="12_go7sj"]
-=======
->>>>>>> Stashed changes
+[ext_resource type="AudioStream" uid="uid://bv7tepbb7meo8" path="res://assets/Music/LOOP(upbeat) 190bpm_Too Many Coffees 2.ogg" id="9_e3sih"]
+[ext_resource type="AudioStream" uid="uid://d2g6trr2ccjdt" path="res://assets/Music/LOOP(upbeat) 190bpm_Too Many Coffees_MIDI 2.ogg" id="11_2os1m"]
+[ext_resource type="Script" path="res://scripts/go_to_level_1.gd" id="12_go7sj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rus8k"]
 texture = ExtResource("1_bswci")
@@ -70,11 +56,7 @@ texture = ExtResource("1_bswci")
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2aecg"]
 texture = ExtResource("5_7gny6")
 0:0/0 = 0
-<<<<<<< Updated upstream
 0:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, -7.0169697, 8, -6.787359, 8, -8, -8, -8)
-=======
-0:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -4.965888, -8, -5.757266)
->>>>>>> Stashed changes
 0:0/0/physics_layer_1/polygon_0/one_way = true
 1:0/0 = 0
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -83,11 +65,7 @@ texture = ExtResource("5_7gny6")
 4:0/0 = 0
 5:0/0 = 0
 0:1/0 = 0
-<<<<<<< Updated upstream
 0:1/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, -7.0169697, 8, -6.787359, 8, -8, -8, -8)
-=======
-0:1/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -4.965888, -8, -5.757266)
->>>>>>> Stashed changes
 0:1/0/physics_layer_1/polygon_0/one_way = true
 1:1/0 = 0
 1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -163,32 +141,20 @@ sources/0 = SubResource("TileSetAtlasSource_rus8k")
 sources/6 = SubResource("TileSetAtlasSource_4nkto")
 sources/8 = SubResource("TileSetAtlasSource_fcfvj")
 sources/3 = SubResource("TileSetAtlasSource_2aecg")
-<<<<<<< Updated upstream
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_42wgy"]
 distance = 24.0
-=======
->>>>>>> Stashed changes
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_oh4dh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_go7sj"]
 size = Vector2(32, 9)
 
-<<<<<<< Updated upstream
-=======
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_xs11v"]
-
->>>>>>> Stashed changes
 [node name="Level1" type="Node2D" unique_id=1016265920]
 script = ExtResource("1_2y5yt")
 
 [node name="cat" parent="." unique_id=2095441473 instance=ExtResource("2_rus8k")]
 collision_layer = 3
-<<<<<<< Updated upstream
-=======
-script = ExtResource("3_rus8k")
->>>>>>> Stashed changes
 
 [node name="Camera2D" type="Camera2D" parent="cat" unique_id=1279045125]
 position = Vector2(11, -6)
@@ -317,35 +283,21 @@ rotation = 1.5707964
 shape = SubResource("WorldBoundaryShape2D_oh4dh")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=620976193]
-stream = ExtResource("9_e3sih")
+stream = ExtResource("11_2os1m")
 parameters/looping = true
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=1470354138]
-stream = ExtResource("11_2os1m")
+stream = ExtResource("9_e3sih")
 parameters/looping = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1189304730]
 collision_layer = 0
 collision_mask = 2
-<<<<<<< Updated upstream
 script = ExtResource("12_go7sj")
-=======
->>>>>>> Stashed changes
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=5291759]
 position = Vector2(1040, -125.5)
 shape = SubResource("RectangleShape2D_go7sj")
 
-<<<<<<< Updated upstream
-=======
-[node name="Go to level 2" parent="." unique_id=1816965618 instance=ExtResource("7_15mv3")]
-position = Vector2(3585, -321)
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Go to level 2" unique_id=1621489830]
-rotation = -1.5707964
-shape = SubResource("WorldBoundaryShape2D_xs11v")
-
->>>>>>> Stashed changes
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

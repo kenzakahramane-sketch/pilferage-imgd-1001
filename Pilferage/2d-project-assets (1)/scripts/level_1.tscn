@@ -1,10 +1,9 @@
-[gd_scene format=4 uid="uid://cav6xpxheopmy"]
+[gd_scene format=4 uid="uid://dm4wkqs2j7cxq"]
 
 [ext_resource type="Texture2D" uid="uid://kpw6j0jvyrr4" path="res://assets/images/Sidescroller images/pilferageact1-tilemapv1.0-pixilart.png" id="1_bswci"]
 [ext_resource type="PackedScene" uid="uid://c7uyokengmfxn" path="res://scenes/cat.tscn" id="2_rus8k"]
-[ext_resource type="Script" uid="uid://7peead4k52jx" path="res://scripts/cat.gd" id="3_rus8k"]
-[ext_resource type="Texture2D" uid="uid://dtindn668i0np" path="res://assets/images/Sidescroller images/pixil-frame-0-9.png" id="4_5xbjy"]
-[ext_resource type="Texture2D" uid="uid://clpel4kn5cse2" path="res://assets/images/Sidescroller images/pixilart-drawing.png" id="5_4nkto"]
+[ext_resource type="Texture2D" uid="uid://dtindn668i0np" path="res://assets/images/Sidescroller images/pilferageact1- tilemap with darker tree.png" id="4_5xbjy"]
+[ext_resource type="Texture2D" uid="uid://clpel4kn5cse2" path="res://assets/images/Sidescroller images/pilferageact1background.png" id="5_4nkto"]
 [ext_resource type="FontFile" uid="uid://c8x3e628x2e51" path="res://assets/fonts/PressStart2P-Regular.ttf" id="6_fcfvj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rus8k"]
@@ -93,7 +92,6 @@ sources/8 = SubResource("TileSetAtlasSource_fcfvj")
 
 [node name="cat" parent="." unique_id=2095441473 instance=ExtResource("2_rus8k")]
 collision_layer = 4
-script = ExtResource("3_rus8k")
 
 [node name="Camera2D" type="Camera2D" parent="cat" unique_id=1279045125]
 position = Vector2(11, -6)
