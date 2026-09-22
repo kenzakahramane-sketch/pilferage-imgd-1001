@@ -332,19 +332,22 @@ animations = [{
 
 [node name="cat" type="CharacterBody2D" unique_id=814917533]
 z_index = 1
+collision_layer = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=454549907]
+[node name="movement_box" type="CollisionShape2D" parent="." unique_id=454549907]
 position = Vector2(11.25, -5.5)
 shape = SubResource("RectangleShape2D_myi5k")
 
 [node name="RayCastRight" type="RayCast2D" parent="." unique_id=586380289]
 position = Vector2(11, -6)
 target_position = Vector2(8, 0)
+collision_mask = 4
 hit_from_inside = true
 
 [node name="RayCastLeft" type="RayCast2D" parent="." unique_id=1294679913]
 position = Vector2(7, -6)
 target_position = Vector2(-8, 0)
+collision_mask = 4
 hit_from_inside = true
 
 [node name="RayCastDown" type="RayCast2D" parent="." unique_id=1558546788]

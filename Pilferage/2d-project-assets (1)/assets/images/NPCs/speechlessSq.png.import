@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clpel4kn5cse2"
-path="res://.godot/imported/pixilart-drawing.png-138fc47fdfb8a3b6a5e8e7fdc246d046.ctex"
+uid="uid://dxuc401rga5w8"
+path="res://.godot/imported/speechlessSq.png-94b75bd2575bdc949ab1510aa187121c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/Sidescroller images/pixilart-drawing.png"
-dest_files=["res://.godot/imported/pixilart-drawing.png-138fc47fdfb8a3b6a5e8e7fdc246d046.ctex"]
+source_file="res://assets/images/NPCs/speechlessSq.png"
+dest_files=["res://.godot/imported/speechlessSq.png-94b75bd2575bdc949ab1510aa187121c.ctex"]
 
 [params]
 

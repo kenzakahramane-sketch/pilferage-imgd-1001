@@ -1,11 +1,11 @@
 CollisionShape2D
-Sprite2D
-AnimatedSprite2D
-StaticBody2D
+AudioStreamPlayer
+Area2D
+TextureRect
+HBoxContainer
 Timer
 AudioStreamPlayer2D
 RayCast2D
-Area2D
 Marker2D
 Node2D
 FoldableContainer

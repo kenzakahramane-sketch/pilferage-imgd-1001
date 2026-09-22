@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cghebo1ukli5x" path="res://scripts/brotatoclone.gd" id="1_svci8"]
 [ext_resource type="PackedScene" uid="uid://c0gpy0pye4jr6" path="res://scenes/tree.tscn" id="2_1kod4"]
 [ext_resource type="Texture2D" uid="uid://b7cct2004aro6" path="res://assets/images/Hub Images/ground time map.png" id="2_m0d6t"]
-[ext_resource type="Texture2D" uid="uid://dnchdx4aywvij" path="res://assets/images/Hub Images/TDTilemapUpdate.png" id="3_8dnpt"]
+[ext_resource type="Texture2D" path="res://assets/images/Hub Images/TDTilemapUpdate.png" id="3_8dnpt"]
 [ext_resource type="PackedScene" uid="uid://cfnd114ddwknr" path="res://scenes/rocks.tscn" id="3_a0oke"]
 [ext_resource type="PackedScene" uid="uid://c0kwwv1xvf334" path="res://scenes/oak_tree.tscn" id="3_vjt6i"]
 [ext_resource type="Script" uid="uid://ca32227r5387d" path="res://scenes/pubDoor.gd" id="4_7xkgf"]
