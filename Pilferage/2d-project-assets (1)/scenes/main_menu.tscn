@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bbep2dogndtrt" path="res://assets/images/Miscellanious images/GameLogoVer1.png" id="2_bqqt6"]
 [ext_resource type="Texture2D" uid="uid://d23uheorku8l0" path="res://assets/images/Miscellanious images/pixel_art_large (1).png" id="2_wu84c"]
 [ext_resource type="Theme" uid="uid://didlpevuq4lh3" path="res://assets/fonts/buttonTheme.tres" id="3_wu84c"]
+[ext_resource type="FontFile" uid="uid://c8x3e628x2e51" path="res://assets/fonts/PressStart2P-Regular.ttf" id="5_8ln24"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_cbqb0"]
 
@@ -89,6 +90,12 @@ theme = ExtResource("3_wu84c")
 text = "Version History
 "
 
+[node name="Options" type="Button" parent="Options" unique_id=767685150]
+layout_mode = 2
+theme = ExtResource("3_wu84c")
+theme_override_fonts/font = ExtResource("5_8ln24")
+text = "Options"
+
 [node name="Quit" type="Button" parent="Options" unique_id=981889593]
 layout_mode = 2
 theme = ExtResource("3_wu84c")
@@ -108,5 +115,6 @@ text = "Level 1 Shortcut
 [connection signal="pressed" from="Options/StartGame" to="." method="_on_startgame_pressed"]
 [connection signal="pressed" from="Options/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="Options/Versions" to="." method="_on_versions_pressed"]
+[connection signal="pressed" from="Options/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="Options/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="dev" to="." method="_on_dev_pressed"]

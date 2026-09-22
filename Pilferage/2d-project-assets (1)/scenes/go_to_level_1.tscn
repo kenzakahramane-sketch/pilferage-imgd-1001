@@ -1,12 +1,6 @@
-<<<<<<< Updated upstream
-[gd_scene format=3 uid="uid://b2rxoq85l6g5"]
-
-[ext_resource type="Script" path="res://scripts/go_to_level_1.gd" id="1_crqr2"]
-=======
 [gd_scene format=3 uid="uid://j13nplw74h7n"]
 
 [ext_resource type="Script" uid="uid://comxd0tngr4f2" path="res://scripts/go_to_level_1.gd" id="1_crqr2"]
->>>>>>> Stashed changes
 
 [node name="go_to_level_1" type="Area2D" unique_id=94506289]
 script = ExtResource("1_crqr2")

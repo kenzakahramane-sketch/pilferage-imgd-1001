@@ -208,7 +208,18 @@ of the most recent input
 automatically face it to aid you in wall pushing or wall
 jumping
 - Added coyote time and jump buffering to make timing
-inputs less demanding"
+inputs less demanding
+- An opening cutscene is now played when you
+start the game
+- The hub world is updated with a different aesthetic
+- Simplified controls have been added. When you are
+against a wall for enough time, you can move in the
+other direction to perform a wall push without pressing
+the push button. Additionally, pressing jump while
+pressing in the other direction will allow you to perform
+a wall jump without the push button as well
+- npc characters have been added
+"
 horizontal_alignment = 1
 
 [node name="BackButton" type="Button" parent="." unique_id=1204261190]
