@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://csqwaxnpvpgqa"]
 
-[ext_resource type="Script" uid="uid://fowxxfgqb2fn" path="res://scenes/exit_door.gd" id="2_02ecs"]
+[ext_resource type="Script" uid="uid://fowxxfgqb2fn" path="res://scripts/exit_door.gd" id="2_02ecs"]
 [ext_resource type="Texture2D" uid="uid://42bnlf0jk3uq" path="res://assets/images/Topdown images/door.png" id="3_pad1t"]
 [ext_resource type="PackedScene" uid="uid://c7uyokengmfxn" path="res://scenes/cat.tscn" id="3_w3svg"]
-[ext_resource type="Script" uid="uid://bvxmdlka7brrd" path="res://scenes/hubCat.gd" id="4_y5ugd"]
+[ext_resource type="Script" uid="uid://bvxmdlka7brrd" path="res://scripts/hubCat.gd" id="4_y5ugd"]
 [ext_resource type="Texture2D" uid="uid://bf4oexnk1n8ky" path="res://assets/images/Sidescroller images/cat.png" id="5_dgq8i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w3svg"]

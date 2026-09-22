@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dtindn668i0np" path="res://assets/images/Sidescroller images/pilferageact1 - tilemap with darker tree.png" id="4_5xbjy"]
 [ext_resource type="Texture2D" uid="uid://clpel4kn5cse2" path="res://assets/images/Sidescroller images/pilferageact1 - background.png" id="5_4nkto"]
 [ext_resource type="Texture2D" uid="uid://bhq77luo0rlnb" path="res://assets/images/Sidescroller images/pilferageact1 - tilemap with semisolid platforms.png" id="5_7gny6"]
-[ext_resource type="PackedScene" uid="uid://3ku35wypyd2q" path="res://scenes/item_bar.tscn" id="6_7nomh"]
+[ext_resource type="PackedScene" uid="uid://bchmsaallq28c" path="res://scenes/item_bar.tscn" id="6_7nomh"]
 [ext_resource type="FontFile" uid="uid://c8x3e628x2e51" path="res://assets/fonts/PressStart2P-Regular.ttf" id="6_fcfvj"]
 [ext_resource type="PackedScene" uid="uid://04gte8cy0kd0" path="res://scenes/go_to_level_2.tscn" id="7_15mv3"]
 [ext_resource type="PackedScene" uid="uid://iu12wrkbrrvm" path="res://scenes/mushroom_item.tscn" id="7_mush1"]
