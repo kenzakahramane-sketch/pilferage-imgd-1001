@@ -1,3 +1,7 @@
+AnimationPlayer
+TextureProgressBar
+ProgressBar
+CanvasLayer
 CollisionShape2D
 AudioStreamPlayer
 Area2D
@@ -9,6 +13,3 @@ RayCast2D
 Marker2D
 Node2D
 FoldableContainer
-ColorRect
-Label
-TileMapLayer

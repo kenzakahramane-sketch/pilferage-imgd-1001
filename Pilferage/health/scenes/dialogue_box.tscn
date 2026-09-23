@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://dlgbox7k2n1a"]
+
+[ext_resource type="Script" uid="uid://dnjwg25ehag8" path="res://scripts/dialogue_box.gd" id="1_dlgbx"]
+[ext_resource type="Texture2D" uid="uid://8k58ir8t8ey0" path="res://assets/images/NPCs/Sq.png" id="2_fu8b5"]
+[ext_resource type="Texture2D" uid="uid://dwd4cp8bqam1n" path="res://assets/images/NPCs/cat.png" id="3_tm68y"]
+
+[node name="DialogueBox" type="CanvasLayer" unique_id=81821148]
+layer = 20
+script = ExtResource("1_dlgbx")
+
+[node name="DialoguePanel" type="Panel" parent="." unique_id=800051092]
+unique_name_in_owner = true
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 80.0
+offset_top = -220.0
+offset_right = -80.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Margin" type="MarginContainer" parent="DialoguePanel" unique_id=374267919]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 16
+
+[node name="HBox" type="HBoxContainer" parent="DialoguePanel/Margin" unique_id=1858734986]
+layout_mode = 2
+
+[node name="CharacterPortrait" type="TextureRect" parent="DialoguePanel/Margin/HBox" unique_id=272734902]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+texture = ExtResource("2_fu8b5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VBox" type="VBoxContainer" parent="DialoguePanel/Margin/HBox" unique_id=1078065009]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="SpeakerName" type="Label" parent="DialoguePanel/Margin/HBox/VBox" unique_id=219258876]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Speaker"
+
+[node name="DialogueText" type="Label" parent="DialoguePanel/Margin/HBox/VBox" unique_id=493669540]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 20
+text = "..."
+autowrap_mode = 3
+
+[node name="ContinueHint" type="Label" parent="DialoguePanel/Margin/HBox/VBox" unique_id=2144531142]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "[E] Continue"
+horizontal_alignment = 2
+
+[node name="PlayerPortrait" type="TextureRect" parent="DialoguePanel/Margin/HBox" unique_id=881887731]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+texture = ExtResource("3_tm68y")
+expand_mode = 2

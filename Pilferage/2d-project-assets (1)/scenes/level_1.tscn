@@ -16,6 +16,10 @@
 [ext_resource type="PackedScene" uid="uid://3ku8hufaeh2k" path="res://scenes/flower_item.tscn" id="9_flwr1"]
 [ext_resource type="PackedScene" uid="uid://ban18ub1qqy5v" path="res://scenes/squirrel_npc.tscn" id="10_npc01"]
 [ext_resource type="AudioStream" uid="uid://hdouwhjhclcr" path="res://assets/Music/LOOP(upbeat) 190bpm_Too Many Coffees.ogg" id="11_2os1m"]
+[ext_resource type="Script" uid="uid://b4ef51ceiouu8" path="res://scripts/health_bar.gd" id="17_1s4pk"]
+[ext_resource type="Texture2D" uid="uid://c4euqeeprtubo" path="res://assets/images/Sidescroller images/BarBase.png" id="18_2cbcq"]
+[ext_resource type="Texture2D" uid="uid://b8mr4q63jox4b" path="res://assets/images/Sidescroller images/Bar.png" id="19_isj1j"]
+[ext_resource type="Script" uid="uid://p4gnarn1kyjh" path="res://scripts/texture_progress_bar.gd" id="20_isj1j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rus8k"]
 texture = ExtResource("1_bswci")
@@ -291,6 +295,7 @@ a wall jump."
 horizontal_alignment = 1
 
 [node name="return to hubworld" parent="." unique_id=1214173505 instance=ExtResource("1_pa8r4")]
+script = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="return to hubworld" unique_id=2142518085]
 position = Vector2(-160, 0)
@@ -331,5 +336,27 @@ position = Vector2(2731, -58)
 position = Vector2(2314, -250)
 
 [node name="ItemBar" parent="." unique_id=2108399289 instance=ExtResource("6_7nomh")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1058770547]
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer" unique_id=1974197931 node_paths=PackedStringArray("cat")]
+visible = false
+offset_left = 5.0
+offset_top = 4.0
+offset_right = 84.0
+offset_bottom = 64.75
+script = ExtResource("17_1s4pk")
+cat = NodePath("../../cat")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer" unique_id=1616689694 node_paths=PackedStringArray("cat")]
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 225.54546
+offset_bottom = 71.0
+nine_patch_stretch = true
+texture_under = ExtResource("18_2cbcq")
+texture_progress = ExtResource("19_isj1j")
+script = ExtResource("20_isj1j")
+cat = NodePath("../../cat")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
