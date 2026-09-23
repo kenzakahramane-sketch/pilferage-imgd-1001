@@ -1,10 +1,20 @@
 extends CharacterBody2D
+
+class_name Cat
+
+signal healthChanged
+
 var wall_cling = 0
 const ACCELERATION = 2.5
 const JUMP_VELOCITY = -250.0
 const MAX_SPEED = 150
 var wall_charge = 0
 const wall_charge_time = 45
+var isHurt = false
+
+@export var max_health = 25
+@onready var current_health = max_health 
+
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var hitbox = $movement_box
 @onready var detect_left = $RayCastLeft
@@ -13,7 +23,14 @@ const wall_charge_time = 45
 @onready var audio_grass = $"Grass sound effect"
 @onready var coyote_timer = $"Coyote timer"
 @onready var jump_buffer_timer = $"Jump buffer timer"
+@onready var hit_flash_ani: AnimationPlayer = $hit_flash_ani
+
+
 func _physics_process(delta: float) -> void:
+	
+	if Input.is_action_just_pressed("test_key"):
+		hit()
+	
 	# Add the gravity. When moving against a wall, you will fall down slower
 	if not is_on_floor():
 		if detect_right.is_colliding() and velocity.y > 0 and animated_sprite.flip_h == false or detect_left.is_colliding() and velocity.y > 0 and animated_sprite.flip_h == true:
@@ -108,3 +125,17 @@ func _physics_process(delta: float) -> void:
 	if Global.simplified_controls == true and direction and wall_charge > wall_charge_time and abs(velocity.x) < 50:
 		if (animated_sprite.flip_h == false and direction < 0) or (animated_sprite.flip_h == true and direction > 0):
 			velocity.x = MAX_SPEED * 1.75 * direction
+
+
+
+func hit():
+	current_health -= 5
+	if (current_health <= 0):
+		die()
+	hit_flash_ani.play("hit_flash")
+	isHurt = true
+	healthChanged.emit()
+	
+	
+func die():
+	get_tree().reload_current_scene()

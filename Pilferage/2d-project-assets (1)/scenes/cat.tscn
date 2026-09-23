@@ -1,10 +1,17 @@
 [gd_scene format=3 uid="uid://c7uyokengmfxn"]
 
 [ext_resource type="Texture2D" uid="uid://bf4oexnk1n8ky" path="res://assets/images/Sidescroller images/cat.png" id="1_myi5k"]
+[ext_resource type="Shader" uid="uid://bt1pbxuwhq16f" path="res://assets/hit.tres" id="1_t8pth"]
 [ext_resource type="AudioStream" uid="uid://cqntv7ry0y4fr" path="res://assets/Sound Effects/joentnt-walk-on-grass-2-291985.mp3" id="2_se5fe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_myi5k"]
 size = Vector2(6.5, 11)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7vi38"]
+resource_local_to_scene = true
+shader = ExtResource("1_t8pth")
+shader_parameter/enabled = false
+shader_parameter/tint = Color(18.892157, 18.892157, 18.892157, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_se5fe"]
 atlas = ExtResource("1_myi5k")
@@ -330,6 +337,43 @@ animations = [{
 "speed": 15.0
 }]
 
+[sub_resource type="Animation" id="Animation_7vi38"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:material:shader_parameter/enabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_cxap7"]
+resource_name = "hit_flash"
+length = 0.19999999999999998
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:material:shader_parameter/enabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tol8a"]
+_data = {
+&"RESET": SubResource("Animation_7vi38"),
+&"hit_flash": SubResource("Animation_cxap7")
+}
+
 [node name="cat" type="CharacterBody2D" unique_id=814917533]
 z_index = 1
 collision_layer = 2
@@ -355,6 +399,7 @@ position = Vector2(11.25, -3)
 target_position = Vector2(0, 6)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1500078002]
+material = SubResource("ShaderMaterial_7vi38")
 position = Vector2(9, -8)
 scale = Vector2(1.147, 1)
 sprite_frames = SubResource("SpriteFrames_ciobh")
@@ -372,3 +417,6 @@ one_shot = true
 [node name="Jump buffer timer" type="Timer" parent="." unique_id=396974780]
 wait_time = 0.1
 one_shot = true
+
+[node name="hit_flash_ani" type="AnimationPlayer" parent="." unique_id=2089548654]
+libraries/ = SubResource("AnimationLibrary_tol8a")

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cuqta3bwplpu"]
+
+[ext_resource type="Script" uid="uid://baeokwut4pdyr" path="res://scenes/return_to_hubworld.gd" id="1_2seat"]
+
+[node name="return to hubworld" type="Area2D" unique_id=1214173505]
+collision_mask = 2
+script = ExtResource("1_2seat")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

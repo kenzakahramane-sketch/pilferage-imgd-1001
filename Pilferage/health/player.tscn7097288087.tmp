@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://c1sx7bic4uhdj"]
+
+[ext_resource type="PackedScene" uid="uid://pbmyh1qru7p" path="res://characters/happy_boo/happy_boo.tscn" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://yh2ao5or56lq" path="res://player.gd" id="1_onrkg"]
+[ext_resource type="PackedScene" uid="uid://du5i8r7jdycua" path="res://gun.tscn" id="3_i3pqv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rekuv"]
+radius = 33.24154
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4cxtk"]
+radius = 39.812057
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4cxtk"]
+bg_color = Color(0.15294118, 0.16862746, 0.1882353, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rekuv"]
+bg_color = Color(0, 0.71661615, 0.09344315, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Player" type="CharacterBody2D" unique_id=775659923]
+y_sort_enabled = true
+script = ExtResource("1_onrkg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=868435201]
+shape = SubResource("CircleShape2D_rekuv")
+
+[node name="HappyBoo" parent="." unique_id=1091727253 instance=ExtResource("1_4flbx")]
+unique_name_in_owner = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=420452094]
+
+[node name="GUN" parent="." unique_id=269018533 instance=ExtResource("3_i3pqv")]
+position = Vector2(-4, -47)
+
+[node name="shootTime" type="Timer" parent="GUN" unique_id=90855666]
+wait_time = 0.009999999999999998
+autostart = true
+
+[node name="hurtBox" type="Area2D" parent="." unique_id=84366875]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtBox" unique_id=1428838870]
+shape = SubResource("CircleShape2D_4cxtk")
+debug_color = Color(0.87198466, 0.3391367, 0.22259462, 0.41960785)
+
+[node name="playerHealth" type="ProgressBar" parent="." unique_id=1631012207]
+unique_name_in_owner = true
+offset_left = -138.0
+offset_top = -145.0
+offset_right = 139.0
+offset_bottom = -116.0
+theme_override_styles/background = SubResource("StyleBoxFlat_4cxtk")
+theme_override_styles/fill = SubResource("StyleBoxFlat_rekuv")
+value = 100.0
+show_percentage = false
+
+[connection signal="timeout" from="GUN/shootTime" to="GUN" method="_on_shoot_time_timeout"]

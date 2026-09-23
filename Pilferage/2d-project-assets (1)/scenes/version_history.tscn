@@ -38,7 +38,7 @@ layout_mode = 0
 offset_left = 3.0
 offset_top = -3.0
 offset_right = 1819.0
-offset_bottom = 3980.0
+offset_bottom = 7682.0
 color = Color(0.141176, 0.133333, 0.180392, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=1451312130]
@@ -219,6 +219,9 @@ the push button. Additionally, pressing jump while
 pressing in the other direction will allow you to perform
 a wall jump without the push button as well
 - npc characters have been added
+- the player can take damage now and a health bar 
+has been added. Press \"T\" in level 1
+ to test the damage system.
 "
 horizontal_alignment = 1
 
