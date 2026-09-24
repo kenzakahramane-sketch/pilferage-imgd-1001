@@ -12,3 +12,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		var time = music_1.get_playback_position()
 		music_1.stop()
 		music_2.play(time)
+
+
+func _on_return_to_hubworld_body_entered(body: Node2D) -> void:
+	get_tree().change_scene_to_file("res://scenes/brotatoclone.tscn")

@@ -359,4 +359,5 @@ texture_progress = ExtResource("19_isj1j")
 script = ExtResource("20_isj1j")
 cat = NodePath("../../cat")
 
+[connection signal="body_entered" from="return to hubworld" to="." method="_on_return_to_hubworld_body_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

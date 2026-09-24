@@ -1,8 +1,8 @@
+CollisionShape2D
 AnimationPlayer
 TextureProgressBar
 ProgressBar
 CanvasLayer
-CollisionShape2D
 AudioStreamPlayer
 Area2D
 TextureRect
@@ -12,4 +12,3 @@ AudioStreamPlayer2D
 RayCast2D
 Marker2D
 Node2D
-FoldableContainer
