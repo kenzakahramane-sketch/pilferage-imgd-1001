@@ -955,6 +955,8 @@ zoom = Vector2(6, 6)
 position_smoothing_enabled = true
 
 [node name="go_to_level_1" parent="." unique_id=94506289 instance=ExtResource("17_lsvnq")]
+collision_layer = 0
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="go_to_level_1" unique_id=1654681200]
 position = Vector2(990.5, -1.75)

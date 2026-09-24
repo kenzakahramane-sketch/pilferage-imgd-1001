@@ -37,3 +37,4 @@ res://scenes/item_bar.tscn
 res://scripts/item_bar.gd
 res://assets/hit.tres
 res://scenes/return_to_hubworld.tscn
+res://scripts/level_2.gd
