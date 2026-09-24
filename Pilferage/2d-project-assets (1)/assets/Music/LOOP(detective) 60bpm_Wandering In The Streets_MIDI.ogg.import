@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cxskxukpviwsm"
+path="res://.godot/imported/LOOP(detective) 60bpm_Wandering In The Streets_MIDI.ogg-845f462c2492c64066965ec22386ebd1.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/Music/LOOP(detective) 60bpm_Wandering In The Streets_MIDI.ogg"
+dest_files=["res://.godot/imported/LOOP(detective) 60bpm_Wandering In The Streets_MIDI.ogg-845f462c2492c64066965ec22386ebd1.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
