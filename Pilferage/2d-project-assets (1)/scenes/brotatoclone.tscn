@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://42bnlf0jk3uq" path="res://assets/images/Topdown images/door.png" id="5_m1wyy"]
 [ext_resource type="PackedScene" uid="uid://c7uyokengmfxn" path="res://scenes/cat.tscn" id="6_l1rjk"]
 [ext_resource type="Script" uid="uid://i25vqnbrl3us" path="res://scripts/entrance.gd" id="6_m1wyy"]
+[ext_resource type="Script" uid="uid://bvxmdlka7brrd" path="res://scripts/hubCat.gd" id="7_2lv1l"]
 [ext_resource type="Texture2D" uid="uid://bf4oexnk1n8ky" path="res://assets/images/Sidescroller images/cat.png" id="7_l1rjk"]
 [ext_resource type="Texture2D" uid="uid://clkpjavs3gywl" path="res://assets/images/Hub Images/catBack.png" id="8_6me8n"]
 [ext_resource type="Texture2D" uid="uid://4vt5jjjrbjky" path="res://assets/images/Hub Images/catFront.png" id="9_6me8n"]
@@ -68,56 +69,6 @@ size = Vector2(859.5, 597.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m5gep"]
 size = Vector2(342, 196)
-
-[sub_resource type="GDScript" id="GDScript_a0oke"]
-script/source = "extends CharacterBody2D
-
-var health = 100.0
-
-@onready var animated_sprite = $AnimatedSprite2D2
-
-func _ready():
-	$AnimatedSprite2D.visible = false
-	$AnimatedSprite2D2.visible = true
-
-func _physics_process(delta):
-	var direction = Input.get_vector(\"move_left\", \"move_right\", \"move_up\", \"move_down\")
-
-	var speed = 600
-
-	if Input.is_action_pressed(\"hubSprint\"):
-		speed = 1000
-
-	velocity = direction * speed
-
-	if velocity.length() > 0:
-
-		if velocity.y < 0:
-			animated_sprite.play(\"backCool\")
-			animated_sprite.frame = 0
-			animated_sprite.stop()
-
-		elif velocity.y > 0:
-			animated_sprite.play(\"frontCool\")
-			animated_sprite.frame = 0
-			animated_sprite.stop()
-
-		elif Input.is_action_pressed(\"hubSprint\"):
-			animated_sprite.play(\"sprintCool\")
-
-		else:
-			animated_sprite.play(\"runCool\")
-
-		if velocity.x > 0:
-			animated_sprite.flip_h = false
-		elif velocity.x < 0:
-			animated_sprite.flip_h = true
-
-	else:
-		animated_sprite.play(\"idleCool\")
-
-	move_and_slide()
-"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l1rjk"]
 size = Vector2(6.5, 11)
@@ -955,7 +906,7 @@ scale = Vector2(0.6399988, 0.6399988)
 [node name="hubCat" parent="." unique_id=814917533 groups=["player"] instance=ExtResource("6_l1rjk")]
 position = Vector2(-10.000001, 22.000002)
 rotation = -0.009041538
-script = SubResource("GDScript_a0oke")
+script = ExtResource("7_2lv1l")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="hubCat" unique_id=683514641]
 position = Vector2(11.25, -5.5)
