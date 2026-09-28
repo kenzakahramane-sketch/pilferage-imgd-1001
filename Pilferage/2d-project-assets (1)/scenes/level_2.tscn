@@ -11,7 +11,6 @@
 [ext_resource type="AudioStream" uid="uid://cxskxukpviwsm" path="res://assets/Music/LOOP(detective) 60bpm_Wandering In The Streets_MIDI.ogg" id="9_hey2k"]
 [ext_resource type="AudioStream" uid="uid://7c41oph1lrp4" path="res://assets/Music/LOOP(detective) 60bpm_Wandering In The Streets.ogg" id="9_que50"]
 [ext_resource type="PackedScene" uid="uid://b20p3gm7oi7pr" path="res://scenes/wrench_item.tscn" id="11_hey2k"]
-[ext_resource type="Texture2D" uid="uid://ch6nd0lnsp62j" path="res://assets/images/Items/wrench.png" id="12_172wr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wo48x"]
 texture = ExtResource("3_6cvei")
@@ -445,11 +444,7 @@ position = Vector2(136, -16)
 rotation = -1.5707964
 shape = SubResource("WorldBoundaryShape2D_oh4dh")
 
-[node name="WrenchItem" parent="." unique_id=1403762038 instance=ExtResource("11_hey2k")]
-position = Vector2(1912, -405)
-priority = 1
-item_id = "wrench_01"
-item_name = "Wrench"
-item_texture = ExtResource("12_172wr")
+[node name="WrenchItem" parent="." unique_id=1281509407 instance=ExtResource("11_hey2k")]
+position = Vector2(1921, -412)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
