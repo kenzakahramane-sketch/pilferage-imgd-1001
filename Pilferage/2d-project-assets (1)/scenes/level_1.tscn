@@ -503,7 +503,6 @@ position = Vector2(2314, -250)
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1058770547]
 
 [node name="ProgressBar" type="ProgressBar" parent="CanvasLayer" unique_id=1974197931 node_paths=PackedStringArray("cat")]
-visible = false
 offset_left = 5.0
 offset_top = 4.0
 offset_right = 84.0

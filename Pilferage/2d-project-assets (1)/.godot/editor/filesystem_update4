@@ -3,3 +3,4 @@ res://assets/fonts/buttonTheme.tres
 res://assets/hit.tres
 res://scenes/level_2.tscn
 res://scripts/level_2.gd
+res://scenes/wrench_item.tscn
