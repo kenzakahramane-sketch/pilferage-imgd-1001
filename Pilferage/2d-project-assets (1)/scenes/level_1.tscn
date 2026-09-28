@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://b8mr4q63jox4b" path="res://assets/images/Sidescroller images/Bar.png" id="19_isj1j"]
 [ext_resource type="Script" uid="uid://p4gnarn1kyjh" path="res://scripts/texture_progress_bar.gd" id="20_isj1j"]
 [ext_resource type="Texture2D" uid="uid://gbipnr7e31lp" path="res://assets/images/Sidescroller images/pilferage-cat-sheet-v1.1-pixilart.png" id="21_so66j"]
+[ext_resource type="PackedScene" uid="uid://jxsqjaos8ent" path="res://scenes/alien.tscn" id="22_tr1x6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rus8k"]
 texture = ExtResource("1_bswci")
@@ -535,6 +536,9 @@ flip_h = true
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody2D" unique_id=2016841921]
 libraries/ = SubResource("AnimationLibrary_s7g0b")
 autoplay = &"tutorial animation"
+
+[node name="Alien" parent="." unique_id=767741621 instance=ExtResource("22_tr1x6")]
+position = Vector2(233, -8)
 
 [connection signal="body_entered" from="return to hubworld" to="." method="_on_return_to_hubworld_body_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
