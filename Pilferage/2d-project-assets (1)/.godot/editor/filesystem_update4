@@ -4,3 +4,7 @@ res://assets/hit.tres
 res://scenes/level_2.tscn
 res://scripts/level_2.gd
 res://scenes/wrench_item.tscn
+res://scripts/cat.gd
+res://scenes/alien.tscn
+res://scripts/go_to_level_3.gd
+res://scenes/go_to_level_2.tscn

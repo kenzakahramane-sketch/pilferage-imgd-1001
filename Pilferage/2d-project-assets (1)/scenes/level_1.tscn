@@ -392,29 +392,25 @@ tile_set = SubResource("TileSet_ciobh")
 [node name="Labels" type="Node2D" parent="." unique_id=1448191603]
 
 [node name="Label" type="Label" parent="Labels" unique_id=144689654]
-offset_left = 120.0
-offset_top = -39.0
-offset_right = 232.0
-offset_bottom = -20.0
+offset_left = 98.0
+offset_top = -26.0
+offset_right = 210.0
+offset_bottom = -7.0
 theme_override_fonts/font = ExtResource("6_fcfvj")
 theme_override_font_sizes/font_size = 8
-text = "Press the w or
+text = "Press the W or
 up key to jump"
 horizontal_alignment = 1
 
 [node name="Label5" type="Label" parent="Labels" unique_id=1479960599]
-offset_left = -68.0
-offset_top = -130.0
-offset_right = 92.0
-offset_bottom = -12.0
+offset_left = -77.0
+offset_top = 22.0
+offset_right = 99.0
+offset_bottom = 47.0
 theme_override_fonts/font = ExtResource("6_fcfvj")
 theme_override_font_sizes/font_size = 8
-text = "Welcome to the
-sidescrolling world!
-Press the left and
-right arrow keys
-or A and D to
-move around."
+text = "press the left, right,
+A, or D keys to move."
 horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="Labels" unique_id=1608448813]
@@ -444,10 +440,10 @@ speed."
 horizontal_alignment = 1
 
 [node name="Label4" type="Label" parent="Labels" unique_id=1757193038]
-offset_left = 844.0
-offset_top = -160.0
-offset_right = 1001.0
-offset_bottom = -104.0
+offset_left = 860.0
+offset_top = -119.0
+offset_right = 1017.0
+offset_bottom = -63.0
 theme_override_fonts/font = ExtResource("6_fcfvj")
 theme_override_font_sizes/font_size = 8
 text = "If you preform a

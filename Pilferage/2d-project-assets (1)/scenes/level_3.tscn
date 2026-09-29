@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://1txyulylmvku"]
+
+[ext_resource type="PackedScene" uid="uid://c7uyokengmfxn" path="res://scenes/cat.tscn" id="1_70nk6"]
+
+[node name="level_3" type="Node2D" unique_id=547933867]
+
+[node name="cat" parent="." unique_id=814917533 instance=ExtResource("1_70nk6")]
+
+[node name="Camera2D" type="Camera2D" parent="cat" unique_id=1660056725]

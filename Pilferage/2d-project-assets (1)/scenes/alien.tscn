@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://d2opcyxm5si7q"]
+
+[ext_resource type="Texture2D" path="res://assets/images/Sidescroller images/alien.png" id="1_3vbw7"]
+[ext_resource type="Script" path="res://scripts/alien.gd" id="1_np108"]
+[ext_resource type="Texture2D" path="res://assets/images/Sidescroller images/alien2.png" id="2_np108"]
+[ext_resource type="Texture2D" path="res://assets/images/Sidescroller images/alien3.png" id="3_vxp04"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kufd8"]
+atlas = ExtResource("1_3vbw7")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g58bj"]
+atlas = ExtResource("2_np108")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_87urc"]
+atlas = ExtResource("3_vxp04")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ciobh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kufd8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g58bj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_87urc")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qggm8"]
+size = Vector2(7, 10)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ciobh"]
+radius = 50.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qggm8"]
+radius = 75.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ciobh"]
+size = Vector2(7, 3)
+
+[node name="Alien" type="CharacterBody2D" unique_id=767741621]
+collision_layer = 8
+collision_mask = 3
+script = ExtResource("1_np108")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1887304450]
+sprite_frames = SubResource("SpriteFrames_ciobh")
+autoplay = "default"
+frame = 2
+frame_progress = 0.24828476
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1095401730]
+position = Vector2(-0.5, 3)
+shape = SubResource("RectangleShape2D_qggm8")
+
+[node name="Enter" type="Area2D" parent="." unique_id=583505762]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enter" unique_id=1846163056]
+shape = SubResource("CircleShape2D_ciobh")
+debug_color = Color(0.13253191, 0.64678526, 0, 0.41960785)
+
+[node name="Exit" type="Area2D" parent="." unique_id=146262046]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit" unique_id=917703913]
+shape = SubResource("CircleShape2D_qggm8")
+debug_color = Color(0.9999998, 0.0091635175, 0.06634987, 0.41960785)
+
+[node name="wallDetectRay" type="RayCast2D" parent="." unique_id=394992052]
+target_position = Vector2(-7, 0)
+
+[node name="ledgeDetectRay" type="RayCast2D" parent="." unique_id=1008723802]
+position = Vector2(-5, 7)
+target_position = Vector2(0, 4)
+
+[node name="collide" type="Area2D" parent="." unique_id=61552164]
+position = Vector2(-0.5, -3.5)
+collision_layer = 8
+collision_mask = 0
+
+[node name="top" type="CollisionShape2D" parent="collide" unique_id=2096172224]
+shape = SubResource("RectangleShape2D_ciobh")
+debug_color = Color(0.92793626, 3.657937e-05, 0.66858476, 0.41960785)
+
+[connection signal="body_entered" from="Enter" to="." method="_on_sight_entered"]
+[connection signal="body_exited" from="Exit" to="." method="_on_sight_exited"]

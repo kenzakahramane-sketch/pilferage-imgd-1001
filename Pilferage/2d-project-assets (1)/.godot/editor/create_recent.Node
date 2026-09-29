@@ -1,9 +1,10 @@
+CollisionShape2D
+Camera2D
+Area2D
 AnimationPlayer
 AnimatedSprite2D
 AnimatableBody2D
 TileMapLayer
-CollisionShape2D
-Area2D
 Timer
 AudioStreamPlayer
 AudioStreamPlayer2D
@@ -11,4 +12,3 @@ TextureProgressBar
 ProgressBar
 CanvasLayer
 TextureRect
-HBoxContainer
