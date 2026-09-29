@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cape0item1"]
+
+[ext_resource type="Script" path="res://scripts/item.gd" id="1_item"]
+[ext_resource type="Texture2D" path="res://assets/images/Items/cape.png" id="2_cape"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cape"]
+radius = 24.0
+
+[node name="CapeItem" type="Area2D"]
+collision_layer = 8
+collision_mask = 3
+script = ExtResource("1_item")
+item_id = "cape_01"
+item_name = "Captain's Cape"
+item_texture = ExtResource("2_cape")
+lore_id_to_unlock = "cape_found"
+lore_title = "The Captain's Cape, Found"
+lore_journal_text = "Half-buried and salt-stiff, but unmistakably the old sailor's cape the dog back in town swore he lost chasing that runaway cow. Wearing it feels like carrying a piece of someone else's story."
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_cape")
+
+[node name="ItemSprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("2_cape")

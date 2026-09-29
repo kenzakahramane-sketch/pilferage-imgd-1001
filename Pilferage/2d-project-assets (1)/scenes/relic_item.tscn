@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://relic0item1"]
+
+[ext_resource type="Script" path="res://scripts/item.gd" id="1_item"]
+[ext_resource type="Texture2D" path="res://assets/images/Items/relic.png" id="2_relic"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_relic"]
+radius = 24.0
+
+[node name="RelicItem" type="Area2D"]
+collision_layer = 8
+collision_mask = 3
+script = ExtResource("1_item")
+item_id = "relic_01"
+item_name = "Sealed Relic"
+item_texture = ExtResource("2_relic")
+lore_id_to_unlock = "relic_found"
+lore_title = "The Sealed Relic"
+lore_journal_text = "Behind the old lever's gate: a tome, bound shut with a clasp that hasn't been touched in years. Whatever secret it's keeping, it's kept it well."
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_relic")
+
+[node name="ItemSprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("2_relic")

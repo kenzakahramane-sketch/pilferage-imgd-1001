@@ -17,6 +17,8 @@
 [ext_resource type="Texture2D" uid="uid://clkpjavs3gywl" path="res://assets/images/Hub Images/catBack.png" id="8_6me8n"]
 [ext_resource type="Texture2D" uid="uid://4vt5jjjrbjky" path="res://assets/images/Hub Images/catFront.png" id="9_6me8n"]
 [ext_resource type="PackedScene" uid="uid://j13nplw74h7n" path="res://scenes/go_to_level_1.tscn" id="17_lsvnq"]
+[ext_resource type="PackedScene" uid="uid://npcdohak4a" path="res://scenes/dog_npc.tscn" id="18_dognpc"]
+[ext_resource type="PackedScene" uid="uid://cape0item1" path="res://scenes/cape_item.tscn" id="19_cape1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vjt6i"]
 texture = ExtResource("2_m0d6t")
@@ -954,9 +956,14 @@ scale = Vector2(-12.384573, -12.384573)
 zoom = Vector2(6, 6)
 position_smoothing_enabled = true
 
+[node name="DogNPC" parent="." unique_id=1477258377 instance=ExtResource("18_dognpc")]
+position = Vector2(48, 26)
+
+[node name="HubTestCape" parent="." unique_id=1766670690 instance=ExtResource("19_cape1")]
+position = Vector2(167.50407, 76.05553)
+item_id = "cape_hub_test"
+
 [node name="go_to_level_1" parent="." unique_id=94506289 instance=ExtResource("17_lsvnq")]
-collision_layer = 0
-collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="go_to_level_1" unique_id=1654681200]
 position = Vector2(990.5, -1.75)

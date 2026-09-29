@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://npcwolf8h4k2"]
+
+[ext_resource type="Script" path="res://scripts/npc.gd" id="1_npcgd"]
+[ext_resource type="Texture2D" path="res://assets/images/NPCs/squirrel.png" id="2_placeholder"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wolf"]
+size = Vector2(16, 16)
+
+[node name="WolfNPC" type="Area2D"]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_npcgd")
+npc_name = "Wolf"
+dialogue_lines = Array[String](["...oh. Didn't hear you creep up on me like that.", "I don't get many visitors way out here.", "You seem like the curious type. Most cats are."])
+lore_id_to_unlock = "hidden_secret"
+one_time_lore_lines = Array[String](["Between us? There's something hidden in this world that most folks walk right past.", "I won't tell you where. Where's the fun in that?", "But if you're patient, and you look in the places nobody else bothers to look... you'll find it."])
+lore_title = "Something Hidden"
+lore_journal_text = "The wolf speaks of something tucked away in the world, unnoticed by most. A secret worth hunting for - if only there were a clue to where."
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_wolf")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_placeholder")
+modulate = Color(0.6, 0.6, 0.65, 1)
+
+[node name="InteractHint" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = -20.0
+offset_top = -26.0
+offset_right = 20.0
+offset_bottom = -2.0
+theme_override_font_sizes/font_size = 8
+horizontal_alignment = 1
+text = "[E]"

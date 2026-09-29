@@ -36,5 +36,10 @@ func _on_dev_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/level_1.tscn")
 
 
+# TEMPORARY BUTTON FOR TESTING - jumps straight to both minigames, no level geometry
+func _on_dev_minigames_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/minigame_test.tscn")
+
+
 func _on_options_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/options.tscn")

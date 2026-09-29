@@ -23,20 +23,16 @@ func _on_ended() -> void:
 	panel.visible = false
 
 
-func _on_line_shown(speaker: String, text: String) -> void:
-		speaker_label.text = speaker
-		speaker_label.visible = speaker != ""
-		text_label.text = text
+func _on_line_shown(speaker: String, text: String, line_portrait: Texture2D) -> void:
+	speaker_label.text = speaker
+	speaker_label.visible = speaker != ""
+	text_label.text = text
 
-		portrait.texture = preload("res://assets/images/NPCs/Sq.png")
-		portrait.visible = true
+	portrait.texture = line_portrait
+	portrait.visible = line_portrait != null
 
 
 func _unhandled_input(event: InputEvent) -> void:
 	if DialogueManager.is_active() and event.is_action_pressed("interact"):
 		DialogueManager.advance()
 		get_viewport().set_input_as_handled()
-
-const PORTRAITS = {
-	"NPCName": preload("res://assets/images/NPCs/Sq.png"),
-}

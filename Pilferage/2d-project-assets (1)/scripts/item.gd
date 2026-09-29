@@ -7,6 +7,12 @@ extends Area2D
 @export var item_name: String = "Item"
 @export var item_texture: Texture2D
 
+## Optional: makes picking this item up grant a Lore Journal entry, same idea
+## as the lore fields on npc.gd. Leave blank if this item is just an item.
+@export var lore_id_to_unlock: String = ""
+@export var lore_title: String = ""
+@export var lore_journal_text: String = ""
+
 @onready var sprite: Sprite2D = %ItemSprite
 
 
@@ -25,24 +31,11 @@ func _ready() -> void:
 
 	body_entered.connect(_on_body_entered)
 
-	print("[item debug] ", item_name, " ready at global_position=", global_position, " collision_layer=", collision_layer, " collision_mask=", collision_mask, " monitoring=", monitoring)
-	var players = get_tree().get_nodes_in_group("player")
-	print("[item debug] nodes in 'player' group: ", players)
-	for p in players:
-		print("[item debug]   -> ", p.name, " at ", p.global_position, " collision_layer=", p.collision_layer)
-
-
-func _process(_delta: float) -> void:
-	for p in get_tree().get_nodes_in_group("player"):
-		var d: float = global_position.distance_to(p.global_position)
-		if int(Engine.get_frames_drawn()) % 30 == 0:
-			print("[item debug] ", item_name, " distance to ", p.name, " = ", d)
-
 
 func _on_body_entered(body: Node2D) -> void:
-	print("[item debug] something entered: ", body.name, " groups: ", body.get_groups())
 	if body.is_in_group("player"):
-		print("[item debug] player confirmed, adding item: ", item_name)
 		Global.add_item(item_id, item_name, item_texture)
+		if lore_id_to_unlock != "":
+			DialogueManager.unlock_lore(lore_id_to_unlock, lore_title, lore_journal_text)
 		# Deferred: freeing a CollisionObject mid-physics-callback isn't allowed
 		call_deferred("queue_free")

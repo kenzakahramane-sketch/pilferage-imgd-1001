@@ -8,6 +8,9 @@ signal inventory_changed
 var inventory: Array[Dictionary] = []       # [{"id":..., "name":..., "texture":...}]
 var collected_item_ids: Array[String] = []  # permanently picked up, so items never respawn
 
+signal puzzle_solved(puzzle_id: String)
+var solved_puzzles: Array[String] = []       # persists which puzzles are already done
+
 
 func has_collected(item_id: String) -> bool:
 	return collected_item_ids.has(item_id)
@@ -38,3 +41,18 @@ func use_item(item_id: String) -> bool:
 			inventory_changed.emit()
 			return true
 	return false
+
+
+# --- Puzzles ---
+
+func is_puzzle_solved(puzzle_id: String) -> bool:
+	return solved_puzzles.has(puzzle_id)
+
+
+# Any puzzle type calls this once solved. Any Gate watching this puzzle_id
+# will open automatically.
+func solve_puzzle(puzzle_id: String) -> void:
+	if puzzle_id == "" or is_puzzle_solved(puzzle_id):
+		return
+	solved_puzzles.append(puzzle_id)
+	puzzle_solved.emit(puzzle_id)

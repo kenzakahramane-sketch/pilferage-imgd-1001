@@ -86,6 +86,7 @@ DialogueManager="*res://scripts/dialogue_manager.gd"
 DialogueBoxUI="*res://scenes/dialogue_box.tscn"
 LoreJournalUI="*res://scenes/lore_journal.tscn"
 ItemBarUI="*res://scenes/item_bar.tscn"
+RiddleUI="*res://scenes/riddle_ui.tscn"
 
 [display]
 
@@ -170,11 +171,7 @@ test_key={
 
 [layer_names]
 
-2d_physics/layer_1="Environment"
-2d_physics/layer_2="Player"
 3d_physics/layer_2="player"
-2d_physics/layer_3="Push"
-2d_physics/layer_4="Enemy"
 
 [rendering]
 

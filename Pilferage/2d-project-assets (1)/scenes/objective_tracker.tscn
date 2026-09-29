@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://objtracker9k4"]
+
+[ext_resource type="Script" path="res://scripts/objective_tracker.gd" id="1_objtrk"]
+[ext_resource type="Texture2D" path="res://assets/images/UI/journal_paper.png" id="2_paper"]
+[ext_resource type="FontFile" uid="uid://c8x3e628x2e51" path="res://assets/fonts/PressStart2P-Regular.ttf" id="3_pixel"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_paper"]
+texture = ExtResource("2_paper")
+texture_margin_left = 30.0
+texture_margin_top = 30.0
+texture_margin_right = 30.0
+texture_margin_bottom = 30.0
+
+[node name="ObjectiveTracker" type="CanvasLayer"]
+layer = 12
+script = ExtResource("1_objtrk")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 456.0
+offset_bottom = 76.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_paper")
+
+[node name="ObjectiveLabel" type="Label" parent="Panel"]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 6.0
+offset_right = -12.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.25, 0.18, 0.1, 1)
+theme_override_fonts/font = ExtResource("3_pixel")
+theme_override_font_sizes/font_size = 8
+text = "Objective: ..."
+autowrap_mode = 3
+vertical_alignment = 1

@@ -5,13 +5,16 @@ extends Node
 
 signal dialogue_started
 signal dialogue_ended
-signal line_shown(speaker: String, text: String)
+signal line_shown(speaker: String, text: String, portrait: Texture2D)
 signal lore_unlocked(lore_id: String, title: String, text: String)
 
 var lore_flags: Dictionary = {}    # e.g. {"scoobaloo_cape": true}
 var lore_entries: Dictionary = {}  # e.g. {"scoobaloo_cape": {"title": "...", "text": "..."}}
 
-var _queue: Array[String] = []
+var _lines: Array[String] = []
+var _line_portraits: Array = []       # optional, parallel to _lines - per-line expression override
+var _default_portrait: Texture2D = null
+var _index: int = 0
 var _speaker: String = ""
 var _active: bool = false
 var _current_npc = null
@@ -24,30 +27,40 @@ func is_active() -> bool:
 # lines: the dialogue lines to show, in order
 # speaker: name shown above the dialogue box (can be "")
 # npc: optional reference to the NPC node, so it gets notified when done
-func start_dialogue(lines: Array[String], speaker: String = "", npc = null) -> void:
+# default_portrait: shown for every line unless overridden below (optional)
+# line_portraits: same length as lines - a specific expression per line
+#   (leave an entry null to fall back to default_portrait for that line)
+func start_dialogue(lines: Array[String], speaker: String = "", npc = null, default_portrait: Texture2D = null, line_portraits: Array = []) -> void:
 	if _active or lines.is_empty():
 		return
-	_queue = lines.duplicate()
+	_lines = lines.duplicate()
+	_line_portraits = line_portraits.duplicate()
+	_default_portrait = default_portrait
+	_index = 0
 	_speaker = speaker
 	_current_npc = npc
 	_active = true
 	dialogue_started.emit()
-	_show_next_line()
+	_show_current_line()
 
 
 # Call this when the interact key is pressed while dialogue is active
 func advance() -> void:
 	if not _active:
 		return
-	_show_next_line()
+	_index += 1
+	_show_current_line()
 
 
-func _show_next_line() -> void:
-	if _queue.is_empty():
+func _show_current_line() -> void:
+	if _index >= _lines.size():
 		_end_dialogue()
 		return
-	var line: String = _queue.pop_front()
-	line_shown.emit(_speaker, line)
+	var line: String = _lines[_index]
+	var portrait: Texture2D = _default_portrait
+	if _index < _line_portraits.size() and _line_portraits[_index] != null:
+		portrait = _line_portraits[_index]
+	line_shown.emit(_speaker, line, portrait)
 
 
 func _end_dialogue() -> void:

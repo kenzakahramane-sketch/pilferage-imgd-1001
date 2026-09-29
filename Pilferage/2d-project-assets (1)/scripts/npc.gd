@@ -13,6 +13,12 @@ extends Area2D
 @export var lore_title: String = ""       # shown in the Lore Journal
 @export var lore_journal_text: String = ""  # shown in the Lore Journal
 
+## Optional: makes this NPC's dialogue react to lore OTHER NPCs unlocked, so
+## the world feels interconnected. Parallel arrays - reaction_lines[i] is
+## said (every conversation) if the player already knows reacts_to_lore_ids[i].
+@export var reacts_to_lore_ids: Array[String] = []
+@export var reaction_lines: Array[String] = []
+
 @onready var interact_hint: Label = %InteractHint
 
 var _player_in_range: bool = false
@@ -44,7 +50,11 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _start_talking() -> void:
 	interact_hint.visible = false
-	var lines: Array[String] = dialogue_lines.duplicate()
+	var lines: Array[String] = []
+	for i in reacts_to_lore_ids.size():
+		if i < reaction_lines.size() and DialogueManager.has_lore(reacts_to_lore_ids[i]):
+			lines.append(reaction_lines[i])
+	lines.append_array(dialogue_lines)
 	if lore_id_to_unlock != "" and not DialogueManager.has_lore(lore_id_to_unlock) and one_time_lore_lines.size() > 0:
 		lines.append_array(one_time_lore_lines)
 	DialogueManager.start_dialogue(lines, npc_name, self)

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://switchpuzzle8k2"]
+
+[ext_resource type="Script" path="res://scripts/switch_puzzle_controller.gd" id="1_ctrl"]
+[ext_resource type="PackedScene" uid="uid://switchlever3k7" path="res://scenes/switch_lever.tscn" id="2_lever"]
+
+[node name="SwitchPuzzle" type="Node2D"]
+script = ExtResource("1_ctrl")
+puzzle_id = ""
+correct_order = Array[int]([0, 1, 2])
+
+[node name="Lever0" parent="." instance=ExtResource("2_lever")]
+position = Vector2(0, 0)
+lever_id = 0
+
+[node name="Lever1" parent="." instance=ExtResource("2_lever")]
+position = Vector2(40, 0)
+lever_id = 1
+
+[node name="Lever2" parent="." instance=ExtResource("2_lever")]
+position = Vector2(80, 0)
+lever_id = 2
