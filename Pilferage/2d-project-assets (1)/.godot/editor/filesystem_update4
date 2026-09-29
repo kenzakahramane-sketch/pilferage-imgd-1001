@@ -1,5 +1,8 @@
-res://scenes/level_1.tscn
 res://assets/fonts/buttonTheme.tres
 res://assets/hit.tres
-res://scenes/level_2.tscn
-res://scripts/level_2.gd
+res://scenes/alien.tscn
+res://scripts/alien.gd
+res://scripts/cat.gd
+res://scenes/level_1.tscn
+res://scenes/cat.tscn
+res://scripts/damage_box.gd

@@ -27,11 +27,9 @@ var isHurt = false
 @onready var hit_flash_ani: AnimationPlayer = $hit_flash_ani
 
 
+
 func _physics_process(delta: float) -> void:
-	
-	if Input.is_action_just_pressed("test_key"):
-		hit()
-	
+
 	# Add the gravity. When moving against a wall, you will fall down slower
 	if not is_on_floor():
 		if detect_right.is_colliding() and velocity.y > 0 and animated_sprite.flip_h == false or detect_left.is_colliding() and velocity.y > 0 and animated_sprite.flip_h == true:
@@ -131,8 +129,6 @@ func _physics_process(delta: float) -> void:
 		push_timer.start()
 		if (animated_sprite.flip_h == false and direction < 0) or (animated_sprite.flip_h == true and direction > 0):
 			velocity.x = MAX_SPEED * 1.75 * direction
-
-
 
 func hit():
 	current_health -= 5
