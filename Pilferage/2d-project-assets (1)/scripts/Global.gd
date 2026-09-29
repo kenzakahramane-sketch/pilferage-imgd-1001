@@ -12,7 +12,8 @@ signal puzzle_solved(puzzle_id: String)
 var solved_puzzles: Array[String] = []       # persists which puzzles are already done
 
 # Item ids that should make the cat visually wear the cape (see cat.gd).
-const CAPE_ITEM_IDS: Array[String] = ["cape_01"]
+# Both the real Level 2 cape and the hub test copy count, so testing works.
+const CAPE_ITEM_IDS: Array[String] = ["cape_01", "cape_hub_test"]
 
 # --- Save / load ---
 # Add a line here whenever a new pickup item scene is made, so a save file
@@ -22,6 +23,7 @@ const ITEM_TEXTURE_PATHS := {
 	"mushroom_01": "res://assets/images/Items/mushroom.png",
 	"carrot_01": "res://assets/images/Items/carrot.png",
 	"cape_01": "res://assets/images/Items/cape.png",
+	"cape_hub_test": "res://assets/images/Items/cape.png",
 	"relic_01": "res://assets/images/Items/relic.png",
 }
 const ITEM_NAMES := {
@@ -29,6 +31,7 @@ const ITEM_NAMES := {
 	"mushroom_01": "Mushroom",
 	"carrot_01": "Carrot",
 	"cape_01": "Captain's Cape",
+	"cape_hub_test": "Captain's Cape",
 	"relic_01": "Sealed Relic",
 }
 

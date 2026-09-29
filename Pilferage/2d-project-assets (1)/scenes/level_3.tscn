@@ -4,7 +4,7 @@
 
 [node name="level_3" type="Node2D" unique_id=547933867]
 
-[node name="cat" parent="." unique_id=814917533 instance=ExtResource("1_70nk6")]
+[node name="cat" parent="." unique_id=814917533 groups=["player"] instance=ExtResource("1_70nk6")]
 
 [node name="Camera2D" type="Camera2D" parent="cat" unique_id=1660056725]
 zoom = Vector2(6, 6)

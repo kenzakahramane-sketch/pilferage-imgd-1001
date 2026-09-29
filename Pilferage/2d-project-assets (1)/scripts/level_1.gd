@@ -8,6 +8,8 @@ func _ready() -> void:
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
+	if not body.is_in_group("player"):
+		return
 	if music_1.is_playing():
 		var time = music_1.get_playback_position()
 		music_1.stop()
@@ -15,4 +17,8 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 
 
 func _on_return_to_hubworld_body_entered(body: Node2D) -> void:
+	if not body.is_in_group("player"):
+		return
+	Global.current_level_path = "res://scenes/brotatoclone.tscn"
+	Global.save_game()
 	get_tree().change_scene_to_file("res://scenes/brotatoclone.tscn")

@@ -19,6 +19,9 @@
 [ext_resource type="PackedScene" uid="uid://j13nplw74h7n" path="res://scenes/go_to_level_1.tscn" id="17_lsvnq"]
 [ext_resource type="PackedScene" uid="uid://npcdohak4a" path="res://scenes/dog_npc.tscn" id="18_dognpc"]
 [ext_resource type="PackedScene" uid="uid://cape0item1" path="res://scenes/cape_item.tscn" id="19_cape1"]
+[ext_resource type="PackedScene" uid="uid://npcgator9k4" path="res://scenes/alligator_npc.tscn" id="20_gatornpc"]
+[ext_resource type="PackedScene" uid="uid://npcturtle9k4" path="res://scenes/turtle_npc.tscn" id="21_turtlenpc"]
+[ext_resource type="PackedScene" uid="uid://npcwolf8h4k2" path="res://scenes/wolf_npc.tscn" id="22_wolfnpc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vjt6i"]
 texture = ExtResource("2_m0d6t")
@@ -958,6 +961,15 @@ position_smoothing_enabled = true
 
 [node name="DogNPC" parent="." unique_id=1477258377 instance=ExtResource("18_dognpc")]
 position = Vector2(48, 26)
+
+[node name="WolfNPC" parent="." unique_id=1766670691 instance=ExtResource("22_wolfnpc")]
+position = Vector2(-40, 30)
+
+[node name="TurtleNPC" parent="." unique_id=1766670692 instance=ExtResource("21_turtlenpc")]
+position = Vector2(-70, 18)
+
+[node name="AlligatorNPC" parent="." unique_id=1766670693 instance=ExtResource("20_gatornpc")]
+position = Vector2(90, 50)
 
 [node name="HubTestCape" parent="." unique_id=1766670690 instance=ExtResource("19_cape1")]
 position = Vector2(167.50407, 76.05553)

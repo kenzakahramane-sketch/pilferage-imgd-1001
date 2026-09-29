@@ -9,12 +9,9 @@ func _ready() -> void:
 	disappearing_bridge.enabled = true
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-
 func _on_area_2d_body_entered(body: Node2D) -> void:
+	if not body.is_in_group("player"):
+		return
 	disappearing_bridge.enabled = false
 	if music_1.is_playing():
 		var time = music_1.get_playback_position()
