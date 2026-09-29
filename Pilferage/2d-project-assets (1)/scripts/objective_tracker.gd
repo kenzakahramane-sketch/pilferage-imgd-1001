@@ -14,7 +14,7 @@ extends CanvasLayer
 # Root node names of scenes where the tracker should actually show - it's an
 # autoload, so without this it would also sit on top of the main menu,
 # credits, options, etc.
-const GAMEPLAY_SCENES: Array[String] = ["Game", "Level1", "level_2"]
+const GAMEPLAY_SCENES: Array[String] = ["Game", "Level1", "level_2", "level_3"]
 
 # Checked top to bottom - the first step whose "done" check fails is shown.
 # "done" runs every refresh, so this list can grow freely.

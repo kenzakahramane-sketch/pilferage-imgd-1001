@@ -71,13 +71,22 @@ offset_bottom = 841.0
 scale = Vector2(1, 1.8089857)
 theme_override_constants/separation = 16
 
+[node name="Continue" type="Button" parent="Options" unique_id=1172777087]
+visible = false
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme = ExtResource("3_wu84c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1ie8s")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_cbqb0")
+text = "Continue"
+
 [node name="StartGame" type="Button" parent="Options" unique_id=1172777086]
 layout_mode = 2
 size_flags_stretch_ratio = 0.0
 theme = ExtResource("3_wu84c")
 theme_override_styles/hover = SubResource("StyleBoxFlat_1ie8s")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_cbqb0")
-text = "Start Game"
+text = "New Game"
 
 [node name="Credits" type="Button" parent="Options" unique_id=611118544]
 layout_mode = 2
@@ -122,6 +131,7 @@ theme = ExtResource("3_wu84c")
 text = "Test Minigames
  (DEV BUTTON)"
 
+[connection signal="pressed" from="Options/Continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="Options/StartGame" to="." method="_on_startgame_pressed"]
 [connection signal="pressed" from="Options/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="Options/Versions" to="." method="_on_versions_pressed"]

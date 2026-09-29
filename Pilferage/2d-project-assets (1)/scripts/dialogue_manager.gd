@@ -82,6 +82,7 @@ func unlock_lore(lore_id: String, title: String = "", text: String = "") -> void
 	lore_flags[lore_id] = true
 	lore_entries[lore_id] = {"title": title, "text": text}
 	lore_unlocked.emit(lore_id, title, text)
+	Global.save_game()
 
 
 func has_lore(lore_id: String) -> bool:
