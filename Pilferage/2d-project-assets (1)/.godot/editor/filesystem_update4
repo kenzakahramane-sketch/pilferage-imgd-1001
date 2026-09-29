@@ -8,3 +8,4 @@ res://scripts/cat.gd
 res://scenes/alien.tscn
 res://scripts/go_to_level_3.gd
 res://scenes/go_to_level_2.tscn
+res://scenes/level_3.tscn

@@ -7,3 +7,6 @@
 [node name="cat" parent="." unique_id=814917533 instance=ExtResource("1_70nk6")]
 
 [node name="Camera2D" type="Camera2D" parent="cat" unique_id=1660056725]
+zoom = Vector2(6, 6)
+
+[node name="Middleground" type="TileMapLayer" parent="." unique_id=2092776853]
