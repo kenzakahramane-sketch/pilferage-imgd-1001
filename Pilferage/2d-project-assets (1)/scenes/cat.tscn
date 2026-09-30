@@ -424,6 +424,7 @@ position = Vector2(11.25, -3)
 target_position = Vector2(0, 6)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1500078002]
+texture_filter = 1
 material = SubResource("ShaderMaterial_7vi38")
 position = Vector2(9, -8)
 scale = Vector2(1.147, 1)

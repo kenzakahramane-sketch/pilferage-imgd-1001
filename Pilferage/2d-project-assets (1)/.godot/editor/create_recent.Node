@@ -1,3 +1,9 @@
+TextureRect
+ColorRect
+Node2D
+Sprite2D
+Marker2D
+Parallax2D
 TileMapLayer
 Timer
 AudioStreamPlayer
@@ -6,9 +12,3 @@ CollisionShape2D
 AnimationPlayer
 TextureProgressBar
 ProgressBar
-CanvasLayer
-Area2D
-TextureRect
-HBoxContainer
-RayCast2D
-Marker2D
