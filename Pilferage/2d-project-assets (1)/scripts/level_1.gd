@@ -3,8 +3,13 @@ extends Node2D
 @onready var music_2 = $AudioStreamPlayer2
 @onready var tutorial_wall_push = $Labels/Label3
 @onready var tutorial_wall_jump = $Labels/Label4
+@onready var easy_tiles = $"TileMap/Easy Mode"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	if Global.easy_mode == true:
+		easy_tiles.enabled = true
+	else:
+		easy_tiles.enabled = false
 	if Global.music == true:
 		music_1.play()
 	spawnpoint()

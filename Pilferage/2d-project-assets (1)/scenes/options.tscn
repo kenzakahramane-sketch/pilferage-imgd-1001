@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://xtuo6eaih2wp"]
 
-[ext_resource type="Script" uid="uid://d0e6d8kyb1pq2" path="res://scripts/options.gd" id="1_yjkok"]
+[ext_resource type="Script" path="res://scripts/options.gd" id="1_yjkok"]
 [ext_resource type="FontFile" uid="uid://c8x3e628x2e51" path="res://assets/fonts/PressStart2P-Regular.ttf" id="2_2iy26"]
 [ext_resource type="Theme" uid="uid://didlpevuq4lh3" path="res://assets/fonts/buttonTheme.tres" id="2_kv8mn"]
 
@@ -70,6 +70,12 @@ text = "Music (default: on):
 
 "
 
+[node name="Label4" type="Label" parent="VBoxContainer" unique_id=1420735289]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_2iy26")
+theme_override_font_sizes/font_size = 32
+text = "Easy Mode (default: off):"
+
 [node name="Options buttons" type="VBoxContainer" parent="." unique_id=778429739]
 layout_mode = 0
 offset_left = 1301.0
@@ -93,6 +99,12 @@ theme_override_fonts/font = ExtResource("2_2iy26")
 theme_override_font_sizes/font_size = 32
 text = "ON"
 
+[node name="Easy mode button" type="Button" parent="Options buttons" unique_id=1955594346]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_2iy26")
+theme_override_font_sizes/font_size = 32
+text = "OFF"
+
 [node name="Return to Menu" type="Button" parent="." unique_id=1045943704]
 layout_mode = 0
 offset_left = 87.0
@@ -106,4 +118,5 @@ text = "Return to Main Menu"
 [connection signal="pressed" from="Options buttons/Simplified controls setting" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Options buttons/Simplified controls setting" to="." method="_on_simplified_controls_setting_pressed"]
 [connection signal="pressed" from="Options buttons/Music button" to="." method="_on_music_button_pressed"]
+[connection signal="pressed" from="Options buttons/Easy mode button" to="." method="_on_easy_mode_button_pressed"]
 [connection signal="pressed" from="Return to Menu" to="." method="_on_return_to_menu_pressed"]
