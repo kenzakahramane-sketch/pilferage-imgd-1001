@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://1txyulylmvku"]
+[gd_scene format=3 uid="uid://g0oj2pdjig86"]
 
-[ext_resource type="Texture2D" uid="uid://8gddqakirafw" path="res://assets/images/Sidescroller images/spaceshipmap.png" id="1_1pn4d"]
+[ext_resource type="Texture2D" uid="uid://bs40j7tkimv7u" path="res://assets/images/Sidescroller images/pilferageact3 - ufo tilemap.png" id="1_1pn4d"]
 [ext_resource type="Texture2D" uid="uid://cqsu67pcxbusf" path="res://assets/images/Sidescroller images/Pixilart selection (3).png" id="2_ah8om"]
 [ext_resource type="Texture2D" uid="uid://kpw6j0jvyrr4" path="res://assets/images/Sidescroller images/pilferageact1-tilemapv1.0-pixilart.png" id="3_hhfj6"]
 [ext_resource type="PackedScene" uid="uid://c7uyokengmfxn" path="res://scenes/cat.tscn" id="3_p6vls"]
@@ -119,6 +119,7 @@ position_smoothing_enabled = true
 
 [node name="backTo2" parent="." unique_id=105553706 instance=ExtResource("5_ah8om")]
 position = Vector2(-67, -17)
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="backTo2" unique_id=411355207]
 shape = SubResource("WorldBoundaryShape2D_qggm8")
