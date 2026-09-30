@@ -3,6 +3,7 @@ extends Node
 var spawn_point = ""
 var simplified_controls = true
 var music = true
+var easy_mode = false
 signal inventory_changed
 
 var inventory: Array[Dictionary] = []       # [{"id":..., "name":..., "texture":...}]

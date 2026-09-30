@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://npcdog9k4a"]
+[gd_scene format=3 uid="uid://npcdohak4a"]
 
 [ext_resource type="Script" path="res://scripts/npc.gd" id="1_npcgd"]
 [ext_resource type="Texture2D" path="res://assets/images/NPCs/squirrel.png" id="2_sqrl"]

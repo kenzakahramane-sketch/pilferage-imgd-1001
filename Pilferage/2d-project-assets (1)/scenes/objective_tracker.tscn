@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://objtracker9k4"]
+[gd_scene format=3 uid="uid://cpb7y3kso6nbt"]
 
 [ext_resource type="Script" path="res://scripts/objective_tracker.gd" id="1_objtrk"]
 [ext_resource type="Texture2D" path="res://assets/images/UI/journal_paper.png" id="2_paper"]

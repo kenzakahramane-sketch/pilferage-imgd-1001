@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://switchlever3k7"]
+[gd_scene format=3 uid="uid://nwlqcnkrmkbs"]
 
 [ext_resource type="Script" path="res://scripts/switch_lever.gd" id="1_lever"]
 [ext_resource type="Texture2D" path="res://assets/images/UI/slot_normal.png" id="2_slotn"]

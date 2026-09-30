@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://riddletrig4k9"]
+[gd_scene format=3 uid="uid://b1pu755q8nmj7"]
 
 [ext_resource type="Script" path="res://scripts/riddle_trigger.gd" id="1_rtrig"]
 [ext_resource type="Texture2D" path="res://assets/images/UI/slot_normal.png" id="2_slotn"]

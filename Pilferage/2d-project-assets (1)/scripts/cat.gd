@@ -23,6 +23,7 @@ var isHurt = false
 @onready var audio_grass = $"Grass sound effect"
 @onready var coyote_timer = $"Coyote timer"
 @onready var jump_buffer_timer = $"Jump buffer timer"
+@onready var push_timer = $"Push timer"
 @onready var hit_flash_ani: AnimationPlayer = $hit_flash_ani
 
 
@@ -70,10 +71,10 @@ func _physics_process(delta: float) -> void:
 		coyote_timer.start()
 	# Detects collision for things.
 	# Different animations are played based on the current state of your movement.
-	if is_on_floor() || !coyote_timer.is_stopped():
-		if wall_charge > wall_charge_time and Global.simplified_controls == true:
-			animated_sprite.play("dmgCool")
-		else:
+	if !push_timer.is_stopped() or wall_charge > 0:
+		animated_sprite.play("pushCool")
+	else:
+		if is_on_floor() || !coyote_timer.is_stopped():
 			if velocity.x == 0:
 				animated_sprite.play("idleCool")
 			else:	
@@ -81,14 +82,16 @@ func _physics_process(delta: float) -> void:
 					animated_sprite.play("sprintCool")
 				else:
 					animated_sprite.play("runCool")
-	else:
-		if velocity.y > 0:
-			animated_sprite.play("fallCool")
+		else:
+			if velocity.y > 0:
+				animated_sprite.play("fallCool")
+			else:
+				animated_sprite.play("jumpCool")
 	# The push mechanic. Push against a wall to perform a wall push, wall pushes done while pressing jump will become a wall jump.
 	if Input.is_action_just_pressed("Push"):
+		push_timer.start()
 		if detect_right.is_colliding() and animated_sprite.flip_h == false:
 			if Input.is_action_pressed("move_up"):
-				animated_sprite.play("jumpCool")
 				velocity.y = JUMP_VELOCITY
 				velocity.x = MAX_SPEED * -1.25
 			else:
@@ -96,7 +99,6 @@ func _physics_process(delta: float) -> void:
 		else:
 			if detect_left.is_colliding() and animated_sprite.flip_h == true:
 				if Input.is_action_pressed("move_up"):
-					animated_sprite.play("jumpCool")
 					velocity.y = JUMP_VELOCITY
 					velocity.x = MAX_SPEED * 1.25
 				else:
@@ -104,13 +106,22 @@ func _physics_process(delta: float) -> void:
 	if detect_left.is_colliding():
 		wall_cling = 50
 		wall_charge += 1
+		if wall_charge > 45 and Global.simplified_controls == true:
+			modulate = Color(2, 2, 0, 2)
+		else:
+			modulate = Color(1, 1, 1, 1)
 	else:
 		if detect_right.is_colliding():
 			wall_cling = -50
 			wall_charge += 1
+			if wall_charge > 45 and Global.simplified_controls == true:
+				modulate = Color(2, 2, 0, 2)
+			else:
+				modulate = Color(1, 1, 1, 1)
 		else:
 			wall_cling = 0
 			wall_charge = 0
+			modulate = Color(1, 1, 1, 1)
 	if velocity.x > 10 + wall_cling:
 		animated_sprite.flip_h = false
 		hitbox.position.x = 11.25
@@ -122,9 +133,11 @@ func _physics_process(delta: float) -> void:
 	if Global.simplified_controls == true and abs(velocity.x) < 50 and Input.is_action_pressed("move_up") and !is_on_floor() and ((detect_right.is_colliding() and animated_sprite.flip_h == false and direction < 0) or (detect_left.is_colliding() and animated_sprite.flip_h == true and direction > 0)):
 			velocity.y = JUMP_VELOCITY
 			velocity.x = MAX_SPEED * 1.25 * direction
+			push_timer.start()
 	if Global.simplified_controls == true and direction and wall_charge > wall_charge_time and abs(velocity.x) < 50:
 		if (animated_sprite.flip_h == false and direction < 0) or (animated_sprite.flip_h == true and direction > 0):
 			velocity.x = MAX_SPEED * 1.75 * direction
+			push_timer.start()
 
 
 
