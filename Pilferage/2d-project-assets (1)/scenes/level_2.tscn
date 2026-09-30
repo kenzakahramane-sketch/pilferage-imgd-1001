@@ -11,8 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://8gddqakirafw" path="res://assets/images/Sidescroller images/pilferageact3 - ufo tilemap.png" id="8_g2hoc"]
 [ext_resource type="AudioStream" uid="uid://cxskxukpviwsm" path="res://assets/Music/LOOP(detective) 60bpm_Wandering In The Streets_MIDI.ogg" id="9_hey2k"]
 [ext_resource type="AudioStream" uid="uid://7c41oph1lrp4" path="res://assets/Music/LOOP(detective) 60bpm_Wandering In The Streets.ogg" id="9_que50"]
-[ext_resource type="PackedScene" uid="uid://e4hcno1nkfqg" path="res://scenes/wrench_item.tscn" id="11_hey2k"]
-[ext_resource type="PackedScene" uid="uid://cuqju8ia3q26n" path="res://scenes/go_to_level_3.tscn" id="12_172wr"]
+[ext_resource type="PackedScene" uid="uid://b20p3gm7oi7pr" path="res://scenes/wrench_item.tscn" id="11_hey2k"]
+[ext_resource type="PackedScene" uid="uid://dl1savu7k0261" path="res://scenes/go_to_level_3.tscn" id="12_172wr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wo48x"]
 texture = ExtResource("3_6cvei")
@@ -407,7 +407,7 @@ size = Vector2(106, 158)
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_oh4dh"]
 distance = 2.0
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_42wgy"]
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_xs11v"]
 
 [node name="level_2" type="Node2D" unique_id=412066807]
 script = ExtResource("1_6cvei")
@@ -480,12 +480,11 @@ shape = SubResource("WorldBoundaryShape2D_oh4dh")
 position = Vector2(1921, -412)
 
 [node name="Go to level 3" parent="." unique_id=1569389692 instance=ExtResource("12_172wr")]
-position = Vector2(5790, -1925)
+position = Vector2(5789, -1733)
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Go to level 3" unique_id=442196973]
-position = Vector2(3, 183)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Go to level 3" unique_id=252862869]
 rotation = 3.1415927
-shape = SubResource("WorldBoundaryShape2D_42wgy")
+shape = SubResource("WorldBoundaryShape2D_xs11v")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
