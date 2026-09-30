@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://npcgator9k4"]
+[gd_scene format=3 uid="uid://npcgatosak4"]
 
 [ext_resource type="Script" path="res://scripts/npc.gd" id="1_npcgd"]
 [ext_resource type="Texture2D" path="res://assets/images/NPCs/alligator_map.png" id="2_gatormap"]

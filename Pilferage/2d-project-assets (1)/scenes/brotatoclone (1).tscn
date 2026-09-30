@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dw541hhyrvxao"]
+[gd_scene format=3 uid="uid://b22a8rcqk8ij2"]
 
 [ext_resource type="PackedScene" uid="uid://c1sx7bic4uhdj" path="res://scenes/player.tscn" id="1_qyqyw"]
 [ext_resource type="Script" uid="uid://cghebo1ukli5x" path="res://scripts/brotatoclone.gd" id="1_svci8"]

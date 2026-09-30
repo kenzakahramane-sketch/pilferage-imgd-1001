@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://switchpuzzle8k2"]
+[gd_scene format=3 uid="uid://ccd4oxxmqacvr"]
 
 [ext_resource type="Script" path="res://scripts/switch_puzzle_controller.gd" id="1_ctrl"]
 [ext_resource type="PackedScene" uid="uid://switchlever3k7" path="res://scenes/switch_lever.tscn" id="2_lever"]

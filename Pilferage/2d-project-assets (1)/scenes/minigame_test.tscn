@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://minigametest7k1"]
+[gd_scene format=3 uid="uid://d3jafoswmc4ko"]
 
 [ext_resource type="Script" path="res://scripts/minigame_test.gd" id="1_test"]
 [ext_resource type="PackedScene" uid="uid://c7uyokengmfxn" path="res://scenes/cat.tscn" id="2_cat01"]

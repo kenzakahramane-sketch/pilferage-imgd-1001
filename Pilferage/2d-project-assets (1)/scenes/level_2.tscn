@@ -7,13 +7,16 @@
 [ext_resource type="Texture2D" uid="uid://btb4r7vmvqwln" path="res://assets/images/Sidescroller images/pilferageact2 - tilemapV1.png" id="4_que50"]
 [ext_resource type="Texture2D" uid="uid://dtindn668i0np" path="res://assets/images/Sidescroller images/pilferageact1 - tilemap with darker tree.png" id="5_hey2k"]
 [ext_resource type="Texture2D" uid="uid://bhq77luo0rlnb" path="res://assets/images/Sidescroller images/pilferageact1 - tilemap with semisolid platforms.png" id="6_172wr"]
-[ext_resource type="PackedScene" uid="uid://j13nplw74h7n" path="res://scenes/go_to_level_1.tscn" id="7_g2hoc"]
-[ext_resource type="Texture2D" uid="uid://8gddqakirafw" path="res://assets/images/Sidescroller images/pilferageact3 - ufo tilemap.png" id="8_g2hoc"]
+[ext_resource type="PackedScene" uid="uid://04gte8cy0kd0" path="res://scenes/go_to_level_2.tscn" id="7_g2hoc"]
 [ext_resource type="PackedScene" uid="uid://npcfoyah5k3" path="res://scenes/fox_npc.tscn" id="8_foxnpc"]
+[ext_resource type="Texture2D" uid="uid://bs40j7tkimv7u" path="res://assets/images/Sidescroller images/pilferageact3 - ufo tilemap.png" id="8_g2hoc"]
 [ext_resource type="AudioStream" uid="uid://cxskxukpviwsm" path="res://assets/Music/LOOP(detective) 60bpm_Wandering In The Streets_MIDI.ogg" id="9_hey2k"]
 [ext_resource type="AudioStream" uid="uid://7c41oph1lrp4" path="res://assets/Music/LOOP(detective) 60bpm_Wandering In The Streets.ogg" id="9_que50"]
-[ext_resource type="PackedScene" uid="uid://e4hcno1nkfqg" path="res://scenes/wrench_item.tscn" id="11_hey2k"]
+[ext_resource type="PackedScene" uid="uid://b20p3gm7oi7pr" path="res://scenes/wrench_item.tscn" id="11_hey2k"]
+[ext_resource type="Script" path="res://scripts/go_to_level_1.gd" id="11_wdtqu"]
 [ext_resource type="PackedScene" uid="uid://cuqju8ia3q26n" path="res://scenes/go_to_level_3.tscn" id="12_172wr"]
+[ext_resource type="PackedScene" uid="uid://relic0item1" path="res://scenes/relic_item.tscn" id="15_igmy8"]
+[ext_resource type="PackedScene" uid="uid://cape0item1" path="res://scenes/cape_item.tscn" id="16_wdtqu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wo48x"]
 texture = ExtResource("3_6cvei")
@@ -451,6 +454,7 @@ tile_set = SubResource("TileSet_oh4dh")
 [node name="go_to_level_1_2" parent="." unique_id=94506289 instance=ExtResource("7_g2hoc")]
 position = Vector2(2658, -794)
 collision_mask = 2
+script = ExtResource("11_wdtqu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="go_to_level_1_2" unique_id=1259218571]
 position = Vector2(6, -22)
@@ -458,6 +462,7 @@ shape = SubResource("RectangleShape2D_oh4dh")
 
 [node name="go_to_level_1" parent="." unique_id=1247347712 instance=ExtResource("7_g2hoc")]
 collision_mask = 2
+script = ExtResource("11_wdtqu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="go_to_level_1" unique_id=1864469511]
 position = Vector2(-224, -18)
@@ -492,5 +497,13 @@ collision_mask = 2
 position = Vector2(3, 183)
 rotation = 3.1415927
 shape = SubResource("WorldBoundaryShape2D_42wgy")
+
+[node name="RelicItem" parent="." unique_id=2022447538 instance=ExtResource("15_igmy8")]
+position = Vector2(3316, -171)
+scale = Vector2(0.2, 0.2)
+
+[node name="CapeItem" parent="." unique_id=1479901703 instance=ExtResource("16_wdtqu")]
+position = Vector2(4870, -1194)
+scale = Vector2(0.2, 0.2)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
