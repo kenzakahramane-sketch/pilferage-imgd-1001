@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://csqwaxnpvpgqa"]
+
+[ext_resource type="PackedScene" uid="uid://c1sx7bic4uhdj" path="res://scenes/player.tscn" id="1_th4i0"]
+[ext_resource type="Script" uid="uid://fowxxfgqb2fn" path="res://scenes/exit_door.gd" id="2_02ecs"]
+[ext_resource type="Texture2D" uid="uid://42bnlf0jk3uq" path="res://scenes/door.png" id="3_pad1t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w3svg"]
+size = Vector2(87, 135)
+
+[node name="Interiors" type="Node2D" unique_id=616408509]
+
+[node name="Camera2D2" type="Camera2D" parent="." unique_id=1863351373]
+position = Vector2(1556, 801)
+limit_left = 0
+limit_top = 0
+limit_right = 3077
+limit_bottom = 1515
+
+[node name="Room" type="ColorRect" parent="." unique_id=2066520856]
+offset_right = 3077.0
+offset_bottom = 1516.0
+color = Color(0.4964314, 0.25540417, 0.094661735, 1)
+
+[node name="PlayerSpawn" type="Marker2D" parent="." unique_id=1225064742]
+position = Vector2(1529, 1350)
+
+[node name="Player" parent="." unique_id=775659923 instance=ExtResource("1_th4i0")]
+position = Vector2(1543, 1041)
+
+[node name="ExitDoor" type="Area2D" parent="." unique_id=1015719102]
+position = Vector2(1542, 1276)
+script = ExtResource("2_02ecs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitDoor" unique_id=895171852]
+position = Vector2(4.5, -42)
+shape = SubResource("RectangleShape2D_w3svg")
+
+[node name="Sprite2D" type="Sprite2D" parent="ExitDoor" unique_id=1126471780]
+position = Vector2(0.99998474, -47.000015)
+scale = Vector2(0.08730158, 0.05841823)
+texture = ExtResource("3_pad1t")
+
+[connection signal="body_entered" from="ExitDoor" to="ExitDoor" method="_on_body_entered"]

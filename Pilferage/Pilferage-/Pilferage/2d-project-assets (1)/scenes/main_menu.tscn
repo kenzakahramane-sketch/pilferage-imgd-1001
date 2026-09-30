@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://c8acanknmjgjl"]
+
+[ext_resource type="Script" uid="uid://k3cljth1nm2m" path="res://scripts/main_menu.gd" id="1_ekxnf"]
+[ext_resource type="Texture2D" uid="uid://bbep2dogndtrt" path="res://assets/images/GameLogoVer1.png" id="2_bqqt6"]
+[ext_resource type="Theme" uid="uid://didlpevuq4lh3" path="res://assets/fonts/buttonTheme.tres" id="3_wu84c"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_cbqb0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ie8s"]
+bg_color = Color(0.1764706, 0.2627451, 0.3019608, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cbqb0"]
+bg_color = Color(0.1764706, 0.2627451, 0.3019608, 1)
+
+[node name="MainMenu" type="Control" unique_id=41783770]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 6.0
+offset_right = 1935.0
+offset_bottom = 1090.0
+script = ExtResource("1_ekxnf")
+
+[node name="background" type="TextureRect" parent="." unique_id=1131889905]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("ImageTexture_cbqb0")
+
+[node name="ColorRect" type="ColorRect" parent="background" unique_id=1470953358]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.5176471, 0.6784314, 0.654902, 1)
+
+[node name="logo" type="TextureRect" parent="." unique_id=242677976]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -331.5
+offset_top = 26.0
+offset_right = 331.5
+offset_bottom = 525.0
+grow_horizontal = 2
+texture = ExtResource("2_bqqt6")
+stretch_mode = 5
+
+[node name="Options" type="VBoxContainer" parent="." unique_id=366953215]
+layout_mode = 0
+offset_left = 613.0
+offset_top = 435.0
+offset_right = 1327.0
+offset_bottom = 841.0
+scale = Vector2(1, 1.8089857)
+theme_override_constants/separation = 16
+
+[node name="StartGame" type="Button" parent="Options" unique_id=1172777086]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme = ExtResource("3_wu84c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1ie8s")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_cbqb0")
+text = "Start Game"
+
+[node name="Credits" type="Button" parent="Options" unique_id=611118544]
+layout_mode = 2
+theme = ExtResource("3_wu84c")
+text = "Credits"
+
+[node name="Versions" type="Button" parent="Options" unique_id=1725383538]
+layout_mode = 2
+theme = ExtResource("3_wu84c")
+text = "Version History
+"
+
+[node name="Quit" type="Button" parent="Options" unique_id=981889593]
+layout_mode = 2
+theme = ExtResource("3_wu84c")
+text = "Quit
+"
+
+[connection signal="pressed" from="Options/StartGame" to="." method="_on_startgame_pressed"]
+[connection signal="pressed" from="Options/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Options/Versions" to="." method="_on_versions_pressed"]
+[connection signal="pressed" from="Options/Quit" to="." method="_on_quit_pressed"]

@@ -1,0 +1,470 @@
+[gd_scene format=3 uid="uid://dw541hhyrvxao"]
+
+[ext_resource type="PackedScene" uid="uid://c1sx7bic4uhdj" path="res://scenes/player.tscn" id="1_qyqyw"]
+[ext_resource type="Script" uid="uid://cghebo1ukli5x" path="res://scripts/brotatoclone.gd" id="1_svci8"]
+[ext_resource type="PackedScene" uid="uid://c0gpy0pye4jr6" path="res://scenes/tree.tscn" id="2_1kod4"]
+[ext_resource type="Script" uid="uid://ca32227r5387d" path="res://scenes/pubDoor.gd" id="4_7xkgf"]
+[ext_resource type="Texture2D" uid="uid://42bnlf0jk3uq" path="res://scenes/door.png" id="5_m1wyy"]
+
+[sub_resource type="Curve2D" id="Curve2D_1kod4"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -68, -59, 0, 0, 0, 0, 1952, -55, 0, 0, 0, 0, 1956, 1160, 0, 0, 0, 0, -63, 1146, 0, 0, 0, 0, -68, -59)
+}
+point_count = 5
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rekuv"]
+size = Vector2(87, 135)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4cxtk"]
+size = Vector2(288.5, 338.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bxidx"]
+size = Vector2(763, 689)
+
+[node name="Game" type="Node2D" unique_id=21739277]
+y_sort_enabled = true
+script = ExtResource("1_svci8")
+
+[node name="Ground" type="CanvasLayer" parent="." unique_id=2010963963]
+layer = -30
+
+[node name="ColorRect" type="ColorRect" parent="Ground" unique_id=660663045]
+anchors_preset = -1
+anchor_left = -2.3104167
+anchor_top = -2.612037
+anchor_right = 2.175521
+anchor_bottom = 2.886111
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 1927.0
+offset_bottom = 1077.0
+color = Color(0, 0.3877768, 0.18893263, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect2" type="ColorRect" parent="Ground" unique_id=1875676726]
+anchors_preset = -1
+anchor_left = 2.0833333
+anchor_top = -2.612037
+anchor_right = 2.175521
+anchor_bottom = 2.886111
+offset_left = -4019.9998
+offset_top = 6517.0
+offset_right = -2091.9998
+offset_bottom = 7595.0
+color = Color(0, 0.3877768, 0.18893263, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Roads" type="Node2D" parent="." unique_id=630006469]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1618318050]
+anchors_preset = -1
+anchor_left = -0.78400004
+offset_left = -3650.0
+offset_top = -1565.0
+offset_right = 5272.0
+offset_bottom = -1354.0
+color = Color(0.55991113, 0.35764244, 0.14665072, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=1868758051]
+z_index = -1
+anchors_preset = -1
+anchor_left = -0.78400004
+offset_left = -3628.0
+offset_top = 3329.0
+offset_right = 1273.9331
+offset_bottom = 3540.0
+rotation = -1.5707964
+color = Color(0.55991113, 0.35764244, 0.14665072, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="." unique_id=35328551]
+z_index = -1
+anchors_preset = -1
+anchor_left = -0.78400004
+offset_left = -732.0
+offset_top = 3294.0
+offset_right = 4019.3604
+offset_bottom = 3505.0
+rotation = -1.5707964
+color = Color(0.55991113, 0.35764244, 0.14665072, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="." unique_id=1981351130]
+z_index = -1
+anchors_preset = -1
+anchor_left = -0.78400004
+offset_left = 954.0
+offset_top = 8173.0
+offset_right = 5780.9434
+offset_bottom = 8384.0
+rotation = -1.5707964
+color = Color(0.55991113, 0.35764244, 0.14665072, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="." unique_id=994479654]
+z_index = -1
+anchors_preset = -1
+anchor_left = -0.78400004
+offset_left = 2521.0
+offset_top = 3306.0
+offset_right = 7204.7964
+offset_bottom = 3517.0
+rotation = -1.5707964
+color = Color(0.55991113, 0.35764244, 0.14665072, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="." unique_id=350208967]
+z_index = -1
+anchors_preset = -1
+anchor_left = -0.78400004
+offset_left = 5118.0
+offset_top = 3361.6833
+offset_right = 10017.717
+offset_bottom = 3572.6833
+rotation = -1.5707964
+color = Color(0.55991113, 0.35764244, 0.14665072, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=739375677]
+anchors_preset = -1
+anchor_left = -0.78400004
+offset_left = -3625.0
+offset_top = 3194.0
+offset_right = 5297.0
+offset_bottom = 3405.0
+color = Color(0.55991113, 0.35764244, 0.14665072, 1)
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=241157516]
+layer = 5
+
+[node name="ScoreLabel" type="Label" parent="HUD" unique_id=1361797588]
+unique_name_in_owner = true
+offset_left = 24.0
+offset_top = 16.0
+offset_right = 260.0
+offset_bottom = 56.0
+theme_override_font_sizes/font_size = 28
+text = "Explore!"
+metadata/_edit_use_anchors_ = true
+
+[node name="gameOver" type="CanvasLayer" parent="." unique_id=1618024531]
+unique_name_in_owner = true
+layer = 10
+visible = false
+
+[node name="Dim" type="ColorRect" parent="gameOver" unique_id=811061439]
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 1927.0
+offset_bottom = 1077.0
+color = Color(0, 0, 0, 0.6)
+
+[node name="GameOverLabel" type="Label" parent="gameOver" unique_id=1790887730]
+offset_left = 663.0
+offset_top = 468.0
+offset_right = 1263.0
+offset_bottom = 548.0
+theme_override_font_sizes/font_size = 64
+text = "GAME OVER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MobSpawnTimer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="Player" parent="." unique_id=775659923 instance=ExtResource("1_qyqyw")]
+position = Vector2(-409, 1493)
+
+[node name="Path2D" type="Path2D" parent="Player" unique_id=660540788]
+position = Vector2(-980.0356, -663.128)
+scale = Vector2(1.0583004, 1.0656276)
+curve = SubResource("Curve2D_1kod4")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Player/Path2D" unique_id=1929834664]
+unique_name_in_owner = true
+position = Vector2(-68, -59)
+rotation = 0.0019801953
+
+[node name="tempTree" parent="." unique_id=1024133271 instance=ExtResource("2_1kod4")]
+position = Vector2(-1296, -314)
+
+[node name="Home" type="Area2D" parent="." unique_id=1381094304]
+position = Vector2(1550, -1843)
+
+[node name="tempWall" type="ColorRect" parent="Home" unique_id=1360654506]
+offset_left = 121.0
+offset_top = -71.0
+offset_right = 406.0
+offset_bottom = 266.0
+color = Color(1, 1, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Door" type="Area2D" parent="Home/tempWall" unique_id=2119961848]
+position = Vector2(145, 304)
+script = ExtResource("4_7xkgf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Home/tempWall/Door" unique_id=581836426]
+position = Vector2(4.5, -42)
+shape = SubResource("RectangleShape2D_rekuv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Home/tempWall/Door" unique_id=43186765]
+position = Vector2(0.99998474, -47.000015)
+scale = Vector2(0.08730158, 0.05841823)
+texture = ExtResource("5_m1wyy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Home" unique_id=895885812]
+position = Vector2(262.75, 96.75)
+shape = SubResource("RectangleShape2D_4cxtk")
+
+[node name="Home2" type="Area2D" parent="." unique_id=204276708]
+position = Vector2(-2532, -526)
+
+[node name="tempWall" type="ColorRect" parent="Home2" unique_id=1602685591]
+offset_left = 121.0
+offset_top = -71.0
+offset_right = 406.0
+offset_bottom = 266.0
+color = Color(1, 1, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Door" type="Area2D" parent="Home2/tempWall" unique_id=1072614853]
+position = Vector2(145, 304)
+script = ExtResource("4_7xkgf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Home2/tempWall/Door" unique_id=1987808523]
+position = Vector2(4.5, -42)
+shape = SubResource("RectangleShape2D_rekuv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Home2/tempWall/Door" unique_id=931007278]
+position = Vector2(0.99998474, -47.000015)
+scale = Vector2(0.08730158, 0.05841823)
+texture = ExtResource("5_m1wyy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Home2" unique_id=370376779]
+position = Vector2(262.75, 96.75)
+shape = SubResource("RectangleShape2D_4cxtk")
+
+[node name="Home3" type="Area2D" parent="." unique_id=945476312]
+position = Vector2(985, -1855)
+
+[node name="tempWall" type="ColorRect" parent="Home3" unique_id=1420075065]
+offset_left = 121.0
+offset_top = -71.0
+offset_right = 406.0
+offset_bottom = 266.0
+color = Color(1, 1, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Door" type="Area2D" parent="Home3/tempWall" unique_id=1990977563]
+position = Vector2(145, 304)
+script = ExtResource("4_7xkgf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Home3/tempWall/Door" unique_id=1754440996]
+position = Vector2(4.5, -42)
+shape = SubResource("RectangleShape2D_rekuv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Home3/tempWall/Door" unique_id=112195648]
+position = Vector2(0.99998474, -47.000015)
+scale = Vector2(0.08730158, 0.05841823)
+texture = ExtResource("5_m1wyy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Home3" unique_id=267239654]
+position = Vector2(262.75, 96.75)
+shape = SubResource("RectangleShape2D_4cxtk")
+
+[node name="Home4" type="Area2D" parent="." unique_id=1628759770]
+position = Vector2(410, -1867)
+
+[node name="tempWall" type="ColorRect" parent="Home4" unique_id=1279711950]
+offset_left = 121.0
+offset_top = -71.0
+offset_right = 406.0
+offset_bottom = 266.0
+color = Color(1, 1, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Door" type="Area2D" parent="Home4/tempWall" unique_id=876472442]
+position = Vector2(145, 304)
+script = ExtResource("4_7xkgf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Home4/tempWall/Door" unique_id=1170584917]
+position = Vector2(4.5, -42)
+shape = SubResource("RectangleShape2D_rekuv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Home4/tempWall/Door" unique_id=1444852400]
+position = Vector2(0.99998474, -47.000015)
+scale = Vector2(0.08730158, 0.05841823)
+texture = ExtResource("5_m1wyy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Home4" unique_id=2039985275]
+position = Vector2(262.75, 96.75)
+shape = SubResource("RectangleShape2D_4cxtk")
+
+[node name="Home5" type="Area2D" parent="." unique_id=1852830126]
+position = Vector2(3151, 620)
+
+[node name="tempWall" type="ColorRect" parent="Home5" unique_id=14101493]
+offset_left = 121.0
+offset_top = -71.0
+offset_right = 406.0
+offset_bottom = 266.0
+color = Color(1, 1, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Door" type="Area2D" parent="Home5/tempWall" unique_id=811820006]
+position = Vector2(145, 304)
+script = ExtResource("4_7xkgf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Home5/tempWall/Door" unique_id=767085703]
+position = Vector2(4.5, -42)
+shape = SubResource("RectangleShape2D_rekuv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Home5/tempWall/Door" unique_id=1245076876]
+position = Vector2(0.99998474, -47.000015)
+scale = Vector2(0.08730158, 0.05841823)
+texture = ExtResource("5_m1wyy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Home5" unique_id=200647536]
+position = Vector2(262.75, 96.75)
+shape = SubResource("RectangleShape2D_4cxtk")
+
+[node name="Home6" type="Area2D" parent="." unique_id=1543463863]
+position = Vector2(3633, 633)
+
+[node name="tempWall" type="ColorRect" parent="Home6" unique_id=1541737355]
+offset_left = 121.0
+offset_top = -71.0
+offset_right = 406.0
+offset_bottom = 266.0
+color = Color(1, 1, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Door" type="Area2D" parent="Home6/tempWall" unique_id=1355753973]
+position = Vector2(145, 304)
+script = ExtResource("4_7xkgf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Home6/tempWall/Door" unique_id=630464725]
+position = Vector2(4.5, -42)
+shape = SubResource("RectangleShape2D_rekuv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Home6/tempWall/Door" unique_id=1902968808]
+position = Vector2(0.99998474, -47.000015)
+scale = Vector2(0.08730158, 0.05841823)
+texture = ExtResource("5_m1wyy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Home6" unique_id=1430124334]
+position = Vector2(262.75, 96.75)
+shape = SubResource("RectangleShape2D_4cxtk")
+
+[node name="Home7" type="Area2D" parent="." unique_id=563816748]
+position = Vector2(1161, 2569)
+
+[node name="tempWall" type="ColorRect" parent="Home7" unique_id=1347020991]
+offset_left = 121.0
+offset_top = -71.0
+offset_right = 406.0
+offset_bottom = 266.0
+color = Color(1, 1, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Door" type="Area2D" parent="Home7/tempWall" unique_id=1375738437]
+position = Vector2(145, 304)
+script = ExtResource("4_7xkgf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Home7/tempWall/Door" unique_id=1340810708]
+position = Vector2(4.5, -42)
+shape = SubResource("RectangleShape2D_rekuv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Home7/tempWall/Door" unique_id=69634773]
+position = Vector2(0.99998474, -47.000015)
+scale = Vector2(0.08730158, 0.05841823)
+texture = ExtResource("5_m1wyy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Home7" unique_id=1479981154]
+position = Vector2(262.75, 96.75)
+shape = SubResource("RectangleShape2D_4cxtk")
+
+[node name="Home8" type="Area2D" parent="." unique_id=454326719]
+position = Vector2(-1909, -524)
+
+[node name="tempWall" type="ColorRect" parent="Home8" unique_id=92381296]
+offset_left = 121.0
+offset_top = -71.0
+offset_right = 406.0
+offset_bottom = 266.0
+color = Color(1, 1, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Door" type="Area2D" parent="Home8/tempWall" unique_id=585744163]
+position = Vector2(145, 304)
+script = ExtResource("4_7xkgf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Home8/tempWall/Door" unique_id=2097773514]
+position = Vector2(4.5, -42)
+shape = SubResource("RectangleShape2D_rekuv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Home8/tempWall/Door" unique_id=2068817577]
+position = Vector2(0.99998474, -47.000015)
+scale = Vector2(0.08730158, 0.05841823)
+texture = ExtResource("5_m1wyy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Home8" unique_id=1683155699]
+position = Vector2(262.75, 96.75)
+shape = SubResource("RectangleShape2D_4cxtk")
+
+[node name="Home9" type="Area2D" parent="." unique_id=2044295658]
+position = Vector2(753, 2563)
+
+[node name="tempWall" type="ColorRect" parent="Home9" unique_id=1975708291]
+offset_left = 121.0
+offset_top = -71.0
+offset_right = 406.0
+offset_bottom = 266.0
+color = Color(1, 1, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Door" type="Area2D" parent="Home9/tempWall" unique_id=1156218448]
+position = Vector2(145, 304)
+script = ExtResource("4_7xkgf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Home9/tempWall/Door" unique_id=1202083042]
+position = Vector2(4.5, -42)
+shape = SubResource("RectangleShape2D_rekuv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Home9/tempWall/Door" unique_id=721517151]
+position = Vector2(0.99998474, -47.000015)
+scale = Vector2(0.08730158, 0.05841823)
+texture = ExtResource("5_m1wyy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Home9" unique_id=1443632880]
+position = Vector2(262.75, 96.75)
+shape = SubResource("RectangleShape2D_4cxtk")
+
+[node name="_cave_" type="StaticBody2D" parent="." unique_id=1543800596]
+position = Vector2(1055, 8919)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="_cave_" unique_id=440655470]
+position = Vector2(17, 8)
+shape = SubResource("RectangleShape2D_bxidx")
+
+[node name="rock" type="ColorRect" parent="_cave_" unique_id=1342952401]
+offset_left = -372.0
+offset_top = -362.0
+offset_right = 402.0
+offset_bottom = 358.0
+color = Color(0.5037685, 0.5037685, 0.50376844, 1)
+
+[node name="Opening" type="ColorRect" parent="_cave_" unique_id=1541685702]
+offset_left = -147.0
+offset_top = 68.0
+offset_right = 192.0
+offset_bottom = 357.0
+color = Color(0, 0, 0, 1)
+
+[connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
+[connection signal="timeout" from="MobSpawnTimer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="Home/tempWall/Door" to="Home/tempWall/Door" method="_on_body_entered"]
+[connection signal="body_entered" from="Home2/tempWall/Door" to="Home2/tempWall/Door" method="_on_body_entered"]
+[connection signal="body_entered" from="Home3/tempWall/Door" to="Home3/tempWall/Door" method="_on_body_entered"]
+[connection signal="body_entered" from="Home4/tempWall/Door" to="Home4/tempWall/Door" method="_on_body_entered"]
+[connection signal="body_entered" from="Home5/tempWall/Door" to="Home5/tempWall/Door" method="_on_body_entered"]
+[connection signal="body_entered" from="Home6/tempWall/Door" to="Home6/tempWall/Door" method="_on_body_entered"]
+[connection signal="body_entered" from="Home7/tempWall/Door" to="Home7/tempWall/Door" method="_on_body_entered"]
+[connection signal="body_entered" from="Home8/tempWall/Door" to="Home8/tempWall/Door" method="_on_body_entered"]
+[connection signal="body_entered" from="Home9/tempWall/Door" to="Home9/tempWall/Door" method="_on_body_entered"]

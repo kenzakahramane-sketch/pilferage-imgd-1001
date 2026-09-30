@@ -1,9 +1,9 @@
-[gd_scene format=3 uid="uid://jxsqjaos8ent"]
+[gd_scene format=3 uid="uid://d2opcyxm5si7q"]
 
-[ext_resource type="Texture2D" uid="uid://dargsx8ri51cx" path="res://assets/images/Sidescroller images/alien.png" id="1_3vbw7"]
-[ext_resource type="Script" uid="uid://vu3b63lqomd7" path="res://scripts/alien.gd" id="1_np108"]
-[ext_resource type="Texture2D" uid="uid://nngb0vg6p6qj" path="res://assets/images/Sidescroller images/alien2.png" id="2_np108"]
-[ext_resource type="Texture2D" uid="uid://568qwgohc2kp" path="res://assets/images/Sidescroller images/alien3.png" id="3_vxp04"]
+[ext_resource type="Texture2D" path="res://assets/images/Sidescroller images/alien.png" id="1_3vbw7"]
+[ext_resource type="Script" path="res://scripts/alien.gd" id="1_np108"]
+[ext_resource type="Texture2D" path="res://assets/images/Sidescroller images/alien2.png" id="2_np108"]
+[ext_resource type="Texture2D" path="res://assets/images/Sidescroller images/alien3.png" id="3_vxp04"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kufd8"]
 atlas = ExtResource("1_3vbw7")

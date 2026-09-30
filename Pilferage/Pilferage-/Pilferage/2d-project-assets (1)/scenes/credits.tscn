@@ -1,0 +1,203 @@
+[gd_scene format=3 uid="uid://bkead2p88fymq"]
+
+[ext_resource type="Script" uid="uid://caj0ns2qma38g" path="res://scripts/credits.gd" id="1_nm7lk"]
+[ext_resource type="Theme" uid="uid://b4iqbjq3otfnm" path="res://assets/fonts/textLable.tres" id="2_0ctdu"]
+[ext_resource type="Theme" uid="uid://didlpevuq4lh3" path="res://assets/fonts/buttonTheme.tres" id="2_2ckv8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cbqb0"]
+bg_color = Color(0.15294118, 0.18039216, 0.27058825, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j6xil"]
+bg_color = Color(0.1764706, 0.2627451, 0.3019608, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tykka"]
+bg_color = Color(0.18039216, 0.28235295, 0.38039216, 1)
+
+[sub_resource type="Theme" id="Theme_1ie8s"]
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_cbqb0")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_j6xil")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_tykka")
+
+[node name="credits" type="Control" unique_id=13193858]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nm7lk")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1854005644]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="TextureRect" unique_id=342886148]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.5176471, 0.6784314, 0.654902, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1772132518]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 83.00001
+offset_top = 24.000002
+offset_right = 83.0
+offset_bottom = -29.307495
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9200004, 0.9350413)
+theme = SubResource("Theme_1ie8s")
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer" unique_id=1726313119]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ColorRect" type="ColorRect" parent="ScrollContainer/TextureRect" unique_id=789205355]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 106.64378
+scale = Vector2(49.26084, 28.250134)
+color = Color(0.14117648, 0.13333334, 0.18039216, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=1759869958]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 50
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1414503188]
+layout_mode = 2
+theme = ExtResource("2_0ctdu")
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=922342934]
+layout_mode = 2
+theme = ExtResource("2_0ctdu")
+theme_override_font_sizes/font_size = 50
+text = "----Credits----"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1904404271]
+layout_mode = 2
+theme = ExtResource("2_0ctdu")
+theme_override_font_sizes/font_size = 32
+text = "Art"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=285712305]
+layout_mode = 2
+theme = ExtResource("2_0ctdu")
+theme_override_font_sizes/font_size = 32
+text = "******"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=354465838]
+layout_mode = 2
+theme = ExtResource("2_0ctdu")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=196547264]
+layout_mode = 2
+theme = ExtResource("2_0ctdu")
+theme_override_font_sizes/font_size = 32
+text = "Music"
+horizontal_alignment = 1
+
+[node name="Label7" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1209266455]
+layout_mode = 2
+theme = ExtResource("2_0ctdu")
+theme_override_font_sizes/font_size = 32
+text = "******"
+horizontal_alignment = 1
+
+[node name="Label8" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1609769400]
+layout_mode = 2
+theme = ExtResource("2_0ctdu")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+
+[node name="Label9" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=286036756]
+layout_mode = 2
+theme = ExtResource("2_0ctdu")
+theme_override_font_sizes/font_size = 32
+text = "Sound Effects"
+horizontal_alignment = 1
+
+[node name="Label10" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1467211914]
+layout_mode = 2
+theme = ExtResource("2_0ctdu")
+theme_override_font_sizes/font_size = 32
+text = "******"
+horizontal_alignment = 1
+
+[node name="Label11" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=669663888]
+layout_mode = 2
+theme = ExtResource("2_0ctdu")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+
+[node name="Label12" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1546160318]
+layout_mode = 2
+theme = ExtResource("2_0ctdu")
+theme_override_font_sizes/font_size = 32
+text = "Story"
+horizontal_alignment = 1
+
+[node name="Label13" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1938753951]
+layout_mode = 2
+theme = ExtResource("2_0ctdu")
+theme_override_font_sizes/font_size = 32
+text = "******"
+horizontal_alignment = 1
+
+[node name="Label14" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=293892284]
+layout_mode = 2
+theme = ExtResource("2_0ctdu")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+
+[node name="Label15" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1188270352]
+layout_mode = 2
+theme = ExtResource("2_0ctdu")
+theme_override_font_sizes/font_size = 32
+text = "Level Design"
+horizontal_alignment = 1
+
+[node name="Label16" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=194008456]
+layout_mode = 2
+theme = ExtResource("2_0ctdu")
+theme_override_font_sizes/font_size = 32
+text = "******"
+horizontal_alignment = 1
+
+[node name="Label17" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=37223426]
+layout_mode = 2
+theme = ExtResource("2_0ctdu")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+
+[node name="BackButton" type="Button" parent="." unique_id=1314677983]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 117.0
+offset_top = -180.0
+offset_right = 445.0
+offset_bottom = -122.0
+grow_vertical = 0
+theme = ExtResource("2_2ckv8")
+theme_override_font_sizes/font_size = 21
+text = "Return to Menu"

@@ -3,19 +3,24 @@ extends CanvasLayer
 # "LoreJournalUI" in Project Settings > Autoload.
 # Press the "journal" input action to open/close it.
 
+const PIXEL_FONT: FontFile = preload("res://assets/fonts/PressStart2P-Regular.ttf")
+
 @onready var panel: Panel = %JournalPanel
+@onready var dim: ColorRect = $Dim
 @onready var entries_container: VBoxContainer = %EntriesContainer
 @onready var empty_label: Label = %EmptyLabel
 
 
 func _ready() -> void:
 	panel.visible = false
+	dim.visible = false
 	DialogueManager.lore_unlocked.connect(_on_lore_unlocked)
 
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("journal") and not DialogueManager.is_active():
 		panel.visible = not panel.visible
+		dim.visible = panel.visible
 		if panel.visible:
 			_refresh()
 		get_viewport().set_input_as_handled()
@@ -42,14 +47,19 @@ func _refresh() -> void:
 
 		var title_label := Label.new()
 		title_label.text = title if title != "" else lore_id
-		title_label.add_theme_font_size_override("font_size", 22)
+		title_label.add_theme_font_override("font", PIXEL_FONT)
+		title_label.add_theme_font_size_override("font_size", 13)
+		title_label.add_theme_color_override("font_color", Color(0.25, 0.18, 0.1))
 		entries_container.add_child(title_label)
 
 		if text != "":
 			var text_label := Label.new()
 			text_label.text = text
 			text_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-			text_label.add_theme_font_size_override("font_size", 16)
+			text_label.add_theme_font_override("font", PIXEL_FONT)
+			text_label.add_theme_font_size_override("font_size", 9)
+			text_label.add_theme_color_override("font_color", Color(0.35, 0.27, 0.18))
+			text_label.add_theme_constant_override("line_spacing", 6)
 			entries_container.add_child(text_label)
 
 		var spacer := Control.new()
