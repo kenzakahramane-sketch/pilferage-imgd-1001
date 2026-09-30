@@ -5,6 +5,17 @@ extends Node2D
 func _ready() -> void:
 	if Global.music == true:
 		music_1.play()
+	spawnpoint()
+
+
+func spawnpoint() -> void:
+	if Global.spawn_point == "FromLevel2":
+		$cat.global_position = $FromLevel2.global_position
+
+		var camera = $cat/Camera2D
+		camera.reset_smoothing()
+
+		Global.spawn_point = ""
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
@@ -19,6 +30,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 func _on_return_to_hubworld_body_entered(body: Node2D) -> void:
 	if not body.is_in_group("player"):
 		return
+	Global.spawn_point = "forest"
 	Global.current_level_path = "res://scenes/brotatoclone.tscn"
 	Global.save_game()
 	get_tree().change_scene_to_file("res://scenes/brotatoclone.tscn")

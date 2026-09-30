@@ -1,8 +1,12 @@
 [gd_scene format=3 uid="uid://j13nplw74h7n"]
 
-[ext_resource type="Script" uid="uid://comxd0tngr4f2" path="res://scripts/go_to_level_1.gd" id="1_crqr2"]
+[ext_resource type="Script" path="res://scripts/go_to_level_1.gd" id="1_crqr2"]
+[ext_resource type="PackedScene" uid="uid://dwq2qe4ykfijq" path="res://scenes/squirrel_npc.tscn" id="2_y77hm"]
 
 [node name="go_to_level_1" type="Area2D" unique_id=94506289]
 script = ExtResource("1_crqr2")
+
+[node name="LevelNPC" parent="." unique_id=1909809436 instance=ExtResource("2_y77hm")]
+position = Vector2(15.992116, 7.9524117)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

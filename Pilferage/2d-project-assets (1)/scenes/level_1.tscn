@@ -24,6 +24,9 @@
 [ext_resource type="Texture2D" uid="uid://gbipnr7e31lp" path="res://assets/images/Sidescroller images/pilferage-cat-sheet-v1.1-pixilart.png" id="21_so66j"]
 [ext_resource type="PackedScene" uid="uid://jxsqjaos8ent" path="res://scenes/alien.tscn" id="22_tr1x6"]
 [ext_resource type="PackedScene" uid="uid://cape0item1" path="res://scenes/cape_item.tscn" id="21_cape1"]
+[ext_resource type="Texture2D" uid="uid://7x4kxb4gscfy" path="res://assets/images/Sidescroller images/level1background.png" id="2_so66j"]
+[ext_resource type="Script" uid="uid://b4y3iepu2sq0m" path="res://scripts/npc.gd" id="5_tr1x6"]
+[ext_resource type="Texture2D" uid="uid://fh1ayyjkrdpm" path="res://assets/images/NPCs/egg1.png" id="6_d5akn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rus8k"]
 texture = ExtResource("1_bswci")
@@ -342,8 +345,20 @@ _data = {
 &"tutorial animation": SubResource("Animation_x2fux")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sqrl"]
+size = Vector2(16, 16)
+
 [node name="Level1" type="Node2D" unique_id=1016265920]
 script = ExtResource("1_2y5yt")
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=71005273]
+z_index = -10
+scroll_scale = Vector2(0.5, 1)
+
+[node name="background2" type="Sprite2D" parent="Parallax2D" unique_id=2067171208]
+position = Vector2(1713, -234)
+scale = Vector2(3.6621096, 6.895833)
+texture = ExtResource("2_so66j")
 
 [node name="Fountain" parent="." unique_id=1094242671 instance=ExtResource("2_tr1x6")]
 position = Vector2(77, -375)
@@ -363,6 +378,30 @@ limit_left = -96
 limit_right = 3520
 limit_bottom = 96
 position_smoothing_enabled = true
+
+[node name="EggNPC" type="Area2D" parent="." unique_id=1398672279]
+position = Vector2(15.992116, 7.9524117)
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("5_tr1x6")
+npc_name = "Squirrel"
+dialogue_lines = Array[String](["Howdy mister cat!"])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EggNPC" unique_id=135065093]
+shape = SubResource("RectangleShape2D_sqrl")
+
+[node name="InteractHint" type="Label" parent="EggNPC" unique_id=2053178170]
+unique_name_in_owner = true
+offset_left = -20.0
+offset_top = -26.0
+offset_right = 20.0
+offset_bottom = -2.0
+theme_override_font_sizes/font_size = 8
+text = "[E]"
+horizontal_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="EggNPC" unique_id=781439968]
+texture = ExtResource("6_d5akn")
 
 [node name="TileMap" type="TileMap" parent="." unique_id=385781539]
 tile_set = SubResource("TileSet_ciobh")
@@ -545,6 +584,9 @@ autoplay = &"tutorial animation"
 
 [node name="Alien" parent="." unique_id=767741621 instance=ExtResource("22_tr1x6")]
 position = Vector2(233, -8)
+
+[node name="FromLevel2" type="Marker2D" parent="." unique_id=2036214512]
+position = Vector2(3452, -330)
 
 [connection signal="body_entered" from="return to hubworld" to="." method="_on_return_to_hubworld_body_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

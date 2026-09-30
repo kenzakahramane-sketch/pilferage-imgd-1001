@@ -22,6 +22,27 @@
 [ext_resource type="PackedScene" uid="uid://npcgator9k4" path="res://scenes/alligator_npc.tscn" id="20_gatornpc"]
 [ext_resource type="PackedScene" uid="uid://npcturtle9k4" path="res://scenes/turtle_npc.tscn" id="21_turtlenpc"]
 [ext_resource type="PackedScene" uid="uid://npcwolf8h4k2" path="res://scenes/wolf_npc.tscn" id="22_wolfnpc"]
+[ext_resource type="Texture2D" uid="uid://jkwb7kdtj2oc" path="res://assets/images/Hub Images/exterior/s-blob-v1-IMAGE-hBQCs6f2Lms.png" id="16_pxg3u"]
+[ext_resource type="Texture2D" uid="uid://ch5vvx70pf801" path="res://assets/images/Hub Images/NPCs/brownEgg.png" id="17_arlad"]
+[ext_resource type="Texture2D" uid="uid://liy2amr6m0ti" path="res://assets/images/Hub Images/NPCs/pixil-frame-0 (7) (3).png" id="18_4jfvc"]
+[ext_resource type="Texture2D" uid="uid://c3tnvc6teom1i" path="res://assets/images/Hub Images/background.png" id="18_h1vpq"]
+[ext_resource type="Texture2D" uid="uid://cgw2sqmalsjg1" path="res://assets/images/Hub Images/NPCs/pixil-frame-0 (10) (1).png" id="19_f5kva"]
+[ext_resource type="Texture2D" uid="uid://se3bxn3xw3v1" path="res://assets/images/Hub Images/NPCs/pixil-frame-0 (11) (1).png" id="20_k3fai"]
+[ext_resource type="Texture2D" uid="uid://dr7cxsf4slv17" path="res://assets/images/Hub Images/NPCs/pixil-frame-0 (15) (1).png" id="21_oyiv1"]
+[ext_resource type="Texture2D" uid="uid://bwgclp4bc5g5t" path="res://assets/images/Hub Images/NPCs/pixil-frame-0 (16).png" id="22_eivh4"]
+[ext_resource type="Texture2D" uid="uid://cslvqu6mhrs84" path="res://assets/images/Hub Images/NPCs/pixil-frame-0 (19) (1).png" id="23_3pe00"]
+[ext_resource type="Texture2D" uid="uid://dt3ug6dwct5jr" path="res://assets/images/Hub Images/NPCs/pixil-frame-0 (20) (1).png" id="24_yqqlc"]
+[ext_resource type="Texture2D" uid="uid://di3ifqeuhwqeu" path="res://assets/images/Hub Images/NPCs/scaredEgg.png" id="25_uqpy1"]
+[ext_resource type="Texture2D" uid="uid://cg2wqhu0iuayv" path="res://assets/images/Hub Images/exterior/Bush.png" id="26_ocy4d"]
+[ext_resource type="Texture2D" uid="uid://i3lmbdtflv2p" path="res://assets/images/Hub Images/exterior/pixil-frame-0 (8) (1).png" id="27_254q7"]
+[ext_resource type="Texture2D" uid="uid://djg5y56gnos2x" path="res://assets/images/Hub Images/exterior/pixil-frame-0 (1) (1).png" id="28_4j23c"]
+[ext_resource type="Texture2D" uid="uid://xh10xg6oqdyn" path="res://assets/images/Hub Images/exterior/pixil-frame-0 (2) (1).png" id="29_jo7lp"]
+[ext_resource type="Texture2D" uid="uid://crfeg6o0cugoh" path="res://assets/images/Hub Images/exterior/pixil-frame-0 (3) (1).png" id="30_6184c"]
+[ext_resource type="Texture2D" uid="uid://catntocckdcp" path="res://assets/images/Hub Images/exterior/pixil-frame-0 (4) (3).png" id="31_qoxvv"]
+[ext_resource type="Texture2D" uid="uid://ckfxgj4crykik" path="res://assets/images/Hub Images/exterior/pixil-frame-0 (5) (1).png" id="32_0kkx4"]
+[ext_resource type="Texture2D" uid="uid://ctw8013oqbpki" path="res://assets/images/Hub Images/exterior/pixil-frame-0 (6) (2).png" id="33_ocp48"]
+[ext_resource type="Texture2D" uid="uid://q0u78xugot88" path="res://assets/images/Hub Images/exterior/pixil-frame-0 (9) (2).png" id="34_ujmsc"]
+[ext_resource type="Texture2D" uid="uid://brwe5pkn3bd0q" path="res://assets/images/Hub Images/exterior/flowerBox.png" id="35_mp5ln"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vjt6i"]
 texture = ExtResource("2_m0d6t")
@@ -425,6 +446,15 @@ size = Vector2(71, 40.5)
 [node name="Game" type="Node2D" unique_id=21739277]
 y_sort_enabled = true
 script = ExtResource("1_svci8")
+
+[node name="background" type="Sprite2D" parent="." unique_id=1511907774]
+z_index = -10
+texture_repeat = 2
+position = Vector2(507, 146)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("18_h1vpq")
+region_enabled = true
+region_rect = Rect2(0, 0, 40000, 40000)
 
 [node name="TileMap" type="TileMap" parent="." unique_id=1358762800]
 tile_set = SubResource("TileSet_ciobh")
@@ -980,6 +1010,305 @@ item_id = "cape_hub_test"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="go_to_level_1" unique_id=1654681200]
 position = Vector2(990.5, -1.75)
 shape = SubResource("RectangleShape2D_oh4dh")
+
+[node name="OakTreeCluster" parent="." unique_id=1503424192 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(-521, 735)
+
+[node name="OakTree" parent="OakTreeCluster" unique_id=1908038062 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(10, 0)
+
+[node name="OakTree2" parent="OakTreeCluster" unique_id=362947982 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(21, 0)
+
+[node name="OakTree" parent="OakTreeCluster/OakTree2" unique_id=2080599129 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(10, 0)
+
+[node name="OakTree3" parent="OakTreeCluster" unique_id=698764121 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(21, 0)
+
+[node name="OakTree" parent="OakTreeCluster/OakTree3" unique_id=2004438817 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(10, 0)
+
+[node name="OakTree4" parent="OakTreeCluster" unique_id=1960193365 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(-43, -1)
+
+[node name="OakTree" parent="OakTreeCluster/OakTree4" unique_id=1725023479 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(10, 0)
+
+[node name="OakTree2" parent="OakTreeCluster/OakTree4" unique_id=2107272672 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(21, 0)
+
+[node name="OakTree" parent="OakTreeCluster/OakTree4/OakTree2" unique_id=501384117 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(10, 0)
+
+[node name="OakTree3" parent="OakTreeCluster/OakTree4" unique_id=1815166642 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(21, 0)
+
+[node name="OakTree" parent="OakTreeCluster/OakTree4/OakTree3" unique_id=934504752 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(10, 0)
+
+[node name="OakTree5" parent="OakTreeCluster" unique_id=1192288784 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(80, 8)
+
+[node name="OakTree" parent="OakTreeCluster/OakTree5" unique_id=1601756449 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(10, 0)
+
+[node name="OakTree2" parent="OakTreeCluster/OakTree5" unique_id=231520787 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(21, 0)
+
+[node name="OakTree" parent="OakTreeCluster/OakTree5/OakTree2" unique_id=283139983 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(10, 0)
+
+[node name="OakTree3" parent="OakTreeCluster/OakTree5" unique_id=1865039578 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(21, 0)
+
+[node name="OakTree" parent="OakTreeCluster/OakTree5/OakTree3" unique_id=274579378 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(10, 0)
+
+[node name="OakTree4" parent="OakTreeCluster/OakTree5" unique_id=2017228327 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(-43, -1)
+
+[node name="OakTree" parent="OakTreeCluster/OakTree5/OakTree4" unique_id=1980707630 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(10, 0)
+
+[node name="OakTree2" parent="OakTreeCluster/OakTree5/OakTree4" unique_id=1324299601 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(21, 0)
+
+[node name="OakTree" parent="OakTreeCluster/OakTree5/OakTree4/OakTree2" unique_id=1654067670 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(10, 0)
+
+[node name="OakTree3" parent="OakTreeCluster/OakTree5/OakTree4" unique_id=1624689205 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(21, 0)
+
+[node name="OakTree" parent="OakTreeCluster/OakTree5/OakTree4/OakTree3" unique_id=1497613921 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(10, 0)
+
+[node name="OakTree6" parent="OakTreeCluster" unique_id=910982229 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(159, 12)
+
+[node name="OakTree" parent="OakTreeCluster/OakTree6" unique_id=1710829374 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(10, 0)
+
+[node name="OakTree2" parent="OakTreeCluster/OakTree6" unique_id=884022515 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(21, 0)
+
+[node name="OakTree" parent="OakTreeCluster/OakTree6/OakTree2" unique_id=751259472 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(10, 0)
+
+[node name="OakTree" parent="OakTreeCluster/OakTree6/OakTree2/OakTree" unique_id=1627916096 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(2, 8)
+
+[node name="OakTree2" parent="OakTreeCluster/OakTree6/OakTree2/OakTree" unique_id=142981349 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(2, 8)
+
+[node name="OakTree" parent="OakTreeCluster/OakTree6/OakTree2/OakTree/OakTree2" unique_id=1837597678 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(3, 5)
+
+[node name="OakTree2" parent="OakTreeCluster/OakTree6/OakTree2/OakTree/OakTree2" unique_id=694702918 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(3, 5)
+
+[node name="OakTree" parent="OakTreeCluster/OakTree6/OakTree2/OakTree/OakTree2/OakTree2" unique_id=87699270 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(3, 5)
+
+[node name="OakTree2" parent="OakTreeCluster/OakTree6/OakTree2/OakTree/OakTree2/OakTree2" unique_id=320978603 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(3, 5)
+
+[node name="OakTree" parent="OakTreeCluster/OakTree6/OakTree2/OakTree/OakTree2/OakTree2/OakTree2" unique_id=1730817430 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(3, 5)
+
+[node name="OakTree2" parent="OakTreeCluster/OakTree6/OakTree2/OakTree/OakTree2/OakTree2/OakTree2" unique_id=1727342920 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(3, 5)
+
+[node name="OakTree3" parent="OakTreeCluster/OakTree6" unique_id=920286319 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(21, 0)
+
+[node name="OakTree" parent="OakTreeCluster/OakTree6/OakTree3" unique_id=883181421 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(10, 0)
+
+[node name="OakTree4" parent="OakTreeCluster/OakTree6" unique_id=1122561505 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(-43, -1)
+
+[node name="OakTree" parent="OakTreeCluster/OakTree6/OakTree4" unique_id=1943525880 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(10, 0)
+
+[node name="OakTree2" parent="OakTreeCluster/OakTree6/OakTree4" unique_id=467355120 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(21, 0)
+
+[node name="OakTree" parent="OakTreeCluster/OakTree6/OakTree4/OakTree2" unique_id=1776857637 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(10, 0)
+
+[node name="OakTree3" parent="OakTreeCluster/OakTree6/OakTree4" unique_id=35251196 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(21, 0)
+
+[node name="OakTree" parent="OakTreeCluster/OakTree6/OakTree4/OakTree3" unique_id=2003918206 instance=ExtResource("3_vjt6i")]
+z_index = 1
+position = Vector2(10, 0)
+
+[node name="BrownEgg" type="Sprite2D" parent="." unique_id=105616478]
+position = Vector2(-46, 63)
+texture = ExtResource("17_arlad")
+
+[node name="PixilFrame0(7)(3)" type="Sprite2D" parent="." unique_id=682402015]
+position = Vector2(58, 54)
+texture = ExtResource("18_4jfvc")
+
+[node name="PixilFrame0(10)(1)" type="Sprite2D" parent="." unique_id=937896515]
+position = Vector2(-122, 99)
+texture = ExtResource("19_f5kva")
+
+[node name="PixilFrame0(11)(1)" type="Sprite2D" parent="." unique_id=1953857279]
+position = Vector2(-105, 58)
+texture = ExtResource("20_k3fai")
+
+[node name="PixilFrame0(15)(1)" type="Sprite2D" parent="." unique_id=708441607]
+position = Vector2(50, 100)
+texture = ExtResource("21_oyiv1")
+
+[node name="PixilFrame0(16)" type="Sprite2D" parent="." unique_id=1694124563]
+position = Vector2(37, 53)
+texture = ExtResource("22_eivh4")
+
+[node name="PixilFrame0(19)(1)" type="Sprite2D" parent="." unique_id=1202083615]
+position = Vector2(-48, 104)
+texture = ExtResource("23_3pe00")
+
+[node name="PixilFrame0(20)(1)" type="Sprite2D" parent="." unique_id=1403763786]
+position = Vector2(44, 126)
+texture = ExtResource("24_yqqlc")
+
+[node name="ScaredEgg" type="Sprite2D" parent="." unique_id=957031274]
+position = Vector2(-75, 33)
+texture = ExtResource("25_uqpy1")
+
+[node name="Bush" type="Sprite2D" parent="." unique_id=1292180647]
+z_index = 1
+position = Vector2(-233, -71)
+texture = ExtResource("26_ocy4d")
+
+[node name="Bush3" type="Sprite2D" parent="." unique_id=601953045]
+z_index = 1
+position = Vector2(-424, -206)
+texture = ExtResource("26_ocy4d")
+
+[node name="Bush2" type="Sprite2D" parent="." unique_id=594219696]
+z_index = 1
+position = Vector2(250, -108)
+texture = ExtResource("26_ocy4d")
+
+[node name="PixilFrame0(8)(1)" type="Sprite2D" parent="." unique_id=691068031]
+z_index = 1
+position = Vector2(0, -374)
+texture = ExtResource("27_254q7")
+
+[node name="PixilFrame0(1)(1)" type="Sprite2D" parent="." unique_id=1541183802]
+z_index = 2
+position = Vector2(-592, -208)
+texture = ExtResource("28_4j23c")
+
+[node name="PixilFrame0(2)(1)" type="Sprite2D" parent="." unique_id=806889197]
+z_index = 1
+position = Vector2(1526, 581)
+texture = ExtResource("29_jo7lp")
+
+[node name="PixilFrame0(3)(1)" type="Sprite2D" parent="." unique_id=1164184253]
+z_index = 1
+position = Vector2(314, -80)
+texture = ExtResource("30_6184c")
+
+[node name="PixilFrame0(4)(3)" type="Sprite2D" parent="." unique_id=1375049824]
+z_index = 1
+position = Vector2(614, -80)
+texture = ExtResource("31_qoxvv")
+
+[node name="PixilFrame0(5)(1)" type="Sprite2D" parent="." unique_id=1882883983]
+z_index = 1
+position = Vector2(144, -416)
+texture = ExtResource("32_0kkx4")
+
+[node name="PixilFrame0(6)(2)" type="Sprite2D" parent="." unique_id=1792553059]
+z_index = 1
+position = Vector2(376, -415)
+texture = ExtResource("33_ocp48")
+
+[node name="PixilFrame0(9)(2)" type="Sprite2D" parent="." unique_id=1864326346]
+z_index = 1
+position = Vector2(345, 496)
+texture = ExtResource("34_ujmsc")
+
+[node name="FlowerBox" type="Sprite2D" parent="." unique_id=511483549]
+position = Vector2(435, 615)
+texture = ExtResource("35_mp5ln")
+
+[node name="FlowerBox2" type="Sprite2D" parent="." unique_id=1254707988]
+position = Vector2(264, 612)
+texture = ExtResource("35_mp5ln")
+
+[node name="PixilFrame0(5)(1)2" type="Sprite2D" parent="." unique_id=430467225]
+position = Vector2(743, 496)
+texture = ExtResource("32_0kkx4")
+
+[node name="PixilFrame0(6)(2)2" type="Sprite2D" parent="." unique_id=366948243]
+position = Vector2(485, 205)
+texture = ExtResource("33_ocp48")
+
+[node name="Bush4" type="Sprite2D" parent="." unique_id=2116458604]
+position = Vector2(544, 220)
+texture = ExtResource("26_ocy4d")
+
+[node name="BrownEgg2" type="Sprite2D" parent="." unique_id=1845101746]
+position = Vector2(1526, 626)
+texture = ExtResource("17_arlad")
+
+[node name="BrownEgg3" type="Sprite2D" parent="." unique_id=1353518134]
+position = Vector2(1503, 625)
+texture = ExtResource("17_arlad")
+
+[node name="BrownEgg4" type="Sprite2D" parent="." unique_id=660166740]
+position = Vector2(1547, 625)
+texture = ExtResource("17_arlad")
 
 [connection signal="timeout" from="MobSpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="Homes/Home/tempWall/Door" to="Homes/Home/tempWall/Door" method="_on_body_entered"]

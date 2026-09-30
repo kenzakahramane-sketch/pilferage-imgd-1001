@@ -53,3 +53,8 @@ func _on_dev_minigames_pressed() -> void:
 
 func _on_options_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/options.tscn")
+
+
+# TEMPORARY BUTTON FOR TESTING - jumps straight to level 3
+func _on_to_3_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/level_3.tscn")
