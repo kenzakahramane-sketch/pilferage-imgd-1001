@@ -1,15 +1,14 @@
+Node
+AnimatedSprite2D
 Label
 Button
 Timer
 Area2D
 CollisionShape2D
 RayCast2D
-AnimatedSprite2D
 CharacterBody2D
 AnimationPlayer
 AnimatableBody2D
 TileMapLayer
 AudioStreamPlayer
 AudioStreamPlayer2D
-TextureProgressBar
-ProgressBar
