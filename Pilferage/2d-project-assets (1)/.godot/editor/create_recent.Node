@@ -1,3 +1,4 @@
+AudioStreamPlayer
 Label
 Button
 Timer
@@ -9,7 +10,5 @@ CharacterBody2D
 AnimationPlayer
 AnimatableBody2D
 TileMapLayer
-AudioStreamPlayer
 AudioStreamPlayer2D
 TextureProgressBar
-ProgressBar
