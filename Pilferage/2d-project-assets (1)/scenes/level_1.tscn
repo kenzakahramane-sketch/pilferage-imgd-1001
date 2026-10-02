@@ -354,8 +354,8 @@ z_index = -10
 scroll_scale = Vector2(0.5, 1)
 
 [node name="background2" type="Sprite2D" parent="Parallax2D" unique_id=2067171208]
-position = Vector2(1713, -234)
-scale = Vector2(3.6621096, 6.895833)
+position = Vector2(1713, -300)
+scale = Vector2(3.6621096, 8.270833)
 texture = ExtResource("2_so66j")
 
 [node name="cat" parent="." unique_id=2095441473 groups=["player"] instance=ExtResource("2_rus8k")]
