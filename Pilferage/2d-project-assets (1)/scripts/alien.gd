@@ -22,7 +22,7 @@ func _physics_process(delta: float) -> void:
 func _movement(delta) -> void:
 	speed = 30
 	if sees_Cat : # Go toward the cat if in range
-		if cat.global_position.x > global_position.x:
+		if cat.global_position.x + 9 > global_position.x:
 			velocity.x = speed
 			sprite.flip_h = true
 		else :
