@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://h7lfct2kseaq"]
+
+[ext_resource type="Script" uid="uid://b0uply8g6v5pn" path="res://scripts/scene_transition.gd" id="1_rujfs"]
+[ext_resource type="Shader" uid="uid://ckyr516jtpcgs" path="res://scene_transition.gdshader" id="2_2sgj6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rekuv"]
+shader = ExtResource("2_2sgj6")
+shader_parameter/circle_radius = 0.0
+shader_parameter/circle_center = Vector2(0.5, 0.5)
+
+[node name="SceneTransition" type="CanvasLayer" unique_id=818086858]
+script = ExtResource("1_rujfs")
+
+[node name="Transition" type="ColorRect" parent="." unique_id=1819254824]
+material = SubResource("ShaderMaterial_rekuv")
+offset_right = 1936.0
+offset_bottom = 1093.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)

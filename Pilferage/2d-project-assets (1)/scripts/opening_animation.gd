@@ -86,4 +86,4 @@ func _skip() -> void:
 
 
 func _go_to_hub() -> void:
-	get_tree().change_scene_to_file("res://scenes/brotatoclone.tscn")
+	SceneTransition.change_scene("res://scenes/brotatoclone.tscn")

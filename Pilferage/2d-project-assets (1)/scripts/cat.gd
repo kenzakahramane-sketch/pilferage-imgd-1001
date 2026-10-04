@@ -12,9 +12,10 @@ var wall_charge = 0
 const wall_charge_time = 45
 var isHurt = false
 
+@onready var push_sound = $PushNoise
+@onready var jump_sound = $JumpNoise
 @export var max_health = 25
 @onready var current_health = max_health 
-
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var hitbox = $movement_box
 @onready var detect_left = $RayCastLeft
@@ -66,6 +67,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	#jump buffer and coyote time so input timing is less strict
 	if Input.is_action_just_pressed("jump") and !is_on_floor():
+		jump_sound.play()
 		jump_buffer_timer.start()
 	if was_on_floor && !is_on_floor():
 		coyote_timer.start()
@@ -90,6 +92,7 @@ func _physics_process(delta: float) -> void:
 	# The push mechanic. Push against a wall to perform a wall push, wall pushes done while pressing jump will become a wall jump.
 	if Input.is_action_just_pressed("Push"):
 		push_timer.start()
+		push_sound.play()
 		if detect_right.is_colliding() and animated_sprite.flip_h == false:
 			if Input.is_action_pressed("move_up"):
 				velocity.y = JUMP_VELOCITY
@@ -143,12 +146,21 @@ func _physics_process(delta: float) -> void:
 
 func hit():
 	current_health -= 5
-	if (current_health <= 0):
+	
+	if current_health <= 0:
+		Global.lives -= 1
+		Global.save_game()
+		#Global.play_death_sound()
 		die()
+		return
+	
 	hit_flash_ani.play("hit_flash")
 	isHurt = true
 	healthChanged.emit()
-	
-	
+
 func die():
-	get_tree().reload_current_scene()
+	if Global.lives <= 0:
+		Global.lives = 9
+		get_tree().change_scene_to_file("res://scenes/deathScreen.tscn")
+	else:
+		get_tree().reload_current_scene()

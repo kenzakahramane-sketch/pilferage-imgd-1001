@@ -26,3 +26,10 @@ offset_top = 525.0
 offset_right = 2071.0
 offset_bottom = 1163.0
 texture = ExtResource("3_ec0dw")
+
+[node name="Fade" type="ColorRect" parent="." unique_id=36934637]
+layout_mode = 0
+offset_left = -869.0
+offset_top = -541.0
+offset_right = 2824.0
+offset_bottom = 1424.0

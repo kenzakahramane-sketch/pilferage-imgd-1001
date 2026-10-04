@@ -1,5 +1,7 @@
 extends Node
 
+var lives = 9
+#@onready var deathNoise = $deathNoise
 var spawn_point = ""
 var simplified_controls = true
 var music = true
@@ -104,12 +106,13 @@ func solve_puzzle(puzzle_id: String) -> void:
 
 func save_game() -> void:
 	var data := {
-		"collected_item_ids": collected_item_ids,
-		"solved_puzzles": solved_puzzles,
-		"lore_flags": DialogueManager.lore_flags,
-		"lore_entries": DialogueManager.lore_entries,
-		"current_level_path": current_level_path,
-		"spawn_point": spawn_point,
+	"collected_item_ids": collected_item_ids,
+	"solved_puzzles": solved_puzzles,
+	"lore_flags": DialogueManager.lore_flags,
+	"lore_entries": DialogueManager.lore_entries,
+	"current_level_path": current_level_path,
+	"spawn_point": spawn_point,
+	"lives": lives,
 	}
 	var file := FileAccess.open(SAVE_PATH, FileAccess.WRITE)
 	if file:
@@ -123,6 +126,7 @@ func has_save() -> bool:
 
 # Returns true if a save was actually found and loaded.
 func load_game() -> bool:
+	
 	if not has_save():
 		return false
 	var file := FileAccess.open(SAVE_PATH, FileAccess.READ)
@@ -134,6 +138,7 @@ func load_game() -> bool:
 	var parsed = JSON.parse_string(text)
 	if typeof(parsed) != TYPE_DICTIONARY:
 		return false
+		
 
 	collected_item_ids = []
 	inventory = []
@@ -154,6 +159,7 @@ func load_game() -> bool:
 	DialogueManager.lore_flags = parsed.get("lore_flags", {})
 	DialogueManager.lore_entries = parsed.get("lore_entries", {})
 
+	lives = parsed.get("lives", 9)
 	current_level_path = parsed.get("current_level_path", "res://scenes/brotatoclone.tscn")
 	spawn_point = parsed.get("spawn_point", "")
 	return true
@@ -173,6 +179,14 @@ func reset_state() -> void:
 	solved_puzzles = []
 	spawn_point = ""
 	current_level_path = "res://scenes/brotatoclone.tscn"
+	lives = 9
 	DialogueManager.lore_flags = {}
 	DialogueManager.lore_entries = {}
 	inventory_changed.emit()
+#func play_death_sound():
+	#$deathNoise.play()
+
+func _input(Exit):
+	if Exit.is_action_pressed("ui_cancel"):
+		get_tree().quit()
+	
