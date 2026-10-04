@@ -1,6 +1,37 @@
 [gd_scene format=3 uid="uid://fr82jdvwmx83"]
 
-[ext_resource type="Texture2D" uid="uid://bid73ke34vkdt" path="res://assets/images/Hub Images/Fountain.png" id="1_50hkb"]
+[ext_resource type="Texture2D" uid="uid://bco0nn2huelim" path="res://assets/images/Hub Images/exterior/fountain1.png" id="1_lfgns"]
+[ext_resource type="Texture2D" uid="uid://cbok2td3rqabt" path="res://assets/images/Hub Images/exterior/fountain2.png" id="2_uterx"]
+[ext_resource type="Texture2D" uid="uid://cho65ve5dd52o" path="res://assets/images/Hub Images/exterior/fountain3.png" id="3_xo7qt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ifxtb"]
+atlas = ExtResource("1_lfgns")
+region = Rect2(0, 0, 59, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jc6qj"]
+atlas = ExtResource("2_uterx")
+region = Rect2(0, 0, 59, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mqf4m"]
+atlas = ExtResource("3_xo7qt")
+region = Rect2(0, 0, 59, 49)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ciobh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ifxtb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jc6qj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mqf4m")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 7.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ciobh"]
 radius = 4.0
@@ -8,8 +39,10 @@ height = 56.0
 
 [node name="Fountain" type="StaticBody2D" unique_id=1094242671]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1475910077]
-texture = ExtResource("1_50hkb")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1544207467]
+sprite_frames = SubResource("SpriteFrames_ciobh")
+autoplay = "default"
+frame_progress = 0.41008762
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1214583587]
 position = Vector2(0, 14)

@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://3ku45xakgh2j" path="res://scenes/carrot_item.tscn" id="8_carr1"]
 [ext_resource type="PackedScene" uid="uid://3ku8hufaeh2k" path="res://scenes/flower_item.tscn" id="9_flwr1"]
 [ext_resource type="AudioStream" uid="uid://hdouwhjhclcr" path="res://assets/Music/LOOP(upbeat) 190bpm_Too Many Coffees.ogg" id="11_2os1m"]
+[ext_resource type="Script" uid="uid://baeokwut4pdyr" path="res://scenes/return_to_hubworld.gd" id="13_x2fux"]
 [ext_resource type="Script" uid="uid://b4ef51ceiouu8" path="res://scripts/health_bar.gd" id="17_1s4pk"]
 [ext_resource type="Texture2D" uid="uid://c4euqeeprtubo" path="res://assets/images/Sidescroller images/BarBase.png" id="18_2cbcq"]
 [ext_resource type="Texture2D" uid="uid://b8mr4q63jox4b" path="res://assets/images/Sidescroller images/Bar.png" id="19_isj1j"]
@@ -354,8 +355,8 @@ z_index = -10
 scroll_scale = Vector2(0.5, 1)
 
 [node name="background2" type="Sprite2D" parent="Parallax2D" unique_id=2067171208]
-position = Vector2(1713, -234)
-scale = Vector2(3.6621096, 6.895833)
+position = Vector2(1713, -300)
+scale = Vector2(3.6621096, 8.270833)
 texture = ExtResource("2_so66j")
 
 [node name="cat" parent="." unique_id=2095441473 groups=["player"] instance=ExtResource("2_rus8k")]
@@ -431,6 +432,7 @@ offset_left = 120.0
 offset_top = -39.0
 offset_right = 232.0
 offset_bottom = -20.0
+theme_override_constants/line_spacing = 0
 theme_override_fonts/font = ExtResource("6_fcfvj")
 theme_override_font_sizes/font_size = 8
 text = "Press the w or
@@ -438,23 +440,24 @@ up key to jump"
 horizontal_alignment = 1
 
 [node name="Label5" type="Label" parent="Labels" unique_id=1479960599]
-offset_left = -68.0
-offset_top = -56.0
-offset_right = 92.0
-offset_bottom = -12.0
+offset_left = -70.0
+offset_top = -42.0
+offset_right = 90.0
+offset_bottom = 2.0
+theme_override_constants/line_spacing = 0
 theme_override_fonts/font = ExtResource("6_fcfvj")
 theme_override_font_sizes/font_size = 8
-text = "Press the left and
-right arrow keys
+text = "<- and -> 
 or A and D to
 move around."
 horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="Labels" unique_id=1608448813]
-offset_left = 326.0
-offset_top = -45.0
-offset_right = 462.0
-offset_bottom = -24.0
+offset_left = 312.0
+offset_top = 13.0
+offset_right = 448.0
+offset_bottom = 37.0
+theme_override_constants/line_spacing = 0
 theme_override_fonts/font = ExtResource("6_fcfvj")
 theme_override_font_sizes/font_size = 8
 text = "Build up speed
@@ -466,6 +469,7 @@ offset_left = 722.0
 offset_top = -51.0
 offset_right = 898.0
 offset_bottom = 23.0
+theme_override_constants/line_spacing = 0
 theme_override_fonts/font = ExtResource("6_fcfvj")
 theme_override_font_sizes/font_size = 8
 text = "To push yourself off
@@ -492,7 +496,7 @@ the wall to wall jump."
 horizontal_alignment = 1
 
 [node name="return to hubworld" parent="." unique_id=1214173505 instance=ExtResource("1_pa8r4")]
-script = null
+script = ExtResource("13_x2fux")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="return to hubworld" unique_id=2142518085]
 position = Vector2(-159, 0)

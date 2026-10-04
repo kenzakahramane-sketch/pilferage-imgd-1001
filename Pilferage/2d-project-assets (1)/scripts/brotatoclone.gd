@@ -6,8 +6,12 @@ const STURDY_MOB_SCENE = preload("res://scenes/sturdy_mob.tscn")
 var score := 0
 
 func _ready():
+	print("HUB READY - spawn point: ", Global.spawn_point)
+
 	if Global.spawn_point == "forest":
-		call_deferred("_spawn_at_forest")
+		print("MOVING TO FOREST")
+		$hubCat.global_position = $Spawns/forest.global_position
+		Global.spawn_point = ""
 
 func _spawn_at_forest():
 	print("SPAWNING AT FOREST")

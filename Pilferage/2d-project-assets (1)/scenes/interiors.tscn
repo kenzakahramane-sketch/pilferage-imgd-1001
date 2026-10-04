@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://csqwaxnpvpgqa"]
 
 [ext_resource type="Script" uid="uid://fowxxfgqb2fn" path="res://scripts/exit_door.gd" id="2_02ecs"]
-[ext_resource type="Texture2D" uid="uid://42bnlf0jk3uq" path="res://assets/images/Topdown images/door.png" id="3_pad1t"]
 [ext_resource type="PackedScene" uid="uid://c7uyokengmfxn" path="res://scenes/cat.tscn" id="3_w3svg"]
 [ext_resource type="Script" uid="uid://bvxmdlka7brrd" path="res://scripts/hubCat.gd" id="4_y5ugd"]
 [ext_resource type="Texture2D" uid="uid://bf4oexnk1n8ky" path="res://assets/images/Sidescroller images/cat.png" id="5_dgq8i"]
@@ -357,11 +356,6 @@ script = ExtResource("2_02ecs")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ExitDoor" unique_id=895171852]
 position = Vector2(4.5, -42)
 shape = SubResource("RectangleShape2D_w3svg")
-
-[node name="Sprite2D" type="Sprite2D" parent="ExitDoor" unique_id=1126471780]
-position = Vector2(0.99998474, -47.000015)
-scale = Vector2(0.08730158, 0.05841823)
-texture = ExtResource("3_pad1t")
 
 [node name="hubCat" parent="." unique_id=814917533 instance=ExtResource("3_w3svg")]
 position = Vector2(1459, 976.00024)
