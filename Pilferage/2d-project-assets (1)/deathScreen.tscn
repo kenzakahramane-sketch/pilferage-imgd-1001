@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://b2j1bdki5ehge"]
+
+[ext_resource type="Texture2D" uid="uid://dtutt1xxypbe" path="res://assets/images/Sidescroller images/deathScreen.png" id="1_ej8j8"]
+[ext_resource type="Script" uid="uid://f3vyc0lr0tg7" path="res://death_screen.gd" id="1_vqn4a"]
+[ext_resource type="AudioStream" uid="uid://ceuggrtofadh" path="res://assets/Sound Effects/sadtrombone.swf.mp3" id="3_y0rio"]
+
+[node name="Node2D" type="Node2D" unique_id=782552854]
+script = ExtResource("1_vqn4a")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1467444912]
+
+[node name="screen" type="ColorRect" parent="CanvasLayer" unique_id=419002843]
+offset_right = 88.0
+offset_bottom = 1087.0
+color = Color(0, 0, 0, 1)
+
+[node name="background" type="TextureRect" parent="CanvasLayer" unique_id=952984219]
+offset_left = 86.0
+offset_right = 2006.0
+offset_bottom = 1081.0
+texture = ExtResource("1_ej8j8")
+
+[node name="Fade" type="ColorRect" parent="CanvasLayer" unique_id=947314687]
+offset_right = 2012.0
+offset_bottom = 1090.0
+color = Color(0, 0, 0, 1)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="CanvasLayer" unique_id=642150584]
+stream = ExtResource("3_y0rio")

@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://g0oj2pdjig86"]
 
-[ext_resource type="Texture2D" uid="uid://bs40j7tkimv7u" path="res://assets/images/Sidescroller images/pilferageact3 - ufo tilemap.png" id="1_1pn4d"]
-[ext_resource type="Texture2D" uid="uid://cqsu67pcxbusf" path="res://assets/images/Sidescroller images/Pixilart selection (3).png" id="2_ah8om"]
+[ext_resource type="Texture2D" uid="uid://bd88g5yc64c3x" path="res://assets/images/Sidescroller images/pilferageact3 - ufo tilemap.png" id="1_1pn4d"]
+[ext_resource type="Texture2D" uid="uid://dltx8vg3kpt4t" path="res://assets/images/Sidescroller images/Pixilart selection (3).png" id="2_ah8om"]
 [ext_resource type="Texture2D" uid="uid://kpw6j0jvyrr4" path="res://assets/images/Sidescroller images/pilferageact1-tilemapv1.0-pixilart.png" id="3_hhfj6"]
 [ext_resource type="PackedScene" uid="uid://c7uyokengmfxn" path="res://scenes/cat.tscn" id="3_p6vls"]
 [ext_resource type="Script" uid="uid://7peead4k52jx" path="res://scripts/cat.gd" id="4_hhfj6"]
-[ext_resource type="Texture2D" uid="uid://byajrcxa8yjxp" path="res://assets/images/Sidescroller images/Pixilart selection (4).png" id="4_wae8j"]
+[ext_resource type="Texture2D" uid="uid://cnq3c3eb0v762" path="res://assets/images/Sidescroller images/Pixilart selection (4).png" id="4_wae8j"]
 [ext_resource type="PackedScene" uid="uid://dr1kkuuuigm3p" path="res://scenes/back_to_2.tscn" id="5_ah8om"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wae8j"]

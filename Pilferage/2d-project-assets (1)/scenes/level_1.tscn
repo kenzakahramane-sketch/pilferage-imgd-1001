@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://3ku45xakgh2j" path="res://scenes/carrot_item.tscn" id="8_carr1"]
 [ext_resource type="PackedScene" uid="uid://3ku8hufaeh2k" path="res://scenes/flower_item.tscn" id="9_flwr1"]
 [ext_resource type="AudioStream" uid="uid://hdouwhjhclcr" path="res://assets/Music/LOOP(upbeat) 190bpm_Too Many Coffees.ogg" id="11_2os1m"]
+[ext_resource type="Script" uid="uid://baeokwut4pdyr" path="res://scenes/return_to_hubworld.gd" id="13_x2fux"]
 [ext_resource type="Script" uid="uid://b4ef51ceiouu8" path="res://scripts/health_bar.gd" id="17_1s4pk"]
 [ext_resource type="Texture2D" uid="uid://c4euqeeprtubo" path="res://assets/images/Sidescroller images/BarBase.png" id="18_2cbcq"]
 [ext_resource type="Texture2D" uid="uid://b8mr4q63jox4b" path="res://assets/images/Sidescroller images/Bar.png" id="19_isj1j"]
@@ -495,7 +496,7 @@ the wall to wall jump."
 horizontal_alignment = 1
 
 [node name="return to hubworld" parent="." unique_id=1214173505 instance=ExtResource("1_pa8r4")]
-script = null
+script = ExtResource("13_x2fux")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="return to hubworld" unique_id=2142518085]
 position = Vector2(-159, 0)

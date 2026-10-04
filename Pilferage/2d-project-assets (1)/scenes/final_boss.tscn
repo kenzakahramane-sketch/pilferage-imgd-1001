@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://0bd6jjwq0cqd"]
+
+[ext_resource type="Texture2D" uid="uid://cnq3c3eb0v762" path="res://assets/images/Sidescroller images/Pixilart selection (4).png" id="1_0otar"]
+[ext_resource type="PackedScene" uid="uid://c7uyokengmfxn" path="res://scenes/cat.tscn" id="1_ifitu"]
+[ext_resource type="Script" uid="uid://7peead4k52jx" path="res://scripts/cat.gd" id="2_0otar"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_il0sp"]
+texture = ExtResource("1_0otar")
+
+[sub_resource type="TileSet" id="TileSet_rekuv"]
+sources/1 = SubResource("TileSetAtlasSource_il0sp")
+
+[node name="finalBoss" type="Node2D" unique_id=289153124]
+
+[node name="TileMap" type="TileMap" parent="." unique_id=2027845690]
+tile_set = SubResource("TileSet_rekuv")
+format = 2
+
+[node name="cat" parent="." unique_id=814917533 groups=["player"] instance=ExtResource("1_ifitu")]
+script = ExtResource("2_0otar")
+
+[node name="Camera2D" type="Camera2D" parent="cat" unique_id=1125965429]
+position = Vector2(11, -6)
+zoom = Vector2(5, 5)
+limit_left = -96
+limit_right = 3520
+limit_bottom = 96
+position_smoothing_enabled = true

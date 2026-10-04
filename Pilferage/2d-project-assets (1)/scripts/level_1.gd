@@ -59,4 +59,4 @@ func spawnpoint():
 		Global.spawn_point = ""
 func _return_to_hub():
 	Global.spawn_point = "forest"
-	get_tree().change_scene_to_file("res://scenes/brotatoclone.tscn")
+	SceneTransition.change_scene("res://scenes/brotatoclone.tscn")
