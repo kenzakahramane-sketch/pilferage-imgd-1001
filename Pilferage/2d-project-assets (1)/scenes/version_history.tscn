@@ -225,6 +225,96 @@ has been added. Press \"T\" in level 1
 "
 horizontal_alignment = 1
 
+[node name="Label18" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=605558579]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4leat")
+theme_override_font_sizes/font_size = 32
+text = "* * * * * * * *"
+horizontal_alignment = 1
+
+[node name="Label19" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=636151484]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4leat")
+theme_override_font_sizes/font_size = 32
+text = "Version 0.5 (Sprint 5) 9/23 - 9/29"
+horizontal_alignment = 1
+
+[node name="Label20" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1283530906]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4leat")
+theme_override_font_sizes/font_size = 32
+text = "* * * * * * * *"
+horizontal_alignment = 1
+
+[node name="Label21" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=2025092956]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4leat")
+theme_override_font_sizes/font_size = 32
+text = "- Implemented aliens that can deal damage to the cat.
+- A dynamic background has been added for level 1.
+- The game can now be saved if you rerun the game
+and press continue.
+- More NPC characters have been added throughout the
+game.
+- Level 2 is completed.
+- Implemented more items for you to collect.
+- Added music for the second level.
+- Added a tutorial animation to show how the wall push
+works.
+- Level 3 is implemented."
+horizontal_alignment = 1
+
+[node name="Label22" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=15241101]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4leat")
+theme_override_font_sizes/font_size = 32
+text = "* * * * * * * *"
+horizontal_alignment = 1
+
+[node name="Label23" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=940891993]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4leat")
+theme_override_font_sizes/font_size = 32
+text = "Version 1.0 (Sprint 6) 9/30 - 10/6"
+horizontal_alignment = 1
+
+[node name="Label24" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=889147587]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4leat")
+theme_override_font_sizes/font_size = 32
+text = "* * * * * * * *"
+horizontal_alignment = 1
+
+[node name="Label25" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1607490626]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4leat")
+theme_override_font_sizes/font_size = 32
+text = "- Completely refined the push mechanic and core movement
+animations.
+- When using simplified controls, the cat will now
+indicate when you will do an automatic wall push by
+pressing the opposite direction of the wall.
+- An easy mode has been implemented if you struggle with
+a lot of the harder jumps in the game. Find the easy
+mode settting in the options menu.
+- You are able to slide down walls faster by pressing
+the down key or S."
+horizontal_alignment = 1
+
+[node name="Label26" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=319302057]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4leat")
+theme_override_font_sizes/font_size = 32
+text = "* * * * * * * *"
+horizontal_alignment = 1
+
+[node name="Label27" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=437849010]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4leat")
+theme_override_font_sizes/font_size = 32
+text = "Thanks for playing!"
+horizontal_alignment = 1
+
 [node name="BackButton" type="Button" parent="." unique_id=1204261190]
 layout_mode = 0
 offset_left = 53.0
