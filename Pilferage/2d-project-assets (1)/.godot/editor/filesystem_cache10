@@ -1,5 +1,9 @@
 78098b89c88a74ebe8c20117b8754620
+<<<<<<< Updated upstream
 ::res://::1791219133
+=======
+::res://::1791219932
+>>>>>>> Stashed changes
 deathScreen.tscn::PackedScene::4301679462734179948::1791149546::0::1::::<><><>0<>0<><>::uid://dtutt1xxypbe::::res://assets/images/Sidescroller images/deathScreen.png<>uid://f3vyc0lr0tg7::::res://death_screen.gd<>uid://ceuggrtofadh::::res://assets/Sound Effects/sadtrombone.swf.mp3
 death_screen.gd::GDScript::410064855395971760::1791149544::0::1::::<>Node2D<><>0<>0<><>::
 default_bus_layout.tres::AudioBusLayout::6564268947468103023::1789401413::0::1::::<><><>0<>0<><>::
@@ -12,7 +16,11 @@ transition.gd::GDScript::5204253671332208594::1791149544::0::1::::<>ColorRect<><
 colorpicker_presets.gd::GDScript::2597531570939366545::1789401413::0::1::::<>EditorPlugin<><>0<>1<><>::
 plugin.cfg::TextFile::-1::1789401413::0::1::::<><><>0<>0<><>::
 README.md::TextFile::-1::1789401413::0::1::::<><><>0<>0<><>::
+<<<<<<< Updated upstream
 ::res://assets/::1791219034
+=======
+::res://assets/::1791219932
+>>>>>>> Stashed changes
 hit.tres::VisualShader::3774596315049407675::1790463368::0::1::::<><><>0<>0<><>::
 ::res://assets/fonts/::1790807892
 buttonTheme.tres::Theme::7727660850740282078::1790807892::0::1::::<><><>0<>0<><>::uid://c8x3e628x2e51::::res://assets/fonts/PressStart2P-Regular.ttf
@@ -128,6 +136,7 @@ journal_paper.png::CompressedTexture2D::9070087312832142581::1790740879::1791219
 slot_hover.png::CompressedTexture2D::1938506696957820279::1790109310::1790109313::1::::<><><>0<>0<>70011ce3ae9cdc3ab3b39327c2d05238<>res://.godot/imported/slot_hover.png-891b9017a3f8ade5c906a6c5dc6a269c.ctex::
 slot_normal.png::CompressedTexture2D::8138514703068994239::1790109310::1790109313::1::::<><><>0<>0<>99ccbba73b1f467d9e08fd39391a50d0<>res://.godot/imported/slot_normal.png-82602137821b849d3d6c900884d5a6fa.ctex::
 slot_pressed.png::CompressedTexture2D::3138749429611365337::1790109310::1790109313::1::::<><><>0<>0<>ff7dfc9b9a95ad95d9be8f59d2a882ba<>res://.godot/imported/slot_pressed.png-e8bcd24fa8dd1ae8bc193bd132a40d34.ctex::
+<<<<<<< Updated upstream
 ::res://assets/Music/::1791219133
 deathScreen.tscn::PackedScene::4301679462734179948::1791218708::0::1::::<><><>0<>0<><>::uid://dtutt1xxypbe::::res://assets/images/Sidescroller images/deathScreen.png<>uid://f3vyc0lr0tg7::::res://death_screen.gd<>uid://ceuggrtofadh::::res://assets/Sound Effects/sadtrombone.swf.mp3
 LOOP(detective) 60bpm_Wandering In The Streets.ogg::AudioStreamOggVorbis::2251979734209124087::1790267687::1790267687::1::::<><><>0<>0<>5078721d3466035ad9eee0b938cc9ad4<>res://.godot/imported/LOOP(detective) 60bpm_Wandering In The Streets.ogg-d6240d1457f7fec89a179e08fedc7463.oggvorbisstr::
@@ -202,6 +211,14 @@ wolf_npc.tscn::PackedScene::943582107648094091::1791218696::0::1::::<><><>0<>0<>
 wrench_item.tscn::PackedScene::4334089998043051951::1791218696::0::1::::<><><>0<>0<><>::uid://bv4nk25m451oj::::res://scripts/item.gd<>uid://ch6nd0lnsp62j::::res://assets/images/Items/wrench.png
 ::res://assets/Music/trees/::1791219034
 pine_tree.png::CompressedTexture2D::3533732700255610135::1791218706::1791219026::1::::<><><>0<>0<>68d64b8c76b7b80dc49176b6d358b841<>res://.godot/imported/pine_tree.png-3c5fc40e88c021abc07ed0d9311ab054.ctex::
+=======
+::res://assets/Music/::1791219935
+LOOP(detective) 60bpm_Wandering In The Streets.ogg::AudioStreamOggVorbis::2251979734209124087::1790267687::1790267687::1::::<><><>0<>0<>5078721d3466035ad9eee0b938cc9ad4<>res://.godot/imported/LOOP(detective) 60bpm_Wandering In The Streets.ogg-d6240d1457f7fec89a179e08fedc7463.oggvorbisstr::
+LOOP(detective) 60bpm_Wandering In The Streets_MIDI.ogg::AudioStreamOggVorbis::6424992880446482104::1790267666::1790267666::1::::<><><>0<>0<>3d2447371d359db73ffaa2a2cda21fc4<>res://.godot/imported/LOOP(detective) 60bpm_Wandering In The Streets_MIDI.ogg-845f462c2492c64066965ec22386ebd1.oggvorbisstr::
+LOOP(nervous) 140bpm_Runaway_MIDI.ogg::AudioStreamOggVorbis::4020710175097635560::1791219935::1791219939::1::::<><><>0<>0<>af6a35651dbca64c7d85a6d89a95a6fa<>res://.godot/imported/LOOP(nervous) 140bpm_Runaway_MIDI.ogg-5db0837bc34cab837f2bdc450b9086f2.oggvorbisstr::
+LOOP(upbeat) 190bpm_Too Many Coffees.ogg::AudioStreamOggVorbis::498401959250933089::1790043161::1790043188::1::::<><><>0<>0<>29fb5d18aeeb3587fbb198b545b44321<>res://.godot/imported/LOOP(upbeat) 190bpm_Too Many Coffees.ogg-056aea1ae07d882c5d6a50afd9f6ca99.oggvorbisstr::
+LOOP(upbeat) 190bpm_Too Many Coffees_MIDI.ogg::AudioStreamOggVorbis::6282118802722036002::1790043161::1790043188::1::::<><><>0<>0<>62749a65a998df85e7419f27e4b1dccc<>res://.godot/imported/LOOP(upbeat) 190bpm_Too Many Coffees_MIDI.ogg-84a19ea62c876deed31886a9018db11d.oggvorbisstr::
+>>>>>>> Stashed changes
 ::res://assets/Sound Effects/::1791219030
 joentnt-walk-on-grass-2-291985.mp3::AudioStreamMP3::5923892609065778239::1790043161::1790043161::1::::<><><>0<>0<>a1da20cdada6e1e45b54cd0eaa6137a5<>res://.godot/imported/joentnt-walk-on-grass-2-291985.mp3-c1c11a479dfb35d87602a7e2d3ba3636.mp3str::
 jumpDR.wav::AudioStreamWAV::2023901472143842662::1791149544::1791219030::1::::<><><>0<>0<>f6f22ad4d2b7bf5a596525467029c75a<>res://.godot/imported/jumpDR.wav-6657b8b20c02487a11ca8fe8dacd98e8.sample::
@@ -238,7 +255,11 @@ impact.tscn::PackedScene::706737085132625066::1789401413::0::1::::<><><>0<>0<><>
 muzzle_flash.gd::GDScript::2184711477186327130::1789401413::0::1::::<>Node2D<><>0<>0<><>::
 muzzle_flash.png::CompressedTexture2D::8165061320742786479::1789401413::1789401413::1::::<><><>0<>0<>d63a7f225b1e1679c8cc4123d78e692f<>res://.godot/imported/muzzle_flash.png-752b19c1a1a60c24eac6f205d487f2ea.ctex::
 muzzle_flash.tscn::PackedScene::6601472980654318439::1789401413::0::1::::<><><>0<>0<><>::uid://6ej4465c3oxu::::res://pistol/muzzle_flash/muzzle_flash.gd<>uid://brgpjilf7s2ul::::res://pistol/muzzle_flash/muzzle_flash.png
+<<<<<<< Updated upstream
 ::res://scenes/::1791219133
+=======
+::res://scenes/::1791219935
+>>>>>>> Stashed changes
 alien.tscn::PackedScene::9084177741019259168::1790740879::0::1::::<><><>0<>0<><>::res://assets/images/Sidescroller images/alien.png<>res://scripts/alien.gd<>res://assets/images/Sidescroller images/alien2.png<>res://assets/images/Sidescroller images/alien3.png
 alligator_npc.tscn::PackedScene::27751553304874305::1790740925::0::1::::<><><>0<>0<><>::res://scripts/npc.gd<>res://assets/images/NPCs/alligator_map.png<>res://assets/images/NPCs/alligator_portrait.png
 back_to_2.tscn::PackedScene::8406772324680862503::1791149544::0::1::::<><><>0<>0<><>::uid://bilgrlwohw3d4::::res://scripts/backto2.gd
@@ -247,7 +268,11 @@ brotatoclone.tscn::PackedScene::8767155546760665442::1791149544::0::1::::<><><>0
 bullet.tscn::PackedScene::4510038469915135496::1789401413::0::1::::<><><>0<>0<><>::uid://cfjvwhypwf5h5::::res://scripts/bullet.gd<>uid://bd4rrqj72amnx::::res://pistol/projectile.png
 cape_item.tscn::PackedScene::122229162330874::1790740925::0::1::::<><><>0<>0<><>::res://scripts/item.gd<>res://assets/images/Items/cape.png
 carrot_item.tscn::PackedScene::1987199138528689867::1790059567::0::1::::<><><>0<>0<><>::uid://bv4nk25m451oj::::res://scripts/item.gd<>uid://br556a8cwoa41::::res://assets/images/Items/carrot.png
+<<<<<<< Updated upstream
 cat.tscn::PackedScene::7061654659837373455::1791218060::0::1::::<><><>0<>0<><>::uid://bf4oexnk1n8ky::::res://assets/images/Sidescroller images/cat.png<>uid://bt1pbxuwhq16f::::res://assets/hit.tres<>uid://cqntv7ry0y4fr::::res://assets/Sound Effects/joentnt-walk-on-grass-2-291985.mp3<>uid://gbipnr7e31lp::::res://assets/images/Sidescroller images/pilferage-cat-sheet-v1.1-pixilart.png<>uid://bgttjo0btvc7a::::res://scripts/damage_box.gd<>uid://bpwnjh5evb01l::::res://assets/Sound Effects/undertakers-bell_2UwFCIe.mp3<>uid://33nmj7m7ohry::::res://assets/Sound Effects/jumpDR.wav<>uid://bqen14a808ccm::::res://assets/Sound Effects/push.wav
+=======
+cat.tscn::PackedScene::7061654659837373455::1791219925::0::1::::<><><>0<>0<><>::uid://bf4oexnk1n8ky::::res://assets/images/Sidescroller images/cat.png<>uid://bt1pbxuwhq16f::::res://assets/hit.tres<>uid://cqntv7ry0y4fr::::res://assets/Sound Effects/joentnt-walk-on-grass-2-291985.mp3<>uid://gbipnr7e31lp::::res://assets/images/Sidescroller images/pilferage-cat-sheet-v1.1-pixilart.png<>uid://bgttjo0btvc7a::::res://scripts/damage_box.gd<>uid://bpwnjh5evb01l::::res://assets/Sound Effects/undertakers-bell_2UwFCIe.mp3<>uid://33nmj7m7ohry::::res://assets/Sound Effects/jumpDR.wav<>uid://bqen14a808ccm::::res://assets/Sound Effects/push.wav
+>>>>>>> Stashed changes
 credits.tscn::PackedScene::3096573431317591584::1789518675::0::1::::<><><>0<>0<><>::uid://caj0ns2qma38g::::res://scripts/credits.gd<>uid://b4iqbjq3otfnm::::res://assets/fonts/textLable.tres<>uid://didlpevuq4lh3::::res://assets/fonts/buttonTheme.tres<>uid://c8x3e628x2e51::::res://assets/fonts/PressStart2P-Regular.ttf
 dialogue_box.tscn::PackedScene::233641546285036000::1790043161::0::1::::<><><>0<>0<><>::uid://dnjwg25ehag8::::res://scripts/dialogue_box.gd<>uid://8k58ir8t8ey0::::res://assets/images/NPCs/Sq.png<>uid://dwd4cp8bqam1n::::res://assets/images/NPCs/cat.png
 dog_npc.tscn::PackedScene::816218141113842::1790740925::0::1::::<><><>0<>0<><>::res://scripts/npc.gd<>res://assets/images/NPCs/squirrel.png
@@ -270,8 +295,14 @@ item.gd::GDScript::4116248062938465489::1790740891::0::1::::<>Area2D<><>0<>0<><>
 item.tscn::PackedScene::1987197353677626272::1790043188::0::1::::<><><>0<>0<><>::res://scripts/item.gd
 item_bar.tscn::PackedScene::2542009763966220512::1790043188::0::1::::<><><>0<>0<><>::res://scripts/item_bar.gd
 level_1.tscn::PackedScene::2180632604282710044::1791152447::0::1::::<><><>0<>0<><>::res://scripts/level_1.gd<>uid://kpw6j0jvyrr4::::res://assets/images/Sidescroller images/pilferageact1-tilemapv1.0-pixilart.png<>uid://cuqta3bwplpu::::res://scenes/return_to_hubworld.tscn<>uid://c7uyokengmfxn::::res://scenes/cat.tscn<>uid://7x4kxb4gscfy::::res://assets/images/Sidescroller images/level1background.png<>uid://7peead4k52jx::::res://scripts/cat.gd<>uid://dtindn668i0np::::res://assets/images/Sidescroller images/pilferageact1 - tilemap with darker tree.png<>uid://clpel4kn5cse2::::res://assets/images/Sidescroller images/pilferageact1 - background.png<>uid://bhq77luo0rlnb::::res://assets/images/Sidescroller images/pilferageact1 - tilemap with semisolid platforms.png<>uid://b4y3iepu2sq0m::::res://scripts/npc.gd<>uid://bchmsaallq28c::::res://scenes/item_bar.tscn<>uid://fh1ayyjkrdpm::::res://assets/images/NPCs/egg1.png<>uid://c8x3e628x2e51::::res://assets/fonts/PressStart2P-Regular.ttf<>uid://04gte8cy0kd0::::res://scenes/go_to_level_2.tscn<>uid://iu12wrkbrrvm::::res://scenes/mushroom_item.tscn<>uid://3ku45xakgh2j::::res://scenes/carrot_item.tscn<>uid://3ku8hufaeh2k::::res://scenes/flower_item.tscn<>uid://hdouwhjhclcr::::res://assets/Music/LOOP(upbeat) 190bpm_Too Many Coffees.ogg<>uid://baeokwut4pdyr::::res://scenes/return_to_hubworld.gd<>uid://b4ef51ceiouu8::::res://scripts/health_bar.gd<>uid://c4euqeeprtubo::::res://assets/images/Sidescroller images/BarBase.png<>uid://b8mr4q63jox4b::::res://assets/images/Sidescroller images/Bar.png<>uid://p4gnarn1kyjh::::res://scripts/texture_progress_bar.gd<>uid://gbipnr7e31lp::::res://assets/images/Sidescroller images/pilferage-cat-sheet-v1.1-pixilart.png<>uid://d2opcyxm5si7q::::res://scenes/alien.tscn
+<<<<<<< Updated upstream
 level_2.tscn::PackedScene::1487410982653700739::1791217563::0::1::::<><><>0<>0<><>::uid://chkra6krcul7i::::res://scripts/level_2.gd<>uid://c7uyokengmfxn::::res://scenes/cat.tscn<>uid://7peead4k52jx::::res://scripts/cat.gd<>uid://kpw6j0jvyrr4::::res://assets/images/Sidescroller images/pilferageact1-tilemapv1.0-pixilart.png<>uid://btb4r7vmvqwln::::res://assets/images/Sidescroller images/pilferageact2 - tilemapV1.png<>uid://dtindn668i0np::::res://assets/images/Sidescroller images/pilferageact1 - tilemap with darker tree.png<>uid://bhq77luo0rlnb::::res://assets/images/Sidescroller images/pilferageact1 - tilemap with semisolid platforms.png<>uid://04gte8cy0kd0::::res://scenes/go_to_level_2.tscn<>uid://npcfoyah5k3::::res://scenes/fox_npc.tscn<>uid://bd88g5yc64c3x::::res://assets/images/Sidescroller images/pilferageact3 - ufo tilemap.png<>uid://cxskxukpviwsm::::res://assets/Music/LOOP(detective) 60bpm_Wandering In The Streets_MIDI.ogg<>uid://7c41oph1lrp4::::res://assets/Music/LOOP(detective) 60bpm_Wandering In The Streets.ogg<>uid://b20p3gm7oi7pr::::res://scenes/wrench_item.tscn<>res://scripts/go_to_level_1.gd<>uid://cuqju8ia3q26n::::res://scenes/go_to_level_3.tscn<>uid://relic0item1::::res://scenes/relic_item.tscn<>uid://cape0item1::::res://scenes/cape_item.tscn
 level_3.tscn::PackedScene::473610057174739209::1791219117::0::1::::<><><>0<>0<><>::uid://bs40j7tkimv7u::::res://assets/images/Sidescroller images/pilferageact3 - ufo tilemap.png<>uid://cpvggiubp2u0::::res://scripts/level_3.gd<>uid://cqsu67pcxbusf::::res://assets/images/Sidescroller images/Pixilart selection (3).png<>uid://kpw6j0jvyrr4::::res://assets/images/Sidescroller images/pilferageact1-tilemapv1.0-pixilart.png<>uid://c7uyokengmfxn::::res://scenes/cat.tscn<>uid://7peead4k52jx::::res://scripts/cat.gd<>uid://byajrcxa8yjxp::::res://assets/images/Sidescroller images/Pixilart selection (4).png<>uid://dr1kkuuuigm3p::::res://scenes/back_to_2.tscn<>uid://d4a0em2w8g02t::::res://scenes/LOOP(nervous) 140bpm_Runaway_MIDI.ogg
+=======
+level_2.tscn::PackedScene::1487410982653700739::1791219935::0::1::::<><><>0<>0<><>::uid://chkra6krcul7i::::res://scripts/level_2.gd<>uid://c7uyokengmfxn::::res://scenes/cat.tscn<>uid://7peead4k52jx::::res://scripts/cat.gd<>uid://kpw6j0jvyrr4::::res://assets/images/Sidescroller images/pilferageact1-tilemapv1.0-pixilart.png<>uid://btb4r7vmvqwln::::res://assets/images/Sidescroller images/pilferageact2 - tilemapV1.png<>uid://dtindn668i0np::::res://assets/images/Sidescroller images/pilferageact1 - tilemap with darker tree.png<>uid://bhq77luo0rlnb::::res://assets/images/Sidescroller images/pilferageact1 - tilemap with semisolid platforms.png<>uid://04gte8cy0kd0::::res://scenes/go_to_level_2.tscn<>uid://npcfoyah5k3::::res://scenes/fox_npc.tscn<>uid://bd88g5yc64c3x::::res://assets/images/Sidescroller images/pilferageact3 - ufo tilemap.png<>uid://cxskxukpviwsm::::res://assets/Music/LOOP(detective) 60bpm_Wandering In The Streets_MIDI.ogg<>uid://7c41oph1lrp4::::res://assets/Music/LOOP(detective) 60bpm_Wandering In The Streets.ogg<>uid://b20p3gm7oi7pr::::res://scenes/wrench_item.tscn<>res://scripts/go_to_level_1.gd<>uid://cuqju8ia3q26n::::res://scenes/go_to_level_3.tscn<>uid://relic0item1::::res://scenes/relic_item.tscn<>uid://cape0item1::::res://scenes/cape_item.tscn
+level_3.gd::GDScript::8393836981617508571::1791219935::0::1::::<>Node2D<><>0<>0<><>::
+level_3.tscn::PackedScene::473610057174739209::1791219935::0::1::::<><><>0<>0<><>::uid://bs40j7tkimv7u::::res://assets/images/Sidescroller images/pilferageact3 - ufo tilemap.png<>uid://cpvggiubp2u0::::res://scripts/level_3.gd<>uid://cqsu67pcxbusf::::res://assets/images/Sidescroller images/Pixilart selection (3).png<>uid://kpw6j0jvyrr4::::res://assets/images/Sidescroller images/pilferageact1-tilemapv1.0-pixilart.png<>uid://c7uyokengmfxn::::res://scenes/cat.tscn<>uid://7peead4k52jx::::res://scripts/cat.gd<>uid://byajrcxa8yjxp::::res://assets/images/Sidescroller images/Pixilart selection (4).png<>uid://dr1kkuuuigm3p::::res://scenes/back_to_2.tscn<>uid://d4a0em2w8g02t::::res://scenes/LOOP(nervous) 140bpm_Runaway_MIDI.ogg
+>>>>>>> Stashed changes
 lore_journal.tscn::PackedScene::802018400230025861::1790740891::0::1::::<><><>0<>0<><>::res://scripts/lore_journal.gd<>res://assets/images/UI/journal_paper.png<>res://assets/images/UI/journal_banner.png<>uid://c8x3e628x2e51::::res://assets/fonts/PressStart2P-Regular.ttf
 main_menu.tscn::PackedScene::7089195340285457277::1790740891::0::1::::<><><>0<>0<><>::uid://k3cljth1nm2m::::res://scripts/main_menu.gd<>uid://bbep2dogndtrt::::res://assets/images/Miscellanious images/GameLogoVer1.png<>uid://d23uheorku8l0::::res://assets/images/Miscellanious images/pixel_art_large (1).png<>uid://didlpevuq4lh3::::res://assets/fonts/buttonTheme.tres<>uid://c8x3e628x2e51::::res://assets/fonts/PressStart2P-Regular.ttf
 minigame_test.tscn::PackedScene::9143138765849381734::1790740901::0::1::::<><><>0<>0<><>::res://scripts/minigame_test.gd<>uid://c7uyokengmfxn::::res://scenes/cat.tscn<>uid://7peead4k52jx::::res://scripts/cat.gd<>uid://b1pu755q8nmj7::::res://scenes/riddle_trigger.tscn<>uid://bi4dkpdb1i2as::::res://scenes/gate.tscn<>uid://ccd4oxxmqacvr::::res://scenes/switch_puzzle.tscn<>uid://bchmsaallq28c::::res://scenes/item_bar.tscn
@@ -300,18 +331,32 @@ switch_lever.tscn::PackedScene::958567863113358412::1790740945::0::1::::<><><>0<
 switch_puzzle.tscn::PackedScene::4921199225963506595::1790740945::0::1::::<><><>0<>0<><>::res://scripts/switch_puzzle_controller.gd<>uid://nwlqcnkrmkbs::::res://scenes/switch_lever.tscn
 tree.tscn::PackedScene::6540903676159351021::1790043161::0::1::::<><><>0<>0<><>::uid://bgfw41ug4q482::::res://assets/images/Hub Images/trees/Tree2.png
 turtle_npc.tscn::PackedScene::943577075281891177::1790740945::0::1::::<><><>0<>0<><>::res://scripts/npc.gd<>res://assets/images/NPCs/turtle.png
+<<<<<<< Updated upstream
 version_history.tscn::PackedScene::135612260724515998::1791217563::0::1::::<><><>0<>0<><>::uid://cj7u3ci8hvyav::::res://scripts/version_history.gd<>uid://c8x3e628x2e51::::res://assets/fonts/PressStart2P-Regular.ttf
 wolf_npc.tscn::PackedScene::943582107648094091::1790740945::0::1::::<><><>0<>0<><>::res://scripts/npc.gd<>res://assets/images/NPCs/squirrel.png
 wrench_item.tscn::PackedScene::4334089998043051951::1790740945::0::1::::<><><>0<>0<><>::uid://bv4nk25m451oj::::res://scripts/item.gd<>uid://ch6nd0lnsp62j::::res://assets/images/Items/wrench.png
 ::res://scripts/::1791218696
 alien.gd::GDScript::1516956805071354886::1791217956::0::1::::Alien<>CharacterBody2D<><>0<>0<><>::
+=======
+version_history.tscn::PackedScene::135612260724515998::1791219935::0::1::::<><><>0<>0<><>::uid://cj7u3ci8hvyav::::res://scripts/version_history.gd<>uid://c8x3e628x2e51::::res://assets/fonts/PressStart2P-Regular.ttf
+wolf_npc.tscn::PackedScene::943582107648094091::1790740945::0::1::::<><><>0<>0<><>::res://scripts/npc.gd<>res://assets/images/NPCs/squirrel.png
+wrench_item.tscn::PackedScene::4334089998043051951::1790740945::0::1::::<><><>0<>0<><>::uid://bv4nk25m451oj::::res://scripts/item.gd<>uid://ch6nd0lnsp62j::::res://assets/images/Items/wrench.png
+::res://scripts/::1791219935
+alien.gd::GDScript::1516956805071354886::1791219935::0::1::::Alien<>CharacterBody2D<><>0<>0<><>::
+>>>>>>> Stashed changes
 audio_stream_player_2d.gd::GDScript::4389280580299127244::1791149544::0::1::::<>RefCounted<><>0<>0<><>::
 backto2.gd::GDScript::2971034860933895891::1791216581::0::1::::<>Area2D<><>0<>0<><>::
 brotatoclone.gd::GDScript::5208670503672116907::1791149544::0::1::::<>Node2D<><>0<>0<><>::
 bullet.gd::GDScript::5143679735126824684::1790042133::0::1::::<>Area2D<><>0<>0<><>::
+<<<<<<< Updated upstream
 cat.gd::GDScript::2277258679841232933::1791218254::0::1::::Cat<>CharacterBody2D<><>0<>0<><>::
 credits.gd::GDScript::4792962895185723480::1790042133::0::1::::<>Control<><>0<>0<><>::
 damage_box.gd::GDScript::2847947391874804992::1791218045::0::1::::HitBox<>Area2D<><>0<>0<><>::
+=======
+cat.gd::GDScript::2277258679841232933::1791219935::0::1::::Cat<>CharacterBody2D<><>0<>0<><>::
+credits.gd::GDScript::4792962895185723480::1790042133::0::1::::<>Control<><>0<>0<><>::
+damage_box.gd::GDScript::2847947391874804992::1791219925::0::1::::HitBox<>Area2D<><>0<>0<><>::
+>>>>>>> Stashed changes
 dialogue_box.gd::GDScript::237989540336183653::1790740930::0::1::::<>CanvasLayer<><>0<>0<><>::
 dialogue_manager.gd::GDScript::5695379310282828772::1790740930::0::1::::<>Node<><>0<>0<><>::
 entrance.gd::GDScript::619108820443548018::1790740930::0::1::::<>CollisionShape2D<><>0<>0<><>::
