@@ -58,3 +58,8 @@ func _on_options_pressed() -> void:
 # TEMPORARY BUTTON FOR TESTING - jumps straight to level 3
 func _on_to_3_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/level_3.tscn")
+
+
+# TEMPORARY BUTTON FOR TESTING - previews the ending cinematic directly
+func _on_dev_ending_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/ending_animation.tscn")

@@ -10,9 +10,10 @@
 [ext_resource type="Theme" uid="uid://b4iqbjq3otfnm" path="res://assets/fonts/textLable.tres" id="5_6w6t7"]
 [ext_resource type="PackedScene" uid="uid://c7uyokengmfxn" path="res://scenes/cat.tscn" id="6_l1rjk"]
 [ext_resource type="Script" uid="uid://bvxmdlka7brrd" path="res://scripts/hubCat.gd" id="7_2lv1l"]
-[ext_resource type="Texture2D" uid="uid://bf4oexnk1n8ky" path="res://assets/images/Sidescroller images/cat.png" id="7_l1rjk"]
+[ext_resource type="Texture2D" uid="uid://bf4oexnk1n8ky" path="res://assets/images/cat.png" id="7_l1rjk"]
 [ext_resource type="Texture2D" uid="uid://clkpjavs3gywl" path="res://assets/images/Hub Images/catBack.png" id="8_6me8n"]
 [ext_resource type="Texture2D" uid="uid://4vt5jjjrbjky" path="res://assets/images/Hub Images/catFront.png" id="9_6me8n"]
+[ext_resource type="AudioStream" uid="uid://hdouwhjhclcr" path="res://assets/Music/LOOP(upbeat) 190bpm_Too Many Coffees.ogg" id="10_music"]
 [ext_resource type="Texture2D" uid="uid://jkwb7kdtj2oc" path="res://assets/images/Hub Images/exterior/s-blob-v1-IMAGE-hBQCs6f2Lms.png" id="16_pxg3u"]
 [ext_resource type="Texture2D" uid="uid://ch5vvx70pf801" path="res://assets/images/Hub Images/NPCs/brownEgg.png" id="17_arlad"]
 [ext_resource type="PackedScene" uid="uid://j13nplw74h7n" path="res://scenes/go_to_level_1.tscn" id="17_lsvnq"]
@@ -428,10 +429,14 @@ size = Vector2(71, 40.5)
 y_sort_enabled = true
 script = ExtResource("1_svci8")
 
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=70149495]
+stream = ExtResource("10_music")
+volume_db = -6.0
+
 [node name="background" type="Sprite2D" parent="." unique_id=1511907774]
 z_index = -10
 texture_repeat = 2
-position = Vector2(507, 146)
+position = Vector2(525, 114)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("18_h1vpq")
 region_enabled = true
@@ -5236,11 +5241,11 @@ texture = ExtResource("16_pxg3u")
 metadata/_edit_use_anchors_ = true
 
 [node name="BrownEgg" type="Sprite2D" parent="." unique_id=105616478]
-position = Vector2(-46, 63)
+position = Vector2(-190.51567, 11.701355)
 texture = ExtResource("17_arlad")
 
 [node name="PixilFrame0(7)(3)" type="Sprite2D" parent="." unique_id=682402015]
-position = Vector2(58, 54)
+position = Vector2(81.663376, 178.78561)
 texture = ExtResource("18_4jfvc")
 
 [node name="PixilFrame0(10)(1)" type="Sprite2D" parent="." unique_id=937896515]
@@ -5252,7 +5257,7 @@ position = Vector2(-105, 58)
 texture = ExtResource("20_k3fai")
 
 [node name="PixilFrame0(15)(1)" type="Sprite2D" parent="." unique_id=708441607]
-position = Vector2(50, 100)
+position = Vector2(-180.2525, 169.3435)
 texture = ExtResource("21_oyiv1")
 
 [node name="PixilFrame0(16)" type="Sprite2D" parent="." unique_id=1694124563]
@@ -5260,7 +5265,7 @@ position = Vector2(37, 53)
 texture = ExtResource("22_eivh4")
 
 [node name="PixilFrame0(19)(1)" type="Sprite2D" parent="." unique_id=1202083615]
-position = Vector2(-48, 104)
+position = Vector2(224.93709, 79.02768)
 texture = ExtResource("23_3pe00")
 
 [node name="PixilFrame0(20)(1)" type="Sprite2D" parent="." unique_id=1403763786]
@@ -5268,7 +5273,7 @@ position = Vector2(44, 126)
 texture = ExtResource("24_yqqlc")
 
 [node name="ScaredEgg" type="Sprite2D" parent="." unique_id=957031274]
-position = Vector2(-75, 33)
+position = Vector2(174.48917, 298.99942)
 texture = ExtResource("25_uqpy1")
 
 [node name="Bush" type="Sprite2D" parent="." unique_id=1292180647]
