@@ -87,9 +87,13 @@ func _skip() -> void:
 
 
 func _go_to_credits() -> void:
-	# The team's SceneTransition autoload already handles the visual
-	# transition (iris wipe) - just duck the music under it instead of
-	# doing a second fade of our own.
-	var music_out := create_tween()
-	music_out.tween_property(music, "volume_db", -40.0, 0.3)
-	SceneTransition.change_scene("res://scenes/credits.tscn")
+	# NOT using SceneTransition.change_scene() here - see the matching
+	# comment in opening_animation.gd's _go_to_hub(). It waits forever for a
+	# node named "cat"/"hubCat" that doesn't exist in this scene, so this
+	# fades its own overlay to black and changes scenes directly instead.
+	var fade_out := create_tween()
+	fade_out.set_parallel(true)
+	fade_out.tween_property(fade_overlay, "color:a", 1.0, 0.5)
+	fade_out.tween_property(music, "volume_db", -40.0, 0.5)
+	await fade_out.finished
+	get_tree().change_scene_to_file("res://scenes/credits.tscn")

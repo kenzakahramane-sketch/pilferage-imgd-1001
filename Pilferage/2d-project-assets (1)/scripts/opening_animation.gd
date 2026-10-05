@@ -107,9 +107,16 @@ func _skip() -> void:
 
 
 func _go_to_hub() -> void:
-	# The team's SceneTransition autoload already handles the visual
-	# transition (iris wipe) - just duck the music under it instead of
-	# doing a second fade of our own.
-	var music_out := create_tween()
-	music_out.tween_property(music, "volume_db", -40.0, 0.3)
-	SceneTransition.change_scene("res://scenes/brotatoclone.tscn")
+	# NOT using SceneTransition.change_scene() here: it centers its iris
+	# effect on a node literally named "cat" or "hubCat" in the current
+	# scene, and waits (forever, if it never shows up) for one to appear.
+	# This scene's cat sprite is named "CatSprite", so that search would
+	# spin indefinitely - this is also why skipping looked "frozen" before.
+	# This scene already fades its own overlay to black, so it changes
+	# scenes directly once that fade is done.
+	var fade_out := create_tween()
+	fade_out.set_parallel(true)
+	fade_out.tween_property(fade_overlay, "color:a", 1.0, 0.5)
+	fade_out.tween_property(music, "volume_db", -40.0, 0.5)
+	await fade_out.finished
+	get_tree().change_scene_to_file("res://scenes/brotatoclone.tscn")
