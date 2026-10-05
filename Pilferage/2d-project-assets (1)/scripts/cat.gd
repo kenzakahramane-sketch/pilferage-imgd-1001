@@ -26,6 +26,7 @@ var isHurt = false
 @onready var jump_buffer_timer = $"Jump buffer timer"
 @onready var push_timer = $"Push timer"
 @onready var hit_flash_ani: AnimationPlayer = $hit_flash_ani
+@onready var hurt_box = $hitBox/CollisionShape2D
 
 
 func _physics_process(delta: float) -> void:
@@ -44,6 +45,7 @@ func _physics_process(delta: float) -> void:
 
 	# Handle jump, jumps higher if you build up speed.
 	if velocity.y >= 0 and ((!jump_buffer_timer.is_stopped() and is_on_floor()) or Input.is_action_just_pressed("jump")) and (is_on_floor() or !coyote_timer.is_stopped()):
+		jump_sound.play()
 		animated_sprite.play("jumpCool")
 		velocity.y = JUMP_VELOCITY + JUMP_VELOCITY * 0.15 * (abs(velocity.x) / 100)
 		
@@ -67,7 +69,6 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	#jump buffer and coyote time so input timing is less strict
 	if Input.is_action_just_pressed("jump") and !is_on_floor():
-		jump_sound.play()
 		jump_buffer_timer.start()
 	if was_on_floor && !is_on_floor():
 		coyote_timer.start()
@@ -129,18 +130,22 @@ func _physics_process(delta: float) -> void:
 		animated_sprite.flip_h = false
 		hitbox.position.x = 11.25
 		detect_down.position.x = 11.25
+		hurt_box.position.x = 11
 	if velocity.x < -10 + wall_cling:
 		animated_sprite.flip_h = true
 		hitbox.position.x = 6.75
 		detect_down.position.x = 6.75
+		hurt_box.position.x = 6.5
 	if Global.simplified_controls == true and abs(velocity.x) < 50 and Input.is_action_pressed("move_up") and !is_on_floor() and ((detect_right.is_colliding() and animated_sprite.flip_h == false and direction < 0) or (detect_left.is_colliding() and animated_sprite.flip_h == true and direction > 0)):
 			velocity.y = JUMP_VELOCITY
 			velocity.x = MAX_SPEED * 1.25 * direction
 			push_timer.start()
+			push_sound.play()
 	if Global.simplified_controls == true and direction and wall_charge > wall_charge_time and abs(velocity.x) < 50:
 		if (animated_sprite.flip_h == false and direction < 0) or (animated_sprite.flip_h == true and direction > 0):
 			velocity.x = MAX_SPEED * 1.75 * direction
 			push_timer.start()
+			push_sound.play()
 
 
 
