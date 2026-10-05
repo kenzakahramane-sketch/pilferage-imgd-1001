@@ -12,7 +12,6 @@ func _physics_process(delta):
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 
 	var speed = 120
-
 	if Input.is_action_pressed("hubSprint"):
 		speed = 160
 
