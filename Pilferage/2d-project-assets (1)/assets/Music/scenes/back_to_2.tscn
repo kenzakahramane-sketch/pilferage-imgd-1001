@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dr1kkuuuigm3p"]
+
+[ext_resource type="Script" uid="uid://bilgrlwohw3d4" path="res://scripts/backto2.gd" id="1_backto2"]
+
+[node name="backTo2" type="Area2D" unique_id=105553706]
+script = ExtResource("1_backto2")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

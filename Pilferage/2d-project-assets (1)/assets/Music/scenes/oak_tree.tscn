@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c0kwwv1xvf334"]
+
+[ext_resource type="Texture2D" uid="uid://pim68n0q7p36" path="res://assets/images/Hub Images/trees/OakTree.png" id="2_f2lq6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rekuv"]
+radius = 13.038404
+
+[node name="OakTree" type="StaticBody2D" unique_id=1609031442]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=516195295]
+position = Vector2(-1, -4)
+shape = SubResource("CircleShape2D_rekuv")
+
+[node name="PineTree" type="Sprite2D" parent="." unique_id=1480051961]
+position = Vector2(-1.999999, -39.000004)
+scale = Vector2(1.0833333, 1.1768348)
+texture = ExtResource("2_f2lq6")

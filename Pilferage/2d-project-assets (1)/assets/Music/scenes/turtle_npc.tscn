@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://npcturtlfak4"]
+
+[ext_resource type="Script" path="res://scripts/npc.gd" id="1_npcgd"]
+[ext_resource type="Texture2D" path="res://assets/images/NPCs/turtle.png" id="2_turtle"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_turtle"]
+size = Vector2(16, 16)
+
+[node name="TurtleNPC" type="Area2D"]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_npcgd")
+npc_name = "Turtle"
+dialogue_lines = Array[String](["Mmm... in a hurry, are you? I've got nowhere to be. Never have.", "Sit by this fountain long enough and you hear everything eventually."])
+portrait = ExtResource("2_turtle")
+reacts_to_lore_ids = Array[String](["hidden_secret"])
+reaction_lines = Array[String](["That wolf told you about something hidden, hm? I've lived a long time. Things stay hidden for a reason - not always a good one."])
+lore_id_to_unlock = "turtle_wisdom"
+one_time_lore_lines = Array[String](["Between us - there's an old stone lever out past the eastern woods. Sealed some time back.", "Nobody left remembers why. If you ever find it... old locks are like old secrets. Best treated carefully."])
+lore_title = "The Old Lever"
+lore_journal_text = "The turtle mentions a sealed stone lever somewhere in the eastern woods. She doesn't know why it was locked - only that it has been, for a very long time."
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_turtle")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_turtle")
+
+[node name="InteractHint" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = -20.0
+offset_top = -26.0
+offset_right = 20.0
+offset_bottom = -2.0
+theme_override_font_sizes/font_size = 8
+horizontal_alignment = 1
+text = "[E]"

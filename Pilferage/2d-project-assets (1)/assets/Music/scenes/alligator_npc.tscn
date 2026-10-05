@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://npcgatosak4"]
+
+[ext_resource type="Script" path="res://scripts/npc.gd" id="1_npcgd"]
+[ext_resource type="Texture2D" path="res://assets/images/NPCs/alligator_map.png" id="2_gatormap"]
+[ext_resource type="Texture2D" path="res://assets/images/NPCs/alligator_portrait.png" id="3_gatorport"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gator"]
+size = Vector2(16, 16)
+
+[node name="AlligatorNPC" type="Area2D"]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_npcgd")
+npc_name = "Alligator"
+dialogue_lines = Array[String](["This lever's been stuck since before I hatched. Something about a promise. Or a punishment. Depends who you ask."])
+portrait = ExtResource("3_gatorport")
+reacts_to_lore_ids = Array[String](["turtle_wisdom"])
+reaction_lines = Array[String](["Ah, so the turtle already told you about this old thing. Figures - she never could keep a secret from a stranger."])
+lore_id_to_unlock = "lever_hint"
+one_time_lore_lines = Array[String](["Go on, try it if you like. I've given up guessing what's behind that gate.", "Just don't blame me if it's nothing but rocks."])
+lore_title = "A Stuck Lever"
+lore_journal_text = "An alligator lounging by an old stone gate says the lever's been jammed for years, sealed behind whatever's on the other side. Nobody currently in town remembers why."
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_gator")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_gatormap")
+
+[node name="InteractHint" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = -20.0
+offset_top = -26.0
+offset_right = 20.0
+offset_bottom = -2.0
+theme_override_font_sizes/font_size = 8
+horizontal_alignment = 1
+text = "[E]"

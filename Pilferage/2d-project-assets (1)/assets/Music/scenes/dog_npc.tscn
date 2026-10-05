@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://npcdohak4a"]
+
+[ext_resource type="Script" path="res://scripts/npc.gd" id="1_npcgd"]
+[ext_resource type="Texture2D" path="res://assets/images/NPCs/squirrel.png" id="2_sqrl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dog"]
+size = Vector2(16, 16)
+
+[node name="DogNPC" type="Area2D"]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_npcgd")
+npc_name = "Dog"
+dialogue_lines = Array[String](["*sniffs the air* Oh, hey there. I like sitting by this fountain.", "Been an old dog a long time now. Seen a lot come and go around here."])
+lore_id_to_unlock = "cape_legend"
+one_time_lore_lines = Array[String](["You know... there's one thing I never told anyone.", "Years back I chased a runaway cow clean out of town - lost my captain's cape somewhere out past the fields.", "Never found it. Always figured it was still out there, rotting in a ditch somewhere. But maybe not."])
+lore_title = "The Captain's Cape"
+lore_journal_text = "The dog by the fountain says he lost a sailor's cape years ago, chasing a runaway cow out past the fields. Rumor has it a cape like that is meant to carry its wearer safely over water - if it's really still out there."
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_dog")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+modulate = Color(0.85, 0.85, 1, 1)
+texture = ExtResource("2_sqrl")
+
+[node name="InteractHint" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = -20.0
+offset_top = -26.0
+offset_right = 20.0
+offset_bottom = -2.0
+theme_override_font_sizes/font_size = 8
+horizontal_alignment = 1
+text = "[E]"

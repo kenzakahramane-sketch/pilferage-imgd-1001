@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://npcfoyah5k3"]
+
+[ext_resource type="Script" path="res://scripts/npc.gd" id="1_npcgd"]
+[ext_resource type="Texture2D" path="res://assets/images/NPCs/squirrel.png" id="2_placeholder"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fox"]
+size = Vector2(16, 16)
+
+[node name="FoxNPC" type="Area2D"]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_npcgd")
+npc_name = "Fox"
+dialogue_lines = Array[String](["Oh, hey! You're the new face 'round these levels.", "Word travels fast in a small world like this one."])
+reacts_to_lore_ids = Array[String](["cape_legend", "hidden_secret"])
+reaction_lines = Array[String](["Heard you got an earful from the dog about some old cape. Wouldn't put it past him to be one grandpappy story removed from the truth.", "And the wolf, too, huh? That old furball loves being cryptic. Typical."])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_fox")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_placeholder")
+modulate = Color(1, 0.8, 0.75, 1)
+
+[node name="InteractHint" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = -20.0
+offset_top = -26.0
+offset_right = 20.0
+offset_bottom = -2.0
+theme_override_font_sizes/font_size = 8
+horizontal_alignment = 1
+text = "[E]"

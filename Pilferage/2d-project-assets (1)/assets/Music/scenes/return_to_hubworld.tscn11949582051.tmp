@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cuqta3bwplpu"]
+
+[sub_resource type="GDScript" id="GDScript_aavv5"]
+script/source = "extends Area2D
+ 
+func _on_body_entered (body) -> void:
+	Global.spawn_point = \"forest\"
+	SceneTransition.change_scene(\"res://scenes/brotatoclone.tscn\")
+
+
+func _on_area_entered(area: Area2D) -> void:
+	Global.spawn_point = \"forest\"
+	SceneTransition.change_scene(\"res://scenes/brotatoclone.tscn\")
+"
+
+[node name="return to hubworld" type="Area2D" unique_id=1214173505]
+collision_mask = 2
+script = SubResource("GDScript_aavv5")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

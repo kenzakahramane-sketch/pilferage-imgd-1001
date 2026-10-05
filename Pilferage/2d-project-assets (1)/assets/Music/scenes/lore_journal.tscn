@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://lorejrn4x8p2"]
+
+[ext_resource type="Script" path="res://scripts/lore_journal.gd" id="1_lrjrn"]
+[ext_resource type="Texture2D" path="res://assets/images/UI/journal_paper.png" id="2_paper"]
+[ext_resource type="Texture2D" path="res://assets/images/UI/journal_banner.png" id="3_banner"]
+[ext_resource type="FontFile" uid="uid://c8x3e628x2e51" path="res://assets/fonts/PressStart2P-Regular.ttf" id="4_pixel"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_paper"]
+texture = ExtResource("2_paper")
+texture_margin_left = 40.0
+texture_margin_top = 40.0
+texture_margin_right = 40.0
+texture_margin_bottom = 40.0
+
+[node name="LoreJournal" type="CanvasLayer"]
+layer = 15
+script = ExtResource("1_lrjrn")
+
+[node name="Dim" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.45)
+visible = false
+
+[node name="JournalPanel" type="Panel" parent="."]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -300.0
+offset_right = 400.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_paper")
+
+[node name="Banner" type="TextureRect" parent="JournalPanel"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -160.0
+offset_top = -28.0
+offset_right = 160.0
+offset_bottom = 32.0
+grow_horizontal = 2
+texture = ExtResource("3_banner")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TitleLabel" type="Label" parent="JournalPanel/Banner"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.25, 0.18, 0.1, 1)
+theme_override_fonts/font = ExtResource("4_pixel")
+theme_override_font_sizes/font_size = 14
+text = "Lore Journal"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Margin" type="MarginContainer" parent="JournalPanel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 56
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 56
+theme_override_constants/margin_bottom = 56
+
+[node name="VBox" type="VBoxContainer" parent="JournalPanel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="EmptyLabel" type="Label" parent="JournalPanel/Margin/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.3, 0.22, 0.14, 1)
+theme_override_fonts/font = ExtResource("4_pixel")
+theme_override_font_sizes/font_size = 11
+text = "Nothing discovered yet - go talk to the townsfolk!"
+autowrap_mode = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="JournalPanel/Margin/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="EntriesContainer" type="VBoxContainer" parent="JournalPanel/Margin/VBox/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3

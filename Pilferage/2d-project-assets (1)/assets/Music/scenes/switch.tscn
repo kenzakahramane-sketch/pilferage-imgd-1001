@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://nwlqcnkrmqbp"]
+
+[ext_resource type="Script" path="res://scripts/switch.gd" id="1_switchgd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_switch"]
+size = Vector2(16, 16)
+
+[node name="Switch" type="Area2D"]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_switchgd")
+puzzle_id = ""
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_switch")
+
+[node name="Visual" type="ColorRect" parent="."]
+offset_left = -8.0
+offset_top = -16.0
+offset_right = 8.0
+offset_bottom = 0.0
+color = Color(0.55, 0.4, 0.2, 1)
+
+[node name="Label" type="Label" parent="Visual"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 6
+text = "LEVER"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="InteractHint" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = -20.0
+offset_top = -26.0
+offset_right = 20.0
+offset_bottom = -2.0
+theme_override_font_sizes/font_size = 8
+horizontal_alignment = 1
+text = "[E]"

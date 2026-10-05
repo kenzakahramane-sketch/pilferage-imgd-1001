@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://npcbasfax4k2"]
+
+[ext_resource type="Script" uid="uid://b4y3iepu2sq0m" path="res://scripts/npc.gd" id="1_npcgd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_npc"]
+size = Vector2(32, 48)
+
+[node name="NPC" type="Area2D" unique_id=1047835761]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_npcgd")
+dialogue_lines = Array[String](["Hey there!", "Nice day, isn't it?"])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=418280627]
+shape = SubResource("RectangleShape2D_npc")
+
+[node name="Placeholder" type="ColorRect" parent="." unique_id=527505878]
+offset_left = -16.0
+offset_top = -48.0
+offset_right = 16.0
+color = Color(0.8, 0.6, 0.3, 1)
+
+[node name="InteractHint" type="Label" parent="." unique_id=723485656]
+unique_name_in_owner = true
+offset_left = -20.0
+offset_top = -74.0
+offset_right = 20.0
+offset_bottom = -50.0
+theme_override_font_sizes/font_size = 20
+text = "[E]"
+horizontal_alignment = 1

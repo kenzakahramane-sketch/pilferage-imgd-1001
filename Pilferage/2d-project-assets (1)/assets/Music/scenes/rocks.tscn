@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cfnd114ddwknr"]
+
+[ext_resource type="Texture2D" uid="uid://wu1synfmeafc" path="res://assets/images/Hub Images/Rocks.png" id="1_ooke6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qggm8"]
+radius = 3.0
+
+[node name="Rocks" type="StaticBody2D" unique_id=1094242671]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1475910077]
+texture = ExtResource("1_ooke6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1214583587]
+position = Vector2(1, 1)
+rotation = 1.5707964
+shape = SubResource("CircleShape2D_qggm8")
