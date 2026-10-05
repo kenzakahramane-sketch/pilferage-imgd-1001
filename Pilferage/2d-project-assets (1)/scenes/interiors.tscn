@@ -1,12 +1,13 @@
 [gd_scene format=3 uid="uid://csqwaxnpvpgqa"]
 
+[ext_resource type="Texture2D" uid="uid://d32spxjgq7jp1" path="res://assets/images/Hub Images/JazzBar.png" id="1_w3svg"]
 [ext_resource type="Script" uid="uid://fowxxfgqb2fn" path="res://scripts/exit_door.gd" id="2_02ecs"]
 [ext_resource type="PackedScene" uid="uid://c7uyokengmfxn" path="res://scenes/cat.tscn" id="3_w3svg"]
 [ext_resource type="Script" uid="uid://bvxmdlka7brrd" path="res://scripts/hubCat.gd" id="4_y5ugd"]
 [ext_resource type="Texture2D" uid="uid://bf4oexnk1n8ky" path="res://assets/images/Sidescroller images/cat.png" id="5_dgq8i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w3svg"]
-size = Vector2(87, 135)
+size = Vector2(17, 19.25)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_se5fe"]
 atlas = ExtResource("5_dgq8i")
@@ -332,37 +333,52 @@ animations = [{
 "speed": 15.0
 }]
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ciobh"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ciobh"]
+normal = Vector2(0.001077766, 0.9999994)
+distance = 5.744236
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qggm8"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ilayl"]
+normal = Vector2(0.67201847, 0.7405344)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_av4au"]
+normal = Vector2(-0.7144892, 0.6996465)
+
 [node name="Interiors" type="Node2D" unique_id=616408509]
 
+[node name="TextureRect" type="TextureRect" parent="." unique_id=337206505]
+offset_right = 320.0
+offset_bottom = 180.0
+texture = ExtResource("1_w3svg")
+
 [node name="Camera2D2" type="Camera2D" parent="." unique_id=1863351373]
-position = Vector2(1556, 801)
+position = Vector2(157.38805, 88.698784)
+zoom = Vector2(6, 6)
 limit_left = 0
 limit_top = 0
-limit_right = 3077
-limit_bottom = 1515
-
-[node name="Room" type="ColorRect" parent="." unique_id=2066520856]
-offset_right = 3077.0
-offset_bottom = 1516.0
-color = Color(0.4964314, 0.25540417, 0.094661735, 1)
+limit_right = 319
+limit_bottom = 179
 
 [node name="PlayerSpawn" type="Marker2D" parent="." unique_id=1225064742]
-position = Vector2(1529, 1350)
+position = Vector2(156, 153)
 
 [node name="ExitDoor" type="Area2D" parent="." unique_id=1015719102]
-position = Vector2(1542, 1276)
+position = Vector2(198, 236)
 script = ExtResource("2_02ecs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ExitDoor" unique_id=895171852]
-position = Vector2(4.5, -42)
+position = Vector2(-40, -68.375)
 shape = SubResource("RectangleShape2D_w3svg")
 
 [node name="hubCat" parent="." unique_id=814917533 instance=ExtResource("3_w3svg")]
-position = Vector2(1459, 976.00024)
-scale = Vector2(9.640001, 9.673571)
+position = Vector2(148.68903, 154.06023)
 script = ExtResource("4_y5ugd")
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="hubCat" unique_id=273219367]
+visible = false
 position = Vector2(9, -8)
 scale = Vector2(1.147, 1)
 sprite_frames = SubResource("SpriteFrames_rssdf")
@@ -370,11 +386,33 @@ animation = &"idleCool"
 autoplay = "idleCool"
 
 [node name="RayCastRight2" type="RayCast2D" parent="hubCat" unique_id=60271267]
+visible = false
 position = Vector2(11, -6)
 target_position = Vector2(6, 0)
 
 [node name="RayCastLeft2" type="RayCast2D" parent="hubCat" unique_id=40073216]
+visible = false
 position = Vector2(7, -6)
 target_position = Vector2(-6, 0)
+
+[node name="border" type="StaticBody2D" parent="." unique_id=998603666]
+collision_mask = 3
+physics_material_override = SubResource("PhysicsMaterial_ciobh")
+
+[node name="Top" type="CollisionShape2D" parent="border" unique_id=2146356644]
+position = Vector2(157.83267, 99.25702)
+shape = SubResource("WorldBoundaryShape2D_ciobh")
+
+[node name="Btm" type="CollisionShape2D" parent="border" unique_id=687398147]
+position = Vector2(149.78395, 179.06088)
+shape = SubResource("WorldBoundaryShape2D_qggm8")
+
+[node name="Left" type="CollisionShape2D" parent="border" unique_id=1714419785]
+position = Vector2(37.17933, 126.255394)
+shape = SubResource("WorldBoundaryShape2D_ilayl")
+
+[node name="Right" type="CollisionShape2D" parent="border" unique_id=801227819]
+position = Vector2(279.21695, 128.49754)
+shape = SubResource("WorldBoundaryShape2D_av4au")
 
 [connection signal="body_entered" from="ExitDoor" to="ExitDoor" method="_on_body_entered"]
