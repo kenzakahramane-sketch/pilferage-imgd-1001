@@ -1,14 +1,22 @@
 [gd_scene format=3 uid="uid://g0oj2pdjig86"]
 
 [ext_resource type="Texture2D" uid="uid://bs40j7tkimv7u" path="res://assets/images/Sidescroller images/pilferageact3 - ufo tilemap.png" id="1_1pn4d"]
+<<<<<<< HEAD
 [ext_resource type="Script" uid="uid://cpvggiubp2u0" path="res://scripts/level_3.gd" id="1_ha73p"]
+=======
+[ext_resource type="Script" uid="uid://drubjewiwopvf" path="res://scenes/level_3.gd" id="1_ha73p"]
+>>>>>>> main
 [ext_resource type="Texture2D" uid="uid://cqsu67pcxbusf" path="res://assets/images/Sidescroller images/Pixilart selection (3).png" id="2_ah8om"]
 [ext_resource type="Texture2D" uid="uid://kpw6j0jvyrr4" path="res://assets/images/Sidescroller images/pilferageact1-tilemapv1.0-pixilart.png" id="3_hhfj6"]
 [ext_resource type="PackedScene" uid="uid://c7uyokengmfxn" path="res://scenes/cat.tscn" id="3_p6vls"]
 [ext_resource type="Script" uid="uid://7peead4k52jx" path="res://scripts/cat.gd" id="4_hhfj6"]
 [ext_resource type="Texture2D" uid="uid://byajrcxa8yjxp" path="res://assets/images/Sidescroller images/Pixilart selection (4).png" id="4_wae8j"]
 [ext_resource type="PackedScene" uid="uid://dr1kkuuuigm3p" path="res://scenes/back_to_2.tscn" id="5_ah8om"]
+<<<<<<< HEAD
 [ext_resource type="AudioStream" uid="uid://d4a0em2w8g02t" path="res://scenes/LOOP(nervous) 140bpm_Runaway_MIDI.ogg" id="9_vcx5n"]
+=======
+[ext_resource type="AudioStream" uid="uid://bxjwrktwqgvc7" path="res://assets/Music/LOOP(nervous) 140bpm_Runaway_MIDI.ogg" id="9_vcx5n"]
+>>>>>>> main
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wae8j"]
 texture = ExtResource("1_1pn4d")
@@ -96,7 +104,6 @@ sources/4 = SubResource("TileSetAtlasSource_56dhn")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qggm8"]
 normal = Vector2(1, 0)
-distance = 65.0
 
 [node name="Level3" type="Node2D" unique_id=1381255891]
 script = ExtResource("1_ha73p")
@@ -125,7 +132,11 @@ position = Vector2(-67, -17)
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="backTo2" unique_id=411355207]
+<<<<<<< HEAD
 position = Vector2(20, 134)
+=======
+position = Vector2(19, 65)
+>>>>>>> main
 rotation = -1.5707964
 shape = SubResource("WorldBoundaryShape2D_qggm8")
 
