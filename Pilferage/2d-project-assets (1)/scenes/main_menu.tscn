@@ -141,6 +141,16 @@ theme = ExtResource("3_wu84c")
 text = "Level 3 Shortcut
  (DEV BUTTON)"
 
+[node name="dev_ending" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1270.0
+offset_top = 1008.0
+offset_right = 1500.0
+offset_bottom = 1048.0
+theme = ExtResource("3_wu84c")
+text = "Ending Cinematic
+ (DEV BUTTON)"
+
 [connection signal="pressed" from="Options/Continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="Options/StartGame" to="." method="_on_startgame_pressed"]
 [connection signal="pressed" from="Options/Credits" to="." method="_on_credits_pressed"]
@@ -150,3 +160,4 @@ text = "Level 3 Shortcut
 [connection signal="pressed" from="dev" to="." method="_on_dev_pressed"]
 [connection signal="pressed" from="dev_minigames" to="." method="_on_dev_minigames_pressed"]
 [connection signal="pressed" from="to3" to="." method="_on_to_3_pressed"]
+[connection signal="pressed" from="dev_ending" to="." method="_on_dev_ending_pressed"]

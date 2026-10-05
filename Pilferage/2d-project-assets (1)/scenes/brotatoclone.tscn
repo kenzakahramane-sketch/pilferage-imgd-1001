@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bf4oexnk1n8ky" path="res://assets/images/Sidescroller images/cat.png" id="7_l1rjk"]
 [ext_resource type="Texture2D" uid="uid://clkpjavs3gywl" path="res://assets/images/Hub Images/catBack.png" id="8_6me8n"]
 [ext_resource type="Texture2D" uid="uid://4vt5jjjrbjky" path="res://assets/images/Hub Images/catFront.png" id="9_6me8n"]
+[ext_resource type="AudioStream" uid="uid://hdouwhjhclcr" path="res://assets/Music/LOOP(upbeat) 190bpm_Too Many Coffees.ogg" id="10_music"]
 [ext_resource type="Texture2D" uid="uid://jkwb7kdtj2oc" path="res://assets/images/Hub Images/exterior/s-blob-v1-IMAGE-hBQCs6f2Lms.png" id="16_pxg3u"]
 [ext_resource type="Texture2D" uid="uid://ch5vvx70pf801" path="res://assets/images/Hub Images/NPCs/brownEgg.png" id="17_arlad"]
 [ext_resource type="PackedScene" uid="uid://j13nplw74h7n" path="res://scenes/go_to_level_1.tscn" id="17_lsvnq"]
@@ -426,6 +427,10 @@ size = Vector2(71, 40.5)
 [node name="Game" type="Node2D" unique_id=21739277]
 y_sort_enabled = true
 script = ExtResource("1_svci8")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_music")
+volume_db = -6.0
 
 [node name="background" type="Sprite2D" parent="." unique_id=1511907774]
 z_index = -10

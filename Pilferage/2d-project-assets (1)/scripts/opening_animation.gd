@@ -5,6 +5,8 @@ extends Node2D
 @onready var cat_sprite: Sprite2D = %CatSprite
 @onready var narration_label: Label = %NarrationLabel
 @onready var skip_hint: Label = %SkipHint
+@onready var fade_overlay: ColorRect = %FadeOverlay
+@onready var music: AudioStreamPlayer = $Music
 
 var cat_back := preload("res://assets/images/Hub Images/catBack.png")
 var cat_front := preload("res://assets/images/Hub Images/catFront.png")
@@ -26,10 +28,18 @@ func _ready() -> void:
 	narration_label.text = ""
 	narration_label.modulate.a = 0.0
 	skip_hint.text = "[Space] Skip"
+	if not Global.music:
+		music.stop()
+	else:
+		music.play()
 	await _play_intro()
 
 
 func _play_intro() -> void:
+	# Fade in from black instead of cutting straight to the scene.
+	var screen_fade_in := create_tween()
+	screen_fade_in.tween_property(fade_overlay, "color:a", 0.0, 1.0)
+
 	cat_sprite.texture = cat_back
 	var start_y := cat_sprite.position.y
 	cat_sprite.position.y = start_y + 300
@@ -44,8 +54,9 @@ func _play_intro() -> void:
 	if _skipped:
 		return
 
-	# Cat turns around to face the player
-	cat_sprite.texture = cat_front
+	# Cat turns around to face the player - a quick fade instead of an
+	# instant texture swap, so it reads as a turn rather than a glitch.
+	await _swap_cat_texture(cat_front)
 
 	for line in narration_lines:
 		if _skipped:
@@ -56,6 +67,16 @@ func _play_intro() -> void:
 		return
 	await get_tree().create_timer(0.75).timeout
 	_go_to_hub()
+
+
+func _swap_cat_texture(new_texture: Texture2D) -> void:
+	var fade_out := create_tween()
+	fade_out.tween_property(cat_sprite, "modulate:a", 0.0, 0.15)
+	await fade_out.finished
+	cat_sprite.texture = new_texture
+	var fade_in := create_tween()
+	fade_in.tween_property(cat_sprite, "modulate:a", 1.0, 0.15)
+	await fade_in.finished
 
 
 func _show_line(line: String) -> void:
@@ -86,4 +107,9 @@ func _skip() -> void:
 
 
 func _go_to_hub() -> void:
+	# The team's SceneTransition autoload already handles the visual
+	# transition (iris wipe) - just duck the music under it instead of
+	# doing a second fade of our own.
+	var music_out := create_tween()
+	music_out.tween_property(music, "volume_db", -40.0, 0.3)
 	SceneTransition.change_scene("res://scenes/brotatoclone.tscn")
