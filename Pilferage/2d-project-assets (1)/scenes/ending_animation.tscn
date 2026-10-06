@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://d8kf3jq1mv0xw"]
+[gd_scene format=3 uid="uid://d5kihtr2o465"]
 
 [ext_resource type="Script" path="res://scripts/ending_animation.gd" id="1_end"]
 [ext_resource type="FontFile" uid="uid://c8x3e628x2e51" path="res://assets/fonts/PressStart2P-Regular.ttf" id="2_pixel"]
