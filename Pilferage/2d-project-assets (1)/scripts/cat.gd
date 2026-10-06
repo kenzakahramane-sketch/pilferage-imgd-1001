@@ -26,7 +26,7 @@ var isHurt = false
 @onready var jump_buffer_timer = $"Jump buffer timer"
 @onready var push_timer = $"Push timer"
 @onready var hit_flash_ani: AnimationPlayer = $hit_flash_ani
-
+@onready var hurt_box = $hitBox/CollisionShape2D
 
 func _physics_process(delta: float) -> void:
 	
@@ -35,7 +35,7 @@ func _physics_process(delta: float) -> void:
 	
 	# Add the gravity. When moving against a wall, you will fall down slower
 	if not is_on_floor():
-		if detect_right.is_colliding() and velocity.y > 0 and animated_sprite.flip_h == false or detect_left.is_colliding() and velocity.y > 0 and animated_sprite.flip_h == true:
+		if !Input.is_action_pressed("move_down") and (detect_right.is_colliding() and velocity.y > 0 and animated_sprite.flip_h == false or detect_left.is_colliding() and velocity.y > 0 and animated_sprite.flip_h == true):
 			velocity += get_gravity() * delta / 20
 			if velocity.y > 75:
 				velocity.y = 75
@@ -129,10 +129,12 @@ func _physics_process(delta: float) -> void:
 		animated_sprite.flip_h = false
 		hitbox.position.x = 11.25
 		detect_down.position.x = 11.25
+		hurt_box.position.x = 11
 	if velocity.x < -10 + wall_cling:
 		animated_sprite.flip_h = true
 		hitbox.position.x = 6.75
 		detect_down.position.x = 6.75
+		hurt_box.position.x = 6.5
 	if Global.simplified_controls == true and abs(velocity.x) < 50 and Input.is_action_pressed("move_up") and !is_on_floor() and ((detect_right.is_colliding() and animated_sprite.flip_h == false and direction < 0) or (detect_left.is_colliding() and animated_sprite.flip_h == true and direction > 0)):
 			velocity.y = JUMP_VELOCITY
 			velocity.x = MAX_SPEED * 1.25 * direction
