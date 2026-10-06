@@ -4,6 +4,7 @@ func _on_body_entered(body) -> void:
 	var current_scene = get_tree().current_scene.scene_file_path
 	
 	if current_scene == "res://scenes/brotatoclone.tscn":
+		AudioManager.fade_out_hub_music()
 		SceneTransition.change_scene("res://scenes/level_1.tscn")
 	
 	if current_scene == "res://scenes/level_2.tscn":

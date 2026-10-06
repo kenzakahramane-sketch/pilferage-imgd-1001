@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://c503py603jgk5"]
+
+[ext_resource type="Script" uid="uid://cxmvkvpleba7o" path="res://final_boss.gd" id="1_skx2t"]
+[ext_resource type="Texture2D" uid="uid://cv4n8kkh6rdhj" path="res://assets/images/Sidescroller images/boss.png" id="2_lnbgr"]
+[ext_resource type="PackedScene" uid="uid://du5i8r7jdycua" path="res://scenes/gun.tscn" id="3_o1i15"]
+[ext_resource type="AudioStream" uid="uid://cwqywv6m0mci" path="res://assets/Sound Effects/bossDeathNoise.mp3" id="4_lnbgr"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rekuv"]
+height = 49.999996
+
+[node name="finalBoss" type="CharacterBody2D" unique_id=532397132]
+script = ExtResource("1_skx2t")
+
+[node name="BossSprite" type="Sprite2D" parent="." unique_id=601108759]
+texture = ExtResource("2_lnbgr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2097899887]
+position = Vector2(-1, 5)
+scale = Vector2(1.2799994, 1)
+shape = SubResource("CapsuleShape2D_rekuv")
+
+[node name="BlasterR" parent="." unique_id=269018533 instance=ExtResource("3_o1i15")]
+position = Vector2(17, 15.000001)
+scale = Vector2(0.15999937, 0.15999937)
+
+[node name="BlasterL" parent="." unique_id=614806535 instance=ExtResource("3_o1i15")]
+position = Vector2(-18.000004, 15)
+scale = Vector2(0.15999998, 0.15999998)
+
+[node name="DeathSound" type="AudioStreamPlayer" parent="." unique_id=1546362828]
+stream = ExtResource("4_lnbgr")

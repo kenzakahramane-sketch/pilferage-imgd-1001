@@ -89,6 +89,7 @@ ItemBarUI="*res://scenes/item_bar.tscn"
 RiddleUI="*res://scenes/riddle_ui.tscn"
 ObjectiveTrackerUI="*res://scenes/objective_tracker.tscn"
 SceneTransition="*uid://h7lfct2kseaq"
+AudioManager="*uid://dtxcb72jk2mxw"
 
 [display]
 

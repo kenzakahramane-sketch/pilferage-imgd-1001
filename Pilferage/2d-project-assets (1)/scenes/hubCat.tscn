@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dsje47yrh3hjv"]
 
+[ext_resource type="Script" uid="uid://c3e83ov2sjjyg" path="res://scenes/hub_cat.gd" id="1_b8eyj"]
 [ext_resource type="Texture2D" uid="uid://bf4oexnk1n8ky" path="res://assets/images/Sidescroller images/cat.png" id="1_iuvgd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_se5fe"]
@@ -331,6 +332,7 @@ size = Vector2(6.5, 11)
 
 [node name="cat" type="CharacterBody2D" unique_id=814917533]
 z_index = 1
+script = ExtResource("1_b8eyj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1813273544]
 texture_filter = 1
