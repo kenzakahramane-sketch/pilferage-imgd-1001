@@ -163,6 +163,7 @@ func hit():
 	healthChanged.emit()
 
 func die():
+	print (Global.lives)
 	if Global.lives <= 0:
 		Global.lives = 9
 		get_tree().change_scene_to_file("res://scenes/deathScreen.tscn")
