@@ -13,8 +13,9 @@ extends CanvasLayer
 
 # Root node names of scenes where the tracker should actually show - it's an
 # autoload, so without this it would also sit on top of the main menu,
-# credits, options, etc.
-const GAMEPLAY_SCENES: Array[String] = ["Game", "Level1", "level_2", "level_3"]
+# credits, options, etc. Level1 is deliberately left out: it's a sidescroller
+# level, not the hub, and the hub quest text doesn't read correctly over it.
+const GAMEPLAY_SCENES: Array[String] = ["Game", "level_2", "level_3"]
 
 # Checked top to bottom - the first step whose "done" check fails is shown.
 # "done" runs every refresh, so this list can grow freely.

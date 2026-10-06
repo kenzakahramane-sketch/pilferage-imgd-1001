@@ -9,10 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://fr82jdvwmx83" path="res://scenes/fountain.tscn" id="5_4p1cp"]
 [ext_resource type="Theme" uid="uid://b4iqbjq3otfnm" path="res://assets/fonts/textLable.tres" id="5_6w6t7"]
 [ext_resource type="PackedScene" uid="uid://c7uyokengmfxn" path="res://scenes/cat.tscn" id="6_l1rjk"]
+[ext_resource type="Texture2D" uid="uid://bvr75okih8l4w" path="res://assets/images/Hub Images/pixilart-drawing.png" id="6_pxg3u"]
 [ext_resource type="Script" uid="uid://bvxmdlka7brrd" path="res://scripts/hubCat.gd" id="7_2lv1l"]
-[ext_resource type="Texture2D" uid="uid://bf4oexnk1n8ky" path="res://assets/images/Sidescroller images/cat.png" id="7_l1rjk"]
-[ext_resource type="Texture2D" uid="uid://clkpjavs3gywl" path="res://assets/images/Hub Images/catBack.png" id="8_6me8n"]
-[ext_resource type="Texture2D" uid="uid://4vt5jjjrbjky" path="res://assets/images/Hub Images/catFront.png" id="9_6me8n"]
+[ext_resource type="Texture2D" uid="uid://d243y41f0gxfo" path="res://assets/images/cat.png" id="7_l1rjk"]
+[ext_resource type="AudioStream" uid="uid://hdouwhjhclcr" path="res://assets/Music/LOOP(upbeat) 190bpm_Too Many Coffees.ogg" id="10_music"]
 [ext_resource type="Texture2D" uid="uid://jkwb7kdtj2oc" path="res://assets/images/Hub Images/exterior/s-blob-v1-IMAGE-hBQCs6f2Lms.png" id="16_pxg3u"]
 [ext_resource type="Texture2D" uid="uid://ch5vvx70pf801" path="res://assets/images/Hub Images/NPCs/brownEgg.png" id="17_arlad"]
 [ext_resource type="PackedScene" uid="uid://j13nplw74h7n" path="res://scenes/go_to_level_1.tscn" id="17_lsvnq"]
@@ -36,9 +36,28 @@
 [ext_resource type="Texture2D" uid="uid://q0u78xugot88" path="res://assets/images/Hub Images/exterior/pixil-frame-0 (9) (2).png" id="34_ujmsc"]
 [ext_resource type="Texture2D" uid="uid://brwe5pkn3bd0q" path="res://assets/images/Hub Images/exterior/flowerBox.png" id="35_mp5ln"]
 
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l1rjk"]
 size = Vector2(6.5, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_arlad"]
+atlas = ExtResource("6_pxg3u")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4jfvc"]
+atlas = ExtResource("6_pxg3u")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f5kva"]
+atlas = ExtResource("6_pxg3u")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k3fai"]
+atlas = ExtResource("6_pxg3u")
+region = Rect2(48, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oyiv1"]
+atlas = ExtResource("6_pxg3u")
+region = Rect2(0, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_se5fe"]
 atlas = ExtResource("7_l1rjk")
@@ -55,6 +74,26 @@ region = Rect2(96, 64, 16, 16)
 [sub_resource type="AtlasTexture" id="AtlasTexture_cxap7"]
 atlas = ExtResource("7_l1rjk")
 region = Rect2(96, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eivh4"]
+atlas = ExtResource("6_pxg3u")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3pe00"]
+atlas = ExtResource("6_pxg3u")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yqqlc"]
+atlas = ExtResource("6_pxg3u")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uqpy1"]
+atlas = ExtResource("6_pxg3u")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ocy4d"]
+atlas = ExtResource("6_pxg3u")
+region = Rect2(0, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tol8a"]
 atlas = ExtResource("7_l1rjk")
@@ -196,11 +235,23 @@ region = Rect2(96, 32, 16, 16)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("8_6me8n")
+"texture": SubResource("AtlasTexture_arlad")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4jfvc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f5kva")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k3fai")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oyiv1")
 }],
 "loop": 1,
 "name": &"backCool",
-"speed": 5.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -236,11 +287,23 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("9_6me8n")
+"texture": SubResource("AtlasTexture_eivh4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3pe00")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yqqlc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uqpy1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ocy4d")
 }],
 "loop": 1,
 "name": &"frontCool",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -424,14 +487,21 @@ sources/1 = SubResource("TileSetAtlasSource_lsvnq")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oh4dh"]
 size = Vector2(71, 40.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ciobh"]
+size = Vector2(20, 24)
+
 [node name="Game" type="Node2D" unique_id=21739277]
 y_sort_enabled = true
 script = ExtResource("1_svci8")
 
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=70149495]
+stream = ExtResource("10_music")
+volume_db = -6.0
+
 [node name="background" type="Sprite2D" parent="." unique_id=1511907774]
 z_index = -10
 texture_repeat = 2
-position = Vector2(507, 146)
+position = Vector2(525, 114)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("18_h1vpq")
 region_enabled = true
@@ -460,7 +530,8 @@ texture_filter = 1
 position = Vector2(10.071801, -7.909263)
 scale = Vector2(1.147, 1)
 sprite_frames = SubResource("SpriteFrames_2lv1l")
-animation = &"frontCool"
+animation = &"backCool"
+frame_progress = 0.8891797
 
 [node name="Camera2D" type="Camera2D" parent="hubCat" unique_id=811978805]
 position = Vector2(11.173325, -6.029902)
@@ -5218,6 +5289,9 @@ position = Vector2(0, 21)
 position = Vector2(1.000061, 725.0001)
 scale = Vector2(0.6399988, 0.6399988)
 
+[node name="barExitSpawn" type="Marker2D" parent="Spawns" unique_id=886501820]
+position = Vector2(14, -347)
+
 [node name="go_to_level_1" parent="." unique_id=94506289 instance=ExtResource("17_lsvnq")]
 position = Vector2(28, 615)
 collision_layer = 0
@@ -5236,11 +5310,11 @@ texture = ExtResource("16_pxg3u")
 metadata/_edit_use_anchors_ = true
 
 [node name="BrownEgg" type="Sprite2D" parent="." unique_id=105616478]
-position = Vector2(-46, 63)
+position = Vector2(-190.51567, 11.701355)
 texture = ExtResource("17_arlad")
 
 [node name="PixilFrame0(7)(3)" type="Sprite2D" parent="." unique_id=682402015]
-position = Vector2(58, 54)
+position = Vector2(81.663376, 178.78561)
 texture = ExtResource("18_4jfvc")
 
 [node name="PixilFrame0(10)(1)" type="Sprite2D" parent="." unique_id=937896515]
@@ -5252,7 +5326,7 @@ position = Vector2(-105, 58)
 texture = ExtResource("20_k3fai")
 
 [node name="PixilFrame0(15)(1)" type="Sprite2D" parent="." unique_id=708441607]
-position = Vector2(50, 100)
+position = Vector2(-180.2525, 169.3435)
 texture = ExtResource("21_oyiv1")
 
 [node name="PixilFrame0(16)" type="Sprite2D" parent="." unique_id=1694124563]
@@ -5260,7 +5334,7 @@ position = Vector2(37, 53)
 texture = ExtResource("22_eivh4")
 
 [node name="PixilFrame0(19)(1)" type="Sprite2D" parent="." unique_id=1202083615]
-position = Vector2(-48, 104)
+position = Vector2(224.93709, 79.02768)
 texture = ExtResource("23_3pe00")
 
 [node name="PixilFrame0(20)(1)" type="Sprite2D" parent="." unique_id=1403763786]
@@ -5268,7 +5342,7 @@ position = Vector2(44, 126)
 texture = ExtResource("24_yqqlc")
 
 [node name="ScaredEgg" type="Sprite2D" parent="." unique_id=957031274]
-position = Vector2(-75, 33)
+position = Vector2(174.48917, 298.99942)
 texture = ExtResource("25_uqpy1")
 
 [node name="Bush" type="Sprite2D" parent="." unique_id=1292180647]
@@ -5354,4 +5428,14 @@ texture = ExtResource("17_arlad")
 position = Vector2(1547, 625)
 texture = ExtResource("17_arlad")
 
+[node name="BarDoor" type="Area2D" parent="." unique_id=1699402503]
+position = Vector2(0, -374)
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BarDoor" unique_id=556986534]
+position = Vector2(15, 20)
+shape = SubResource("RectangleShape2D_ciobh")
+debug_color = Color(0.5002551, 0.5814092, 0.015124415, 0.41960785)
+
 [connection signal="timeout" from="MobSpawnTimer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="BarDoor" to="." method="_on_bar_door_body_entered"]

@@ -3,6 +3,7 @@ extends Node2D
 @onready var music_2 = $AudioStreamPlayer2
 @onready var tutorial_wall_push = $Labels/Label3
 @onready var tutorial_wall_jump = $Labels/Label4
+@onready var tutorial_labels = $Labels
 @onready var easy_tiles = $"TileMap/Easy Mode"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -13,6 +14,14 @@ func _ready() -> void:
 	if Global.music == true:
 		music_1.play()
 	spawnpoint()
+
+	# Only show the control-tutorial text the first time through Level 1.
+	if Global.seen_level1_tutorial:
+		tutorial_labels.visible = false
+		return
+	Global.seen_level1_tutorial = true
+	Global.save_game()
+
 	if Global.simplified_controls == false:
 		tutorial_wall_push.text = "Press the spacebar
 when against a wall
@@ -39,10 +48,19 @@ you can press the
 opposite direction of
 the wall to wall jump."
 func _on_area_2d_body_entered(body: Node2D) -> void:
+	# Smooth crossfade into the second track instead of a hard cut - keeps the
+	# beat going (music_2 picks up from music_1's playback position) while the
+	# volumes fade past each other over half a second.
 	if music_1.is_playing():
 		var time = music_1.get_playback_position()
-		music_1.stop()
+		music_2.volume_db = -40.0
 		music_2.play(time)
+		var crossfade := create_tween()
+		crossfade.set_parallel(true)
+		crossfade.tween_property(music_1, "volume_db", -40.0, 0.5)
+		crossfade.tween_property(music_2, "volume_db", 0.0, 0.5)
+		await crossfade.finished
+		music_1.stop()
 
 
 func _on_return_to_hubworld_body_entered(body) -> void:
