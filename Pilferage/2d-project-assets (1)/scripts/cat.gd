@@ -45,6 +45,7 @@ func _physics_process(delta: float) -> void:
 	# Handle jump, jumps higher if you build up speed.
 	if velocity.y >= 0 and ((!jump_buffer_timer.is_stopped() and is_on_floor()) or Input.is_action_just_pressed("jump")) and (is_on_floor() or !coyote_timer.is_stopped()):
 		animated_sprite.play("jumpCool")
+		jump_sound.play()
 		velocity.y = JUMP_VELOCITY + JUMP_VELOCITY * 0.15 * (abs(velocity.x) / 100)
 		
 
@@ -67,7 +68,6 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	#jump buffer and coyote time so input timing is less strict
 	if Input.is_action_just_pressed("jump") and !is_on_floor():
-		jump_sound.play()
 		jump_buffer_timer.start()
 	if was_on_floor && !is_on_floor():
 		coyote_timer.start()
@@ -137,10 +137,12 @@ func _physics_process(delta: float) -> void:
 			velocity.y = JUMP_VELOCITY
 			velocity.x = MAX_SPEED * 1.25 * direction
 			push_timer.start()
+			push_sound.play()
 	if Global.simplified_controls == true and direction and wall_charge > wall_charge_time and abs(velocity.x) < 50:
 		if (animated_sprite.flip_h == false and direction < 0) or (animated_sprite.flip_h == true and direction > 0):
 			velocity.x = MAX_SPEED * 1.75 * direction
 			push_timer.start()
+			push_sound.play()
 
 
 
