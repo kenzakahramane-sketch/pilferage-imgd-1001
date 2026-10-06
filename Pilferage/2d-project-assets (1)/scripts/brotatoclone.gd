@@ -1,4 +1,5 @@
 extends Node2D
+class_name HubCat
 
 const MOB_SCENE = preload("res://scenes/mob.tscn")
 const STURDY_MOB_SCENE = preload("res://scenes/sturdy_mob.tscn")
@@ -20,8 +21,17 @@ func _ready():
 		$hubCat.global_position = $Spawns/forest.global_position
 		Global.spawn_point = ""
 
+	if Global.spawn_point == "barExitSpawn" :
+		$hubCat.global_position = $Spawns/barExitSpawn.global_position
+		Global.spawn_point = ""
+		
 func _spawn_at_forest():
 	print("SPAWNING AT FOREST")
 	print($Spawns/forest.global_position)
 	$hubCat.global_position = $Spawns/forest.global_position
 	Global.spawn_point = ""
+
+
+func _on_bar_door_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player") :
+		SceneTransition.change_scene("res://scenes/interiors.tscn")

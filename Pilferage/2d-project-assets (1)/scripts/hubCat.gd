@@ -21,13 +21,13 @@ func _physics_process(delta):
 
 		if velocity.y < 0:
 			animated_sprite.play("backCool")
-			animated_sprite.frame = 0
-			animated_sprite.stop()
+			#animated_sprite.frame = 0
+			#animated_sprite.stop()
 
 		elif velocity.y > 0:
 			animated_sprite.play("frontCool")
-			animated_sprite.frame = 0
-			animated_sprite.stop()
+			#animated_sprite.frame = 0
+			#animated_sprite.stop()
 
 		elif Input.is_action_pressed("hubSprint"):
 			animated_sprite.play("sprintCool")

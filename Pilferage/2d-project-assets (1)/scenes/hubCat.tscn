@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dsje47yrh3hjv"]
 
-[ext_resource type="Texture2D" uid="uid://bf4oexnk1n8ky" path="res://assets/images/Sidescroller images/cat.png" id="1_iuvgd"]
+[ext_resource type="Texture2D" uid="uid://d243y41f0gxfo" path="res://assets/images/cat.png" id="1_iuvgd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_se5fe"]
 atlas = ExtResource("1_iuvgd")
@@ -332,7 +332,7 @@ size = Vector2(6.5, 11)
 [node name="cat" type="CharacterBody2D" unique_id=814917533]
 z_index = 1
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1813273544]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1813273544 groups=["player"]]
 texture_filter = 1
 position = Vector2(9, -8)
 scale = Vector2(1.147, 1)
