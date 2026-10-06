@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c7ov0wp7bokrv"]
+
+[ext_resource type="Script" path="res://audio_manager.gd" id="1_bq1v2"]
+[ext_resource type="AudioStream" path="res://assets/Music/menuMusic.mp3" id="2_6jj5d"]
+[ext_resource type="AudioStream" path="res://assets/Music/hubMusic.mp3" id="3_3asnw"]
+
+[node name="AudioManager" type="Node" unique_id=2053517900]
+script = ExtResource("1_bq1v2")
+
+[node name="MenuMusic" type="AudioStreamPlayer" parent="." unique_id=1636600896]
+stream = ExtResource("2_6jj5d")
+
+[node name="HubMusic" type="AudioStreamPlayer" parent="." unique_id=1418917717]
+stream = ExtResource("3_3asnw")
+volume_db = -4.475
+
+[node name="BossMusic" type="AudioStreamPlayer" parent="." unique_id=1021345295]

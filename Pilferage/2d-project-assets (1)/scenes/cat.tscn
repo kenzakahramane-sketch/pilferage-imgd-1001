@@ -5,9 +5,9 @@
 [ext_resource type="AudioStream" uid="uid://cqntv7ry0y4fr" path="res://assets/Sound Effects/joentnt-walk-on-grass-2-291985.mp3" id="2_se5fe"]
 [ext_resource type="Texture2D" uid="uid://gbipnr7e31lp" path="res://assets/images/Sidescroller images/pilferage-cat-sheet-v1.1-pixilart.png" id="3_7vi38"]
 [ext_resource type="Script" uid="uid://bgttjo0btvc7a" path="res://scripts/damage_box.gd" id="5_cxap7"]
-[ext_resource type="AudioStream" uid="uid://c2qofxpsccbjr" path="res://assets/Sound Effects/undertakers-bell_2UwFCIe.mp3" id="6_tol8a"]
-[ext_resource type="AudioStream" uid="uid://djs5jbq2m703p" path="res://assets/Sound Effects/jumpDR.wav" id="7_o55mh"]
-[ext_resource type="AudioStream" uid="uid://chsh4joc5dk2n" path="res://assets/Sound Effects/push.wav" id="8_ic5u8"]
+[ext_resource type="AudioStream" uid="uid://bpwnjh5evb01l" path="res://assets/Sound Effects/undertakers-bell_2UwFCIe.mp3" id="6_tol8a"]
+[ext_resource type="AudioStream" uid="uid://33nmj7m7ohry" path="res://assets/Sound Effects/jumpDR.wav" id="7_o55mh"]
+[ext_resource type="AudioStream" uid="uid://bqen14a808ccm" path="res://assets/Sound Effects/push.wav" id="8_ic5u8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_myi5k"]
 size = Vector2(6.5, 11)
@@ -466,4 +466,8 @@ stream = ExtResource("7_o55mh")
 [node name="PushNoise" type="AudioStreamPlayer2D" parent="." unique_id=1161821477]
 stream = ExtResource("8_ic5u8")
 
+[node name="Hurt Timer" type="Timer" parent="." unique_id=1289336220]
+one_shot = true
+
 [connection signal="body_entered" from="hitBox" to="hitBox" method="_on_body_entered"]
+[connection signal="body_exited" from="hitBox" to="hitBox" method="_on_body_exited"]
