@@ -298,7 +298,19 @@ pressing the opposite direction of the wall.
 a lot of the harder jumps in the game. Find the easy
 mode settting in the options menu.
 - You are able to slide down walls faster by pressing
-the down key or S."
+the down key or S.
+- The easy mode reduces damage taken as well.
+- The final boss has been completed.
+- Aliens have been fully implemented to attack you and
+break their measly brittle bones.
+The opening cutscene and hub is completed.
+Music has been added to the main menu, and the hub, and
+all of the levels, and they can be turned off in options.
+- The ending of the story has been completed
+- Level 3 has been completed
+- If you lose all of your 9 lives (99 in easy mode),
+it's game over.
+"
 horizontal_alignment = 1
 
 [node name="Label26" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=319302057]

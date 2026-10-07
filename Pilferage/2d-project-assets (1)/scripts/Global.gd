@@ -186,7 +186,10 @@ func reset_state() -> void:
 	solved_puzzles = []
 	spawn_point = ""
 	current_level_path = "res://scenes/brotatoclone.tscn"
-	lives = 9
+	if easy_mode == true:
+		lives = 99
+	else:
+		lives = 9
 	seen_level1_tutorial = false
 	DialogueManager.lore_flags = {}
 	DialogueManager.lore_entries = {}

@@ -10,6 +10,10 @@
 [ext_resource type="PackedScene" uid="uid://04gte8cy0kd0" path="res://scenes/go_to_level_2.tscn" id="9_ha73p"]
 [ext_resource type="AudioStream" uid="uid://b8fyrbeua6qe8" path="res://assets/Music/LOOP(nervous) 140bpm_Runaway_MIDI.ogg" id="9_vcx5n"]
 [ext_resource type="PackedScene" uid="uid://d2opcyxm5si7q" path="res://scenes/alien.tscn" id="10_vcx5n"]
+[ext_resource type="Script" uid="uid://b4ef51ceiouu8" path="res://scripts/health_bar.gd" id="11_p3r0x"]
+[ext_resource type="Texture2D" uid="uid://c4euqeeprtubo" path="res://assets/images/Sidescroller images/BarBase.png" id="12_5xqnf"]
+[ext_resource type="Texture2D" uid="uid://b8mr4q63jox4b" path="res://assets/images/Sidescroller images/Bar.png" id="13_una4e"]
+[ext_resource type="Script" uid="uid://p4gnarn1kyjh" path="res://scripts/texture_progress_bar.gd" id="14_ema3p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wae8j"]
 texture = ExtResource("1_1pn4d")
@@ -200,5 +204,25 @@ position = Vector2(1379, 18)
 
 [node name="Alien20" parent="." unique_id=1491473281 instance=ExtResource("10_vcx5n")]
 position = Vector2(303, -413)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=821652864]
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer" unique_id=1043820940]
+visible = false
+offset_left = 5.0
+offset_top = 4.0
+offset_right = 84.0
+offset_bottom = 64.75
+script = ExtResource("11_p3r0x")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer" unique_id=1077946102]
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 225.54546
+offset_bottom = 71.0
+nine_patch_stretch = true
+texture_under = ExtResource("12_5xqnf")
+texture_progress = ExtResource("13_una4e")
+script = ExtResource("14_ema3p")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

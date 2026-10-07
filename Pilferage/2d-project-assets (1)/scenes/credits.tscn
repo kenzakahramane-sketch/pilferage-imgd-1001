@@ -107,7 +107,7 @@ horizontal_alignment = 1
 layout_mode = 2
 theme = ExtResource("2_0ctdu")
 theme_override_font_sizes/font_size = 32
-text = "Diana"
+text = "Diana, Kenza, Ryan"
 horizontal_alignment = 1
 
 [node name="Label6" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=196547264]
@@ -149,6 +149,7 @@ horizontal_alignment = 1
 layout_mode = 2
 theme = ExtResource("2_0ctdu")
 theme_override_font_sizes/font_size = 32
+text = "Ryan, Derek"
 horizontal_alignment = 1
 
 [node name="Label12" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1546160318]
@@ -190,14 +191,15 @@ horizontal_alignment = 1
 layout_mode = 2
 theme = ExtResource("2_0ctdu")
 theme_override_font_sizes/font_size = 32
-text = "Derek"
+text = "Derek, Ryan, Diana"
 horizontal_alignment = 1
 
 [node name="Label18" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=2027397472]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_2fbfq")
 theme_override_font_sizes/font_size = 32
-text = "A game made by Ryan, Diana, Kenza, and Derek"
+text = "A game made by Ryan, Diana, Kenza, and Derek, the team known
+as Magic Circle Studios"
 horizontal_alignment = 1
 
 [node name="Label19" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1597000561]
