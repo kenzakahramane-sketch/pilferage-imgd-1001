@@ -1,17 +1,22 @@
-[gd_scene format=3 uid="uid://dtxcb72jk2mxw"]
+[gd_scene format=3 uid="uid://bwawd5hgh4w2b"]
 
 [ext_resource type="Script" uid="uid://55uhffl4tt35" path="res://audio_manager.gd" id="1_bq1v2"]
-[ext_resource type="AudioStream" uid="uid://0x00jcra7iaj" path="res://assets/Music/menuMusic.mp3" id="2_6jj5d"]
-[ext_resource type="AudioStream" uid="uid://br7ytyxfeuty8" path="res://assets/Music/hubMusic.mp3" id="3_3asnw"]
+[ext_resource type="AudioStream" uid="uid://8v3qs3b1fl82" path="res://assets/Music/menuMusic.mp3" id="2_6jj5d"]
+[ext_resource type="AudioStream" uid="uid://dok2eklvvu35x" path="res://assets/Music/hubMusic.mp3" id="3_3asnw"]
+[ext_resource type="AudioStream" uid="uid://bfivlqpxy2etp" path="res://assets/Music/bossMusic.mp3" id="4_m6ggh"]
 
 [node name="AudioManager" type="Node" unique_id=2053517900]
 script = ExtResource("1_bq1v2")
 
 [node name="MenuMusic" type="AudioStreamPlayer" parent="." unique_id=1636600896]
 stream = ExtResource("2_6jj5d")
+parameters/looping = true
 
 [node name="HubMusic" type="AudioStreamPlayer" parent="." unique_id=1418917717]
 stream = ExtResource("3_3asnw")
 volume_db = -4.475
+parameters/looping = true
 
 [node name="BossMusic" type="AudioStreamPlayer" parent="." unique_id=1021345295]
+stream = ExtResource("4_m6ggh")
+parameters/looping = true

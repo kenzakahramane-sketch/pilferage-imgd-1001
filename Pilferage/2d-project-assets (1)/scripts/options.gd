@@ -35,8 +35,10 @@ func _on_music_button_pressed() -> void:
 		Global.music = true
 	if Global.music == true:
 		music_button.text = "ON"
+		AudioManager.play_menu_music()
 	else:
 		music_button.text = "OFF"
+		AudioManager.stop_menu_music()
 
 func _on_return_to_menu_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")

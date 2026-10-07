@@ -6,7 +6,8 @@ extends Node
 
 
 func _ready():
-	menu_music.play()
+	if Global.music == true:
+		menu_music.play()
 
 
 func fade_out_menu_music():
@@ -21,7 +22,7 @@ func stop_menu_music():
 
 
 func play_hub_music():
-	if not hub_music.playing:
+	if not hub_music.playing and Global.music == true:
 		hub_music.play()
 
 
@@ -37,8 +38,10 @@ func stop_hub_music():
 	
 func play_boss_music():
 	if not boss_music.playing:
-		boss_music.play()
+		if Global.music == true:
+			boss_music.play()
 		
 func play_menu_music():
 	if not menu_music.playing:
-		menu_music.play()
+		if Global.music == true:
+			menu_music.play()

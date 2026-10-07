@@ -7,7 +7,8 @@ extends Control
 func _ready():
 	# Only show "Continue" once there's actually a save to continue from.
 	$Options/Continue.visible = Global.has_save()
-	AudioManager.play_menu_music()
+	if Global.music == true:
+		AudioManager.play_menu_music()
 
 
 # Continue button action - loads saved progress and jumps straight back in.

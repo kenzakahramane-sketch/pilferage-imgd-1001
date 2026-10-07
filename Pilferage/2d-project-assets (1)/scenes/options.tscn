@@ -115,8 +115,8 @@ theme_override_fonts/font = ExtResource("2_2iy26")
 theme_override_font_sizes/font_size = 32
 text = "Return to Main Menu"
 
-[connection signal="pressed" from="Options buttons/Simplified controls setting" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Options buttons/Simplified controls setting" to="." method="_on_simplified_controls_setting_pressed"]
+[connection signal="pressed" from="Options buttons/Simplified controls setting" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Options buttons/Music button" to="." method="_on_music_button_pressed"]
 [connection signal="pressed" from="Options buttons/Easy mode button" to="." method="_on_easy_mode_button_pressed"]
 [connection signal="pressed" from="Return to Menu" to="." method="_on_return_to_menu_pressed"]
