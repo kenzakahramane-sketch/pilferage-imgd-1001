@@ -8,6 +8,10 @@ var music = true
 var easy_mode = false
 signal inventory_changed
 
+# Set once the player has been shown Level 1's control-tutorial text; after
+# that, level_1.gd hides the Labels node instead of showing it again.
+var seen_level1_tutorial: bool = false
+
 var inventory: Array[Dictionary] = []       # [{"id":..., "name":..., "texture":...}]
 var collected_item_ids: Array[String] = []  # permanently picked up, so items never respawn
 
@@ -113,6 +117,7 @@ func save_game() -> void:
 	"current_level_path": current_level_path,
 	"spawn_point": spawn_point,
 	"lives": lives,
+	"seen_level1_tutorial": seen_level1_tutorial,
 	}
 	var file := FileAccess.open(SAVE_PATH, FileAccess.WRITE)
 	if file:
@@ -162,6 +167,7 @@ func load_game() -> bool:
 	lives = parsed.get("lives", 9)
 	current_level_path = parsed.get("current_level_path", "res://scenes/brotatoclone.tscn")
 	spawn_point = parsed.get("spawn_point", "")
+	seen_level1_tutorial = parsed.get("seen_level1_tutorial", false)
 	return true
 
 
@@ -180,6 +186,7 @@ func reset_state() -> void:
 	spawn_point = ""
 	current_level_path = "res://scenes/brotatoclone.tscn"
 	lives = 9
+	seen_level1_tutorial = false
 	DialogueManager.lore_flags = {}
 	DialogueManager.lore_entries = {}
 	inventory_changed.emit()

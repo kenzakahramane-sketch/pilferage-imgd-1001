@@ -16,7 +16,6 @@ func _physics_process(delta):
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 
 	var speed = 120
-
 	if Input.is_action_pressed("hubSprint"):
 		speed = 160
 
@@ -37,13 +36,13 @@ func _physics_process(delta):
 		# ANIMATION
 		if velocity.y < 0:
 			animated_sprite.play("backCool")
-			animated_sprite.frame = 0
-			animated_sprite.stop()
+			#animated_sprite.frame = 0
+			#animated_sprite.stop()
 
 		elif velocity.y > 0:
 			animated_sprite.play("frontCool")
-			animated_sprite.frame = 0
-			animated_sprite.stop()
+			#animated_sprite.frame = 0
+			#animated_sprite.stop()
 
 		elif Input.is_action_pressed("hubSprint"):
 			animated_sprite.play("sprintCool")

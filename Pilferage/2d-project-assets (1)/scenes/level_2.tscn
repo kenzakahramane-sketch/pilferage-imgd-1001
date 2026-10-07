@@ -393,6 +393,11 @@ scroll_scale = Vector2(0.8, 1)
 position = Vector2(2901.984, -665)
 scale = Vector2(6.005892, 23.942858)
 texture = ExtResource("4_1sb0y")
+[node name="Camera2D" type="Camera2D" parent="cat" unique_id=1589659099]
+position = Vector2(0, 8)
+zoom = Vector2(5, 5)
+limit_left = -160
+limit_bottom = 160
 
 [node name="FoxNPC" parent="." unique_id=1449497698 instance=ExtResource("8_foxnpc")]
 position = Vector2(63.66239, -24.792984)
