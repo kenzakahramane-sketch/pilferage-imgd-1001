@@ -1,13 +1,12 @@
 extends Node2D
 # Plays once when "Start Game" is pressed, then transitions into the hub.
-# Uses Diana's catBack.png / catFront.png - no extra art needed.
+# Uses the jazz bar background art and the "idle"/"run" animations sliced
+# from pilferage-cat-sheet-v1.1 (see the SpriteFrames built into this
+# scene) instead of the old static catBack.png/catFront.png swap.
 
-@onready var cat_sprite: Sprite2D = %CatSprite
+@onready var cat_sprite: AnimatedSprite2D = %CatSprite
 @onready var narration_label: Label = %NarrationLabel
 @onready var skip_hint: Label = %SkipHint
-
-var cat_back := preload("res://assets/images/Hub Images/catBack.png")
-var cat_front := preload("res://assets/images/Hub Images/catFront.png")
 
 # Placeholder narration based on the team's plan-for-the-game doc - reword
 # freely, this is just here so the sequence has something to show.
@@ -20,32 +19,50 @@ var narration_lines: Array[String] = [
 ]
 
 var _skipped := false
+var _fade_overlay: ColorRect
 
 
 func _ready() -> void:
 	narration_label.text = ""
 	narration_label.modulate.a = 0.0
 	skip_hint.text = "[Space] Skip"
+
+	# Fade in from black - the old flat ColorRect background didn't need
+	# this, but cutting straight to the new bar art looks jarring.
+	_fade_overlay = ColorRect.new()
+	_fade_overlay.color = Color(0, 0, 0, 1)
+	_fade_overlay.anchor_right = 1.0
+	_fade_overlay.anchor_bottom = 1.0
+	_fade_overlay.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	add_child(_fade_overlay)
+	var screen_fade_in := create_tween()
+	screen_fade_in.tween_property(_fade_overlay, "color:a", 0.0, 1.0)
+
 	await _play_intro()
 
 
 func _play_intro() -> void:
-	cat_sprite.texture = cat_back
-	var start_y := cat_sprite.position.y
-	cat_sprite.position.y = start_y + 300
+	# Walk in from off-screen left to a resting spot near the bar, running.
+	cat_sprite.animation = "run"
+	cat_sprite.play()
+	cat_sprite.flip_h = false
+
+	var start_x := cat_sprite.position.x
+	cat_sprite.position.x = -150.0
 
 	var walk_in := create_tween()
-	walk_in.tween_property(cat_sprite, "position:y", start_y, 1.5)
+	walk_in.tween_property(cat_sprite, "position:x", start_x, 1.5)
 	await walk_in.finished
 	if _skipped:
 		return
 
-	await get_tree().create_timer(0.5).timeout
+	await get_tree().create_timer(0.3).timeout
 	if _skipped:
 		return
 
-	# Cat turns around to face the player
-	cat_sprite.texture = cat_front
+	# Settle into idle once it's reached its spot at the bar.
+	cat_sprite.animation = "idle"
+	cat_sprite.play()
 
 	for line in narration_lines:
 		if _skipped:
