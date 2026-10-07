@@ -3,8 +3,7 @@ extends CharacterBody2D
 var health = 100.0
 
 @onready var animated_sprite = $AnimatedSprite2D2
-@onready var walk_sound = $Walking
-
+@onready var walk_sound = $"Walking"
 
 func _ready():
 	$AnimatedSprite2D.visible = false
@@ -25,7 +24,8 @@ func _physics_process(delta):
 
 		# WALKING SOUND
 		if not walk_sound.playing:
-			walk_sound.play()
+			if Global.on_grass == true:
+				walk_sound.play()
 
 		if Input.is_action_pressed("hubSprint"):
 			walk_sound.pitch_scale = 1.4

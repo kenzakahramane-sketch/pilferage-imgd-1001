@@ -1,6 +1,6 @@
 extends TextureProgressBar
 
-@export var cat: Cat
+@onready var cat = $"../../cat"
 
 func _ready():
 	cat.healthChanged.connect(update)

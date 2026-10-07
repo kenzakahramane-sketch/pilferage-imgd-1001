@@ -1,29 +1,24 @@
 [gd_scene format=3 uid="uid://dw541hhyrvxao"]
 
 [ext_resource type="Script" uid="uid://cghebo1ukli5x" path="res://scripts/brotatoclone.gd" id="1_svci8"]
-[ext_resource type="AudioStream" uid="uid://br7ytyxfeuty8" path="res://assets/Music/hubMusic.mp3" id="10_music"]
 [ext_resource type="PackedScene" uid="uid://c0gpy0pye4jr6" path="res://scenes/tree.tscn" id="2_1kod4"]
-[ext_resource type="Texture2D" uid="uid://b7cct2004aro6" path="res://assets/images/Hub Images/exterior/ground time map.png" id="2_m0d6t"]
-[ext_resource type="Texture2D" uid="uid://5e77h85dtu4j" path="res://assets/images/Hub Images/exterior/TDTilemapUpdate.png" id="3_8dnpt"]
+[ext_resource type="Texture2D" uid="uid://tcklk4u35kwn" path="res://assets/images/Hub Images/exterior/ground time map.png" id="2_m0d6t"]
+[ext_resource type="Texture2D" uid="uid://cw072tobv6edo" path="res://assets/images/Hub Images/exterior/TDTilemapUpdate.png" id="3_8dnpt"]
 [ext_resource type="PackedScene" uid="uid://cfnd114ddwknr" path="res://scenes/rocks.tscn" id="3_a0oke"]
 [ext_resource type="PackedScene" uid="uid://c0kwwv1xvf334" path="res://scenes/oak_tree.tscn" id="3_vjt6i"]
 [ext_resource type="PackedScene" uid="uid://fr82jdvwmx83" path="res://scenes/fountain.tscn" id="5_4p1cp"]
 [ext_resource type="Theme" uid="uid://b4iqbjq3otfnm" path="res://assets/fonts/textLable.tres" id="5_6w6t7"]
 [ext_resource type="PackedScene" uid="uid://c7uyokengmfxn" path="res://scenes/cat.tscn" id="6_l1rjk"]
-[ext_resource type="Texture2D" uid="uid://bvr75okih8l4w" path="res://assets/images/Hub Images/pixilart-drawing.png" id="6_pxg3u"]
+[ext_resource type="Texture2D" uid="uid://bskb3gvj5ifwd" path="res://assets/images/Hub Images/pixilart-drawing.png" id="6_pxg3u"]
 [ext_resource type="Script" uid="uid://bvxmdlka7brrd" path="res://scripts/hubCat.gd" id="7_2lv1l"]
-
-[ext_resource type="Texture2D" uid="uid://bf4oexnk1n8ky" path="res://assets/images/Sidescroller images/cat.png" id="7_l1rjk"]
-[ext_resource type="AudioStream" uid="uid://cqntv7ry0y4fr" path="res://assets/Sound Effects/joentnt-walk-on-grass-2-291985.mp3" id="8_4jfvc"]
-
-
-[ext_resource type="Texture2D" uid="uid://d243y41f0gxfo" path="res://assets/images/cat.png" id="7_l1rjk"]
-
+[ext_resource type="Texture2D" uid="uid://hscig8fivulh" path="res://assets/images/cat.png" id="7_l1rjk"]
+[ext_resource type="PackedScene" uid="uid://b0lalg15fcs70" path="res://scenes/walking.tscn" id="8_4jfvc"]
+[ext_resource type="AudioStream" uid="uid://dok2eklvvu35x" path="res://assets/Music/hubMusic.mp3" id="10_music"]
 [ext_resource type="Texture2D" uid="uid://jkwb7kdtj2oc" path="res://assets/images/Hub Images/exterior/s-blob-v1-IMAGE-hBQCs6f2Lms.png" id="16_pxg3u"]
 [ext_resource type="Texture2D" uid="uid://ch5vvx70pf801" path="res://assets/images/Hub Images/NPCs/brownEgg.png" id="17_arlad"]
 [ext_resource type="PackedScene" uid="uid://j13nplw74h7n" path="res://scenes/go_to_level_1.tscn" id="17_lsvnq"]
 [ext_resource type="Texture2D" uid="uid://liy2amr6m0ti" path="res://assets/images/Hub Images/NPCs/pixil-frame-0 (7) (3).png" id="18_4jfvc"]
-[ext_resource type="Texture2D" uid="uid://c3tnvc6teom1i" path="res://assets/images/Hub Images/exterior/background.png" id="18_h1vpq"]
+[ext_resource type="Texture2D" uid="uid://dlvnhayh7hdwo" path="res://assets/images/Hub Images/exterior/background.png" id="18_h1vpq"]
 [ext_resource type="Texture2D" uid="uid://cgw2sqmalsjg1" path="res://assets/images/Hub Images/NPCs/pixil-frame-0 (10) (1).png" id="19_f5kva"]
 [ext_resource type="Texture2D" uid="uid://se3bxn3xw3v1" path="res://assets/images/Hub Images/NPCs/pixil-frame-0 (11) (1).png" id="20_k3fai"]
 [ext_resource type="Texture2D" uid="uid://dr7cxsf4slv17" path="res://assets/images/Hub Images/NPCs/pixil-frame-0 (15) (1).png" id="21_oyiv1"]
@@ -494,7 +489,6 @@ sources/1 = SubResource("TileSetAtlasSource_lsvnq")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oh4dh"]
 size = Vector2(71, 40.5)
 
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pxg3u"]
 size = Vector2(63, 43)
 
@@ -506,9 +500,9 @@ size = Vector2(37.32602, 29.15474)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rekuv"]
 size = Vector2(20, 29)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ciobh"]
 size = Vector2(20, 24)
-
 
 [node name="Game" type="Node2D" unique_id=21739277]
 y_sort_enabled = true
@@ -559,8 +553,7 @@ position = Vector2(11.173325, -6.029902)
 scale = Vector2(-12.384573, -12.384573)
 zoom = Vector2(6, 6)
 
-[node name="Walking" type="AudioStreamPlayer2D" parent="hubCat" unique_id=1350933943]
-stream = ExtResource("8_4jfvc")
+[node name="Walking" parent="hubCat" unique_id=1797905810 instance=ExtResource("8_4jfvc")]
 
 [node name="TileMap" type="TileMap" parent="." unique_id=1358762800]
 tile_set = SubResource("TileSet_ciobh")
@@ -5487,6 +5480,7 @@ script = ExtResource("36_arlad")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="entrance" unique_id=1719897504]
 position = Vector2(0, -8)
 shape = SubResource("RectangleShape2D_rekuv")
+
 [node name="BarDoor" type="Area2D" parent="." unique_id=1699402503]
 position = Vector2(0, -374)
 collision_mask = 3
@@ -5496,5 +5490,4 @@ position = Vector2(15, 20)
 shape = SubResource("RectangleShape2D_ciobh")
 debug_color = Color(0.5002551, 0.5814092, 0.015124415, 0.41960785)
 
-[connection signal="timeout" from="MobSpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="BarDoor" to="." method="_on_bar_door_body_entered"]

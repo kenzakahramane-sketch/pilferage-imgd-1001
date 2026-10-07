@@ -1,76 +1,76 @@
-[gd_scene load_steps=14 format=3]
+[gd_scene format=3 uid="uid://b35y3ftatnyf7"]
 
 [ext_resource type="Script" uid="uid://dj1sjgd1d1rg2" path="res://scripts/opening_animation.gd" id="1_open"]
-[ext_resource type="Texture2D" path="res://assets/images/Sidescroller images/jazzBarBackground.png" id="2_bgimg"]
-[ext_resource type="Texture2D" path="res://assets/images/Sidescroller images/pilferage-cat-sheet-v1.1-pixilart.png" id="3_catsheet"]
+[ext_resource type="Texture2D" uid="uid://cd1ccl513pm52" path="res://assets/images/Sidescroller images/jazzBarBackground.png" id="2_bgimg"]
 [ext_resource type="FontFile" uid="uid://c8x3e628x2e51" path="res://assets/fonts/PressStart2P-Regular.ttf" id="2_pixel"]
 [ext_resource type="AudioStream" uid="uid://7c41oph1lrp4" path="res://assets/Music/LOOP(detective) 60bpm_Wandering In The Streets.ogg" id="3_mood"]
+[ext_resource type="Texture2D" uid="uid://hscig8fivulh" path="res://assets/images/cat.png" id="3_spvv6"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_idle0"]
-atlas = ExtResource("3_catsheet")
-region = Rect2(0, 0, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_bwm3n"]
+atlas = ExtResource("3_spvv6")
+region = Rect2(0, 48, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_idle1"]
-atlas = ExtResource("3_catsheet")
-region = Rect2(16, 0, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_kemvv"]
+atlas = ExtResource("3_spvv6")
+region = Rect2(16, 48, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_idle2"]
-atlas = ExtResource("3_catsheet")
-region = Rect2(32, 0, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_cslms"]
+atlas = ExtResource("3_spvv6")
+region = Rect2(32, 48, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_idle3"]
-atlas = ExtResource("3_catsheet")
-region = Rect2(48, 0, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_a5k3k"]
+atlas = ExtResource("3_spvv6")
+region = Rect2(48, 48, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_run0"]
-atlas = ExtResource("3_catsheet")
-region = Rect2(0, 16, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_4j48l"]
+atlas = ExtResource("3_spvv6")
+region = Rect2(0, 32, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_run1"]
-atlas = ExtResource("3_catsheet")
-region = Rect2(16, 16, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_vx5v5"]
+atlas = ExtResource("3_spvv6")
+region = Rect2(16, 32, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_run2"]
-atlas = ExtResource("3_catsheet")
-region = Rect2(32, 16, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_dmfc4"]
+atlas = ExtResource("3_spvv6")
+region = Rect2(32, 32, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_run3"]
-atlas = ExtResource("3_catsheet")
-region = Rect2(48, 16, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_qgll3"]
+atlas = ExtResource("3_spvv6")
+region = Rect2(48, 32, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cat"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_idle0")
+"texture": SubResource("AtlasTexture_bwm3n")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_idle1")
+"texture": SubResource("AtlasTexture_kemvv")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_idle2")
+"texture": SubResource("AtlasTexture_cslms")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_idle3")
+"texture": SubResource("AtlasTexture_a5k3k")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle",
 "speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_run0")
+"texture": SubResource("AtlasTexture_4j48l")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_run1")
+"texture": SubResource("AtlasTexture_vx5v5")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_run2")
+"texture": SubResource("AtlasTexture_dmfc4")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_run3")
+"texture": SubResource("AtlasTexture_qgll3")
 }],
-"loop": true,
+"loop": 1,
 "name": &"run",
 "speed": 8.0
 }]
@@ -80,20 +80,19 @@ script = ExtResource("1_open")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1318088967]
 unique_name_in_owner = true
+texture_filter = 1
 position = Vector2(960, 540)
 scale = Vector2(6, 6)
-texture_filter = 1
 texture = ExtResource("2_bgimg")
-centered = true
 
 [node name="CatSprite" type="AnimatedSprite2D" parent="." unique_id=2083398480]
 unique_name_in_owner = true
 z_index = 5
+texture_filter = 1
 position = Vector2(960, 780)
 scale = Vector2(8, 8)
-texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_cat")
-animation = &"run"
+animation = &"idle"
 autoplay = "run"
 
 [node name="TextBackdrop" type="ColorRect" parent="." unique_id=1091234567]
@@ -125,15 +124,15 @@ theme_override_colors/font_color = Color(0.6, 0.6, 0.65, 1)
 theme_override_fonts/font = ExtResource("2_pixel")
 theme_override_font_sizes/font_size = 10
 
-[node name="Music" type="AudioStreamPlayer" parent="."]
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=802557791]
 stream = ExtResource("3_mood")
 volume_db = -6.0
 
-[node name="FadeOverlay" type="ColorRect" parent="."]
+[node name="FadeOverlay" type="ColorRect" parent="." unique_id=30072300]
 unique_name_in_owner = true
 offset_left = -1.0
 offset_top = -1.0
 offset_right = 1921.0
 offset_bottom = 1081.0
-color = Color(0, 0, 0, 1)
 mouse_filter = 2
+color = Color(0, 0, 0, 1)

@@ -9,6 +9,7 @@ const STURDY_MOB_SCENE = preload("res://scenes/sturdy_mob.tscn")
 var score := 0
 
 func _ready():
+	Global.on_grass = true
 	AudioManager.play_hub_music()
 	print("HUB READY - spawn point: ", Global.spawn_point)
 

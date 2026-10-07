@@ -3,7 +3,7 @@ class_name HitBox
 var hurt = false
 @onready var hurt_timer = $"../Hurt Timer"
 func _on_body_entered(body: Node2D) -> void:
-	if body is Alien:
+	if body is Alien and owner.push_timer.is_stopped():
 		hurt = true
 	if body is Laser: 
 		hurt = true

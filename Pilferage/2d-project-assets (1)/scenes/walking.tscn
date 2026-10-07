@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b0lalg15fcs70"]
+
+[ext_resource type="AudioStream" uid="uid://cqntv7ry0y4fr" path="res://assets/Sound Effects/joentnt-walk-on-grass-2-291985.mp3" id="1_4oqlq"]
+
+[node name="Walking" type="AudioStreamPlayer2D" unique_id=1797905810]
+stream = ExtResource("1_4oqlq")

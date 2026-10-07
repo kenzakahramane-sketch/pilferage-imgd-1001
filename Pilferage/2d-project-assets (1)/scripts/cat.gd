@@ -149,7 +149,10 @@ func _physics_process(delta: float) -> void:
 
 
 func hit():
-	current_health -= 5
+	if Global.easy_mode == false:
+		current_health -= 5
+	else:
+		current_health -= 1
 	
 	if current_health <= 0:
 		Global.lives -= 1

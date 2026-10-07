@@ -2,17 +2,17 @@
 
 [ext_resource type="Script" uid="uid://chkra6krcul7i" path="res://scripts/level_2.gd" id="1_6cvei"]
 [ext_resource type="PackedScene" uid="uid://c7uyokengmfxn" path="res://scenes/cat.tscn" id="1_y0kc7"]
-[ext_resource type="Texture2D" uid="uid://bs1subjyk6wh8" path="res://assets/images/Sidescroller images/back.png" id="2_k22d5"]
+[ext_resource type="Texture2D" uid="uid://bon75xb0gef04" path="res://assets/images/Sidescroller images/back.png" id="2_k22d5"]
 [ext_resource type="Script" uid="uid://7peead4k52jx" path="res://scripts/cat.gd" id="2_ne2mo"]
 [ext_resource type="Texture2D" uid="uid://kpw6j0jvyrr4" path="res://assets/images/Sidescroller images/pilferageact1-tilemapv1.0-pixilart.png" id="3_6cvei"]
-[ext_resource type="Texture2D" uid="uid://cpmpoj7h44wt2" path="res://assets/images/Sidescroller images/middle.png" id="3_k6a82"]
-[ext_resource type="Texture2D" uid="uid://btmq7ecv1onnn" path="res://assets/images/Sidescroller images/front.png" id="4_1sb0y"]
+[ext_resource type="Texture2D" uid="uid://c5mor5iuvdpsj" path="res://assets/images/Sidescroller images/middle.png" id="3_k6a82"]
+[ext_resource type="Texture2D" uid="uid://bcjii51jkem6a" path="res://assets/images/Sidescroller images/front.png" id="4_1sb0y"]
 [ext_resource type="Texture2D" uid="uid://btb4r7vmvqwln" path="res://assets/images/Sidescroller images/pilferageact2 - tilemapV1.png" id="4_que50"]
 [ext_resource type="Texture2D" uid="uid://dtindn668i0np" path="res://assets/images/Sidescroller images/pilferageact1 - tilemap with darker tree.png" id="5_hey2k"]
 [ext_resource type="Texture2D" uid="uid://bhq77luo0rlnb" path="res://assets/images/Sidescroller images/pilferageact1 - tilemap with semisolid platforms.png" id="6_172wr"]
 [ext_resource type="PackedScene" uid="uid://04gte8cy0kd0" path="res://scenes/go_to_level_2.tscn" id="7_g2hoc"]
 [ext_resource type="PackedScene" uid="uid://npcfoyah5k3" path="res://scenes/fox_npc.tscn" id="8_foxnpc"]
-[ext_resource type="Texture2D" uid="uid://bd88g5yc64c3x" path="res://assets/images/Sidescroller images/pilferageact3 - ufo tilemap.png" id="8_g2hoc"]
+[ext_resource type="Texture2D" uid="uid://bs40j7tkimv7u" path="res://assets/images/Sidescroller images/pilferageact3 - ufo tilemap.png" id="8_g2hoc"]
 [ext_resource type="AudioStream" uid="uid://cxskxukpviwsm" path="res://assets/Music/LOOP(detective) 60bpm_Wandering In The Streets_MIDI.ogg" id="9_hey2k"]
 [ext_resource type="AudioStream" uid="uid://7c41oph1lrp4" path="res://assets/Music/LOOP(detective) 60bpm_Wandering In The Streets.ogg" id="9_que50"]
 [ext_resource type="PackedScene" uid="uid://b20p3gm7oi7pr" path="res://scenes/wrench_item.tscn" id="11_hey2k"]
@@ -20,6 +20,11 @@
 [ext_resource type="PackedScene" uid="uid://cuqju8ia3q26n" path="res://scenes/go_to_level_3.tscn" id="12_172wr"]
 [ext_resource type="PackedScene" uid="uid://relic0item1" path="res://scenes/relic_item.tscn" id="15_igmy8"]
 [ext_resource type="PackedScene" uid="uid://cape0item1" path="res://scenes/cape_item.tscn" id="16_wdtqu"]
+[ext_resource type="Script" uid="uid://b4ef51ceiouu8" path="res://scripts/health_bar.gd" id="21_vwfin"]
+[ext_resource type="Texture2D" uid="uid://c4euqeeprtubo" path="res://assets/images/Sidescroller images/BarBase.png" id="22_63d2t"]
+[ext_resource type="Texture2D" uid="uid://b8mr4q63jox4b" path="res://assets/images/Sidescroller images/Bar.png" id="23_va6c3"]
+[ext_resource type="Script" uid="uid://p4gnarn1kyjh" path="res://scripts/texture_progress_bar.gd" id="24_pc3at"]
+[ext_resource type="PackedScene" uid="uid://d2opcyxm5si7q" path="res://scenes/alien.tscn" id="25_63d2t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wo48x"]
 texture = ExtResource("3_6cvei")
@@ -393,11 +398,6 @@ scroll_scale = Vector2(0.8, 1)
 position = Vector2(2901.984, -665)
 scale = Vector2(6.005892, 23.942858)
 texture = ExtResource("4_1sb0y")
-[node name="Camera2D" type="Camera2D" parent="cat" unique_id=1589659099]
-position = Vector2(0, 8)
-zoom = Vector2(5, 5)
-limit_left = -160
-limit_bottom = 160
 
 [node name="FoxNPC" parent="." unique_id=1449497698 instance=ExtResource("8_foxnpc")]
 position = Vector2(63.66239, -24.792984)
@@ -424,11 +424,11 @@ tile_map_data = PackedByteArray("AABfAOj/AAAJAAQAAABgAOj/AAAJAAQAAABhAOj/AAAJAAQ
 tile_set = SubResource("TileSet_oh4dh")
 
 [node name="cat" parent="." unique_id=814917533 groups=["player"] instance=ExtResource("1_y0kc7")]
-position = Vector2(-156, -17)
+position = Vector2(21, -61)
 collision_layer = 7
 script = ExtResource("2_ne2mo")
 
-[node name="Camera2D" type="Camera2D" parent="cat" unique_id=1589659099]
+[node name="Camera2D" type="Camera2D" parent="cat" unique_id=1363420274]
 zoom = Vector2(5, 5)
 limit_left = -160
 limit_bottom = 160
@@ -487,5 +487,55 @@ scale = Vector2(0.2, 0.2)
 [node name="CapeItem" parent="." unique_id=1479901703 instance=ExtResource("16_wdtqu")]
 position = Vector2(4870, -1194)
 scale = Vector2(0.2, 0.2)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=631773540]
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer" unique_id=509137841]
+visible = false
+offset_left = 5.0
+offset_top = 4.0
+offset_right = 84.0
+offset_bottom = 64.75
+script = ExtResource("21_vwfin")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer" unique_id=1905269997]
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 225.54546
+offset_bottom = 71.0
+nine_patch_stretch = true
+texture_under = ExtResource("22_63d2t")
+texture_progress = ExtResource("23_va6c3")
+script = ExtResource("24_pc3at")
+
+[node name="Alien" parent="." unique_id=767741621 instance=ExtResource("25_63d2t")]
+position = Vector2(744, 90)
+
+[node name="Alien2" parent="." unique_id=902949438 instance=ExtResource("25_63d2t")]
+position = Vector2(3198, -43)
+
+[node name="Alien3" parent="." unique_id=1171962768 instance=ExtResource("25_63d2t")]
+position = Vector2(5139, -634)
+
+[node name="Alien4" parent="." unique_id=1463898190 instance=ExtResource("25_63d2t")]
+position = Vector2(5581, -632)
+
+[node name="Alien5" parent="." unique_id=1334174736 instance=ExtResource("25_63d2t")]
+position = Vector2(5362, -635)
+
+[node name="Alien6" parent="." unique_id=1241120716 instance=ExtResource("25_63d2t")]
+position = Vector2(4846, -1135)
+
+[node name="Alien7" parent="." unique_id=1030780621 instance=ExtResource("25_63d2t")]
+position = Vector2(4941, -1134)
+
+[node name="Alien8" parent="." unique_id=1052750064 instance=ExtResource("25_63d2t")]
+position = Vector2(4780, -733)
+
+[node name="Alien9" parent="." unique_id=1049146255 instance=ExtResource("25_63d2t")]
+position = Vector2(2898, -394)
+
+[node name="Alien10" parent="." unique_id=327773590 instance=ExtResource("25_63d2t")]
+position = Vector2(5730, -1242)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

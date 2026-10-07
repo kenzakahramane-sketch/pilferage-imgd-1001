@@ -3,7 +3,7 @@ extends Node
 @onready var menu_music = $MenuMusic
 @onready var hub_music = $HubMusic
 @onready var boss_music = $BossMusic
-
+@onready var death_sound = $DeathSound
 
 func _ready():
 	if Global.music == true:
@@ -45,3 +45,5 @@ func play_menu_music():
 	if not menu_music.playing:
 		if Global.music == true:
 			menu_music.play()
+func play_death_sound():
+	death_sound.play()
