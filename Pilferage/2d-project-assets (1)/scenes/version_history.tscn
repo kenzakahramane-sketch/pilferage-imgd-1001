@@ -310,7 +310,7 @@ all of the levels, and they can be turned off in options.
 - Level 3 has been completed
 - If you lose all of your 9 lives (99 in easy mode),
 it's game over.
-"
+- Removed developer buttons, as development is completed."
 horizontal_alignment = 1
 
 [node name="Label26" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=319302057]
