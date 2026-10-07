@@ -331,7 +331,6 @@ size = Vector2(6.5, 11)
 
 [node name="cat" type="CharacterBody2D" unique_id=814917533]
 z_index = 1
-script = ExtResource("1_b8eyj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1813273544 groups=["player"]]
 texture_filter = 1

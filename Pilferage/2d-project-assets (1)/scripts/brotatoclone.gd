@@ -9,7 +9,6 @@ const STURDY_MOB_SCENE = preload("res://scenes/sturdy_mob.tscn")
 var score := 0
 
 func _ready():
-	AudioManager.play_hub_music()
 	print("HUB READY - spawn point: ", Global.spawn_point)
 
 	# The hub had no music at all before this - everywhere else in the game

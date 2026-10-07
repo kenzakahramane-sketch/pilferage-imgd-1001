@@ -17,5 +17,5 @@ func _ready():
 	fade_out.tween_property(fade, "color:a", 1.0, 1.0)
 
 	await fade_out.finished
-	
+
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")

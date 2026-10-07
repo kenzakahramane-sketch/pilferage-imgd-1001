@@ -15,7 +15,7 @@ var cat_front := preload("res://assets/images/Hub Images/catFront.png")
 # freely, this is just here so the sequence has something to show.
 var narration_lines: Array[String] = [
 	"After a long walk, you finally spot it: a little jazz bar at the edge of town.",
-	"Inside, a cow behind the counter pours you a glass of milk... $5.",
+	"Inside, a cow behind the counter pours you a glass of milk... on the house.",
 	"Before you can even say thanks, a bright light floods the room - and the cow is gone.",
 	"You never did pay for that milk.",
 	"Looks like you've got a debt to settle, and a cow to find.",

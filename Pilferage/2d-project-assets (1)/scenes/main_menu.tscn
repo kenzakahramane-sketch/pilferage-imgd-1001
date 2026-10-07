@@ -121,7 +121,7 @@ theme = ExtResource("3_wu84c")
 text = "Level 1 Shortcut
  (DEV BUTTON)"
 
-[node name="dev_minigames" type="Button" parent="." unique_id=742275023]
+[node name="dev_minigames" type="Button" parent="."]
 layout_mode = 0
 offset_left = 1515.0
 offset_top = 960.0

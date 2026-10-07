@@ -47,7 +47,6 @@ func _physics_process(delta: float) -> void:
 	if velocity.y >= 0 and ((!jump_buffer_timer.is_stopped() and is_on_floor()) or Input.is_action_just_pressed("jump")) and (is_on_floor() or !coyote_timer.is_stopped()):
 		jump_sound.play()
 		animated_sprite.play("jumpCool")
-		jump_sound.play()
 		velocity.y = JUMP_VELOCITY + JUMP_VELOCITY * 0.15 * (abs(velocity.x) / 100)
 		
 
@@ -165,7 +164,6 @@ func hit():
 	healthChanged.emit()
 
 func die():
-	print (Global.lives)
 	if Global.lives <= 0:
 		Global.lives = 9
 		get_tree().change_scene_to_file("res://scenes/deathScreen.tscn")

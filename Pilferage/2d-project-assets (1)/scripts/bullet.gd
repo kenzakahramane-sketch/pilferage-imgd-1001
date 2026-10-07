@@ -1,5 +1,4 @@
 extends Area2D
-class_name Laser
 
 var travelled_distance = 0
 
@@ -16,8 +15,6 @@ func _physics_process(delta):
 
 
 func _on_body_entered(body):
-	print("Laser hit: ", body.name)
-
-	if body.has_method("hit"):
-		body.hit()
-		queue_free()
+	queue_free() 
+	if body.has_method("take_damage"):
+		body.take_damage()
