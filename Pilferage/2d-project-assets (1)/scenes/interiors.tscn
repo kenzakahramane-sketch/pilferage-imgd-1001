@@ -1,12 +1,13 @@
 [gd_scene format=3 uid="uid://csqwaxnpvpgqa"]
 
-[ext_resource type="Texture2D" uid="uid://d32spxjgq7jp1" path="res://assets/images/Hub Images/JazzBar.png" id="1_w3svg"]
+[ext_resource type="Texture2D" uid="uid://c16jdfsq41t0b" path="res://assets/images/Hub Images/JazzBar.png" id="1_w3svg"]
 [ext_resource type="Script" uid="uid://rql1hy6hc54t" path="res://scripts/interiors.gd" id="1_y5ugd"]
 [ext_resource type="AudioStream" uid="uid://hdouwhjhclcr" path="res://assets/Music/LOOP(upbeat) 190bpm_Too Many Coffees.ogg" id="2_y5ugd"]
 [ext_resource type="PackedScene" uid="uid://c7uyokengmfxn" path="res://scenes/cat.tscn" id="3_w3svg"]
 [ext_resource type="Script" uid="uid://bvxmdlka7brrd" path="res://scripts/hubCat.gd" id="4_y5ugd"]
-[ext_resource type="Texture2D" uid="uid://d243y41f0gxfo" path="res://assets/images/cat.png" id="5_dgq8i"]
-[ext_resource type="Texture2D" uid="uid://bvr75okih8l4w" path="res://assets/images/Hub Images/pixilart-drawing.png" id="6_dgq8i"]
+[ext_resource type="Texture2D" uid="uid://hscig8fivulh" path="res://assets/images/cat.png" id="5_dgq8i"]
+[ext_resource type="Texture2D" uid="uid://bskb3gvj5ifwd" path="res://assets/images/Hub Images/pixilart-drawing.png" id="6_dgq8i"]
+[ext_resource type="PackedScene" uid="uid://b0lalg15fcs70" path="res://scenes/walking.tscn" id="8_rssdf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w3svg"]
 size = Vector2(56, 19.25)
@@ -481,6 +482,9 @@ target_position = Vector2(6, 0)
 visible = false
 position = Vector2(7, -6)
 target_position = Vector2(-6, 0)
+
+[node name="Walking" parent="hubCat" unique_id=1797905810 instance=ExtResource("8_rssdf")]
+position = Vector2(-148.68903, -154.06023)
 
 [node name="border" type="StaticBody2D" parent="." unique_id=998603666]
 collision_mask = 3

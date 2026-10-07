@@ -4,12 +4,14 @@ class_name Alien
 @onready var wall_detect_ray: RayCast2D = $wallDetectRay
 @onready var ledge_ray: RayCast2D = $ledgeDetectRay
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var death_sound = $DeathSound
 
 var cat: Node2D
 const GRAVITY = 300.0
 var speed = 30.0
 var sees_Cat = false
 var direction = -1
+var colliding = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -35,6 +37,10 @@ func _movement(delta) -> void:
 		velocity.x = speed * direction
 		_update_sprite()
 	velocity.y += GRAVITY * delta
+	if colliding == true: #alien gets rekt lol
+		if !cat.push_timer.is_stopped():
+			AudioManager.play_death_sound()
+			queue_free()
 	
 	
 func _update_sprite():
@@ -69,3 +75,17 @@ func _on_sight_entered(body: Node2D) -> void:
 func _on_sight_exited(body: Node2D) -> void:
 	if body == cat:
 		sees_Cat = false
+
+
+func _on_collide_body_entered(body: Node2D) -> void:
+	if body == cat:
+		colliding = true
+		if !cat.push_timer.is_stopped():
+			AudioManager.play_death_sound()
+			queue_free()
+
+
+
+func _on_collide_body_exited(body: Node2D) -> void:
+	if body == cat:
+		colliding = false

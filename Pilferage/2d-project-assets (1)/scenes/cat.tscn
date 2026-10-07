@@ -396,7 +396,7 @@ size = Vector2(8, 12)
 
 [node name="cat" type="CharacterBody2D" unique_id=814917533 groups=["cat"]]
 z_index = 1
-collision_layer = 2
+collision_layer = 10
 
 [node name="movement_box" type="CollisionShape2D" parent="." unique_id=454549907]
 position = Vector2(11.25, -5.5)

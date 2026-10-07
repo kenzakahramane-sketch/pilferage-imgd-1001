@@ -3,6 +3,8 @@ extends Node2D
 @onready var music: AudioStreamPlayer = $Music
 
 func _ready():
+	AudioManager.stop_hub_music()
+	Global.on_grass = false
 	if Global.music == true:
 		music.play()
 		

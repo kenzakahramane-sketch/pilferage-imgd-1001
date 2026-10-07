@@ -7,6 +7,7 @@ var simplified_controls = true
 var music = true
 var easy_mode = false
 signal inventory_changed
+var on_grass = true
 
 # Set once the player has been shown Level 1's control-tutorial text; after
 # that, level_1.gd hides the Labels node instead of showing it again.
