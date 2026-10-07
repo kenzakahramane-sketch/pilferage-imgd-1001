@@ -7,10 +7,12 @@ extends Control
 func _ready():
 	# Only show "Continue" once there's actually a save to continue from.
 	$Options/Continue.visible = Global.has_save()
+	AudioManager.play_menu_music()
 
 
 # Continue button action - loads saved progress and jumps straight back in.
 func _on_continue_pressed():
+	await AudioManager.fade_out_menu_music()
 	if Global.load_game():
 		get_tree().change_scene_to_file(Global.current_level_path)
 	else:
@@ -19,6 +21,7 @@ func _on_continue_pressed():
 
 # Start button action - always begins a fresh save.
 func _on_startgame_pressed():
+	await AudioManager.fade_out_menu_music()
 	Global.delete_save()
 	Global.reset_state()
 	# Play the opening animation first, which transitions into the hub itself

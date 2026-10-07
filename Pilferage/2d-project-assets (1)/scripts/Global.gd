@@ -1,7 +1,7 @@
 extends Node
 
 var lives = 9
-#@onready var deathNoise = $deathNoise
+@onready var deathNoise = $deathNoise
 var spawn_point = ""
 var simplified_controls = true
 var music = true
