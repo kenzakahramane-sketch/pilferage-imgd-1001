@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bd4rrqj72amnx"
-path="res://.godot/imported/projectile.png-e03ae856d530df914009475206433400.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://pistol/projectile.png"
-dest_files=["res://.godot/imported/projectile.png-e03ae856d530df914009475206433400.ctex"]
 
 [params]
 
