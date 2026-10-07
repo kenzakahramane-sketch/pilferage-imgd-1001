@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 [gd_scene format=3 uid="uid://c7ov0wp7bokrv"]
 
 [ext_resource type="Script" path="res://audio_manager.gd" id="1_bq1v2"]
 [ext_resource type="AudioStream" path="res://assets/Music/menuMusic.mp3" id="2_6jj5d"]
 [ext_resource type="AudioStream" path="res://assets/Music/hubMusic.mp3" id="3_3asnw"]
+=======
+[gd_scene format=3 uid="uid://dtxcb72jk2mxw"]
+
+[ext_resource type="Script" uid="uid://55uhffl4tt35" path="res://audio_manager.gd" id="1_bq1v2"]
+[ext_resource type="AudioStream" uid="uid://0x00jcra7iaj" path="res://assets/Music/menuMusic.mp3" id="2_6jj5d"]
+[ext_resource type="AudioStream" uid="uid://br7ytyxfeuty8" path="res://assets/Music/hubMusic.mp3" id="3_3asnw"]
+>>>>>>> f6cd24f3fea68e750c057cfd40246e7fcbc78a1b
 
 [node name="AudioManager" type="Node" unique_id=2053517900]
 script = ExtResource("1_bq1v2")

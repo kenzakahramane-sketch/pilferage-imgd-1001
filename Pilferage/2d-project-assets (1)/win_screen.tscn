@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [gd_scene format=3 uid="uid://ju7g6f8u4og8"]
 
 [ext_resource type="Texture2D" path="res://assets/images/Sidescroller images/startFrame.png" id="1_1txte"]
@@ -6,6 +7,16 @@
 [ext_resource type="Texture2D" path="res://assets/images/Sidescroller images/endFrame.png" id="3_luvg0"]
 [ext_resource type="Texture2D" path="res://assets/images/NPCs/studioLogo.png" id="4_5hoe6"]
 [ext_resource type="AudioStream" path="res://assets/Music/endMusic.mp3" id="6_5hoe6"]
+=======
+[gd_scene format=3 uid="uid://d2vevckv6vvks"]
+
+[ext_resource type="Texture2D" uid="uid://blikq77jpbuib" path="res://assets/images/Sidescroller images/startFrame.png" id="1_1txte"]
+[ext_resource type="Script" uid="uid://k4h7pwxfyybx" path="res://win_screen.gd" id="1_luvg0"]
+[ext_resource type="Texture2D" uid="uid://vepx2xbgwjjo" path="res://assets/images/Sidescroller images/midFrame.png" id="2_26557"]
+[ext_resource type="Texture2D" uid="uid://diajjj70ey2kq" path="res://assets/images/Sidescroller images/endFrame.png" id="3_luvg0"]
+[ext_resource type="Texture2D" uid="uid://cjmdyjut0qbfv" path="res://assets/images/NPCs/studioLogo.png" id="4_5hoe6"]
+[ext_resource type="AudioStream" uid="uid://cawrr8q4j2luo" path="res://assets/Music/endMusic.mp3" id="6_5hoe6"]
+>>>>>>> f6cd24f3fea68e750c057cfd40246e7fcbc78a1b
 
 [sub_resource type="Animation" id="Animation_g6jvr"]
 resource_name = "EndSequence"

@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 [gd_scene format=3 uid="uid://qqpipwvnoe28"]
 
 [ext_resource type="Script" path="res://final_boss.gd" id="1_skx2t"]
 [ext_resource type="Texture2D" path="res://assets/images/Sidescroller images/boss.png" id="2_lnbgr"]
 [ext_resource type="PackedScene" uid="uid://du5i8r7jdycua" path="res://scenes/gun.tscn" id="3_o1i15"]
 [ext_resource type="AudioStream" path="res://assets/Sound Effects/bossDeathNoise.mp3" id="4_lnbgr"]
+=======
+[gd_scene format=3 uid="uid://c503py603jgk5"]
+
+[ext_resource type="Script" uid="uid://cxmvkvpleba7o" path="res://final_boss.gd" id="1_skx2t"]
+[ext_resource type="Texture2D" uid="uid://c6jef7ejp612x" path="res://assets/images/Sidescroller images/boss.png" id="2_lnbgr"]
+[ext_resource type="PackedScene" uid="uid://du5i8r7jdycua" path="res://scenes/gun.tscn" id="3_o1i15"]
+[ext_resource type="AudioStream" uid="uid://xqei22l8l87j" path="res://assets/Sound Effects/bossDeathNoise.mp3" id="4_lnbgr"]
+>>>>>>> f6cd24f3fea68e750c057cfd40246e7fcbc78a1b
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rekuv"]
 height = 49.999996
