@@ -12,7 +12,8 @@ var knockback_strength = 600.0
 func _ready():
 	AudioManager.menu_music.stop()
 	AudioManager.hub_music.stop()
-	boss_music.play()
+	if Global.music == true:
+		boss_music.play()
 
 	print("Starting boss health: ", boss_health)
 	head_hitbox.body_entered.connect(_on_head_hitbox_body_entered)

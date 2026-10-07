@@ -3,12 +3,12 @@
 [ext_resource type="Texture2D" uid="uid://byajrcxa8yjxp" path="res://assets/images/Sidescroller images/Pixilart selection (4).png" id="1_0otar"]
 [ext_resource type="PackedScene" uid="uid://c7uyokengmfxn" path="res://scenes/cat.tscn" id="1_ifitu"]
 [ext_resource type="Script" uid="uid://7peead4k52jx" path="res://scripts/cat.gd" id="2_0otar"]
-[ext_resource type="PackedScene" uid="uid://c503py603jgk5" path="res://boss.tscn" id="5_ud6ed"]
-[ext_resource type="AudioStream" uid="uid://cgmhwvgckmci" path="res://assets/Music/bossMusic.mp3" id="6_1sdr7"]
+[ext_resource type="PackedScene" path="res://boss.tscn" id="5_ud6ed"]
+[ext_resource type="AudioStream" uid="uid://bfivlqpxy2etp" path="res://assets/Music/bossMusic.mp3" id="6_1sdr7"]
 [ext_resource type="Script" uid="uid://colfw2hhca57x" path="res://scenes/head_hitbox.gd" id="6_4qsog"]
-[ext_resource type="Texture2D" uid="uid://d11nd6bttmfhh" path="res://assets/images/NPCs/ghost.png" id="7_mpvre"]
+[ext_resource type="Texture2D" uid="uid://b4ecyl3wt0v58" path="res://assets/images/NPCs/ghost.png" id="7_mpvre"]
 [ext_resource type="Script" uid="uid://cn08pcfjt8ak6" path="res://scenes/cow.gd" id="8_7uoj5"]
-[ext_resource type="Texture2D" uid="uid://c5c2m0le2dh6q" path="res://assets/images/Sidescroller images/cow.png" id="9_tkym2"]
+[ext_resource type="Texture2D" uid="uid://b54kb531fkjeg" path="res://assets/images/Sidescroller images/cow.png" id="9_tkym2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_723ie"]
 texture = ExtResource("1_0otar")
