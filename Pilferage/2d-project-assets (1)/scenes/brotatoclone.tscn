@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dw541hhyrvxao"]
 
 [ext_resource type="Script" uid="uid://cghebo1ukli5x" path="res://scripts/brotatoclone.gd" id="1_svci8"]
+[ext_resource type="AudioStream" uid="uid://br7ytyxfeuty8" path="res://assets/Music/hubMusic.mp3" id="10_music"]
 [ext_resource type="PackedScene" uid="uid://c0gpy0pye4jr6" path="res://scenes/tree.tscn" id="2_1kod4"]
 [ext_resource type="Texture2D" uid="uid://b7cct2004aro6" path="res://assets/images/Hub Images/exterior/ground time map.png" id="2_m0d6t"]
 [ext_resource type="Texture2D" uid="uid://5e77h85dtu4j" path="res://assets/images/Hub Images/exterior/TDTilemapUpdate.png" id="3_8dnpt"]
@@ -504,7 +505,7 @@ size = Vector2(64.66328, 75.42697)
 size = Vector2(37.32602, 29.15474)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rekuv"]
-size = Vector2(20, 29)=======
+size = Vector2(20, 29)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ciobh"]
 size = Vector2(20, 24)
 

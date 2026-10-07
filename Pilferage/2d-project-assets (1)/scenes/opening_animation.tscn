@@ -1,8 +1,10 @@
-[gd_scene load_steps=12 format=3]
+[gd_scene load_steps=14 format=3]
 
 [ext_resource type="Script" uid="uid://dj1sjgd1d1rg2" path="res://scripts/opening_animation.gd" id="1_open"]
 [ext_resource type="Texture2D" path="res://assets/images/Sidescroller images/jazzBarBackground.png" id="2_bgimg"]
 [ext_resource type="Texture2D" path="res://assets/images/Sidescroller images/pilferage-cat-sheet-v1.1-pixilart.png" id="3_catsheet"]
+[ext_resource type="FontFile" uid="uid://c8x3e628x2e51" path="res://assets/fonts/PressStart2P-Regular.ttf" id="2_pixel"]
+[ext_resource type="AudioStream" uid="uid://7c41oph1lrp4" path="res://assets/Music/LOOP(detective) 60bpm_Wandering In The Streets.ogg" id="3_mood"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_idle0"]
 atlas = ExtResource("3_catsheet")

@@ -3,6 +3,8 @@ extends Node2D
 # Uses the jazz bar background art and the "idle"/"run" animations sliced
 # from pilferage-cat-sheet-v1.1 (see the SpriteFrames built into this
 # scene) instead of the old static catBack.png/catFront.png swap.
+# Fade/font/music nodes match the same pattern ending_animation.gd uses,
+# so the two cinematics feel like a matched pair.
 
 @onready var cat_sprite: AnimatedSprite2D = %CatSprite
 @onready var narration_label: Label = %NarrationLabel
@@ -21,7 +23,6 @@ var narration_lines: Array[String] = [
 ]
 
 var _skipped := false
-var _fade_overlay: ColorRect
 
 
 func _ready() -> void:
@@ -29,16 +30,14 @@ func _ready() -> void:
 	narration_label.modulate.a = 0.0
 	skip_hint.text = "[Space] Skip"
 
-	# Fade in from black - the old flat ColorRect background didn't need
-	# this, but cutting straight to the new bar art looks jarring.
-	_fade_overlay = ColorRect.new()
-	_fade_overlay.color = Color(0, 0, 0, 1)
-	_fade_overlay.anchor_right = 1.0
-	_fade_overlay.anchor_bottom = 1.0
-	_fade_overlay.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	add_child(_fade_overlay)
+	if not Global.music:
+		music.stop()
+	else:
+		music.play()
+
+	# Fade in from black using the scene's own FadeOverlay node.
 	var screen_fade_in := create_tween()
-	screen_fade_in.tween_property(_fade_overlay, "color:a", 0.0, 1.0)
+	screen_fade_in.tween_property(fade_overlay, "color:a", 0.0, 1.0)
 
 	await _play_intro()
 
@@ -75,16 +74,6 @@ func _play_intro() -> void:
 		return
 	await get_tree().create_timer(0.75).timeout
 	_go_to_hub()
-
-
-func _swap_cat_texture(new_texture: Texture2D) -> void:
-	var fade_out := create_tween()
-	fade_out.tween_property(cat_sprite, "modulate:a", 0.0, 0.15)
-	await fade_out.finished
-	cat_sprite.texture = new_texture
-	var fade_in := create_tween()
-	fade_in.tween_property(cat_sprite, "modulate:a", 1.0, 0.15)
-	await fade_in.finished
 
 
 func _show_line(line: String) -> void:
