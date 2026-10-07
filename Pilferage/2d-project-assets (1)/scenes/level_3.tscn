@@ -6,8 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://kpw6j0jvyrr4" path="res://assets/images/Sidescroller images/pilferageact1-tilemapv1.0-pixilart.png" id="3_hhfj6"]
 [ext_resource type="PackedScene" uid="uid://c7uyokengmfxn" path="res://scenes/cat.tscn" id="3_p6vls"]
 [ext_resource type="Script" uid="uid://7peead4k52jx" path="res://scripts/cat.gd" id="4_hhfj6"]
-[ext_resource type="Texture2D" uid="uid://cnq3c3eb0v762" path="res://assets/images/Sidescroller images/Pixilart selection (4).png" id="4_wae8j"]
-[ext_resource type="PackedScene" uid="uid://dr1kkuuuigm3p" path="res://scenes/back_to_2.tscn" id="5_ah8om"]
+[ext_resource type="Texture2D" uid="uid://byajrcxa8yjxp" path="res://assets/images/Sidescroller images/Pixilart selection (4).png" id="4_wae8j"]
+[ext_resource type="PackedScene" uid="uid://04gte8cy0kd0" path="res://scenes/go_to_level_2.tscn" id="9_ha73p"]
 [ext_resource type="AudioStream" uid="uid://bxjwrktwqgvc7" path="res://assets/Music/LOOP(nervous) 140bpm_Runaway_MIDI.ogg" id="9_vcx5n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wae8j"]
@@ -94,8 +94,7 @@ sources/1 = SubResource("TileSetAtlasSource_ha73p")
 sources/3 = SubResource("TileSetAtlasSource_vcx5n")
 sources/4 = SubResource("TileSetAtlasSource_56dhn")
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qggm8"]
-normal = Vector2(1, 0)
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_oh4dh"]
 
 [node name="Level3" type="Node2D" unique_id=1381255891]
 script = ExtResource("1_ha73p")
@@ -119,15 +118,14 @@ limit_right = 3520
 limit_bottom = 96
 position_smoothing_enabled = true
 
-[node name="backTo2" parent="." unique_id=105553706 instance=ExtResource("5_ah8om")]
-position = Vector2(-67, -17)
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="backTo2" unique_id=411355207]
-position = Vector2(19, 65)
-rotation = -1.5707964
-shape = SubResource("WorldBoundaryShape2D_qggm8")
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1238085135]
 stream = ExtResource("9_vcx5n")
 parameters/looping = true
+
+[node name="Go to level 2" parent="." unique_id=1816965618 instance=ExtResource("9_ha73p")]
+position = Vector2(-45, 41)
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Go to level 2" unique_id=742040854]
+position = Vector2(0, 10)
+shape = SubResource("WorldBoundaryShape2D_oh4dh")

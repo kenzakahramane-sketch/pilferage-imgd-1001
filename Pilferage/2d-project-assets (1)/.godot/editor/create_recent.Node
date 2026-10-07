@@ -1,12 +1,11 @@
-Marker2D
-Area2D
+Timer
 CollisionShape2D
 TextureRect
 StaticBody2D
 AudioStreamPlayer
 Label
 Button
-Timer
+Area2D
 RayCast2D
 AnimatedSprite2D
 CharacterBody2D

@@ -15,20 +15,13 @@ func iris_close():
 
 	if cat == null:
 		cat = get_tree().current_scene.get_node_or_null("hubCat")
-
-	while cat == null:
-		await get_tree().process_frame
-
-		cat = get_tree().current_scene.get_node_or_null("cat")
-
-		if cat == null:
-			cat = get_tree().current_scene.get_node_or_null("hubCat")
-
-	var screen_position = cat.get_global_transform_with_canvas().origin
-	screen_position.x += 50
-
 	var viewport_size = get_viewport().get_visible_rect().size
-	var center = screen_position / viewport_size
+	var center = Vector2(0.5, 0.5)
+
+	if cat != null:
+		var screen_position = cat.get_global_transform_with_canvas().origin
+		screen_position.x += 50
+		center = screen_position / viewport_size
 
 	material.set_shader_parameter("circle_center", center)
 	material.set_shader_parameter("circle_radius", 1.5)
@@ -39,7 +32,7 @@ func iris_close():
 		func(value): material.set_shader_parameter("circle_radius", value),
 		1.5,
 		-0.1,
-		0.3
+		0.8
 	)
 
 	await tween.finished
@@ -74,7 +67,7 @@ func iris_open():
 		func(value): material.set_shader_parameter("circle_radius", value),
 		-0.1,
 		1.5,
-		0.3
+		0.8
 	)
 
 	await tween.finished

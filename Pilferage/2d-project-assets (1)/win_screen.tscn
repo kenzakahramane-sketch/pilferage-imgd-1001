@@ -1,0 +1,113 @@
+<<<<<<< HEAD
+[gd_scene format=3 uid="uid://ju7g6f8u4og8"]
+
+[ext_resource type="Texture2D" path="res://assets/images/Sidescroller images/startFrame.png" id="1_1txte"]
+[ext_resource type="Script" path="res://win_screen.gd" id="1_luvg0"]
+[ext_resource type="Texture2D" path="res://assets/images/Sidescroller images/midFrame.png" id="2_26557"]
+[ext_resource type="Texture2D" path="res://assets/images/Sidescroller images/endFrame.png" id="3_luvg0"]
+[ext_resource type="Texture2D" path="res://assets/images/NPCs/studioLogo.png" id="4_5hoe6"]
+[ext_resource type="AudioStream" path="res://assets/Music/endMusic.mp3" id="6_5hoe6"]
+=======
+[gd_scene format=3 uid="uid://d2vevckv6vvks"]
+
+[ext_resource type="Texture2D" uid="uid://blikq77jpbuib" path="res://assets/images/Sidescroller images/startFrame.png" id="1_1txte"]
+[ext_resource type="Script" uid="uid://k4h7pwxfyybx" path="res://win_screen.gd" id="1_luvg0"]
+[ext_resource type="Texture2D" uid="uid://vepx2xbgwjjo" path="res://assets/images/Sidescroller images/midFrame.png" id="2_26557"]
+[ext_resource type="Texture2D" uid="uid://diajjj70ey2kq" path="res://assets/images/Sidescroller images/endFrame.png" id="3_luvg0"]
+[ext_resource type="Texture2D" uid="uid://cjmdyjut0qbfv" path="res://assets/images/NPCs/studioLogo.png" id="4_5hoe6"]
+[ext_resource type="AudioStream" uid="uid://cawrr8q4j2luo" path="res://assets/Music/endMusic.mp3" id="6_5hoe6"]
+>>>>>>> f6cd24f3fea68e750c057cfd40246e7fcbc78a1b
+
+[sub_resource type="Animation" id="Animation_g6jvr"]
+resource_name = "EndSequence"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4kgk1"]
+_data = {
+&"EndSequence": SubResource("Animation_g6jvr")
+}
+
+[node name="winScreen" type="Control" unique_id=614993712]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_luvg0")
+
+[node name="frame1" type="TextureRect" parent="." unique_id=89004801]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_1txte")
+
+[node name="frame2" type="TextureRect" parent="." unique_id=562791541]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_26557")
+
+[node name="frame3" type="TextureRect" parent="." unique_id=195291346]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_luvg0")
+
+[node name="ThanksScreen" type="Control" parent="." unique_id=170834502]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StudioLogo" type="TextureRect" parent="ThanksScreen" unique_id=295742121]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_5hoe6")
+
+[node name="ThanksText" type="Label" parent="ThanksScreen" unique_id=2081112964]
+layout_mode = 0
+offset_left = 508.0
+offset_top = 19.000061
+offset_right = 672.0
+offset_bottom = 42.00006
+scale = Vector2(5.8400025, 5.8400025)
+text = "Thanks For Playing :o"
+
+[node name="PressSpaceText" type="Label" parent="ThanksScreen" unique_id=726817081]
+layout_mode = 0
+offset_left = 2.9999998
+offset_top = 992.99994
+offset_right = 151.0
+offset_bottom = 1015.99994
+scale = Vector2(3.7200005, 3.7200005)
+text = "Press SPACE to exit"
+
+[node name="Fade" type="ColorRect" parent="." unique_id=2006499389]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="EndGameMusic" type="AudioStreamPlayer" parent="." unique_id=1186985044]
+stream = ExtResource("6_5hoe6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1577638915]
+libraries/ = SubResource("AnimationLibrary_4kgk1")

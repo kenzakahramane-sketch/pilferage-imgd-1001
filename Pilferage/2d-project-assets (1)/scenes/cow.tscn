@@ -1,0 +1,26 @@
+<<<<<<< HEAD
+[gd_scene format=3 uid="uid://buw4qlfmaf8ml"]
+
+[ext_resource type="Script" path="res://scenes/cow.gd" id="1_cairq"]
+[ext_resource type="Texture2D" path="res://assets/images/Sidescroller images/cow.png" id="2_gly4w"]
+=======
+[gd_scene format=3 uid="uid://dfrh0mrpyamy4"]
+
+[ext_resource type="Script" uid="uid://cn08pcfjt8ak6" path="res://scenes/cow.gd" id="1_cairq"]
+[ext_resource type="Texture2D" uid="uid://cl50bfyomo2y" path="res://assets/images/Sidescroller images/cow.png" id="2_gly4w"]
+>>>>>>> f6cd24f3fea68e750c057cfd40246e7fcbc78a1b
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rekuv"]
+
+[node name="Cow" type="Area2D" unique_id=1286434010]
+script = ExtResource("1_cairq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1478911646]
+texture = ExtResource("2_gly4w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=733652548]
+position = Vector2(17.000002, 0)
+scale = Vector2(13.6, 13.6)
+shape = SubResource("CircleShape2D_rekuv")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
