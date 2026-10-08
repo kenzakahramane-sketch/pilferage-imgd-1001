@@ -21,13 +21,13 @@ res://scenes/back_to_2.tscn::215812eb4ff8dc9db544adb0d0686569::1791149544::res:/
 res://scenes/brotatoclone (1).tscn::406ba354deb917441db933e2d10d996d::1790740901::res://.godot/exported/133200997/export-3ea9e47f8124604f44422647d11346a6-brotatoclone (1).scn
 res://scenes/cape_item.tscn::aba9717cf3638d5ce286c84a0583e6e9::1790740925::res://.godot/exported/133200997/export-93aa63f6930eace2049025b6f1cc0ea8-cape_item.scn
 res://scenes/carrot_item.tscn::5f1f08c0227aa50fbf372904b655cbe1::1790059567::res://.godot/exported/133200997/export-43882644a5550ab33a236ce12229bd49-carrot_item.scn
-res://scenes/cat.tscn::246035d4d681db3765fd600d94dfdfa1::1791359225::res://.godot/exported/133200997/export-6006eecc8d498190a776084499fc9af6-cat.scn
+res://scenes/cat.tscn::246035d4d681db3765fd600d94dfdfa1::1791397829::res://.godot/exported/133200997/export-6006eecc8d498190a776084499fc9af6-cat.scn
 res://scenes/cow.tscn::6aab573685839dd97aff4927f9fbaff2::1791359225::res://.godot/exported/133200997/export-42e3c75491b696a29eca1321b70e7e98-cow.scn
 res://scenes/deathScreen.tscn::3d1fbe68cca018dce0b7ef1372dbee83::1791359232::res://.godot/exported/133200997/export-dc2a841c8994620bc879ce01e92c3808-deathScreen.scn
 res://scenes/dialogue_box.tscn::16a8d6fb62e6c4a35aa49aa1cb2c0d5c::1790043161::res://.godot/exported/133200997/export-2caeaf45632685a283d1980091e89d3a-dialogue_box.scn
 res://scenes/dog_npc.tscn::1619be75d0c912d3fcfbb988a0b213f0::1790740925::res://.godot/exported/133200997/export-c37d9c702391d747e24b294424b927d8-dog_npc.scn
 res://scenes/ending_animation.tscn::b873242d3f7e7f7985e82d0c0c6f1410::1791358656::res://.godot/exported/133200997/export-747580345d4f6dc4714fd4989a0e6a21-ending_animation.scn
-res://scenes/final_boss.tscn::3670e67431391ad03e3177cebd0d0900::1791393086::res://.godot/exported/133200997/export-b3b3c38a668f10d4a2cef3b0292d1eeb-final_boss.scn
+res://scenes/final_boss.tscn::2a735ac9a26e395420223363896d1f1a::1791397668::res://.godot/exported/133200997/export-b3b3c38a668f10d4a2cef3b0292d1eeb-final_boss.scn
 res://scenes/flower_item.tscn::fab3d6c58d2650a91a4f4137a1050460::1790059480::res://.godot/exported/133200997/export-35d2b666db5eb28f0b1baa334b26ee0b-flower_item.scn
 res://scenes/forest.tscn::fa10bc63b8f7f9cce75ad8b52e7af6c5::1789518675::res://.godot/exported/133200997/export-3aa35002fd37dc00e3e79d85fc7a0741-forest.scn
 res://scenes/fountain.tscn::d61969f48997c60236b201640c4b338c::1791149544::res://.godot/exported/133200997/export-bcaa81f15690b2cd96609fd54608da3d-fountain.scn
@@ -69,6 +69,6 @@ res://scenes/wolf_npc.tscn::b9d1fd09dcdcd63eab199b7d9cf8b24c::1790740945::res://
 res://scenes/wrench_item.tscn::06a36a6aa3b0f1299c68dd4c5e6d6619::1790740945::res://.godot/exported/133200997/export-7e6fa4a054b0c5a4feb893eacb1577a6-wrench_item.scn
 res://scripts/item_bar.tscn::549a8d27879584cc8d3352e8f7a3e7bc::1790740945::res://.godot/exported/133200997/export-b3bfbd6288b91d24fd05acbbbff2c3f9-item_bar.scn
 res://scripts/level_1.tscn::3587be24c16cea47eda88ec8e101c355::1790740945::res://.godot/exported/133200997/export-38889900ec9ae91065d6fc827d5d8c1b-level_1.scn
-res://boss.tscn::823b17dd180f4d525d9efa87bd5b03ad::1791359231::res://.godot/exported/133200997/export-5e7f0b6541c0059ea24f9d326f1dd0a5-boss.scn
+res://boss.tscn::88e232f325ee0baa446736ca404342bc::1791397769::res://.godot/exported/133200997/export-5e7f0b6541c0059ea24f9d326f1dd0a5-boss.scn
 res://forest.tscn::edf8592f7d70c7fe675417e9f4e73604::1790740901::res://.godot/exported/133200997/export-ab223b5470a720b7fffb3b41203e4929-forest.scn
 res://win_screen.tscn::03f4d35219ac587e66f04460fc86b7ec::1791359231::res://.godot/exported/133200997/export-2e7bd28c0b8763c6bca73934aafd1975-win_screen.scn
